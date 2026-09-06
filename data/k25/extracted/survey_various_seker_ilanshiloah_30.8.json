@@ -1,0 +1,73 @@
+{
+  "ref": "survey_various_seker_ilanshiloah_30.8",
+  "pollster_as_written": "קאנטר ישראל , אריאל שרון 4 גבעתיים",
+  "commissioner_as_written": "אילן שילוח",
+  "fieldwork_start": "2022-08-24",
+  "fieldwork_end": "2022-08-25",
+  "method": "internet",
+  "initial_sample": 2988,
+  "respondents": 900,
+  "response_rate_pct": 30.0,
+  "margin_error_pct": 4.6,
+  "population": "450 איש - מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים); בנוסף, 450 איש נוספים מדגם מייצג של מצביעי מרצ או מפלגת העבודה בבחירות האחרונות בשנת 2021",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו היו מתקיימות היום הבחירות לכנסת, והמפלגות המתמודדות יהיו המפלגות הבאות עם ראשי המפלגות שברשימה בפניך, עבור איזו מפלגה היית מצביע? (תחזית המנדטים - מצב נוכחי)",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 32, "pct": 25.6},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 22, "pct": 17.4},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 5, "pct": 4.2},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ, גדעון סער וגדי איזנקוט", "party": "המחנה הממלכתי", "seats": 14, "pct": 11.3},
+        {"party_as_written": "מפלגת העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 5, "pct": 4.0},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 4, "pct": 3.5},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "הציונות הדתית", "seats": 9, "pct": 7.0},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 5, "pct": 4.0},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": 6.4},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": 5.6},
+        {"party_as_written": "הרשימה המשותפת בראשות איימן עודה (חד\"ש, בל\"ד ותע\"ל)", "party": "חד\"ש-תע\"ל", "seats": 5, "pct": 4.2},
+        {"party_as_written": "רע\"ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 3.5},
+        {"party_as_written": "הרוח הציונית בראשות איילת שקד ויועז הנדל", "party": "הבית היהודי", "seats": 0, "pct": 2.2},
+        {"party_as_written": "מפלגת הכלכלה בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 0.4},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.7}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Pre-registration lineup: הציונות הדתית (4) and עוצמה יהודית (9) shown as separate rows - both mapped to 'הציונות הדתית' since they ran as one list (combined 13 seats, 10.5%). Joint List (חד\"ש, בל\"ד, תע\"ל) shown as ONE list - mapped to חד\"ש-תע\"ל per spec. הרוח הציונית (Shaked/Hendel) mapped to הבית היהודי. pct is 'אחוזים (נתונים גולמיים)' (raw), sums to 100% among those naming a party. Sample includes a 450-person oversample of 2021 Labor/Meretz voters in addition to the 450 national sample; seat forecast presumably weighted to national representation."
+    },
+    {
+      "qid": 2,
+      "type": "scenario",
+      "description": "תחזית המנדטים - רשימה מאוחדת של מפלגת העבודה ומרצ (בראשות מרב מיכאלי וזהבה גלאון), שאר המפלגות ללא שינוי",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 32, "pct": 25.3},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 21, "pct": 16.7},
+        {"party_as_written": "רשימה מאוחדת של מפלגת העבודה ומרצ בראשות מרב מיכאלי וזהבה גלאון", "party": "העבודה", "seats": 11, "pct": 8.8},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ, גדעון סער וגדי איזנקוט", "party": "המחנה הממלכתי", "seats": 14, "pct": 11.1},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 4, "pct": 3.4},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "הציונות הדתית", "seats": 9, "pct": 6.8},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 5, "pct": 4.0},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": 6.2},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": 5.6},
+        {"party_as_written": "הרשימה המשותפת בראשות איימן עודה (חד\"ש, בל\"ד ותע\"ל)", "party": "חד\"ש-תע\"ל", "seats": 5, "pct": 4.1},
+        {"party_as_written": "רע\"ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 3.5},
+        {"party_as_written": "הרוח הציונית בראשות איילת שקד ויועז הנדל", "party": "הבית היהודי", "seats": 0, "pct": 2.5},
+        {"party_as_written": "מפלגת הכלכלה בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 1.4},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.6}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Hypothetical merged Labor-Meretz list (11 seats) - recorded under party 'העבודה' as no canonical joint name exists; treat as Labor+Meretz combined. Smotrich and Ben Gvir shown separately, both mapped to הציונות הדתית; Joint List mapped to חד\"ש-תע\"ל. pct raw."
+    }
+  ],
+  "extraction_notes": "Poll commissioned by Ilan Shiloah (private), conducted by Kantar, published 30/08/2022; fieldwork 24 Aug 2022 (13:00) - 25 Aug 2022 (15:15). Total 900 respondents = 450 national representative + 450 oversample of 2021 Labor/Meretz voters; margin of error +-4.6% is per sub-sample. Page 4 (support for a Labor-Meretz merger among Labor/Meretz voters) ignored as not vote intention."
+}

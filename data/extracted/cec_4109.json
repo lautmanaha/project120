@@ -1,0 +1,47 @@
+{
+  "ref": "4109",
+  "pollster_as_written": "חברת Next Data",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-08-27",
+  "fieldwork_end": "2026-08-27",
+  "method": "internet",
+  "initial_sample": 1717,
+  "respondents": 981,
+  "response_rate_pct": 57.0,
+  "margin_error_pct": 3.2,
+  "population": "981 נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "תוצאות מנדטים - מפת המנדטים הסופית, כנסת בת 120 מושבים, אחוז חסימה 3.25%",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 31, "pct": 24.0},
+        {"party_as_written": "ישר בראשות גדי איזנקוט", "party": "ישר", "seats": 23, "pct": 17.9},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 10, "pct": 7.9},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 9, "pct": 6.9},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 7, "pct": 5.2},
+        {"party_as_written": "חד\"ש-תע\"ל-בל\"ד", "party": "הרשימה המשותפת", "seats": 7, "pct": 5.1},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 7, "pct": 5.4},
+        {"party_as_written": "יחד בראשות נפתלי בנט", "party": "ביחד", "seats": 7, "pct": 5.4},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": 4.5},
+        {"party_as_written": "רע\"ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 5, "pct": 3.9},
+        {"party_as_written": "מפלגה בראשות עופר וינטר", "party": "עמך ישראל", "seats": 4, "pct": 3.9},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 4, "pct": 3.3},
+        {"party_as_written": "זהות בראשות משה פייגלין", "party": "זהות", "seats": 0, "pct": 1.7},
+        {"party_as_written": "מפלגה בראשות חילי טרופר יועז הנדל", "party": "בית ציוני", "seats": 0, "pct": 1.1},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 0.4},
+        {"party_as_written": "מפלגת נעם בראשות אבי מעוז", "party": "נעם", "seats": 0, "pct": 0.3},
+        {"party_as_written": "מפלגה בראשות ארדן, אדלשטיין ושקד", "party": "האחדות", "seats": 0, "pct": 0.3}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "pct column is 'אחוז גולמי' (raw share before converting to seats, parties passing threshold sum to 93.4%); the footnote says the remaining share is distributed among threshold-passing parties (approx. 0.77% per seat). Sub-threshold parties listed in a separate table with raw pct only -> seats 0. Blocs: Netanyahu bloc without Winter 59, opposition+Arabs 57, Winter 4."
+    }
+  ],
+  "extraction_notes": "Next Data for Channel 14, fieldwork 27.8.2026 09:00-14:30 via digital internet data collection. 1,717 asked; 'גודל המדגם ההתחלתי' 616; 981 respondents (18+, representative of eligible citizens); response rate 57%; 736 refused (43%); error +/-3.2% at 95%. Pages 3-4 contain PM-suitability, head-to-head Netanyahu vs Eisenkot and content questions (Liberman, Winter party options, small right-wing party mergers) - not extracted."
+}

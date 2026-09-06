@@ -1,0 +1,46 @@
+{
+  "ref": "survey_maariv_seker-18-8",
+  "pollster_as_written": "פאנלס פוליטיקס בראשות מנחם לזר",
+  "commissioner_as_written": "עיתון מעריב",
+  "fieldwork_start": "2022-08-17",
+  "fieldwork_end": "2022-08-18",
+  "method": "internet",
+  "initial_sample": 4335,
+  "respondents": 737,
+  "response_rate_pct": 17.0,
+  "margin_error_pct": 4.2,
+  "population": "מדגם מייצג של אזרחי ישראל מגיל 18 ומעלה, יהודים וערבים כאחד",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות הקרובות לכנסת היו מתקיימות היום, למי היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 32, "pct": 22.9},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 25, "pct": 20.6},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ גדעון סער וגדי אייזנקוט", "party": "המחנה הממלכתי", "seats": 12, "pct": 9.1},
+        {"party_as_written": "שס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": 6.8},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "אחר", "seats": 7, "pct": 6.1},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": 6.5},
+        {"party_as_written": "הרשימה המשותפת בראשות איימן עודה", "party": "חד\"ש-תע\"ל", "seats": 6, "pct": 4.7},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ", "party": "הציונות הדתית", "seats": 5, "pct": 4.2},
+        {"party_as_written": "העבודה בראשות מירב מיכאלי", "party": "העבודה", "seats": 5, "pct": 4.3},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 5, "pct": 3.9},
+        {"party_as_written": "מרצ", "party": "מרצ", "seats": 4, "pct": 3.6},
+        {"party_as_written": "רעם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 3.7},
+        {"party_as_written": "הרוח הציונית בראשות איילת שקד ויועז הנדל", "party": "הבית היהודי", "seats": 0, "pct": 2.6},
+        {"party_as_written": "המפלגה הכלכלית בראשות פרופ' ירון זליכה", "party": "אחר", "seats": 0, "pct": 0.6},
+        {"party_as_written": "ישראל חופשית ודמוקרטית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.2},
+        {"party_as_written": "רשימת עלה ירוק 20 ואוסרת אל איסלמיה", "party": "אחר", "seats": 0, "pct": 0.2}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "At fieldwork date עוצמה יהודית (בן גביר) and הציונות הדתית (סמוטריץ') polled as separate lists (pre-merger): עוצמה יהודית 7 seats mapped to אחר, הציונות הדתית 5. הרשימה המשותפת shown as one list -> חד\"ש-תע\"ל. הרוח הציונית -> הבית היהודי. Pct column sums to 100% among party voters; no undecided/other row. Order of rows follows the PDF (pct not strictly sorted)."
+    }
+  ],
+  "extraction_notes": "2 pages, both readable. Report addressed to the Central Elections Committee. Refusals 3,598 (83.0%)."
+}

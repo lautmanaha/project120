@@ -1,0 +1,47 @@
+{
+  "ref": "4070",
+  "pollster_as_written": "חברת Next Data (שלמה פילבר)",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-08-03",
+  "fieldwork_end": "2026-08-04",
+  "method": "internet",
+  "initial_sample": 59580,
+  "respondents": 588,
+  "response_rate_pct": null,
+  "margin_error_pct": 4.4,
+  "population": "588 נדגמים בוגרים (בני 18+) המהווים מדגם מייצג של האוכלוסייה הכללית של אזרחי ישראל",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "תוצאות עיקריות - מנדטים: מפת המנדטים הסופית, כנסת בת 120 מושבים, אחוז חסימה 3.25% (no explicit question wording given)",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 31, "pct": 23.7},
+        {"party_as_written": "ישר בראשות גדי אינזקוט", "party": "ישר", "seats": 22, "pct": 16.8},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 11, "pct": 8.4},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 10, "pct": 7.6},
+        {"party_as_written": "יחד בראשות נפתלי בנט", "party": "ביחד", "seats": 8, "pct": 6.1},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 8, "pct": 6.2},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 8, "pct": 6.0},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 6, "pct": 4.8},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 6, "pct": 4.4},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 5, "pct": 3.9},
+        {"party_as_written": "חד\"ש-תע\"ל", "party": "הרשימה המשותפת", "seats": 5, "pct": 3.7},
+        {"party_as_written": "בל\"ד", "party": "אחר", "seats": 0, "pct": 2.9},
+        {"party_as_written": "מפלגה בראשות חילי טרופר ויועז הנדל", "party": "בית ציוני", "seats": 0, "pct": 1.9},
+        {"party_as_written": "זהות בראשות משה פייגלין", "party": "זהות", "seats": 0, "pct": 1.3},
+        {"party_as_written": "מפלגה בראשות עופר וינטר", "party": "עמך ישראל", "seats": 0, "pct": 1.2},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 0.5},
+        {"party_as_written": "מפלגה בראשות ארדן, אדלשטיין ושקד", "party": "האחדות", "seats": 0, "pct": 0.5}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Main table pct column is 'אחוז גולמי' (raw) for the 11 parties above threshold (sum 91.6%); below-threshold parties are in a separate table labelled 'אחוז משוקלל' (weighted) -> seats 0. Blocs printed: גוש נתניהו 62 / אופוזיציה 58. בל\"ד separately -> אחר; Winter -> עמך ישראל; Erdan/Edelstein/Shaked -> האחדות."
+    }
+  ],
+  "extraction_notes": "Next Data for Channel 14 (Now 14), fieldwork 3-4.8.2026. PDF header title 'שאלות התוכן וכוונות הצבעה'. Sent to 59,580 people (initial_sample); 588 respondents; response rate not stated (~1%). Margin ±4.4% at 95%. Method: digital internet data-collection system -> internet. Sample is general population (not a sub-population). Page 2 lower part and page 3: PM suitability and content questions split by 2022 coalition/opposition vote - ignored."
+}

@@ -1,0 +1,46 @@
+{
+  "ref": "survey_kan11_seker-8-8",
+  "pollster_as_written": "קאנטר ישראל , אריאל שרון 4 גבעתיים",
+  "commissioner_as_written": "תאגיד השידור כאן , כנפי נשרים 23, ירושלים",
+  "fieldwork_start": "2022-08-08",
+  "fieldwork_end": "2022-08-08",
+  "method": "mixed",
+  "initial_sample": 4257,
+  "respondents": 642,
+  "response_rate_pct": 15.0,
+  "margin_error_pct": 3.9,
+  "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו היו מתקיימות היום הבחירות לכנסת, והמפלגות המתמודדות יהיו המפלגות הבאות עם ראשי המפלגות שברשימה בפניך, עבור איזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 33, "pct": 25.6},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 23, "pct": 18.3},
+        {"party_as_written": "מרצ", "party": "מרצ", "seats": 5, "pct": 4.1},
+        {"party_as_written": "כחול לבן התקווה החדשה בראשות בני גנץ וגדעון סער", "party": "המחנה הממלכתי", "seats": 12, "pct": 9.4},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 5, "pct": 4.2},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' (ואיתמר בן גביר)", "party": "הציונות הדתית", "seats": 11, "pct": 8.8},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": 5.0},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": 6.4},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": 5.6},
+        {"party_as_written": "הרשימה המשותפת בראשות איימן עודה (חד\"ש, בל\"ד ותע\"ל)", "party": "חד\"ש-תע\"ל", "seats": 6, "pct": 4.8},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 3.7},
+        {"party_as_written": "הרוח הציונית בראשות איילת שקד ויועז הנדל", "party": "הבית היהודי", "seats": 0, "pct": 2.1},
+        {"party_as_written": "מפלגת הכלכלה בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 1.1},
+        {"party_as_written": "הבית היהודי בראשות יוסי ברודני", "party": "הבית היהודי", "seats": 0, "pct": 0.5},
+        {"party_as_written": "עלה ירוק ואוסרת אל איסלמיה", "party": "אחר", "seats": 0, "pct": 0.2},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.2}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Pre-registration lineup: 'כחול לבן התקווה החדשה' (Gantz+Sa'ar) mapped to המחנה הממלכתי; Joint List (חד\"ש, בל\"ד, תע\"ל) shown as ONE list - mapped to חד\"ש-תע\"ל per spec. Both 'הרוח הציונית' (Shaked/Hendel) and 'הבית היהודי' (Brodny) appear as separate below-threshold rows; both mapped to הבית היהודי (2.1% and 0.5%). pct column is 'אחוזים (נתונים גולמיים)' (raw), sums to 100% among those naming a party."
+    }
+  ],
+  "extraction_notes": "Fieldwork 8 Aug 2022 10:00-16:15. Pages 2-4 additional questions (PM suitability, Operation Breaking Dawn, Lapid/Gantz performance) - ignored."
+}

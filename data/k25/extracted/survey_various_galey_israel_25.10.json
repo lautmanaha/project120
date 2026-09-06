@@ -1,0 +1,45 @@
+{
+  "ref": "survey_various_galey_israel_25.10",
+  "pollster_as_written": "חנוך ורפי סמית-יעוץ ומחקר בע\"מ (מכון סמית)",
+  "commissioner_as_written": "רדיו \"גלי-ישראל\"",
+  "fieldwork_start": "2022-10-25",
+  "fieldwork_end": "2022-10-25",
+  "method": "mixed",
+  "initial_sample": 2568,
+  "respondents": 700,
+  "response_rate_pct": null,
+  "margin_error_pct": 3.8,
+  "population": "מדגם מייצג של האוכלוסייה הבוגרת בישראל מגיל 18+",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "לו היו בחירות לכנסת נערכות היום למי היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד", "party": "הליכוד", "seats": 32, "pct": null},
+        {"party_as_written": "יש עתיד בראשות", "party": "יש עתיד", "seats": 25, "pct": null},
+        {"party_as_written": "הציונות הדתית/עוצמה יהודית", "party": "הציונות הדתית", "seats": 13, "pct": null},
+        {"party_as_written": "המחנה הממלכתי בראשות גנץ", "party": "המחנה הממלכתי", "seats": 12, "pct": null},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 9, "pct": null},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 7, "pct": null},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 5, "pct": null},
+        {"party_as_written": "מפלגת העבודה", "party": "העבודה", "seats": 5, "pct": null},
+        {"party_as_written": "מרצ", "party": "מרצ", "seats": 4, "pct": null},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": null},
+        {"party_as_written": "חדש- תע\"ל בראשות עודה וטיבי", "party": "חד\"ש-תע\"ל", "seats": 4, "pct": null},
+        {"party_as_written": "הבית היהודי", "party": "הבית היהודי", "seats": 0, "pct": 1.8},
+        {"party_as_written": "הכלכלית החדשה בראשות פרו' ירון זליכה", "party": "אחר", "seats": 0, "pct": 1.5},
+        {"party_as_written": "חופש כלכלי-אבי קארה", "party": "אחר", "seats": 0, "pct": 0.7},
+        {"party_as_written": "צעירים בוערים", "party": "אחר", "seats": 0, "pct": 0.2}
+      ],
+      "undecided_pct": 5.0,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Seat estimates ('אומדן מנדטים') only; pct given in text only for below-threshold parties. 'אחוז הקולות הצפים (אלו שלא החליטו) - 5%' recorded as undecided. Arab-sector turnout assumed 46%. בל\"ד not listed. PM-preference question not extracted."
+    }
+  ],
+  "extraction_notes": "Single page, clear. Pollster: Smith Institute (Rafi Smith). Interviews by phone and internet panel; 2568 approached, 700 respondents. Party name 'יש עתיד בראשות' is truncated in the PDF as written."
+}

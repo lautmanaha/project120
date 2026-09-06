@@ -1,0 +1,44 @@
+{
+  "ref": "4088",
+  "pollster_as_written": null,
+  "commissioner_as_written": null,
+  "fieldwork_start": "2026-08-19",
+  "fieldwork_end": "2026-08-20",
+  "method": "mixed",
+  "initial_sample": 10041,
+  "respondents": 500,
+  "response_rate_pct": null,
+  "margin_error_pct": 4.4,
+  "population": "כלל האוכלוסייה הבוגרת בישראל, יהודים וערבים (לפי פילוח המגזרים בסקר)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, וכל המפלגות הקיימות היו מתמודדות בנפרד, למי היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "ישר בראשות גדי אייזנקוט", "party": "ישר", "seats": 23, "pct": 18.2},
+        {"party_as_written": "הליכוד", "party": "הליכוד", "seats": 21, "pct": 16.6},
+        {"party_as_written": "ביחד בראשות נפתלי בנט", "party": "ביחד", "seats": 15, "pct": 11.6},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 11, "pct": 8.6},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 9, "pct": 6.6},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 8, "pct": 6.4},
+        {"party_as_written": "הדמוקרטים", "party": "הדמוקרטים", "seats": 8, "pct": 5.8},
+        {"party_as_written": "חד\"ש תע\"ל בל\"ד", "party": "הרשימה המשותפת", "seats": 7, "pct": 5.6},
+        {"party_as_written": "עוצמה יהודית", "party": "עוצמה יהודית", "seats": 7, "pct": 5.4},
+        {"party_as_written": "הציונות הדתית", "party": "הציונות הדתית", "seats": 6, "pct": 4.8},
+        {"party_as_written": "רע\"ם", "party": "רע\"ם", "seats": 5, "pct": 4.2},
+        {"party_as_written": "בית ציוני בהובלת יועז הנדל וחילי טרופר", "party": "בית ציוני", "seats": 0, "pct": 3.0},
+        {"party_as_written": "כחול לבן בהובלת בני גנץ ודדי שמחי", "party": "כחול לבן", "seats": 0, "pct": 2.4},
+        {"party_as_written": "אחדות בהובלת גלעד ארדן ויולי אדלשטיין", "party": "האחדות", "seats": 0, "pct": 0.8}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Table gives respondent counts (n=500), pct of respondents and seat allocation ('חלוקת מנדטים'); below-threshold parties marked 'לא עבר' -> seats 0. Whether pct is weighted is not stated. Party pcts sum to ~100 (no undecided row)."
+    }
+  ],
+  "extraction_notes": "Document is a bare spreadsheet export titled 'תוצאות סקר 20.8' - no pollster or commissioner named anywhere. Fieldwork 19/8 10:00 to 20/8 13:00. Method note: internet panel + phone completions for sectors under-represented in the panel. Initial sample: 10,000 SMS links + 41 phone calls (10,041 requested); 541 answered but 41 were excluded as not matching/out of sample, so 500 respondents; 93% did not respond. Demographic tables (age, sector, gender, region) confirm n=500."
+}

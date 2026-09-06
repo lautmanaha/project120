@@ -1,0 +1,47 @@
+{
+  "ref": "survey_various_galey_israel_28.10",
+  "pollster_as_written": "חנוך ורפי סמית-יעוץ ומחקר בע\"מ (מכון סמית), מנהל: רפי סמית",
+  "commissioner_as_written": "רדיו \"גלי-ישראל\"",
+  "fieldwork_start": "2022-10-27",
+  "fieldwork_end": "2022-10-27",
+  "method": "mixed",
+  "initial_sample": 2985,
+  "respondents": 900,
+  "response_rate_pct": null,
+  "margin_error_pct": 3.3,
+  "population": "מדגם מייצג של האוכלוסייה הבוגרת בישראל מגיל 18+",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "לו היו בחירות לכנסת נערכות היום למי היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 31, "pct": 24.1},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 25, "pct": 19.9},
+        {"party_as_written": "הציונות הדתית/עוצמה יהודית בראשות בצלאל סמוטריץ ואיתמר בן-גביר", "party": "הציונות הדתית", "seats": 14, "pct": 11.9},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ", "party": "המחנה הממלכתי", "seats": 11, "pct": 8.1},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 9, "pct": 6.7},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנוף", "party": "יהדות התורה", "seats": 7, "pct": 5.2},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": 4.3},
+        {"party_as_written": "מפלגת העבודה בראשות מירב מכאלי", "party": "העבודה", "seats": 5, "pct": 3.8},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 4, "pct": 3.2},
+        {"party_as_written": "רע\"ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 4.2},
+        {"party_as_written": "חד\"ש- תע\"ל בראשות איימן עודה ואחמד טיבי", "party": "חד\"ש-תע\"ל", "seats": 4, "pct": 3.8},
+        {"party_as_written": "בל\"ד בראשות סאמי אבו-שחאדה", "party": "בל\"ד", "seats": 0, "pct": 2.1},
+        {"party_as_written": "הבית היהודי בראשות איילת שקד", "party": "הבית היהודי", "seats": 0, "pct": 2.0},
+        {"party_as_written": "חופש כלכלי בראשות אבי קארה", "party": "אחר", "seats": 0, "pct": 1.1},
+        {"party_as_written": "הכלכלית החדשה בראשות ' ירון זליכה", "party": "אחר", "seats": 0, "pct": 0.9},
+        {"party_as_written": "צעירים בוערים בראשות הדר מוכתר", "party": "אחר", "seats": 0, "pct": 0.4},
+        {"party_as_written": "עלה ירוק 2.0 ואוסרת אל איסלאמיה", "party": "אחר", "seats": 0, "pct": 0.0}
+      ],
+      "undecided_pct": 4.8,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Seats and pct columns. Undecided ('קולות צפים') 4.8%, distributed into seats by the Smith model. Below-threshold parties' pct given in text. pct figures do not sum exactly to 100 (party pct + below-threshold + undecided = ~106.5%) - recorded as printed. Blocs per text: right bloc 61, coalition parties 55, Hadash-Ta'al 4. Arab-sector turnout assumed ~47%."
+    }
+  ],
+  "extraction_notes": "Letter dated 28.10.2022; fieldwork 27.10.2022. Pollster: Smith Institute (Rafi Smith). Phone + internet panel; 2985 approached, 900 respondents. Page 2 is commentary only. Both pages clear."
+}

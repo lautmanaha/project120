@@ -1,0 +1,47 @@
+{
+  "ref": "survey_hadashut_hadshut-10-9",
+  "pollster_as_written": "מדגם יעוץ ומחקר בראשות מנו גבע",
+  "commissioner_as_written": "חברת החדשות",
+  "fieldwork_start": "2022-09-08",
+  "fieldwork_end": "2022-09-08",
+  "method": "mixed",
+  "initial_sample": 2852,
+  "respondents": 504,
+  "response_rate_pct": null,
+  "margin_error_pct": 4.4,
+  "population": "מדגם מייצג של כלל האוכלוסייה בישראל בגילאי 18 ומעלה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 32, "pct": 26.0},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 23, "pct": 18.7},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ", "party": "המחנה הממלכתי", "seats": 12, "pct": 9.9},
+        {"party_as_written": "הציונות הדתית בראשות סמוטריץ' ועוצמה יהודית בראשות בן גביר", "party": "הציונות הדתית", "seats": 11, "pct": 8.8},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 9, "pct": 7.2},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": 5.8},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 6, "pct": 4.9},
+        {"party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 5, "pct": 4.0},
+        {"party_as_written": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) בראשות איימן עודה", "party": "חד\"ש-תע\"ל", "seats": 5, "pct": 3.9},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 5, "pct": 3.6},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 5, "pct": 3.5},
+        {"party_as_written": "הרוח הציונית בראשות איילת שקד ויועז הנדל", "party": "הבית היהודי", "seats": 0, "pct": 1.1},
+        {"party_as_written": "המפלגה הכלכלית החדשה בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 0.7},
+        {"party_as_written": "צעירים בוערים בראשות הדר מוכתר", "party": "אחר", "seats": 0, "pct": 0.6},
+        {"party_as_written": "הבית היהודי בראשות יוסי ברודני", "party": "אחר", "seats": 0, "pct": 0.2},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.0},
+        {"party_as_written": "עלה ירוק 2.0 ואוסרת אל איסלמיה", "party": "אחר", "seats": 0, "pct": 0.0}
+      ],
+      "undecided_pct": 6.4,
+      "not_voting_pct": null,
+      "other_pct": 1.2,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) shown as one joint list -> mapped to חד\"ש-תע\"ל. Two lists carry the 'הבית היהודי' name: הרוח הציונית (שקד/הנדל) mapped to הבית היהודי per spec; 'הבית היהודי בראשות יוסי ברודני' mapped to אחר to avoid duplicate. Pct excludes undecided (מתלבטים 6.4% shown separately); note says data do not account for undecided split or certainty of vote."
+    }
+  ],
+  "extraction_notes": "4 pages, all readable. Pages 3-4 contain approval/coalition/issue questions - not extracted. Fieldwork single date 8/9/2022. Initial sample 500 (planned), respondents 504, invited 2,852 -> initial_sample recorded as invited count (מספר המתבקשים להשתתף)."
+}

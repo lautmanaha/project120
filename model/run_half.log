@@ -1,0 +1,94 @@
+industry lean (polls overstate +): {'הליכוד': -3.6, 'ביחד': 2.81, 'הדמוקרטים': 0.22, 'ישראל ביתנו': 0.77, 'עוצמה יהודית': 0.31, 'ש"ס': -0.57, 'הרשימה המשותפת': 0.42, 'רע"ם': -0.22, 'הציונות הדתית': -0.79, 'כחול לבן': 0.25, 'אחר': 0.63}
+pollster priors: {}
+Initializing NUTS using jitter+adapt_diag...
+/usr/local/lib/python3.11/dist-packages/pytensor/link/c/cmodule.py:2986: UserWarning: PyTensor could not link to a BLAS installation. Operations that might benefit from BLAS will be severely degraded.
+This usually happens when PyTensor is installed via pip. We recommend it be installed via conda/mamba/pixi instead.
+Alternatively, you can use an experimental backend such as Numba or JAX that perform their own BLAS optimizations, by setting `pytensor.config.mode == 'NUMBA'` or passing `mode='NUMBA'` when compiling a PyTensor function.
+For more options and details see https://pytensor.readthedocs.io/en/latest/troubleshooting.html#how-do-i-configure-test-my-blas-library
+  warnings.warn(
+Multiprocess sampling (2 chains in 2 jobs)
+NUTS: [sigma_walk, kappa_log, eta_init, innovations, sigma_house, delta_raw, shared_bias_z]
+Sampling 2 chains for 1_500 tune and 1_000 draw iterations (3_000 + 2_000 draws total) took 504 seconds.
+We recommend running at least 4 chains for robust computation of convergence diagnostics
+The rhat statistic is larger than 1.01 for some parameters. This indicates problems during sampling. See https://arxiv.org/abs/1903.08008 for details
+/home/claude/project120/vendor/kronikas/forecast.py:144: ConvergenceWarning: Posterior may not have converged; treat these estimates with caution.
+  - R-hat 1.0108 exceeds 1.01 (worst: innovations); chains have not mixed.
+  - Bulk ESS 320 is below 400 (worst: sigma_house); estimates are noisy.
+  return extract_results(trace, fit_data, metadata, config=self.config)
+==================================================
+Election Forecast Summary
+==================================================
+
+Current estimates
+-----------------
+  ישר                   18.8%  (90% CI:  16.2% –  21.7%)
+  הליכוד                20.5%  (90% CI:  18.5% –  22.6%)
+  ביחד                   7.2%  (90% CI:   5.6% –   9.2%)
+  הדמוקרטים              7.5%  (90% CI:   6.0% –   9.3%)
+  ישראל ביתנו            6.1%  (90% CI:   4.9% –   7.5%)
+  יהדות התורה            6.3%  (90% CI:   5.2% –   7.4%)
+  עוצמה יהודית           5.8%  (90% CI:   4.6% –   7.1%)
+  ש"ס                    6.9%  (90% CI:   5.6% –   8.3%)
+  הרשימה המשותפת         5.5%  (90% CI:   4.1% –   7.1%)
+  רע"ם                   4.2%  (90% CI:   3.5% –   5.1%)
+  הציונות הדתית          5.1%  (90% CI:   4.3% –   6.2%)
+  עמך ישראל              3.9%  (90% CI:   2.0% –   6.6%)
+  כחול לבן               1.1%  (90% CI:   0.8% –   1.5%)
+  אחר                    1.1%  (90% CI:   0.8% –   1.5%)
+
+Election-day forecast
+---------------------
+  ישר                   18.7%  (90% CI:  15.3% –  22.4%)
+  הליכוד                20.3%  (90% CI:  17.9% –  22.8%)
+  ביחד                   7.2%  (90% CI:   5.3% –   9.5%)
+  הדמוקרטים              7.5%  (90% CI:   5.8% –   9.5%)
+  ישראל ביתנו            6.1%  (90% CI:   4.4% –   8.0%)
+  יהדות התורה            6.2%  (90% CI:   5.0% –   7.6%)
+  עוצמה יהודית           5.7%  (90% CI:   4.4% –   7.2%)
+  ש"ס                    6.8%  (90% CI:   5.3% –   8.5%)
+  הרשימה המשותפת         5.5%  (90% CI:   3.6% –   7.9%)
+  רע"ם                   4.2%  (90% CI:   3.3% –   5.3%)
+  הציונות הדתית          5.1%  (90% CI:   3.9% –   6.8%)
+  עמך ישראל              4.3%  (90% CI:   1.3% –   9.7%)
+  כחול לבן               1.1%  (90% CI:   0.7% –   1.6%)
+  אחר                    1.2%  (90% CI:   0.6% –   2.1%)
+
+Plurality probabilities (election day)
+-------------------------------------
+  הליכוד                72.0%
+  ישר                   27.7%
+  עמך ישראל              0.2%
+  ביחד                   0.1%
+  הדמוקרטים              0.0%
+  ישראל ביתנו            0.0%
+  יהדות התורה            0.0%
+  עוצמה יהודית           0.0%
+  ש"ס                    0.0%
+  הרשימה המשותפת         0.0%
+  רע"ם                   0.0%
+  הציונות הדתית          0.0%
+  כחול לבן               0.0%
+  אחר                    0.0%
+
+Sampling diagnostics
+--------------------
+  chains x draws     2 x 1000
+  max R-hat          1.0108 (innovations)
+  min ESS (bulk)     320 (sigma_house)
+  min ESS (tail)     554
+  divergences        0
+  status             PROBLEMS DETECTED
+    - R-hat 1.0108 exceeds 1.01 (worst: innovations); chains have not mixed.
+    - Bulk ESS 320 is below 400 (worst: sigma_house); estimates are noisy.
+==================================================
+Sampling diagnostics
+--------------------
+  chains x draws     2 x 1000
+  max R-hat          1.0108 (innovations)
+  min ESS (bulk)     320 (sigma_house)
+  min ESS (tail)     554
+  divergences        0
+  status             PROBLEMS DETECTED
+    - R-hat 1.0108 exceeds 1.01 (worst: innovations); chains have not mixed.
+    - Bulk ESS 320 is below 400 (worst: sigma_house); estimates are noisy.
+saved to model/output_half

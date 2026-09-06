@@ -1,0 +1,49 @@
+{
+  "ref": "survey_kan11_seker27.10",
+  "pollster_as_written": "קאנטר ישראל , אריאל שרון 4 גבעתיים",
+  "commissioner_as_written": "תאגיד השידור כאן , כנפי נשרים 23, ירושלים",
+  "fieldwork_start": "2022-10-26",
+  "fieldwork_end": "2022-10-27",
+  "method": "mixed",
+  "initial_sample": 7638,
+  "respondents": 1301,
+  "response_rate_pct": 17.0,
+  "margin_error_pct": 2.7,
+  "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו היו מתקיימות היום הבחירות לכנסת, והמפלגות המתמודדות יהיו המפלגות הבאות עם ראשי המפלגות שברשימה בפניך, עבור איזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 31, "pct": 23.6},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 24, "pct": 18.2},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 5, "pct": 3.8},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ, גדעון סער וגדי איזנקוט", "party": "המחנה הממלכתי", "seats": 11, "pct": 8.3},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 6, "pct": 4.5},
+        {"party_as_written": "הציונות הדתית, עוצמה יהודית בראשות סמוטריץ' ובן גביר", "party": "הציונות הדתית", "seats": 14, "pct": 10.6},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": 4.5},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": 6.1},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנופף", "party": "יהדות התורה", "seats": 7, "pct": 5.3},
+        {"party_as_written": "חד\"ש-תע\"ל בראשות איימן עודה ואחמד טיבי", "party": "חד\"ש-תע\"ל", "seats": 4, "pct": 3.3},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 3.4},
+        {"party_as_written": "בל\"ד בראשות סמי אבו שחאדה", "party": "בל\"ד", "seats": 0, "pct": 2.2},
+        {"party_as_written": "מפלגת הכלכלה בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 1.4},
+        {"party_as_written": "ישראל חופשית דמוקרטית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.5},
+        {"party_as_written": "צעירים בוערים בראשות הדר מוכתר", "party": "אחר", "seats": 0, "pct": 1.3},
+        {"party_as_written": "חופש כלכלי בראשות אביר קארה", "party": "אחר", "seats": 0, "pct": 0.9},
+        {"party_as_written": "הבית היהודי בראשות איילת שקד ויוסי ברודני", "party": "הבית היהודי", "seats": 0, "pct": 2.0},
+        {"party_as_written": "צומת בראשות משה גרין דרכו של רפול", "party": "אחר", "seats": 0, "pct": 0.0},
+        {"party_as_written": "עלה ירוק 2.0 ואוסרת אל איסלמיה", "party": "אחר", "seats": 0, "pct": 0.1}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "pct column is labelled 'אחוזים (נתונים גולמיים)' (raw data) and sums to 100% among those who named a party; seats are the headline seat forecast. Parties listed under 'נבדקו בסקר ולא עוברים אחוז חסימה' recorded with seats 0."
+    }
+  ],
+  "extraction_notes": "Fieldwork 26 Oct 2022 (13:10) - 27 Oct 2022 (16:55); larger sample (1,301). Page 3 contains only opinion questions (polls' influence, Ben Gvir as minister, preferred government, what party should do in a deadlock) - ignored."
+}

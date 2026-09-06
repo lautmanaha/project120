@@ -1,0 +1,47 @@
+{
+  "ref": "survey_channel14_seker27_10",
+  "pollster_as_written": "דיירקט פולס בע\"מ, באמצעות מר שלמה פילבר",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2022-10-27",
+  "fieldwork_end": "2022-10-27",
+  "method": "internet",
+  "initial_sample": 10000,
+  "respondents": 2385,
+  "response_rate_pct": null,
+  "margin_error_pct": 1.8,
+  "population": "מדגם בוגרים (בני 18+) המהווים מדגם מייצג של כלל האוכלוסייה בישראל",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "למי תצביעו בבחירות הקרובות במידה וכל המפלגות הבאות יתמודדו?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 34, "pct": 27.7},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ", "party": "המחנה הממלכתי", "seats": 13, "pct": 8.0},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 4, "pct": 3.4},
+        {"party_as_written": "הציונות הדתית ועוצמה יהודית בראשות בצלאל סמוטריץ' ואיתמר בן גביר", "party": "הציונות הדתית", "seats": 12, "pct": 9.4},
+        {"party_as_written": "חד\"ש תע\"ל בראשות איימן עודה ואחמד טיבי", "party": "חד\"ש-תע\"ל", "seats": 4, "pct": 2.9},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנופף", "party": "יהדות התורה", "seats": 7, "pct": 5.5},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 23, "pct": 17.9},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": 4.5},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 4, "pct": 3.2},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 2.9},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 9, "pct": 6.7},
+        {"party_as_written": "בל\"ד בראשות סאמי אבו שחאדה", "party": "בל\"ד", "seats": 0, "pct": 2.1},
+        {"party_as_written": "הבית היהודי בראשות איילת שקד", "party": "הבית היהודי", "seats": 0, "pct": 1.9},
+        {"party_as_written": "חופש כלכלי בראשות אביר קארה", "party": "אחר", "seats": 0, "pct": 0.6},
+        {"party_as_written": "צעירים בוערים בראשות הדר מוכתר", "party": "אחר", "seats": 0, "pct": 0.5},
+        {"party_as_written": "המפלגה הכלכלית בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 0.5},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.1}
+      ],
+      "undecided_pct": 2.1,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Seats plus 'אחוזי תמיכה גולמיים' (raw support pct) column summing to 100% - pct recorded is that raw column. 'מתלבטים' 2.1% recorded as undecided. Blocs: opposition 62, coalition 58. Government-preference and PM questions not extracted."
+    }
+  ],
+  "extraction_notes": "Pollster: Direct Polls via Shlomo Filber. Page 3 is a sign-off only. All pages clear."
+}

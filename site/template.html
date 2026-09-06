@@ -1,0 +1,609 @@
+<title>פרויקט 120</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Frank+Ruhl+Libre:wght@500;700;900&family=Alef:wght@400;700&family=Assistant:wght@300;400;600;700&display=swap">
+<style>
+:root{
+  /* dark-first: the resting look is a night studio; light theme below swaps the same roles */
+  --bg:#0B0F1A; --bg-2:#0F1524; --surface:#151B2B; --surface-2:#1B2234; --ink:#F1F3F8; --ink-2:#AEB5C6; --ink-3:#6F778C; --line:#242C40; --line-2:#1C2335;
+  --brand:#03A89E; --brand-soft:rgba(3,168,158,.14);
+  --coal:#5B8AD6; --opp:#2FA982; --arab:#E25A5A;
+  --p-ליכוד:#5B8AD6; --p-שס:#7AA3E4; --p-יהדות:#3F6BBF; --p-עוצמה:#9BB8EC; --p-ציונות:#7286CE; --p-עמך:#B5C7F0;
+  --p-ישר:#2FA982; --p-ביחד:#5CC2A0; --p-דמוקרטים:#1E8A67; --p-ביתנו:#8DD9BC; --p-כחול:#BDEBD8;
+  --p-משותפת:#E25A5A; --p-רעם:#F09090; --p-אחר:#6A7184;
+  --shadow:0 20px 60px rgba(0,0,0,.45);
+  --font-display:"Frank Ruhl Libre","David","Times New Roman",serif;
+  --font-body:"Assistant","Arial Hebrew",Arial,sans-serif;
+  --font-brand:"Suez One","Frank Ruhl Libre",serif;
+  --font-h2:"Alef","Arial Hebrew",Arial,sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#F3F4F8; --bg-2:#EAEDF4; --surface:#FFFFFF; --surface-2:#F6F7FB; --ink:#141927; --ink-2:#4A5163; --ink-3:#7C8397; --line:#DCE0EA; --line-2:#EDF0F6;
+    --brand:#03A89E; --brand-soft:rgba(3,168,158,.12);
+    --coal:#2255A4; --opp:#18A07A; --arab:#C8353A;
+    --p-ליכוד:#2255A4; --p-שס:#3D6FBF; --p-יהדות:#1B3F80; --p-עוצמה:#6B8FD1; --p-ציונות:#4A62A8; --p-עמך:#8FA9DC;
+    --p-ישר:#18A07A; --p-ביחד:#3FB894; --p-דמוקרטים:#0E7A5A; --p-ביתנו:#7ACFB0; --p-כחול:#B7E4D2;
+    --p-משותפת:#C8353A; --p-רעם:#E07A7A; --p-אחר:#B9BEC9;
+    --shadow:0 20px 50px rgba(20,25,39,.12);
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#F3F4F8; --bg-2:#EAEDF4; --surface:#FFFFFF; --surface-2:#F6F7FB; --ink:#141927; --ink-2:#4A5163; --ink-3:#7C8397; --line:#DCE0EA; --line-2:#EDF0F6;
+  --brand:#03A89E; --brand-soft:rgba(3,168,158,.12);
+  --coal:#2255A4; --opp:#18A07A; --arab:#C8353A;
+  --p-ליכוד:#2255A4; --p-שס:#3D6FBF; --p-יהדות:#1B3F80; --p-עוצמה:#6B8FD1; --p-ציונות:#4A62A8; --p-עמך:#8FA9DC;
+  --p-ישר:#18A07A; --p-ביחד:#3FB894; --p-דמוקרטים:#0E7A5A; --p-ביתנו:#7ACFB0; --p-כחול:#B7E4D2;
+  --p-משותפת:#C8353A; --p-רעם:#E07A7A; --p-אחר:#B9BEC9;
+  --shadow:0 20px 50px rgba(20,25,39,.12);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{direction:rtl;scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+svg text{font-family:var(--font-body)}
+
+/* ===== nav ===== */
+nav.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand svg{height:38px;width:auto;display:block}
+.brand .wm{font-family:var(--font-brand);font-size:26px;line-height:1;letter-spacing:-.01em;white-space:nowrap}
+.brand .wm span{color:var(--brand)}
+.logo-dots circle{fill:var(--ink)} .logo-dots circle.k{fill:var(--brand)}
+.menu{display:flex;gap:4px;align-items:center}
+.menu a{font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;padding:8px 12px;border-radius:999px;transition:color .15s,background .15s;white-space:nowrap}
+.menu a:hover{color:var(--ink);background:var(--surface-2)}
+.menu a.on{color:var(--ink);background:var(--brand-soft);box-shadow:inset 0 0 0 1px var(--brand)}
+.menu a:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2);white-space:nowrap;background:var(--brand-soft);border:1px solid var(--brand);border-radius:999px;padding:5px 12px}
+.tag b{color:var(--ink);font-weight:700}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--brand);display:inline-block;box-shadow:0 0 0 0 var(--brand);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(3,168,158,.6)}70%{box-shadow:0 0 0 7px rgba(3,168,158,0)}100%{box-shadow:0 0 0 0 rgba(3,168,158,0)}}
+@media(max-width:900px){.menu{display:none}.tag{font-size:11.5px;padding:4px 9px}}
+.mnav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
+.mnav a{flex:1;text-align:center;font-size:12px;font-weight:600;color:var(--ink-3);text-decoration:none;padding:8px 2px;border-radius:8px}
+.mnav a.on{color:var(--brand)}
+@media(max-width:900px){.mnav{display:flex} body{padding-bottom:56px}}
+
+/* ===== sections ===== */
+section{padding:72px 0;position:relative}
+section + section{border-top:1px solid var(--line)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+h1{font-family:var(--font-display);font-weight:700;font-size:clamp(30px,4.6vw,48px);line-height:1.12;margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em}
+h2{font-family:var(--font-h2);font-weight:700;font-size:clamp(26px,3.4vw,36px);margin:0 0 8px;text-wrap:balance;letter-spacing:0}
+.lede{font-size:18px;color:var(--ink-2);max-width:64ch;margin:0 0 28px;font-weight:300}
+.lede b{color:var(--ink);font-weight:600}
+.note{font-size:13.5px;color:var(--ink-3);max-width:72ch;margin:10px 0 0}
+html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+html.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){ html.js .rv{opacity:1;transform:none;transition:none} }
+
+/* ===== hero ===== */
+#s120{padding:56px 0 64px;background:radial-gradient(1200px 600px at 50% -10%,var(--brand-soft),transparent 60%),var(--bg)}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.hemi{position:relative}
+.hemi svg{width:100%;height:auto;display:block;overflow:visible}
+.hemi .seat{transform-box:fill-box;transform-origin:center;cursor:pointer;transition:opacity .2s,transform .2s}
+.hemi .seat.dim{opacity:.18}
+.hemi .seat.hi{transform:scale(1.35)}
+@keyframes pop{from{transform:scale(.2)}to{transform:scale(1)}}
+@media (prefers-reduced-motion: no-preference){ .hemi .seat{animation:pop .5s cubic-bezier(.2,.8,.2,1.3) both;animation-delay:calc(var(--i) * 9ms)} }
+.big120{font-family:var(--font-brand);font-size:clamp(88px,15vw,168px);line-height:.9;letter-spacing:-.03em;margin:0 0 6px;background:linear-gradient(180deg,var(--ink),var(--ink-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-side .sub{font-size:14px;color:var(--ink-3);margin-bottom:22px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;border-inline-start:4px solid var(--c);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.kpi:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.kpi .n{font-family:var(--font-brand);font-size:38px;line-height:1;color:var(--c)}
+.kpi .l{font-size:13px;color:var(--ink-2);margin-top:4px;font-weight:600}
+.kpi .r{font-size:12px;color:var(--ink-3)}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font-size:13px;color:var(--ink-2);margin-top:16px}
+.legend button{font:inherit;background:none;border:0;color:inherit;padding:4px 6px;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.legend button:hover{background:var(--surface-2);color:var(--ink)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;padding:9px 12px;border-radius:8px;line-height:1.45;white-space:nowrap;opacity:0;transition:opacity .12s;z-index:50;box-shadow:var(--shadow);transform:translate(-50%,calc(-100% - 12px))}
+.tip b{font-weight:700}
+.tip .mini{display:flex;align-items:flex-end;gap:1px;height:26px;margin-top:6px;direction:ltr}
+.tip .mini i{display:block;width:5px;background:var(--bg);opacity:.85;border-radius:1px 1px 0 0}
+.tip .mini i.m{background:var(--brand);opacity:1}
+
+/* ===== blocs ===== */
+.blocs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.blocs{grid-template-columns:1fr}}
+.bloc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 22px 16px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.bloc:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.bloc::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--c)}
+.bloc .name{font-weight:700;font-size:18px;display:flex;align-items:center;gap:8px}
+.bloc .name i{width:10px;height:10px;border-radius:50%;background:var(--c);display:inline-block}
+.bloc .members{font-size:12.5px;color:var(--ink-3);min-height:40px;margin:4px 0 12px;line-height:1.5}
+.bloc .num{font-family:var(--font-brand);font-size:64px;line-height:1;letter-spacing:-.02em;color:var(--c)}
+.bloc .num small{font-family:var(--font-body);font-weight:400;font-size:14px;color:var(--ink-2);letter-spacing:0;margin-inline-start:8px}
+.bloc .range{font-size:13.5px;color:var(--ink-2);margin:6px 0 12px}
+.bloc svg{width:100%;height:auto;display:block}
+.bloc rect.b{transition:opacity .15s}
+.bloc rect.b:hover{opacity:1!important;stroke:var(--ink);stroke-width:1}
+.bloc .pm{font-size:13px;color:var(--ink-2);margin-top:10px;display:flex;justify-content:space-between;align-items:baseline}
+.bloc .pm b{font-family:var(--font-brand);font-size:22px;color:var(--ink)}
+.scen{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+@media(max-width:900px){.scen{grid-template-columns:repeat(2,1fr)}}
+.scen div{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--ink-2)}
+.scen div b{display:block;font-family:var(--font-brand);font-size:32px;color:var(--ink);line-height:1.05;margin-bottom:4px}
+
+/* ===== parties ===== */
+.plist{display:flex;flex-direction:column;gap:6px}
+.prow{display:grid;grid-template-columns:190px 64px 1fr 150px 110px;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 16px;cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s}
+.prow:hover{transform:translateX(-3px);box-shadow:var(--shadow);border-color:var(--ink-3)}
+.prow.open{border-color:var(--brand)}
+@media(max-width:900px){.prow{grid-template-columns:1fr 56px;gap:8px}.prow .bar,.prow .pct,.prow .thr{grid-column:1/-1}}
+.prow .pn{font-weight:700;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.prow .pn i{width:12px;height:12px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.prow .pn small{font-weight:400;color:var(--ink-3);font-size:12px}
+.prow .seat{font-family:var(--font-brand);font-size:30px;text-align:center;color:var(--ink)}
+.prow .bar svg{width:100%;height:26px;display:block;direction:ltr}
+.prow .pct{font-size:14px;color:var(--ink-2);white-space:nowrap}
+.prow .pct b{color:var(--ink);font-weight:600}
+.prow .thr{font-size:13px;color:var(--ink-3);white-space:nowrap;text-align:start}
+.prow .thr b{color:var(--ink);font-weight:700}
+.prow .thr .pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700}
+.pill.ok{background:var(--brand-soft);color:var(--brand)}
+.pill.warn{background:rgba(226,90,90,.16);color:var(--arab)}
+.pdetail{display:none;background:var(--surface-2);border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;margin:-8px 8px 4px;padding:14px 16px 10px}
+.pdetail.on{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:900px){.pdetail.on{grid-template-columns:1fr}}
+.pdetail h4{margin:0 0 6px;font-size:13px;color:var(--ink-3);font-weight:600;letter-spacing:.04em}
+.pdetail svg{width:100%;height:auto;display:block}
+.axis-note{font-size:12px;color:var(--ink-3);display:flex;justify-content:space-between;padding:8px 16px 0}
+
+/* ===== trend ===== */
+.controls{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chips .lbl{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--ink-3);margin-inline-end:4px}
+.chips button{font:inherit;font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all .15s}
+.chips button:hover{border-color:var(--ink-3);color:var(--ink)}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chips button i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.chips button[aria-pressed="true"] i{box-shadow:0 0 0 2px var(--bg)}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 12px 8px;direction:ltr;position:relative}
+.chart svg{width:100%;height:auto;display:block}
+.chart .hover-rect{fill:transparent;cursor:crosshair}
+.srcbox{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:14px;font-size:14px;color:var(--ink-2);display:none;overflow-x:auto}
+.srcbox.on{display:block}
+.srcbox b{color:var(--ink)}
+.srcbox table{border-collapse:collapse;margin-top:10px;font-size:13.5px;white-space:nowrap}
+.srcbox th{font-weight:600;color:var(--ink-3);font-size:12px;padding:4px 12px;text-align:center;border-bottom:1px solid var(--line)}
+.srcbox th:first-child{text-align:start}
+.srcbox td{padding:5px 12px;text-align:center;border-bottom:1px solid var(--line-2)}
+.srcbox td:first-child{text-align:start;font-weight:600;color:var(--ink)}
+
+/* ===== house ===== */
+.heat{display:grid;gap:3px;font-size:13px}
+.heat .h{color:var(--ink-3);font-size:12px;font-weight:600;text-align:center;padding:4px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat .r{color:var(--ink);font-weight:700;padding:0 8px;display:flex;align-items:center;white-space:nowrap}
+.heat .r small{color:var(--ink-3);font-weight:400;margin-inline-start:6px}
+.heat .c{border-radius:6px;text-align:center;padding:9px 2px;cursor:default;transition:transform .12s;direction:ltr}
+.heat .c:hover{transform:scale(1.12);outline:1px solid var(--ink);position:relative;z-index:2}
+.heat-wrap{overflow-x:auto}
+
+/* ===== method ===== */
+.method{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:900px){.method{grid-template-columns:1fr}}
+.mcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.mcard h3{margin:0 0 8px;font-size:17px;font-weight:700;display:flex;align-items:center;gap:10px}
+.mcard h3 span{width:28px;height:28px;border-radius:8px;background:var(--brand-soft);color:var(--brand);display:inline-grid;place-items:center;font-family:var(--font-brand);font-size:15px}
+.mcard p{margin:0;font-size:15px;color:var(--ink-2);line-height:1.6}
+
+.calib{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.calib h3{margin:0 0 6px;font-size:17px;font-weight:700}
+.calib p{margin:0 0 12px;font-size:14.5px;color:var(--ink-2);line-height:1.6;max-width:80ch}
+.calib .tw{overflow-x:auto}
+.calib table{border-collapse:collapse;font-size:13.5px;white-space:nowrap}
+.calib th{font-weight:600;color:var(--ink-3);font-size:12px;padding:5px 10px;text-align:center;border-bottom:1px solid var(--line)}
+.calib th:first-child{text-align:start}
+.calib td{padding:5px 10px;text-align:center;border-bottom:1px solid var(--line-2);direction:ltr}
+.calib td:first-child{text-align:start;font-weight:600;color:var(--ink);direction:rtl}
+.calib tr.sum td{font-weight:700;border-top:2px solid var(--line)}
+.calib .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+@media(max-width:900px){.calib .steps{grid-template-columns:1fr}}
+.calib .steps div{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13.5px;color:var(--ink-2)}
+.calib .steps b{display:block;color:var(--ink);margin-bottom:4px}
+footer{padding:36px 0 56px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-3)}
+footer .credit{font-size:15px;color:var(--ink-2);margin-bottom:8px}
+footer .credit b{color:var(--ink)}
+footer .la{display:flex;justify-content:center;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+footer .la .lg{display:inline-flex;align-items:center;gap:14px;text-decoration:none;color:inherit;padding:10px 16px;border-radius:14px;transition:background .2s,transform .2s}
+footer .la .lg:hover{background:var(--surface);transform:translateY(-2px)}
+footer .la img{height:52px;width:52px;display:block}
+footer .la .t{display:flex;flex-direction:column;line-height:1.15;text-align:start}
+footer .la .t b{font-family:var(--font-h2);font-size:20px;font-weight:700;color:var(--ink)}
+footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);font-weight:700;margin-top:3px}
+.health{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2)}
+.health i{width:8px;height:8px;border-radius:50%;background:var(--brand);display:inline-block}
+.health.bad i{background:var(--arab)}
+</style>
+
+<nav class="top"><div class="wrap">
+  <a class="brand" href="#s120">__LOGO_SMALL__<div class="wm">פרויקט <span>120</span></div></a>
+  <div class="menu" id="menu">
+    <a href="#s120">120</a><a href="#sblocs">הגושים</a><a href="#sparties">המפלגות</a><a href="#strend">המגמה</a><a href="#shouse">המכונים</a><a href="#smethod">השיטה</a>
+  </div>
+  <div class="tag" id="lasttag"></div>
+</div></nav>
+<div class="mnav" id="mnav"><a href="#s120">120</a><a href="#sblocs">גושים</a><a href="#sparties">מפלגות</a><a href="#strend">מגמה</a><a href="#shouse">מכונים</a><a href="#smethod">שיטה</a></div>
+<div class="tip" id="tip"></div>
+
+<section id="s120"><div class="wrap">
+  <div class="hero">
+    <div class="hero-side">
+      <div class="eyebrow">תחזית ליום הבחירות · 27.10.2026 · <span id="dleft"></span> ימים</div>
+      <div class="big120">120</div>
+      <div class="kpis" id="kpis"></div>
+      <p class="note" style="margin-top:12px">לחיצה על גוש מציגה את המפלגות שלו בלבד. מעבר עכבר - הדגשה במפה.</p>
+    </div>
+    <div>
+      <div class="hemi" id="hemi"></div>
+      <div class="legend" id="legend120"></div>
+      <p class="lede" id="lede" style="margin:14px 0 6px;font-size:16.5px"></p>
+      <p class="note">כל נקודה - מושב. החלוקה המרכזית: ממוצע חלקי הקולות החזויים, מומר לפי בדר-עופר עם אחוז חסימה 3.25%. הטווחים המלאים בהמשך.</p>
+      <p class="note" id="anchornote"></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="sblocs"><div class="wrap">
+  <div class="eyebrow">שלושה גושים</div>
+  <h2>הגושים - טווח המנדטים של כל גוש</h2>
+  <p class="lede">לכל גוש - התפלגות המנדטים על פני <b id="nsims"></b> סימולציות של יום הבחירות. הקו המקווקו הוא 61, גבול הרוב: קו אחד על ההתפלגות, לא המטרה שלה. עברו עם העכבר על העמודות.</p>
+  <div class="blocs" id="blocs"></div>
+  <div class="scen" id="scen"></div>
+  <p class="note">הרכב הגושים הוא הגדרה פוליטית ולא סטטיסטית - לפי הצהרות המפלגות היום.</p>
+</div></section>
+
+<section id="sparties"><div class="wrap">
+  <div class="eyebrow">13 רשימות</div>
+  <h2>המפלגות</h2>
+  <p class="lede">המנדטים בתסריט המרכזי (סכום המפלגות תמיד 120), הטווח שבו נופלות 90% מהסימולציות, חלק הקולות והסיכוי לעבור את אחוז החסימה. <b>לחצו על מפלגה</b> להתפלגות המלאה ולמסלול שלה בזמן.</p>
+  <div class="chips" id="blocfilter" style="margin-bottom:12px"></div>
+  <div class="plist" id="parties"></div>
+  <div class="axis-note"><span>סרגל הטווח: 0 עד 30 מנדטים · הקו העבה הוא התסריט המרכזי</span><span>טווח 90%</span></div>
+</div></section>
+
+<section id="strend"><div class="wrap">
+  <div class="eyebrow">מאז יולי</div>
+  <h2>המגמה</h2>
+  <p class="lede">הקו הוא אומדן המודל לתמיכה האמיתית בכל שבוע, אחרי ניכוי ההטיה של כל מכון; הרצועה - טווח 90%. הנקודות הן הסקרים. <b>הזיזו את העכבר על הגרף</b> לערכים בכל תאריך, או בחרו מקור כדי להשוות מכון אחד למודל.</p>
+  <div class="controls">
+    <div class="chips" id="sources"></div>
+    <div class="chips" id="toggles"></div>
+  </div>
+  <div class="chart" id="trend"></div>
+  <div class="srcbox" id="srcbox"></div>
+</div></section>
+
+<section id="shouse"><div class="wrap">
+  <div class="eyebrow">אפקט הבית</div>
+  <h2>המכונים</h2>
+  <p class="lede">כמה כל מכון מודד כל מפלגה מעל או מתחת לממוצע הענף, בנקודות אחוז, אחרי התחשבות במועד הסקר. השוואה בין מכונים בלבד - טעות שכולם חולקים לא תיראה כאן.</p>
+  <div class="heat-wrap"><div class="heat" id="house"></div></div>
+  <p class="note">כחול: המכון מודד את המפלגה גבוה מהממוצע; כתום: נמוך ממנו. עוצמת הצבע - גודל הפער.</p>
+</div></section>
+
+<section id="smethod"><div class="wrap">
+  <div class="eyebrow">שקיפות מלאה</div>
+  <h2>איך זה עובד</h2>
+  <div class="method">
+    <div class="mcard"><h3><span>1</span>הנתונים</h3><p>כל סקר בחירות שפורסם לציבור חייב, לפי סעיף 16ה לחוק דרכי תעמולה, להיות מועבר לוועדת הבחירות המרכזית ומתפרסם באתרה. פרויקט 120 קורא את כל הסקרים משם - כפי שהוגשו, כולל גודל המדגם, מועד השדה ושיטת הביצוע - ולא מאתרי החדשות. סקרי תת-אוכלוסייה, סקרים ללא שאלת הצבעה והגשות כפולות אינם נכללים.</p></div>
+    <div class="mcard"><h3><span>2</span>המודל</h3><p>מודל בייסיאני היררכי: התמיכה בכל מפלגה היא סדרה בזמן שזזה בקצב שנלמד מהנתונים, לכל מפלגה בנפרד. לכל מכון נלמד אפקט בית - הנטייה השיטתית שלו ביחס לשאר - והיא מנוכה. כל סקר משוקלל לפי גודל המדגם, ורעש נוסף נלמד לכל מכון. התוצאה אינה מספר אחד אלא אלפי תסריטים אפשריים ליום הבחירות.</p></div>
+    <div class="mcard"><h3><span>3</span>מה שאי אפשר למדוד - הכיול</h3><p>טעות שכל המכונים חולקים אינה ניתנת לזיהוי מתוך הסקרים - הם מסכימים זה עם זה, והסכמה נראית כמו דיוק. לכן המודל מקבל "הטיה ענפית" מוצהרת, משני מקורות שמפורטים בטבלה למטה: <b>כיול 2022</b> - הפער השיטתי בין הסקרים האחרונים לפני בחירות 2022 לתוצאה, לפי מפלגה; ו<b>נקודת האמצע</b> - במפלגות שבהן המכונים חלוקים היום לשתי אסכולות ואין תקדים היסטורי להכריע ביניהן. מעבר להטיה עצמה, המודל מוסיף אי-ודאות ענפית של עד 1.5 נקודות למפלגה.</p></div>
+    <div class="mcard"><h3><span>4</span>מקולות למנדטים</h3><p>כל תסריט של חלקי קולות מומר ל-120 מנדטים לפי שיטת בדר-עופר: אחוז חסימה 3.25%, מודד, חלוקת עודפים לפי הממוצע הגדול ביותר, והסכמי עודפים בין רשימות. השיטה אומתה מול תוצאות הבחירות לכנסת ה-25 ומשחזרת אותן במדויק. המודל אינו יודע דבר על השתתפות, על אירועים שטרם קרו או על מי יקים ממשלה.</p></div>
+  </div>
+  <div class="calib" id="calib"></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="credit"><b>פרויקט 120</b> - התאמה לישראל, מסד הנתונים והבנייה: <b>ד"ר אהרון לאוטמן</b></div>
+  <div>מנוע החיזוי מבוסס על <a href="https://github.com/vtisza/kronikas" target="_blank" rel="noopener">kronikas</a> (Viktor Tisza, Apache 2.0), המנוע שמאחורי תחזיות הבחירות בהונגריה ב-<a href="https://www.szazkilencvenkilenc.hu/" target="_blank" rel="noopener">szazkilencvenkilenc.hu</a>, בתוספת תנודתיות נפרדת לכל מפלגה ושכבת בדר-עופר. מקור הסקרים: <a href="https://www.gov.il/he/Departments/DynamicCollectors/knesset_election_polls_26" target="_blank" rel="noopener">ועדת הבחירות המרכזית לכנסת</a>.</div>
+  <div style="margin-top:12px" id="health"></div>
+  <div class="la"><a class="lg" href="https://lautman.org" target="_blank" rel="noopener" aria-label="ד\"ר אהרון לאוטמן - דיגיטל, דאטה, אסטרטגיה">
+    <img src="data:image/png;base64,__LA_MARK_B64__" alt="">
+    <span class="t"><b>ד"ר אהרון לאוטמן</b><small>דיגיטל · דאטה · אסטרטגיה</small></span>
+  </a></div>
+</div></footer>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const PC = {"הליכוד":"--p-ליכוד","ש\"ס":"--p-שס","יהדות התורה":"--p-יהדות","עוצמה יהודית":"--p-עוצמה","הציונות הדתית":"--p-ציונות","עמך ישראל":"--p-עמך",
+  "ישר":"--p-ישר","ביחד":"--p-ביחד","הדמוקרטים":"--p-דמוקרטים","ישראל ביתנו":"--p-ביתנו","כחול לבן":"--p-כחול","הרשימה המשותפת":"--p-משותפת","רע\"ם":"--p-רעם","אחר":"--p-אחר"};
+const col = p => `var(${PC[p]||'--p-אחר'})`;
+const BLOC_COLOR = {"גוש הימין":"var(--coal)","גוש השמאל":"var(--opp)","המפלגות הערביות":"var(--arab)"};
+const blocOf = p => Object.keys(D.bloc_def).find(b => D.bloc_def[b].includes(p)) || null;
+const fmtDate = s => { const [y,m,d] = s.split('-'); return `${+d}.${+m}.${y}`; };
+const pctStr = x => Math.round(x*100) + '%';
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+const blocMap = Object.fromEntries(D.blocs.map(b => [b.bloc, b]));
+const coal = blocMap["גוש הימין"], opp = blocMap["גוש השמאל"], arab = blocMap["המפלגות הערביות"];
+const sc = D.scenarios;
+const seatsBy = Object.fromEntries(D.seats.map(s=>[s.party,s]));
+// תסריט מרכזי אחד לכל האתר: חלוקת 120 המנדטים מממוצע חלקי הקולות (בדר-עופר). סכום המפלגות = 120, סכום הגושים = 120, תמיד.
+const CS = D.central_seats;
+const blocCentral = Object.fromEntries(Object.entries(D.bloc_def).map(([b,ms]) => [b, ms.reduce((t,p)=>t+(CS[p]||0),0)]));
+if (Object.values(blocCentral).reduce((a,b)=>a+b,0) !== 120) console.error('bloc sum != 120', blocCentral);
+const estBy = Object.fromEntries(D.party_estimates.map(e=>[e.name,e]));
+
+// ---- tooltip
+const tip = document.getElementById('tip');
+function showTip(html, x, y){ tip.innerHTML = html; tip.style.left = x+'px'; tip.style.top = y+'px'; tip.style.opacity = 1; }
+function hideTip(){ tip.style.opacity = 0; }
+function miniHist(dist, median, lo, hi){
+  const ks = Object.keys(dist).map(Number); const a = Math.min(...ks), b = Math.max(...ks); const mx = Math.max(...Object.values(dist));
+  let s = ''; for (let k=a;k<=b;k++){ const v = dist[k]||0; s += `<i style="height:${Math.max(2, v/mx*26)}px" class="${k===median?'m':''}"></i>`; }
+  return `<div class="mini">${s}</div><div style="opacity:.75;font-size:11.5px">${a}-${b} מנדטים · 90%: ${lo}-${hi}</div>`;
+}
+
+// ---- header
+document.getElementById('lasttag').innerHTML = `<i></i>סקר אחרון במערכת <b>${fmtDate(D.last_poll)}</b> · ${D.n_polls_model} סקרים`;
+document.getElementById('dleft').textContent = D.days_to_election;
+document.getElementById('nsims').textContent = D.n_sims.toLocaleString('he-IL');
+(function(){ const gap = blocCentral[coal.bloc] - blocCentral[opp.bloc]; const noMaj = Math.max(0, 1 - sc.p_coalition_majority - sc.p_opposition_majority);
+  let tail;
+  if (Math.abs(gap) <= 3) tail = `בין שני הגושים הגדולים מפרידים מנדטים בודדים - וההתפלגויות שלהם חופפות כמעט לחלוטין.`;
+  else { const lead = gap>0?'גוש הימין':'גוש השמאל'; const pm = gap>0?sc.p_coalition_majority:sc.p_opposition_majority;
+    tail = `${lead} מוביל ב-${Math.abs(gap)} מנדטים ${pm>=0.5 ? '- וברוב התסריטים חוצה את 61, אבל לא בכולם' : '- אבל ברוב התסריטים עדיין נעצר לפני 61'}.`; }
+  document.getElementById('lede').innerHTML = `הסיכוי שלגוש הימין יהיה רוב הוא <b>${pctStr(sc.p_coalition_majority)}</b>; לגוש השמאל לבדו <b>${pctStr(sc.p_opposition_majority)}</b>. ב-<b>${pctStr(noMaj)}</b> מהתסריטים אף גוש אינו מגיע ל-61 בלי המפלגות הערביות. ${tail}`; })();
+document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div class="kpi" style="--c:${BLOC_COLOR[b.bloc]}" data-bloc="${esc(b.bloc)}"><div class="n">${blocCentral[b.bloc]}</div><div class="l">${b.bloc}</div><div class="r">טווח ${b.seats_p05}-${b.seats_p95}</div></div>`).join('');
+
+// ---- hemicycle: 120 seats on 4 arcs, filled right-to-left by bloc order
+(function(){
+  const order = [...D.bloc_def["גוש הימין"], ...D.bloc_def["המפלגות הערביות"], ...D.bloc_def["גוש השמאל"]];
+  const cs = D.central_seats;
+  const seats = []; for (const p of order) for (let i=0;i<(cs[p]||0);i++) seats.push(p);
+  const rows = [22, 28, 34, 36]; // 120
+  const radii = [108, 142, 176, 210]; const cx = 250, cy = 250;
+  // positions sorted by angle (right = angle 0) so that seats fill by bloc from the right
+  const pos = [];
+  rows.forEach((n, ri) => { for (let i=0;i<n;i++){ const a = Math.PI * i/(n-1); pos.push({x: cx + radii[ri]*Math.cos(a), y: cy - radii[ri]*Math.sin(a), a, r: 8.5 + ri*0.3}); } });
+  pos.sort((u,v)=>u.a-v.a);
+  let svg = '';
+  pos.forEach((q,i) => { const p = seats[i]; const b = blocOf(p);
+    svg += `<circle class="seat" style="--i:${i}" data-p="${esc(p)}" data-b="${esc(b||'')}" cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="${q.r}" fill="${col(p)}"/>`; });
+  // majority line at 61st seat angle
+  const a61 = pos[60].a; const x1 = cx + 90*Math.cos(a61), y1 = cy - 90*Math.sin(a61), x2 = cx + 232*Math.cos(a61), y2 = cy - 232*Math.sin(a61);
+  svg += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="var(--brand)" stroke-width="2" stroke-dasharray="4 4"/>`;
+  svg += `<text x="${(cx + 244*Math.cos(a61)).toFixed(1)}" y="${(cy - 244*Math.sin(a61)).toFixed(1)}" text-anchor="middle" font-size="13" font-weight="700" fill="var(--brand)">61</text>`;
+  svg += `<text x="${cx}" y="${cy-8}" text-anchor="middle" font-size="46" font-family="Suez One, serif" fill="var(--ink)">120</text><text x="${cx}" y="${cy+14}" text-anchor="middle" font-size="12" fill="var(--ink-3)">מושבים</text>`;
+  const el = document.getElementById('hemi');
+  el.innerHTML = `<svg viewBox="0 0 500 262" direction="ltr" role="img" aria-label="חלוקת 120 המושבים לפי מפלגה וגוש">${svg}</svg>`;
+  const all = [...el.querySelectorAll('.seat')];
+  function focus(fn){ all.forEach(c => { const on = fn(c); c.classList.toggle('dim', !on); c.classList.toggle('hi', on && fn !== null && all.filter(fn).length < 120); }); }
+  function clear(){ all.forEach(c => c.classList.remove('dim','hi')); hideTip(); }
+  all.forEach(c => {
+    c.addEventListener('mouseenter', e => { const p = c.dataset.p; const s = seatsBy[p]; focus(x => x.dataset.p === p);
+      showTip(`<b>${esc(p)}</b> · ${cs[p]} מושבים בחלוקה המרכזית<br>${esc(blocOf(p)||'')} · ${estBy[p].mean.toFixed(1)}% מהקולות` + (s ? miniHist(s.seat_dist, s.seats_median, s.seats_p05, s.seats_p95) : ''), e.clientX, e.clientY); });
+    c.addEventListener('mousemove', e => { tip.style.left = e.clientX+'px'; tip.style.top = e.clientY+'px'; });
+    c.addEventListener('mouseleave', clear);
+  });
+  // legend + bloc kpis drive the same highlight
+  const seg = order.filter(p => cs[p]);
+  document.getElementById('legend120').innerHTML = seg.map(p => `<button type="button" data-p="${esc(p)}"><i style="background:${col(p)}"></i>${esc(p)} <b>${cs[p]}</b></button>`).join('');
+  document.querySelectorAll('#legend120 button').forEach(b => { b.addEventListener('mouseenter', () => focus(x => x.dataset.p === b.dataset.p)); b.addEventListener('mouseleave', clear); });
+  document.querySelectorAll('.kpi').forEach(k => { k.addEventListener('mouseenter', () => focus(x => x.dataset.b === k.dataset.bloc)); k.addEventListener('mouseleave', clear); k.addEventListener('click', () => { if (window.filterBloc) filterBloc(k.dataset.bloc); document.getElementById('sparties').scrollIntoView({behavior:'smooth'}); }); });
+})();
+
+// ---- blocs
+(function(){
+  const el = document.getElementById('blocs');
+  el.innerHTML = D.blocs.map(b => {
+    const dist = b.seat_dist; const isArab = b.bloc === "המפלגות הערביות";
+    const x0 = isArab ? 0 : 40, x1 = isArab ? 20 : 72;
+    const W=320, H=120, pad=6, bw=(W-2*pad)/(x1-x0+1);
+    const maxp = Math.max(...Object.values(dist));
+    let svg = '';
+    for (let k=x0;k<=x1;k++){ const p = dist[k]||0; const h = p/maxp*(H-32);
+      const inR = k>=b.seats_p05 && k<=b.seats_p95;
+      svg += `<rect class="b" data-k="${k}" data-p="${(p*100).toFixed(1)}" x="${(pad+(k-x0)*bw+0.5).toFixed(1)}" y="${(H-24-h).toFixed(1)}" width="${(bw-1).toFixed(1)}" height="${Math.max(h,1).toFixed(1)}" rx="2" fill="${BLOC_COLOR[b.bloc]}" opacity="${inR?1:0.3}"/>`; }
+    for (const k of (isArab?[5,10,15,20]:[40,50,60,70])) svg += `<text x="${(pad+(k-x0+0.5)*bw).toFixed(1)}" y="${H-7}" font-size="11" text-anchor="middle" fill="var(--ink-3)">${k}</text>`;
+    if (!isArab){ const x61 = pad+(61-x0+0.5)*bw; svg += `<line x1="${x61}" x2="${x61}" y1="2" y2="${H-22}" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="3 3"/><text x="${x61}" y="${H-26}" font-size="11" text-anchor="middle" fill="var(--ink-2)" font-weight="700">61</text>`; }
+    const med = pad+(blocCentral[b.bloc]-x0+0.5)*bw;
+    svg += `<path d="M${med-5} ${H-22} l5 6 l5 -6z" fill="var(--ink)"/>`;
+    return `<div class="bloc" style="--c:${BLOC_COLOR[b.bloc]}" data-bloc="${esc(b.bloc)}">
+      <div class="name"><i></i>${b.bloc}</div>
+      <div class="members">${b.members.join(' · ')}</div>
+      <div class="num">${blocCentral[b.bloc]}<small>בתסריט המרכזי</small></div>
+      <div class="range">90% מהתסריטים: ${b.seats_p05}-${b.seats_p95} מנדטים · חציון ${b.seats_median}</div>
+      <svg viewBox="0 0 ${W} ${H}" direction="ltr" role="img" aria-label="התפלגות מנדטים ${b.bloc}">${svg}</svg>
+      ${isArab ? `<div class="pm"><span>ממוצע</span><b>${b.seats_mean}</b></div>` : `<div class="pm"><span>סיכוי ל-61 ומעלה</span><b>${pctStr(b.p_majority)}</b></div>`}
+    </div>`;
+  }).join('');
+  el.querySelectorAll('.bloc').forEach(c => { c.style.cursor='pointer'; c.addEventListener('click', e => { if (e.target.closest('rect')) return; if (window.filterBloc) filterBloc(c.dataset.bloc); document.getElementById('sparties').scrollIntoView({behavior:'smooth'}); }); });
+  el.querySelectorAll('rect.b').forEach(r => {
+    r.addEventListener('mouseenter', e => showTip(`<b>${r.dataset.k} מנדטים</b><br>${r.dataset.p}% מהסימולציות`, e.clientX, e.clientY));
+    r.addEventListener('mousemove', e => { tip.style.left = e.clientX+'px'; tip.style.top = e.clientY+'px'; });
+    r.addEventListener('mouseleave', hideTip);
+  });
+  document.getElementById('scen').innerHTML = [
+    [sc.p_coalition_majority, 'רוב לגוש הימין'], [sc.p_opposition_majority, 'רוב לגוש השמאל לבדו'],
+    [sc.p_opposition_with_arab_majority, 'רוב לגוש השמאל עם המפלגות הערביות'], [sc.p_deadlock, 'מבוי סתום - לאף צירוף אין 61'],
+  ].map(([p,t]) => `<div><b data-count="${Math.round(p*100)}">0%</b>${t}</div>`).join('');
+})();
+
+// ---- count-up for scenario numbers (from a visible 0 to the value, once in view)
+(function(){
+  const els = [...document.querySelectorAll('[data-count]')]; els.forEach(e => e.textContent = e.dataset.count + '%');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(en => en.forEach(x => { if(!x.isIntersecting) return; const e = x.target, v = +e.dataset.count, t0 = performance.now();
+    (function step(t){ const k = Math.min(1,(t-t0)/700); e.textContent = Math.round(v*(1-Math.pow(1-k,3))) + '%'; if(k<1) requestAnimationFrame(step); })(t0); io.unobserve(e); }), {threshold:.6});
+  els.forEach(e => io.observe(e));
+})();
+
+// ---- parties
+(function(){
+  const rows = D.seats.filter(s=>s.party!=='אחר');
+  const maxS = 30; const x = v => (v/maxS*100).toFixed(1);
+  const list = document.getElementById('parties');
+  list.innerHTML = rows.map(s => { const e = estBy[s.party];
+    const bar = `<svg viewBox="0 0 100 26" preserveAspectRatio="none"><line x1="0" x2="100" y1="13" y2="13" stroke="var(--line)" stroke-width="1"/>
+      <rect x="${x(s.seats_p05)}" y="7" width="${Math.max(0.8,(s.seats_p95-s.seats_p05)/maxS*100).toFixed(1)}" height="12" rx="3" fill="${col(s.party)}" opacity=".45"/>
+      <rect x="${((CS[s.party] ?? s.seats_median)/maxS*100-1).toFixed(1)}" y="3" width="2" height="20" rx="1" fill="${col(s.party)}"/></svg>`;
+    const thr = s.p_threshold>=0.995 ? `<span class="pill ok">בטוח מעל הסף</span>` : `<span class="pill ${s.p_threshold<0.8?'warn':'ok'}">${pctStr(s.p_threshold)} מעל הסף</span>`;
+    return `<div class="prow" style="--c:${col(s.party)}" data-p="${esc(s.party)}" role="button" tabindex="0" aria-expanded="false">
+      <div class="pn"><i></i><span>${esc(s.party)}<br><small>${esc(blocOf(s.party)||'')}</small></span></div>
+      <div class="seat" title="חציון הסימולציות: ${s.seats_median}">${CS[s.party] ?? s.seats_median}</div>
+      <div class="bar">${bar}</div>
+      <div class="pct"><b>${e.mean.toFixed(1)}%</b> <span style="color:var(--ink-3)">(${e.ci_lower.toFixed(1)}-${e.ci_upper.toFixed(1)})</span></div>
+      <div class="thr">${thr}</div></div><div class="pdetail" data-for="${esc(s.party)}"></div>`; }).join('');
+  const dates = D.trend.dates;
+  function detail(p){
+    const s = seatsBy[p], dist = s.seat_dist, ks = Object.keys(dist).map(Number), a = Math.max(0,Math.min(...ks)-1), b = Math.max(...ks)+1, mx = Math.max(...Object.values(dist));
+    const W=420,H=120,pad=4,bw=(W-2*pad)/(b-a+1); let h='';
+    for (let k=a;k<=b;k++){ const v=dist[k]||0; const hh=v/mx*(H-30); h+=`<rect x="${(pad+(k-a)*bw+1).toFixed(1)}" y="${(H-22-hh).toFixed(1)}" width="${(bw-2).toFixed(1)}" height="${Math.max(hh,1).toFixed(1)}" rx="2" fill="${col(p)}" opacity="${k===(CS[p] ?? s.seats_median)?1:.55}"><title>${k}: ${(v*100).toFixed(1)}%</title></rect><text x="${(pad+(k-a+0.5)*bw).toFixed(1)}" y="${H-6}" font-size="11" text-anchor="middle" fill="var(--ink-3)">${k}</text>`; }
+    const tr = D.trend.series[p]; const W2=420,H2=120,L=30,R=8,T=10,B=22; const ymax = Math.max(...tr.hi)*1.15;
+    const xs=i=>L+i/(dates.length-1)*(W2-L-R), ys=v=>T+(1-v/ymax)*(H2-T-B);
+    const up=tr.hi.map((v,i)=>`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`), dn=tr.lo.map((v,i)=>`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`).reverse();
+    let t=`<polygon points="${up.join(' ')} ${dn.join(' ')}" fill="${col(p)}" opacity=".18"/><polyline points="${tr.mean.map((v,i)=>`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`).join(' ')}" fill="none" stroke="${col(p)}" stroke-width="2.2"/>`;
+    for (const q of D.polls) t+=`<circle cx="${xs((new Date(q.date)-new Date(dates[0]))/(new Date(dates[dates.length-1])-new Date(dates[0]))*(dates.length-1)).toFixed(1)}" cy="${ys(q[p]).toFixed(1)}" r="2.5" fill="${col(p)}" opacity=".5"/>`;
+    for (const v of [0, Math.round(ymax/2)]) t+=`<text x="${L-4}" y="${ys(v)+4}" font-size="10" text-anchor="end" fill="var(--ink-3)">${v}%</text>`;
+    t+=`<text x="${xs(0)}" y="${H2-6}" font-size="10" fill="var(--ink-3)">${fmtDate(dates[0]).slice(0,-5)}</text><text x="${xs(dates.length-1)}" y="${H2-6}" font-size="10" text-anchor="end" fill="var(--ink-3)">בחירות</text>`;
+    return `<div><h4>התפלגות המנדטים · ${D.n_sims.toLocaleString('he-IL')} סימולציות</h4><svg viewBox="0 0 ${W} ${H}" direction="ltr">${h}</svg></div>
+            <div><h4>המסלול בזמן · % קולות, סקרים ומודל</h4><svg viewBox="0 0 ${W2} ${H2}" direction="ltr">${t}</svg></div>`;
+  }
+  // סינון לפי גוש
+  const bf = document.getElementById('blocfilter');
+  const blocs = Object.keys(D.bloc_def);
+  bf.innerHTML = `<span class="lbl">גוש</span><button type="button" data-b="" aria-pressed="true">כל המפלגות</button>` + blocs.map(b=>`<button type="button" data-b="${esc(b)}" aria-pressed="false"><i style="background:${BLOC_COLOR[b]}"></i>${esc(b)}</button>`).join('');
+  window.filterBloc = function(b){
+    bf.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', (x.dataset.b||'')===(b||'')));
+    list.querySelectorAll('.prow').forEach(r => { const show = !b || blocOf(r.dataset.p)===b; r.style.display = show?'':'none'; const d = r.nextElementSibling; if(!show && d){ d.classList.remove('on'); r.classList.remove('open'); } });
+  };
+  bf.addEventListener('click', e => { const x = e.target.closest('button'); if(!x) return; filterBloc(x.dataset.b||null); });
+  list.querySelectorAll('.prow').forEach(r => { const open = () => { const d = r.nextElementSibling; const on = !d.classList.contains('on');
+      list.querySelectorAll('.pdetail.on').forEach(x=>x.classList.remove('on')); list.querySelectorAll('.prow.open').forEach(x=>{x.classList.remove('open');x.setAttribute('aria-expanded','false');});
+      if (on){ if(!d.innerHTML) d.innerHTML = detail(r.dataset.p); d.classList.add('on'); r.classList.add('open'); r.setAttribute('aria-expanded','true'); } };
+    r.addEventListener('click', open); r.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(); } }); });
+})();
+
+// ---- trend
+(function(){
+  const parties = D.parties.filter(p => p!=='אחר' && p!=='כחול לבן');
+  const on = new Set(["ישר","הליכוד","ביחד","הדמוקרטים","ישראל ביתנו","עמך ישראל"]);
+  let src = null;
+  const pollsters = Object.keys(D.pollster_counts).sort((a,b)=>D.pollster_counts[b]-D.pollster_counts[a]);
+  const sg = document.getElementById('sources'), tg = document.getElementById('toggles'), box = document.getElementById('srcbox');
+  sg.innerHTML = `<span class="lbl">מקור</span><button type="button" data-s="" aria-pressed="true">כל המכונים</button>` + pollsters.map(p=>`<button type="button" data-s="${esc(p)}" aria-pressed="false">${esc(p)} <span style="opacity:.6">${D.pollster_counts[p]}</span></button>`).join('');
+  tg.innerHTML = `<span class="lbl">מפלגות</span>` + parties.map(p => `<button type="button" data-p="${esc(p)}" aria-pressed="${on.has(p)}"><i style="background:${col(p)}"></i>${esc(p)}</button>`).join('');
+  sg.addEventListener('click', e => { const b = e.target.closest('button'); if(!b) return; src = b.dataset.s || null; sg.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', (x.dataset.s||null)===src)); draw(); srcBox(); });
+  tg.addEventListener('click', e => { const b = e.target.closest('button'); if(!b) return; const p=b.dataset.p; on.has(p)?on.delete(p):on.add(p); b.setAttribute('aria-pressed', on.has(p)); draw(); srcBox(); });
+  const medians = Object.fromEntries(D.seats.map(x=>[x.party, CS[x.party] ?? x.seats_median]));
+  function srcBox(){
+    if(!src){ box.className='srcbox'; return; }
+    const mine = D.polls.filter(q=>q.pollster===src).sort((a,b)=>a.date<b.date?1:-1); const last = mine[0]; const cols = parties.filter(p=>on.has(p)); const he = D.house[src]||{};
+    box.className='srcbox on';
+    box.innerHTML = `<b>${esc(src)}</b> · ${mine.length} סקרים במודל · האחרון ${fmtDate(last.date)} (n=${last.n}, אסמכתא ${last.ref})
+      <table><thead><tr><th></th>${cols.map(p=>`<th>${esc(p)}</th>`).join('')}</tr></thead><tbody>
+      <tr><td>הסקר האחרון, % קולות</td>${cols.map(p=>`<td>${last[p].toFixed(1)}</td>`).join('')}</tr>
+      <tr><td>אפקט המכון, נק' אחוז</td>${cols.map(p=>`<td style="direction:ltr">${(he[p]||0)>0?'+':''}${(he[p]||0).toFixed(1)}</td>`).join('')}</tr>
+      <tr><td>המודל, מנדטים</td>${cols.map(p=>`<td>${medians[p]??''}</td>`).join('')}</tr></tbody></table>`;
+  }
+  const dates = D.trend.dates.map(s=>new Date(s)); const t0 = dates[0].getTime(), t1 = dates[dates.length-1].getTime(); const today = new Date(D.generated).getTime();
+  const W=1040, H=440, L=40, R=20, T=18, B=36, yMax=26;
+  const xs = t => L + (t-t0)/(t1-t0)*(W-L-R), ys = v => T + (1 - v/yMax)*(H-T-B);
+  const chart = document.getElementById('trend');
+  function draw(){
+    let g = '';
+    for (let v=0; v<=yMax; v+=5) g += `<line x1="${L}" x2="${W-R}" y1="${ys(v)}" y2="${ys(v)}" stroke="var(--line-2)"/><text x="${L-8}" y="${ys(v)+4}" font-size="11" text-anchor="end" fill="var(--ink-3)">${v}%</text>`;
+    for (let i=0;i<dates.length;i+=2){ const d=dates[i]; g += `<text x="${xs(d.getTime())}" y="${H-12}" font-size="11" text-anchor="middle" fill="var(--ink-3)">${d.getDate()}.${d.getMonth()+1}</text>`; }
+    g += `<line x1="${xs(today)}" x2="${xs(today)}" y1="${T}" y2="${H-B}" stroke="var(--ink-3)" stroke-dasharray="3 3"/><text x="${xs(today)-5}" y="${T+10}" font-size="11" text-anchor="end" fill="var(--ink-2)">היום</text>`;
+    g += `<rect x="${xs(today)}" y="${T}" width="${xs(t1)-xs(today)}" height="${H-T-B}" fill="var(--brand)" opacity=".04"/><text x="${xs(t1)}" y="${T+10}" font-size="11" text-anchor="end" fill="var(--brand)" font-weight="700">בחירות</text>`;
+    let bands='', lines='', dots='', labels=[];
+    for (const p of parties){ if(!on.has(p)) continue; const s = D.trend.series[p];
+      const up = s.hi.map((v,i)=>`${xs(dates[i].getTime()).toFixed(1)},${ys(v).toFixed(1)}`), dn = s.lo.map((v,i)=>`${xs(dates[i].getTime()).toFixed(1)},${ys(v).toFixed(1)}`).reverse();
+      bands += `<polygon points="${up.join(' ')} ${dn.join(' ')}" fill="${col(p)}" opacity=".13"/>`;
+      lines += `<polyline points="${s.mean.map((v,i)=>`${xs(dates[i].getTime()).toFixed(1)},${ys(v).toFixed(1)}`).join(' ')}" fill="none" stroke="${col(p)}" stroke-width="2.4" stroke-linejoin="round"/>`;
+      if (src){ const mine = D.polls.filter(q=>q.pollster===src).sort((a,b)=>a.date<b.date?-1:1);
+        lines += `<polyline points="${mine.map(q=>`${xs(new Date(q.date).getTime()).toFixed(1)},${ys(q[p]).toFixed(1)}`).join(' ')}" fill="none" stroke="${col(p)}" stroke-width="1.3" stroke-dasharray="4 3"/>`; }
+      D.polls.forEach((q,qi) => { const mine = !src || q.pollster===src;
+        dots += `<circle cx="${xs(new Date(q.date).getTime()).toFixed(1)}" cy="${ys(q[p]).toFixed(1)}" r="${mine&&src?4.5:3.2}" fill="${col(p)}" opacity="${mine?(src?.95:.6):.1}" stroke="var(--surface)" stroke-width="1" data-p="${esc(p)}" data-i="${qi}"/>`; });
+      labels.push([p, ys(s.mean[s.mean.length-1])]);
+    }
+    labels.sort((a,b)=>a[1]-b[1]); for (let i=1;i<labels.length;i++) if (labels[i][1]-labels[i-1][1]<14) labels[i][1]=labels[i-1][1]+14;
+    const lab = labels.map(([p,y])=>`<text x="${W-R-4}" y="${y+4}" font-size="12.5" font-weight="700" text-anchor="end" fill="var(--ink)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">${esc(p)}</text>`).join('');
+    chart.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="מגמת התמיכה לפי מפלגה">${g}${bands}${lines}<g id="dots">${dots}</g>${lab}<g id="xh"></g><rect class="hover-rect" x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}"/></svg>`;
+    const svg = chart.querySelector('svg'), xh = chart.querySelector('#xh'), hr = chart.querySelector('.hover-rect');
+    chart.querySelectorAll('#dots circle').forEach(c => {
+      c.addEventListener('mouseenter', e => { const q = D.polls[+c.dataset.i], p = c.dataset.p; c.setAttribute('r', 6);
+        showTip(`<b>${esc(q.pollster)}</b> · ${fmtDate(q.date)} · n=${q.n}<br>${esc(p)}: <b>${q[p].toFixed(1)}%</b> · אסמכתא ${q.ref}`, e.clientX, e.clientY); });
+      c.addEventListener('mouseleave', () => { hideTip(); c.setAttribute('r', (!src||D.polls[+c.dataset.i].pollster===src)&&src?4.5:3.2); });
+    });
+    // crosshair: nearest grid date, values of visible parties
+    hr.addEventListener('mousemove', e => { const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY; const m = pt.matrixTransform(svg.getScreenCTM().inverse());
+      const t = t0 + (m.x-L)/(W-L-R)*(t1-t0); let i = 0; for (let k=0;k<dates.length;k++) if (Math.abs(dates[k]-t) < Math.abs(dates[i]-t)) i=k; const x = xs(dates[i].getTime());
+      let h = `<line x1="${x}" x2="${x}" y1="${T}" y2="${H-B}" stroke="var(--ink-2)" stroke-width="1"/>`;
+      const vis = parties.filter(p=>on.has(p)).map(p=>[p, D.trend.series[p].mean[i], D.trend.series[p].lo[i], D.trend.series[p].hi[i]]).sort((a,b)=>b[1]-a[1]);
+      for (const [p,v] of vis) h += `<circle cx="${x}" cy="${ys(v)}" r="4.5" fill="${col(p)}" stroke="var(--surface)" stroke-width="2"/>`;
+      xh.innerHTML = h;
+      showTip(`<b>${fmtDate(D.trend.dates[i])}${dates[i]>today?' · תחזית':''}</b><br>` + vis.map(([p,v,lo,hi])=>`<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${col(p)};margin-inline-end:6px"></span>${esc(p)} <b>${v.toFixed(1)}%</b> <span style="opacity:.7">(${lo.toFixed(1)}-${hi.toFixed(1)})</span>`).join('<br>'), e.clientX, e.clientY); });
+    hr.addEventListener('mouseleave', () => { xh.innerHTML=''; hideTip(); });
+  }
+  draw();
+})();
+
+// ---- house heatmap
+(function(){
+  const parties = ["ישר","הליכוד","ביחד","הדמוקרטים","ישראל ביתנו","ש\"ס","יהדות התורה","עוצמה יהודית","הציונות הדתית","הרשימה המשותפת","רע\"ם","עמך ישראל"];
+  const pollsters = Object.keys(D.house).sort((a,b)=>(D.pollster_counts[b]||0)-(D.pollster_counts[a]||0));
+  const el = document.getElementById('house'); el.style.gridTemplateColumns = `170px repeat(${parties.length}, minmax(58px,1fr))`;
+  let h = `<div></div>` + parties.map(p=>`<div class="h">${esc(p)}</div>`).join('');
+  for (const ps of pollsters){ h += `<div class="r">${esc(ps)}<small>${D.pollster_counts[ps]||0}</small></div>`;
+    for (const p of parties){ const v = D.house[ps][p]||0; const a = Math.min(1, Math.abs(v)/3.5);
+      const bg = v>0.25 ? `rgba(91,138,214,${(0.1+a*0.75).toFixed(2)})` : v<-0.25 ? `rgba(232,128,79,${(0.1+a*0.75).toFixed(2)})` : 'var(--surface-2)';
+      h += `<div class="c" style="background:${bg}" data-t="${esc(ps)} · ${esc(p)}: ${v>0?'+':''}${v.toFixed(1)} נק' אחוז">${v>0?'+':''}${v.toFixed(1)}</div>`; } }
+  el.innerHTML = h;
+  el.querySelectorAll('.c').forEach(c => { c.addEventListener('mouseenter', e => showTip(c.dataset.t, e.clientX, e.clientY)); c.addEventListener('mouseleave', hideTip); });
+})();
+
+// ---- anchor / stated assumption
+(function(){ const a = D.anchor; if(!a) return;
+  const g = a.gap_trusted_minus_others || {}; const top = Object.entries(g).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2);
+  document.getElementById('anchornote').innerHTML = `הנחות מוצהרות: (א) תיקון לטעויות המכונים בבחירות 2022 - כולם הפחיתו בש"ס, בציונות הדתית וברשימות הערביות והפריזו בשמאל; (ב) בליכוד וביחד, שבהם המכונים חלוקים לשתי אסכולות (${top.map(([p,v])=>`${p} ${v>0?'+':''}${v.toFixed(1)}`).join(', ')} נק' אחוז בין ${a.trusted.join(' ו')} לשאר), המודל עומד באמצע. הפירוט ב"איך זה עובד".`;
+})();
+
+// ---- calibration block (methodology)
+(function(){ const c = D.calibration, a = D.anchor; const el = document.getElementById('calib'); if(!c || !el) return;
+  const parties = ["הליכוד","יש עתיד","הציונות הדתית","המחנה הממלכתי","ש\"ס","יהדות התורה","ישראל ביתנו","רע\"ם","חד\"ש-תע\"ל","העבודה","מרצ"];
+  const ps = Object.keys(c.seat_error).sort((x,y)=>(c.mae[x]||9)-(c.mae[y]||9));
+  const f = v => (v>0?'+':'') + (Math.round(v*10)/10).toFixed(1);
+  let rows = parties.map(p => `<tr><td>${esc(p)}</td>${ps.map(k=>`<td style="color:${Math.abs(c.seat_error[k][p]||0)>=2?'var(--ink)':'var(--ink-3)'}">${f(c.seat_error[k][p]||0)}</td>`).join('')}</tr>`).join('');
+  rows += `<tr class="sum"><td>גוש הימין (64 בפועל)</td>${ps.map(k=>`<td>${f(c.bloc_err[k])}</td>`).join('')}</tr>`;
+  rows += `<tr><td>טעות ממוצעת למפלגה</td>${ps.map(k=>`<td>${(c.mae[k]).toFixed(2)}</td>`).join('')}</tr>`;
+  const cal = (a && a.cal2022) || {}; const half = (a && a.half) || {}; const comb = (a && a.combined) || {};
+  const lean = Object.keys(comb).sort((x,y)=>Math.abs(comb[y])-Math.abs(comb[x])).map(p=>`${esc(p)} <span style="direction:ltr;display:inline-block">${f(comb[p])}</span>`).join(' · ');
+  el.innerHTML = `<h3>הכיול, במספרים</h3>
+    <p>הטבלה: כמה כל מכון פספס בסקריו האחרונים לפני בחירות 2022 (${c.window}), במנדטים - סקר מינוס תוצאה, חיובי = הסקר הפריז. ${ps.length} מכונים, כל הסקרים מאתר ועדת הבחירות.</p>
+    <div class="tw"><table><thead><tr><th>מפלגה</th>${ps.map(k=>`<th>${esc(k)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="steps">
+      <div><b>1 · כיול 2022</b>הטעות המשותפת לכל המכונים מומרת לנקודות אחוז (מנדט ≈ 0.8 נק') ומועברת למפלגות של היום: ש"ס -2.0, הציונות הדתית ועוצמה יהודית -0.6 כל אחת, רע"ם והרשימה המשותפת -0.8, הדמוקרטים (במקום מרצ והעבודה) +2.0. ערך שלילי = הסקרים מפחיתים במפלגה, והמודל מתקן כלפי מעלה.</div>
+      <div><b>2 · נקודת האמצע</b>בליכוד וביחד המכונים חלוקים היום לשתי אסכולות - ${a ? a.trusted.join(' ו') : ''} מול השאר - בפער של ${a ? Object.entries(a.gap_trusted_minus_others).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2).map(([p,v])=>`${p} ${f(v)}`).join(', ') : ''} נק' אחוז ב-3 השבועות האחרונים. ל-2022 אין תקדים למחלוקת הזו (אז כולם מדדו את הליכוד נכון, ודיירקט פולס הפריז בו ב-2), ולכן המודל לוקח מחצית מהפער - לא יותר. הפער מחושב מחדש בכל ריצה.</div>
+      <div><b>3 · הסכום</b>שני התיקונים מתחברים להטיה ענפית אחת שנכנסת למודל כהנחה עם אי-ודאות (ולא כעובדה): ${lean}. בלי שני התיקונים גוש הימין היה על 55; עם כיול 2022 בלבד - 57; עם שניהם - התחזית שבראש הדף.</div>
+    </div>`;
+})();
+
+// ---- health, nav active state, reveal
+(function(){ const ok = D.diagnostics.converged; document.getElementById('health').innerHTML =
+  `<span class="health ${ok?'':'bad'}"><i></i>${ok ? 'בדיקת תקינות המודל עברה' : 'בדיקת תקינות המודל: גבולית - התוצאות זמניות עד הריצה הבאה'}</span> <span style="margin-inline-start:10px">${D.n_sims.toLocaleString('he-IL')} סימולציות · ${D.n_polls_model} מתוך ${D.n_polls_all} סקרים שפורסמו</span>`;
+  const links = [...document.querySelectorAll('#menu a, #mnav a')];
+  const secs = [...document.querySelectorAll('section')];
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver(en => { en.forEach(x => { if (x.isIntersecting){ links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#'+x.target.id)); } }); }, {rootMargin:'-40% 0px -55% 0px'});
+    secs.forEach(s => io.observe(s));
+    // אפקט טעינה לכל אלמנט: כותרות, כרטיסים, שורות, גרפים - עם השהיה מדורגת בתוך כל חלק
+    document.documentElement.classList.add('js');
+    const sel = '.eyebrow, h2, .lede, .note, .kpi, .bloc, .scen > div, .prow, .chips, .chart, .heat-wrap, .mcard, .calib, .hemi, .legend, .big120, footer .credit, footer .la';
+    document.querySelectorAll('section, footer').forEach(sec => { let i = 0; sec.querySelectorAll(sel).forEach(el => { if (el.closest('.pdetail')) return; el.classList.add('rv'); el.style.setProperty('--d', Math.min(i*60, 600)+'ms'); i++; }); });
+    const io2 = new IntersectionObserver(en => en.forEach(x => { if (x.isIntersecting){ x.target.classList.add('in'); io2.unobserve(x.target); } }), {threshold:.05, rootMargin:'0px 0px -5% 0px'});
+    document.querySelectorAll('.rv').forEach(r => io2.observe(r));
+  } else { document.querySelectorAll('.rv').forEach(r => r.classList.add('in')); }
+})();
+</script>

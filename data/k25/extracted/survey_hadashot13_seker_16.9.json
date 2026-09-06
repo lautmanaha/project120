@@ -1,0 +1,47 @@
+{
+  "ref": "survey_hadashot13_seker_16.9",
+  "pollster_as_written": "פרופ' קמיל פוקס עם חברת פאנל פרוייקט המדגם בהנהלת ד\"ר אריאל איילון ועם חברת סטטנט נט בהנהלת יוסף מקלדה",
+  "commissioner_as_written": "חדשות 13",
+  "fieldwork_start": "2022-09-16",
+  "fieldwork_end": "2022-09-16",
+  "method": "mixed",
+  "initial_sample": null,
+  "respondents": 601,
+  "response_rate_pct": null,
+  "margin_error_pct": 3.8,
+  "population": "מדגם שכבות מייצג של אוכלוסיית המדינה בגילאי 18+",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו נערכות היום, מבין המפלגות הבאות, עבור איזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 32, "pct": null},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 24, "pct": null},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ", "party": "המחנה הממלכתי", "seats": 12, "pct": null},
+        {"party_as_written": "הציונות הדתית ועוצמה יהודית בראשות בצלאל סמוטריץ ואיתמר בן גביר", "party": "הציונות הדתית", "seats": 13, "pct": null},
+        {"party_as_written": "שס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": null},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": null},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 5, "pct": null},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 5, "pct": null},
+        {"party_as_written": "הבית היהודי בראשות איילת שקד", "party": "הבית היהודי", "seats": 0, "pct": 2.0},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": null},
+        {"party_as_written": "חדש-תעל בראשות איימן עודה ואחמד טיבי", "party": "חד\"ש-תע\"ל", "seats": 4, "pct": null},
+        {"party_as_written": "רעם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": null},
+        {"party_as_written": "בלד בראשות סמי אבו שחאדה", "party": "בל\"ד", "seats": 0, "pct": 1.2},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.4},
+        {"party_as_written": "הכלכלית בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 1.1},
+        {"party_as_written": "צעירים בוערים בראשות הדר מוכתר", "party": "אחר", "seats": 0, "pct": 1.9},
+        {"party_as_written": "ב 30/40 בראשות סטלה ויינשטיין", "party": "אחר", "seats": 0, "pct": 0.0}
+      ],
+      "undecided_pct": 20.8,
+      "not_voting_pct": null,
+      "other_pct": 0.6,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Table gives seats only; pct only for below-threshold parties. Bayit Yehudi seat cell blank (2.0%, below threshold) -> 0. The 20.8% figure sits on the 'לא מתכוון להצביע' row directly under a blank 'לא יודע' row - in sibling polls this is the combined 'לא יודע/לא מתכוון להצביע' row, so recorded as undecided_pct. First poll in this series with Hadash-Ta'al and Balad split."
+    }
+  ],
+  "extraction_notes": "Single page. Pollster Camil Fuchs. 691 asked (601 Jewish internet + 91 non-Jewish phone), 601 respondents reported."
+}

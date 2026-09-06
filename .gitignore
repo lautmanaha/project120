@@ -1,0 +1,8 @@
+scraper/.browser_profile/
+logs/
+__pycache__/
+data/pages/
+model/output/trace.nc
+model/output_*/
+site/shot.png
+site/s*.png

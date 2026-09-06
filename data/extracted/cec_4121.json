@@ -1,0 +1,272 @@
+{
+ "pollster_as_written": "לזר מחקרים בראשות ד\"ר מנחם לזר",
+ "commissioner_as_written": "וואלה תקשורת בע\"מ",
+ "fieldwork_start": "2026-09-01",
+ "fieldwork_end": "2026-09-02",
+ "method": "internet",
+ "initial_sample": 3402,
+ "respondents": 500,
+ "response_rate_pct": 14.6,
+ "margin_error_pct": 4.4,
+ "population": "מדגם מייצג של אזרחי ישראל מגיל 18 ומעלה, יהודים וערבים כאחד",
+ "questions": [
+  {
+   "qid": 1,
+   "type": "main",
+   "description": "אם לקראת הבחירות לכנסת יתאחדו מפלגות הציונות הדתית בראשות בצלאל סמוטריץ' ומפלגת זהות בראשות משה פייגלין, לאיזו מפלגה היית מצביע?",
+   "weighted": true,
+   "results": [
+    {
+     "party_as_written": "ישר! עם איזנקוט בראשות גדי איזנקוט",
+     "party": "ישר",
+     "seats": 24,
+     "pct": 17.6
+    },
+    {
+     "party_as_written": "הליכוד בראשות בנימין נתניהו",
+     "party": "הליכוד",
+     "seats": 22,
+     "pct": 15.4
+    },
+    {
+     "party_as_written": "מפלגת ביחד - בראשות נפתלי בנט",
+     "party": "ביחד",
+     "seats": 15,
+     "pct": 12.5
+    },
+    {
+     "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+     "party": "הדמוקרטים",
+     "seats": 10,
+     "pct": 7.9
+    },
+    {
+     "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+     "party": "ישראל ביתנו",
+     "seats": 9,
+     "pct": 7.4
+    },
+    {
+     "party_as_written": "יהדות התורה בראשות משה גפני",
+     "party": "יהדות התורה",
+     "seats": 8,
+     "pct": 5.5
+    },
+    {
+     "party_as_written": "רשימה ערבית משותפת של חדש תעל ובלד בראשות יוסף ג'בארין",
+     "party": "הרשימה המשותפת",
+     "seats": 8,
+     "pct": 5.4
+    },
+    {
+     "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+     "party": "עוצמה יהודית",
+     "seats": 7,
+     "pct": 5.2
+    },
+    {
+     "party_as_written": "שס בראשות אריה דרעי",
+     "party": "ש\"ס",
+     "seats": 7,
+     "pct": 5.1
+    },
+    {
+     "party_as_written": "רשימה מאוחדת של הציונות הדתית בראשות סמוטריץ' עם זהות בראשות פייגלין",
+     "party": "הציונות הדתית",
+     "seats": 5,
+     "pct": 4.2
+    },
+    {
+     "party_as_written": "רעם בראשות דר מנסור עבאס",
+     "party": "רע\"ם",
+     "seats": 5,
+     "pct": 4.0
+    },
+    {
+     "party_as_written": "בית ציוני - המילואימניקים",
+     "party": "בית ציוני",
+     "seats": 0,
+     "pct": 3.0
+    },
+    {
+     "party_as_written": "עמך ישראל",
+     "party": "עמך ישראל",
+     "seats": 0,
+     "pct": 2.3
+    },
+    {
+     "party_as_written": "הכלכלית החדשה",
+     "party": "הכלכלית החדשה",
+     "seats": 0,
+     "pct": 2.0
+    },
+    {
+     "party_as_written": "כחול לבן",
+     "party": "כחול לבן",
+     "seats": 0,
+     "pct": 0.7
+    },
+    {
+     "party_as_written": "האחדות",
+     "party": "האחדות",
+     "seats": 0,
+     "pct": 0.7
+    },
+    {
+     "party_as_written": "מקום לכולנו - שותפות יהודית ערבית",
+     "party": "מקום לכולנו",
+     "seats": 0,
+     "pct": 0.5
+    },
+    {
+     "party_as_written": "מפלגת הציבור החרדי",
+     "party": "הציבור החרדי",
+     "seats": 0,
+     "pct": 0.4
+    },
+    {
+     "party_as_written": "ישראל תחילה",
+     "party": "אחר",
+     "seats": 0,
+     "pct": 0.2
+    }
+   ],
+   "undecided_pct": null,
+   "not_voting_pct": null,
+   "other_pct": null,
+   "blank_pct": null,
+   "seats_total": 120,
+   "notes": "הציונות הדתית+זהות כרשימה אחת (המצב בפועל). pct = אחוזים גולמיים, סוכמים ל-100 ללא שורת מתלבטים"
+  },
+  {
+   "qid": 2,
+   "type": "scenario",
+   "description": "בנוסף לאיחוד סמוטריץ'-פייגלין, טלי גוטליב עוזבת את הליכוד ומצטרפת לעוצמה יהודית",
+   "weighted": true,
+   "results": [
+    {
+     "party_as_written": "ישר! עם איזנקוט בראשות גדי איזנקוט",
+     "party": "ישר",
+     "seats": 24,
+     "pct": 17.3
+    },
+    {
+     "party_as_written": "הליכוד בראשות בנימין נתניהו",
+     "party": "הליכוד",
+     "seats": 21,
+     "pct": 14.2
+    },
+    {
+     "party_as_written": "מפלגת ביחד - בראשות נפתלי בנט",
+     "party": "ביחד",
+     "seats": 15,
+     "pct": 12.1
+    },
+    {
+     "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+     "party": "ישראל ביתנו",
+     "seats": 10,
+     "pct": 8.4
+    },
+    {
+     "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+     "party": "הדמוקרטים",
+     "seats": 10,
+     "pct": 8.5
+    },
+    {
+     "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר עם טלי גוטליב",
+     "party": "עוצמה יהודית",
+     "seats": 8,
+     "pct": 5.7
+    },
+    {
+     "party_as_written": "רשימה ערבית מאוחדת של חדש תעל ובלד בראשות יוסף ג'בארין",
+     "party": "הרשימה המשותפת",
+     "seats": 8,
+     "pct": 5.6
+    },
+    {
+     "party_as_written": "יהדות התורה בראשות משה גפני",
+     "party": "יהדות התורה",
+     "seats": 8,
+     "pct": 5.3
+    },
+    {
+     "party_as_written": "שס בראשות אריה דרעי",
+     "party": "ש\"ס",
+     "seats": 7,
+     "pct": 4.9
+    },
+    {
+     "party_as_written": "רעם בראשות דר מנסור עבאס",
+     "party": "רע\"ם",
+     "seats": 5,
+     "pct": 4.2
+    },
+    {
+     "party_as_written": "רשימה מאוחדת של הציונות הדתית בראשות סמוטריץ' עם זהות בראשות משה פייגלין",
+     "party": "הציונות הדתית",
+     "seats": 4,
+     "pct": 3.3
+    },
+    {
+     "party_as_written": "בית ציוני - המילואימניקים",
+     "party": "בית ציוני",
+     "seats": 0,
+     "pct": 3.0
+    },
+    {
+     "party_as_written": "עמך ישראל",
+     "party": "עמך ישראל",
+     "seats": 0,
+     "pct": 2.8
+    },
+    {
+     "party_as_written": "הכלכלית החדשה",
+     "party": "הכלכלית החדשה",
+     "seats": 0,
+     "pct": 1.6
+    },
+    {
+     "party_as_written": "כחול לבן",
+     "party": "כחול לבן",
+     "seats": 0,
+     "pct": 1.1
+    },
+    {
+     "party_as_written": "מקום לכולנו - שותפות יהודית ערבית",
+     "party": "מקום לכולנו",
+     "seats": 0,
+     "pct": 0.7
+    },
+    {
+     "party_as_written": "מפלגת הציבור החרדי",
+     "party": "הציבור החרדי",
+     "seats": 0,
+     "pct": 0.6
+    },
+    {
+     "party_as_written": "האחדות",
+     "party": "האחדות",
+     "seats": 0,
+     "pct": 0.5
+    },
+    {
+     "party_as_written": "ישראל תחילה",
+     "party": "אחר",
+     "seats": 0,
+     "pct": 0.2
+    }
+   ],
+   "undecided_pct": null,
+   "not_voting_pct": null,
+   "other_pct": null,
+   "blank_pct": null,
+   "seats_total": 120,
+   "notes": "תרחיש גוטליב לעוצמה יהודית"
+  }
+ ],
+ "ref": "4121",
+ "extraction_notes": "קובץ זהה בייט-לבייט ל-4120 (אותו סקר הוגש פעמיים)"
+}

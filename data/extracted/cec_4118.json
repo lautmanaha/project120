@@ -1,0 +1,53 @@
+{
+  "ref": "4118",
+  "pollster_as_written": "שמואל רוזנר עם חברת פאנל פרוייקט המדגם בהנהלת ד\"ר אריאל איילון, חברת סטטנט נט בהנהלת יוסף מקלדה, חברת אסקריא בהנהלת דודי דרור",
+  "commissioner_as_written": "חדשות 13",
+  "fieldwork_start": "2026-09-01",
+  "fieldwork_end": "2026-09-02",
+  "method": "mixed",
+  "initial_sample": 7842,
+  "respondents": 1034,
+  "response_rate_pct": null,
+  "margin_error_pct": 3.4,
+  "population": "מדגם שכבות מייצג של אוכלוסיית המדינה בגילאי 18+ (601 בוגרים יהודים, 59 צעירים, 224 חרדים, 150 ערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, לאיזו מפלגה היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "כחול לבן", "party": "כחול לבן", "seats": 0, "pct": null},
+        {"party_as_written": "ליכוד", "party": "הליכוד", "seats": 21, "pct": null},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 7, "pct": null},
+        {"party_as_written": "הציונות הדתית + זהות", "party": "הציונות הדתית", "seats": 6, "pct": null},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 8, "pct": null},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 8, "pct": null},
+        {"party_as_written": "רע\"ם", "party": "רע\"ם", "seats": 5, "pct": null},
+        {"party_as_written": "הרשימה המשותפת", "party": "הרשימה המשותפת", "seats": 9, "pct": null},
+        {"party_as_written": "עוצמה יהודית", "party": "עוצמה יהודית", "seats": 7, "pct": null},
+        {"party_as_written": "הדמוקרטים", "party": "הדמוקרטים", "seats": 11, "pct": null},
+        {"party_as_written": "ביחד", "party": "ביחד", "seats": 12, "pct": null},
+        {"party_as_written": "ישר", "party": "ישר", "seats": 22, "pct": null},
+        {"party_as_written": "בית ציוני", "party": "בית ציוני", "seats": 0, "pct": null},
+        {"party_as_written": "מפלגת האחדות", "party": "האחדות", "seats": 0, "pct": null},
+        {"party_as_written": "עמך ישראל", "party": "עמך ישראל", "seats": 4, "pct": null},
+        {"party_as_written": "מפלגת הציבור החרדי", "party": "הציבור החרדי", "seats": 0, "pct": null},
+        {"party_as_written": "מפלגת הקהל", "party": "מפלגת הקהל", "seats": 0, "pct": null},
+        {"party_as_written": "מקום לכולנו", "party": "מקום לכולנו", "seats": 0, "pct": null},
+        {"party_as_written": "ברית אחים", "party": "ברית אחים", "seats": 0, "pct": null},
+        {"party_as_written": "המפלגה הכלכלית", "party": "הכלכלית החדשה", "seats": 0, "pct": null},
+        {"party_as_written": "נעם", "party": "נעם", "seats": 0, "pct": null},
+        {"party_as_written": "עוז", "party": "עוז", "seats": 0, "pct": null},
+        {"party_as_written": "חופש כלכלי", "party": "חופש כלכלי", "seats": 0, "pct": null}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Only the seat column is national (weighted per Prof. David Steinberg methodology); there is no national pct column, so pct=null. The four pct columns are raw unweighted per-sector sample results (Jewish adults n=601 / young n=59 / Haredi n=224 / Arab n=150): כחול לבן 1.2/3.4/0.0/0.0; ליכוד 16.5/11.9/3.1/1.2; ש\"ס 4.5/6.8/13.8/0.0; הציונות הדתית+זהות 6.0/6.8/2.2/0.0; יהדות התורה 6.3/13.6/47.8/0.0; ישראל ביתנו 6.2/1.7/0.0/2.2; רע\"ם 0.0/0.0/0.0/24.8; המשותפת 0.0/1.7/0.0/39.1; עוצמה יהודית 5.0/13.6/6.7/0.0; הדמוקרטים 7.3/8.5/0.0/5.0; ביחד 7.7/5.1/0.9/0.0; ישר 18.0/6.8/0.4/2.5; בית ציוני 2.5/1.7/0.0/0.0; האחדות 0.3/1.7/0.0/0.0; עמך ישראל 4.2/1.7/1.8/0.0; הציבור החרדי 0.0/0.0/2.7/0.0; הקהל 0.0/0.0/1.3/0.0; מקום לכולנו 0.0/0.0/0.0/2.5; ברית אחים 0.0/0.0/0.0/0.6; הכלכלית 0.3/0.0/0.4/0.0; נעם 0.0/0.0/0.4/0.0; עוז 0/0/0/0; חופש כלכלי 0/0/0/0; מפלגה אחרת 0.0/1.7/0.9/0.0; עדיין לא החלטתי 10.3/10.2/12.1/9.2; פתק לבן 0.3/1.7/0.4/0.0; לא מתכוון להצביע 3.5/1.7/4.9/13.0. Undecided/blank/not-voting are per-sector only, so left null at national level. הציונות הדתית + זהות presented as one list -> הציונות הדתית. 'מקום לכולנו' and 'ברית אחים' offered only in the Arab sector; 'הציבור החרדי' and 'הקהל' only in the Haredi sector."
+    }
+  ],
+  "extraction_notes": "Rosner (Channel 13) poll, 'ממצאי סקר מנדטים - 2 בספטמבר 2026', 2 pages, cross-checked with text dump. Fieldwork 1.9.2026 09:50 to 2.9.2026 10:00. Combined method: 884 Jewish respondents online, 150 Arab respondents by phone (1,034 total valid questionnaires). Initial sample 7,842 asked (4,718 Jewish adults, 1,464 young, 1,364 Haredi, 296 Arab). Per-sector response rates given (26.88% / 11.95% / 16.4% / 50.7% answered; valid-respondent rates 12.73% / 4.03% / 16.4% / 50.7%) but no overall rate -> response_rate_pct null (1,034/7,842 = 13.2%). Sampling error 3.4%. Stratified sampling, random within strata."
+}

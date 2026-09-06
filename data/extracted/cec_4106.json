@@ -1,0 +1,46 @@
+{
+  "ref": "4106",
+  "pollster_as_written": "שמואל רוזנר עם חברת פאנל פרוייקט המדגם בהנהלת ד\"ר אריאל איילון, חברת סטטנט נט בהנהלת יוסף מקלדה, חברת אסקריא בהנהלת דודי דרור",
+  "commissioner_as_written": "חדשות 13",
+  "fieldwork_start": "2026-08-25",
+  "fieldwork_end": "2026-08-26",
+  "method": "mixed",
+  "initial_sample": 8982,
+  "respondents": 1407,
+  "response_rate_pct": null,
+  "margin_error_pct": 3.4,
+  "population": "מדגם שכבות מייצג של אוכלוסיית המדינה בגילאי 18+",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "כחול לבן", "party": "כחול לבן", "seats": 0, "pct": null},
+        {"party_as_written": "ליכוד", "party": "הליכוד", "seats": 19, "pct": null},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 8, "pct": null},
+        {"party_as_written": "הציונות הדתית", "party": "הציונות הדתית", "seats": 5, "pct": null},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 8, "pct": null},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 9, "pct": null},
+        {"party_as_written": "רע\"מ", "party": "רע\"ם", "seats": 5, "pct": null},
+        {"party_as_written": "הרשימה המשותפת", "party": "הרשימה המשותפת", "seats": 10, "pct": null},
+        {"party_as_written": "עוצמה יהודית", "party": "עוצמה יהודית", "seats": 8, "pct": null},
+        {"party_as_written": "הדמוקרטים", "party": "הדמוקרטים", "seats": 11, "pct": null},
+        {"party_as_written": "ביחד", "party": "ביחד", "seats": 13, "pct": null},
+        {"party_as_written": "ישר", "party": "ישר", "seats": 24, "pct": null},
+        {"party_as_written": "בית ציוני", "party": "בית ציוני", "seats": 0, "pct": null},
+        {"party_as_written": "מפלגת האחדות (ארדן)", "party": "האחדות", "seats": 0, "pct": null},
+        {"party_as_written": "מקום לכולנו", "party": "מקום לכולנו", "seats": 0, "pct": null},
+        {"party_as_written": "עמך ישראל (עופר וינטר)", "party": "עמך ישראל", "seats": 0, "pct": null}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Seats are the national weighted forecast. No national pct column - only four raw unweighted per-sample columns (Jewish adults / young / Haredi / Arab), so pct is null. Jewish-adults sample raw pct: כחול לבן 1.3, ליכוד 11.8, ש\"ס 4.9, הציונות הדתית 5.1, יהדות התורה 4.4, ישראל ביתנו 6.6, רע\"ם 0.0, המשותפת 0.0, עוצמה יהודית 5.1, הדמוקרטים 8.0, ביחד 9.7, ישר 15.6, בית ציוני 1.8, האחדות 0.5, מקום לכולנו 0.0, עמך ישראל 2.5, אחרת 2.3, עדיין לא החלטתי 15.7, פתק לבן 0.3, לא מתכוון להצביע 4.4. Young sample: ליכוד 9.8, הציונות הדתית 11.5, יהדות התורה 8.2, ישראל ביתנו 4.9, עוצמה יהודית 8.2, הדמוקרטים 9.8, ביחד 6.6, ישר 11.5, אחרת 9.8, לא החלטתי 14.8, פתק לבן 1.6, לא מצביע 3.3 (rest 0). Haredi sample: כחול לבן 0.2, ליכוד 2.0, ש\"ס 16.8, הציונות הדתית 1.0, יהדות התורה 46.4, ישראל ביתנו 0.2, עוצמה יהודית 4.6, ביחד 0.4, עמך ישראל 0.4, אחרת 9.0, לא החלטתי 10.6, פתק לבן 0.8, לא מצביע 7.6 (rest 0). Arab sample: ליכוד 1.8, ש\"ס 0.5, ישראל ביתנו 1.8, רע\"ם 23.8, המשותפת 42.9, הדמוקרטים 3.5, ביחד 0.5, ישר 2.3, מקום לכולנו 4.1, לא החלטתי 7.6, לא מצביע 11.2 (rest 0). 'מקום לכולנו' offered only in Arab sector; 'הקהל' and 'הציבור החרדי' were offered in the Haredi sample only and are not rows in the table."
+    }
+  ],
+  "extraction_notes": "Channel 13 / Rosner poll, fieldwork 25.8.2026 09:00 - 26.8.2026 10:00. initial_sample 8,982 as stated (= 4,584 Jewish adults + 1,770 young + 2,246 Haredi + 382 Arab asked); valid respondents 601+60+500+200 = 1,361 plus 46 partial, report states 1,407 respondents (1,207 Jewish by internet, 200 non-Jewish by phone) -> method mixed. Overall response rate not given (per-sample 13.11%, 3.38%, 22.3%, 52.4%). Seats computed per Prof. David Steinberg's methodology."
+}

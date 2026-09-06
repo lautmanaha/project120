@@ -1,0 +1,44 @@
+{
+  "ref": "survey_hadashot13_seker_1.9",
+  "pollster_as_written": "פרופ' קמיל פוקס עם חברת פאנל פרוייקט המדגם בהנהלת ד\"ר אריאל איילון ועם חברת סטטנט נט בהנהלת יוסף מקלדה",
+  "commissioner_as_written": "חדשות 13",
+  "fieldwork_start": "2022-09-01",
+  "fieldwork_end": "2022-09-01",
+  "method": "mixed",
+  "initial_sample": null,
+  "respondents": 601,
+  "response_rate_pct": null,
+  "margin_error_pct": 3.8,
+  "population": "מדגם שכבות מייצג של אוכלוסיית המדינה בגילאי 18+",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו נערכות היום, מבין המפלגות הבאות, עבור איזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 32, "pct": null},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 24, "pct": null},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ, גדעון סער וגדי איזנקוט", "party": "המחנה הממלכתי", "seats": 13, "pct": null},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ ועוצמה יהודית בראשות איתמר בן גביר", "party": "הציונות הדתית", "seats": 12, "pct": null},
+        {"party_as_written": "שס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": null},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": null},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 5, "pct": null},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 4, "pct": null},
+        {"party_as_written": "הרוח הציונית בראשות איילת שקד ויועז הנדל", "party": "הבית היהודי", "seats": 0, "pct": 2.0},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": null},
+        {"party_as_written": "הרשימה המשותפת בראשות איימן עודה", "party": "חד\"ש-תע\"ל", "seats": 5, "pct": null},
+        {"party_as_written": "רעם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": null},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.3},
+        {"party_as_written": "הכלכלית בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 1.3}
+      ],
+      "undecided_pct": 19.7,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Table gives seats only (column 'מנדטים סקר נוכחי'); pct column exists only for parties below threshold ('אחוזים מתחת לאחוז חסימה'). undecided_pct 19.7 is the combined row 'לא יודע/לא מתכוון להצביע'. הרשימה המשותפת shown as one list -> חד\"ש-תע\"ל. Table also has a column of 2021 election results (ignored)."
+    }
+  ],
+  "extraction_notes": "Single page. Pollster is Camil Fuchs (not Rozner). Method: 600 Jewish respondents via internet panel + 104 non-Jewish by phone (704 asked; 601 respondents reported as final). Number of invitees 'לא ידוע'."
+}

@@ -1,0 +1,45 @@
+{
+  "ref": "survey_kan11_seker-24-8",
+  "pollster_as_written": "קאנטר ישראל , אריאל שרון 4 גבעתיים",
+  "commissioner_as_written": "תאגיד השידור כאן , כנפי נשרים 23, ירושלים",
+  "fieldwork_start": "2022-08-24",
+  "fieldwork_end": "2022-08-24",
+  "method": "mixed",
+  "initial_sample": 3414,
+  "respondents": 649,
+  "response_rate_pct": 19.0,
+  "margin_error_pct": 3.9,
+  "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו היו מתקיימות היום הבחירות לכנסת, והמפלגות המתמודדות יהיו המפלגות הבאות עם ראשי המפלגות שברשימה בפניך, עבור איזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 33, "pct": 26.2},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 22, "pct": 17.5},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 5, "pct": 4.0},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ, גדעון סער וגדי איזנקוט", "party": "המחנה הממלכתי", "seats": 14, "pct": 11.1},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 5, "pct": 3.9},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 4, "pct": 3.4},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "הציונות הדתית", "seats": 8, "pct": 6.1},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 5, "pct": 4.0},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": 6.4},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": 5.6},
+        {"party_as_written": "הרשימה המשותפת בראשות איימן עודה (חד\"ש, בל\"ד ותע\"ל)", "party": "חד\"ש-תע\"ל", "seats": 5, "pct": 3.9},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 3.3},
+        {"party_as_written": "הרוח הציונית בראשות איילת שקד ויועז הנדל", "party": "הבית היהודי", "seats": 0, "pct": 2.2},
+        {"party_as_written": "מפלגת הכלכלה בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 1.5},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.9}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Poll taken before the final lists were filed: הציונות הדתית (4) and עוצמה יהודית (8) are shown as separate rows - both mapped to party 'הציונות הדתית' since they ran as one list (combined 12 seats, 9.5%). The Joint List (חד\"ש, בל\"ד, תע\"ל) shown as ONE list - mapped to חד\"ש-תע\"ל per spec (they later split). הרוח הציונית (Shaked/Hendel) mapped to הבית היהודי. pct column is 'אחוזים (נתונים גולמיים)' (raw), sums to 100% among those naming a party."
+    }
+  ],
+  "extraction_notes": "Fieldwork 24 Aug 2022 10:40-15:50. Page 3 has only teachers' strike and interest-rate questions - ignored. Party set reflects pre-registration lineup (separate Smotrich/Ben Gvir, Joint List, Zionist Spirit)."
+}

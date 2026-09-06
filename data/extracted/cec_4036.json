@@ -1,0 +1,44 @@
+{
+  "ref": "4036",
+  "pollster_as_written": "שמואל רוזנר עם חברת פאנל פרוייקט המדגם בהנהלת ד\"ר אריאל איילון, חברת סטטנט נט בהנהלת יוסף מקלדה, חברת אסקריא בהנהלת דודי דרור",
+  "commissioner_as_written": "חדשות 13",
+  "fieldwork_start": "2026-07-28",
+  "fieldwork_end": "2026-07-29",
+  "method": "mixed",
+  "initial_sample": 12564,
+  "respondents": 956,
+  "response_rate_pct": null,
+  "margin_error_pct": 3.5,
+  "population": "מדגם שכבות מייצג של אוכלוסיית המדינה בגילאי +18",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "כחול לבן", "party": "כחול לבן", "seats": 23, "pct": null},
+        {"party_as_written": "ליכוד", "party": "הליכוד", "seats": 23, "pct": null},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 13, "pct": null},
+        {"party_as_written": "הציונות הדתית", "party": "הציונות הדתית", "seats": 10, "pct": null},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 9, "pct": null},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 7, "pct": null},
+        {"party_as_written": "רע\"ם", "party": "רע\"ם", "seats": 8, "pct": null},
+        {"party_as_written": "חד\"ש-תע\"ל", "party": "הרשימה המשותפת", "seats": 9, "pct": null},
+        {"party_as_written": "בל\"ד", "party": "אחר", "seats": 4, "pct": null},
+        {"party_as_written": "עוצמה יהודית", "party": "עוצמה יהודית", "seats": 4, "pct": null},
+        {"party_as_written": "הדמוקרטים", "party": "הדמוקרטים", "seats": 5, "pct": null},
+        {"party_as_written": "ביחד", "party": "ביחד", "seats": 5, "pct": null},
+        {"party_as_written": "ישר", "party": "ישר", "seats": null, "pct": null},
+        {"party_as_written": "יסודות ישראל", "party": "אחר", "seats": null, "pct": null}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Table has only a seats column (מנדטים) plus two RAW UNWEIGHTED per-sector percentage columns (Jewish sector, Arab sector) - no national pct, so pct=null. Raw Jewish-sector pct: כחול לבן 1.4, ליכוד 10.7, ש\"ס 7.8, הציונות הדתית 4.4, יהדות התורה 15.1, ישראל ביתנו 6.0, עוצמה יהודית 4.8, הדמוקרטים 5.4, ביחד 7.0, ישר 12.7, יסודות ישראל 2.3, מפלגה אחרת 1.9, עדיין לא החלטתי 14.0, פתק לבן 0.5, לא מתכוון להצביע 6.1. Raw Arab-sector pct: רע\"ם 25.94, חד\"ש-תע\"ל 23.90, בל\"ד 12.58, הדמוקרטים 8.29, ליכוד 2.18, ישראל ביתנו 2.03, ישר 2.90, מפלגה אחרת 2.93, עדיין לא החלטתי 7.79, לא מתכוון להצביע 10.66. Seat column is visually misaligned in the PDF: a '5' sits between הדמוקרטים and ביחד rows and the ישר row shows no seat number (despite 12.7% raw Jewish-sector support), the 12 listed seat numbers sum to exactly 120, so ישר seats recorded as null - likely a layout error in the source. חד\"ש-תע\"ל and בל\"ד run separately here; בל\"ד mapped to אחר, חד\"ש-תע\"ל mapped to הרשימה המשותפת. יסודות ישראל mapped to אחר."
+    }
+  ],
+  "extraction_notes": "Single page, clean text. Initial sample = sum of the four sub-samples (5051 + 1801 + 5530 Haredi + 182 Arab = 12564); response rates given per sub-sample only (10.7%, 6.5%, 3.6%, 54.9%), no overall rate. Method: 856 Jewish respondents via internet panel, 100 non-Jewish via phone (mixed). Seats sum to 120 without a value for ישר - see question notes. NOTE: cec_4048 is a second filing of this same poll (identical metadata and raw pct) with a different seat column (ישר 23, ביחד 13, ש\"ס 7, כחול לבן 0, ליברמן 10, רע\"ם 5, חד\"ש-תע\"ל 4, בל\"ד 0, עוצמה 8, הדמוקרטים 9, יסודות ישראל 5) that is consistent with the raw percentages - the seat column in this cec_4036 version appears to be erroneous/preliminary; prefer cec_4048."
+}

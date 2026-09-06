@@ -1,0 +1,44 @@
+{
+  "ref": "4047",
+  "pollster_as_written": "פרופ' יצחק כ\"ץ, מאגר מוחות בע\"מ",
+  "commissioner_as_written": "ערוץ 16",
+  "fieldwork_start": "2026-08-02",
+  "fieldwork_end": "2026-08-03",
+  "method": "mixed",
+  "initial_sample": 812,
+  "respondents": 547,
+  "response_rate_pct": 67.0,
+  "margin_error_pct": 4.2,
+  "population": "האוכלוסייה הישראלית הבוגרת גילי 18 ומעלה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע? (ברוטציה)",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 21, "pct": 15.0},
+        {"party_as_written": "מפלגת \"ביחד\", בראשות נפתלי בנט", "party": "ביחד", "seats": 14, "pct": 10.0},
+        {"party_as_written": "מפלגת \"ישר!\" בראשות גדי איזנקוט", "party": "ישר", "seats": 22, "pct": 16.0},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 1.2},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 4, "pct": 3.0},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 9, "pct": 7.0},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 9, "pct": 6.0},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנופף", "party": "יהדות התורה", "seats": 8, "pct": 5.0},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 9, "pct": 6.0},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 11, "pct": 8.0},
+        {"party_as_written": "חדש-תע\"ל בראשות יוסף ג'בארין ואחמד טיבי", "party": "הרשימה המשותפת", "seats": 5, "pct": 3.0},
+        {"party_as_written": "רע\"ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 3.0},
+        {"party_as_written": "בל\"ד בראשות סמי אבו שחאדה", "party": "אחר", "seats": 0, "pct": 2.2},
+        {"party_as_written": "הבית הציוני בראשות יועז הנדל וחילי טרופר", "party": "בית ציוני", "seats": 4, "pct": 3.0}
+      ],
+      "undecided_pct": 10.0,
+      "not_voting_pct": null,
+      "other_pct": 2.0,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Seats taken from the current (3.8.26) column; the table also shows earlier waves 23.7.26 and 16.7.26 (not extracted). Parties below threshold are shown with seat-equivalents in parentheses - כחול לבן (1.6) and בל\"ד (3) - recorded as 0 seats. pct are rounded to whole percent except כחול לבן 1.2% and בל\"ד 2.2%; pct column includes 'לא יודע/ת' 10% and 'מפלגה אחרת' 2% within the 100% base. בל\"ד mapped to אחר. Blocs given: coalition 51, opposition 60, Arab parties 9."
+    }
+  ],
+  "extraction_notes": "Maagar Mochot (Prof. Yitzhak Katz) for Channel 16, dated 03/08/2026, fieldwork 2-3.8.26. Clean text. 'גודל מדגם התחלתי' 550 (planned); 812 approached, 547 participated, 67% response - initial_sample recorded as 812 approached. Method: internet panel with phone supplement (mixed). Single vote-intention table."
+}

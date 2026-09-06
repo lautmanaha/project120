@@ -1,0 +1,43 @@
+{
+  "ref": "4057",
+  "pollster_as_written": "טאטיקה מחקרים ומדיה",
+  "commissioner_as_written": "זמן ישראל",
+  "fieldwork_start": "2026-08-05",
+  "fieldwork_end": "2026-08-06",
+  "method": "mixed",
+  "initial_sample": 11052,
+  "respondents": 500,
+  "response_rate_pct": 5.0,
+  "margin_error_pct": 4.4,
+  "population": "כלל האוכלוסייה (יהודים וערבים, 18+) - לא צוין במפורש; מדגם של 500 משיבים עם פילוח גיל/מגזר/מגדר/אזור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, וכל המפלגות הקיימות היו מתמודדות בנפרד, למי היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "ישר בראשות גדי אייזנקוט", "party": "ישר", "seats": 23, "pct": 17.6},
+        {"party_as_written": "הליכוד", "party": "הליכוד", "seats": 21, "pct": 16.4},
+        {"party_as_written": "ביחד בראשות נפתלי בנט", "party": "ביחד", "seats": 15, "pct": 11.6},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 11, "pct": 8.4},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 8, "pct": 6.4},
+        {"party_as_written": "הדמוקרטים", "party": "הדמוקרטים", "seats": 8, "pct": 6.4},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 8, "pct": 6.4},
+        {"party_as_written": "עוצמה יהודית", "party": "עוצמה יהודית", "seats": 8, "pct": 6.0},
+        {"party_as_written": "חד\"ש תע\"ל בל\"ד", "party": "הרשימה המשותפת", "seats": 6, "pct": 5.0},
+        {"party_as_written": "הציונות הדתית", "party": "הציונות הדתית", "seats": 6, "pct": 5.0},
+        {"party_as_written": "רע\"ם", "party": "רע\"ם", "seats": 6, "pct": 4.8},
+        {"party_as_written": "בית ציוני בהובלת יועז הנדל וחילי טרופר", "party": "בית ציוני", "seats": 0, "pct": 3.0},
+        {"party_as_written": "כחול לבן בהובלת בני גנץ ודדי שמחי", "party": "כחול לבן", "seats": 0, "pct": 3.0}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Table gives number of respondents (n=500), pct of respondents (= count/500, so effectively raw shares) and seat allocation. Parties below threshold marked 'לא עבר' -> seats 0. No undecided/not-voting rows; pcts sum to 100."
+    }
+  ],
+  "extraction_notes": "Titled 'תוצאות סקר 6.8'. PDF does not name the pollster or commissioner; taken from CEC metadata (טאטיקה מחקרים ומדיה for זמן ישראל). Fieldwork 5/8 10:00 to 6/8 13:00 (year 2026). Method: internet panel + phone completions ('פאנל אינטרנטי + השלמות טלפוניות למידה ויש חוסר במדגם'). Initial sample: 11,000 SMS with link + 52 phone calls = 11,052; 556 answered, 56 (5.03%) excluded as unfit/out of quota -> 500 respondents; 95% did not participate -> response rate recorded as 5.0. Margin of error 4.4%. Page 3-4 contain a non-vote question about Segalovitz joining Ra'am - ignored."
+}

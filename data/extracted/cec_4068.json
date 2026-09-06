@@ -1,0 +1,44 @@
+{
+  "ref": "4068",
+  "pollster_as_written": "דיירקט פולס בע\"מ בראשות צוריאל שרון",
+  "commissioner_as_written": "חדשות המזרח התיכון I24 בע\"מ",
+  "fieldwork_start": "2026-08-06",
+  "fieldwork_end": "2026-08-06",
+  "method": "mixed",
+  "initial_sample": 9300,
+  "respondents": 535,
+  "response_rate_pct": 5.8,
+  "margin_error_pct": 4.2,
+  "population": "מדגם ארצי ומייצג של כלל האוכלוסייה בישראל בגילאי 18+, לרבות יהודים וערבים",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, למי הייתם מצביעים?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד", "party": "הליכוד", "seats": 28, "pct": 21.6},
+        {"party_as_written": "ישר", "party": "ישר", "seats": 23, "pct": 17.7},
+        {"party_as_written": "הדמוקרטים", "party": "הדמוקרטים", "seats": 10, "pct": 7.7},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 9, "pct": 7.0},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 9, "pct": 6.8},
+        {"party_as_written": "עוצמה יהודית", "party": "עוצמה יהודית", "seats": 8, "pct": 6.3},
+        {"party_as_written": "הרשימה המשותפת", "party": "הרשימה המשותפת", "seats": 8, "pct": 6.1},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 8, "pct": 6.1},
+        {"party_as_written": "ביחד", "party": "ביחד", "seats": 7, "pct": 5.4},
+        {"party_as_written": "רע\"ם", "party": "רע\"ם", "seats": 5, "pct": 4.0},
+        {"party_as_written": "הציונות הדתית", "party": "הציונות הדתית", "seats": 5, "pct": 3.8},
+        {"party_as_written": "בית ציוני", "party": "בית ציוני", "seats": 0, "pct": 2.1},
+        {"party_as_written": "האחדות", "party": "האחדות", "seats": 0, "pct": 1.6},
+        {"party_as_written": "זהות", "party": "זהות", "seats": 0, "pct": 1.5}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Below-threshold parties (בית ציוני, האחדות, זהות) have their pct repeated in the seats column instead of a seat count -> seats 0. Footnote: הכלכלית החדשה (Zelekha) and נעם (Avi Maoz) sampled and received under 1% - not listed as rows (no figures given). No undecided row; pcts sum to ~97.7%."
+    }
+  ],
+  "extraction_notes": "Direct Polls (Tzuriel Sharon) for i24NEWS; fieldwork 6 Aug 2026, 09:00-14:00. Method 'אינטרנטי + טלפוני, פאנל משיבים' -> mixed. Initial sample stated 500 (target); 9,300 approached, 535 responded (5.8%) -> initial_sample = 9,300. Margin ±4.2% at 95%. Only one question in the PDF."
+}

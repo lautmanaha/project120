@@ -1,0 +1,75 @@
+industry lean (polls overstate +): {'ש"ס': -2.53, 'הציונות הדתית': -1.4, 'עוצמה יהודית': -0.32, 'רע"ם': -0.97, 'הרשימה המשותפת': -0.5, 'הדמוקרטים': 2.21, 'הליכוד': -3.6, 'ביחד': 2.79, 'ישראל ביתנו': 0.81, 'כחול לבן': 0.23, 'אחר': 0.69}
+pollster priors: {}
+Initializing NUTS using jitter+adapt_diag...
+/usr/local/lib/python3.11/dist-packages/pytensor/link/c/cmodule.py:2986: UserWarning: PyTensor could not link to a BLAS installation. Operations that might benefit from BLAS will be severely degraded.
+This usually happens when PyTensor is installed via pip. We recommend it be installed via conda/mamba/pixi instead.
+Alternatively, you can use an experimental backend such as Numba or JAX that perform their own BLAS optimizations, by setting `pytensor.config.mode == 'NUMBA'` or passing `mode='NUMBA'` when compiling a PyTensor function.
+For more options and details see https://pytensor.readthedocs.io/en/latest/troubleshooting.html#how-do-i-configure-test-my-blas-library
+  warnings.warn(
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [sigma_walk, kappa_log, eta_init, innovations, sigma_house, delta_raw, shared_bias_z]
+Sampling 4 chains for 1_500 tune and 1_000 draw iterations (6_000 + 4_000 draws total) took 202 seconds.
+==================================================
+Election Forecast Summary
+==================================================
+
+Current estimates
+-----------------
+  ישר                   16.8%  (90% CI:  14.3% –  19.6%)
+  הליכוד                20.6%  (90% CI:  18.7% –  22.6%)
+  ביחד                   7.2%  (90% CI:   5.5% –   9.2%)
+  הדמוקרטים              5.6%  (90% CI:   4.2% –   7.3%)
+  ישראל ביתנו            6.1%  (90% CI:   4.9% –   7.4%)
+  יהדות התורה            5.6%  (90% CI:   4.6% –   6.8%)
+  עוצמה יהודית           6.4%  (90% CI:   5.2% –   7.6%)
+  ש"ס                    8.7%  (90% CI:   7.5% –  10.1%)
+  הרשימה המשותפת         6.5%  (90% CI:   5.1% –   8.2%)
+  רע"ם                   5.0%  (90% CI:   4.2% –   5.9%)
+  הציונות הדתית          5.8%  (90% CI:   4.8% –   7.0%)
+  עמך ישראל              3.4%  (90% CI:   1.7% –   6.0%)
+  כחול לבן               1.1%  (90% CI:   0.8% –   1.5%)
+  אחר                    1.1%  (90% CI:   0.8% –   1.5%)
+
+Election-day forecast
+---------------------
+  ישר                   16.7%  (90% CI:  13.6% –  20.1%)
+  הליכוד                20.4%  (90% CI:  18.2% –  22.8%)
+  ביחד                   7.2%  (90% CI:   5.3% –   9.5%)
+  הדמוקרטים              5.6%  (90% CI:   4.0% –   7.5%)
+  ישראל ביתנו            6.1%  (90% CI:   4.5% –   8.0%)
+  יהדות התורה            5.6%  (90% CI:   4.4% –   7.0%)
+  עוצמה יהודית           6.3%  (90% CI:   4.9% –   7.9%)
+  ש"ס                    8.7%  (90% CI:   7.1% –  10.4%)
+  הרשימה המשותפת         6.5%  (90% CI:   4.5% –   9.1%)
+  רע"ם                   5.0%  (90% CI:   4.0% –   6.1%)
+  הציונות הדתית          5.8%  (90% CI:   4.4% –   7.7%)
+  עמך ישראל              3.8%  (90% CI:   1.1% –   8.6%)
+  כחול לבן               1.1%  (90% CI:   0.7% –   1.6%)
+  אחר                    1.2%  (90% CI:   0.6% –   2.1%)
+
+Plurality probabilities (election day)
+-------------------------------------
+  הליכוד                91.5%
+  ישר                    8.2%
+  עמך ישראל              0.2%
+  ביחד                   0.0%
+  הדמוקרטים              0.0%
+  ישראל ביתנו            0.0%
+  יהדות התורה            0.0%
+  עוצמה יהודית           0.0%
+  ש"ס                    0.0%
+  הרשימה המשותפת         0.0%
+  רע"ם                   0.0%
+  הציונות הדתית          0.0%
+  כחול לבן               0.0%
+  אחר                    0.0%
+==================================================
+Sampling diagnostics
+--------------------
+  chains x draws     4 x 1000
+  max R-hat          1.0070 (innovations)
+  min ESS (bulk)     723 (sigma_house)
+  min ESS (tail)     1482
+  divergences        0
+  status             OK
+saved to /home/claude/project120/model/output

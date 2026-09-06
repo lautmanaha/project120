@@ -1,0 +1,47 @@
+{
+  "ref": "survey_hadashut_hadshut-16-9",
+  "pollster_as_written": "מדגם יעוץ ומחקר בראשות מנו גבע",
+  "commissioner_as_written": "חברת החדשות",
+  "fieldwork_start": "2022-09-16",
+  "fieldwork_end": "2022-09-16",
+  "method": "mixed",
+  "initial_sample": 2864,
+  "respondents": 626,
+  "response_rate_pct": null,
+  "margin_error_pct": 4.4,
+  "population": "מדגם מייצג של כלל האוכלוסייה בישראל בגילאי 18 ומעלה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 33, "pct": 26.2},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 23, "pct": 18.4},
+        {"party_as_written": "הציונות הדתית בראשות סמוטריץ' ועוצמה יהודית בראשות בן גביר", "party": "הציונות הדתית", "seats": 12, "pct": 9.7},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ", "party": "המחנה הממלכתי", "seats": 12, "pct": 9.2},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": 6.0},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנופף", "party": "יהדות התורה", "seats": 7, "pct": 5.4},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 6, "pct": 4.8},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": 4.7},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 5, "pct": 3.9},
+        {"party_as_written": "חד\"ש - תע\"ל בראשות איימן עודה", "party": "חד\"ש-תע\"ל", "seats": 4, "pct": 3.4},
+        {"party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 3.3},
+        {"party_as_written": "הבית היהודי בראשות איילת שקד", "party": "הבית היהודי", "seats": 0, "pct": 1.9},
+        {"party_as_written": "צעירים בוערים בראשות הדר מוכתר", "party": "אחר", "seats": 0, "pct": 1.2},
+        {"party_as_written": "בל\"ד בראשות סמי אבו-שחאדה", "party": "בל\"ד", "seats": 0, "pct": 0.9},
+        {"party_as_written": "ישראל חופשית ודמוקרטית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.4},
+        {"party_as_written": "המפלגה הכלכלית החדשה בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 0.3},
+        {"party_as_written": "עלה ירוק 2.0 ואוסרת אל איסלמיה", "party": "אחר", "seats": 0, "pct": 0.1}
+      ],
+      "undecided_pct": 5.2,
+      "not_voting_pct": null,
+      "other_pct": 0.3,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Pct excludes undecided (מתלבטים 5.2% shown separately); footnote says data do not account for undecided split or certainty of vote."
+    }
+  ],
+  "extraction_notes": "3 pages, all readable. Page 3 has PM suitability / issue questions - not extracted. initial_sample recorded as number invited (2,864); planned sample size 625."
+}

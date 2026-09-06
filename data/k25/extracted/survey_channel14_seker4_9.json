@@ -1,0 +1,73 @@
+{
+  "ref": "survey_channel14_seker4_9",
+  "pollster_as_written": "דיירקט פולס בע\"מ, באמצעות מר שלמה פילבר",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2022-09-04",
+  "fieldwork_end": "2022-09-04",
+  "method": "internet",
+  "initial_sample": 5000,
+  "respondents": 643,
+  "response_rate_pct": null,
+  "margin_error_pct": 4.4,
+  "population": "מדגם בוגרים (בני 18+) מקרב כלל האוכלוסייה בישראל",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "תוצאות המחקר - מנדטים לפי מפלגה",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 33, "pct": null},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 22, "pct": null},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ", "party": "המחנה הממלכתי", "seats": 12, "pct": null},
+        {"party_as_written": "הציונות הדתית ועוצמה יהודית בראשות בצלאל סמוטריץ' ואיתמר בן גביר", "party": "הציונות הדתית", "seats": 10, "pct": null},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 10, "pct": null},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 7, "pct": null},
+        {"party_as_written": "הרשימה המשותפת בראשות איימן עודה", "party": "חד\"ש-תע\"ל", "seats": 6, "pct": null},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": null},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 5, "pct": null},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 5, "pct": null},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": null},
+        {"party_as_written": "הרוח הציונית בראשות איילת שקד ויועז הנדל", "party": "הבית היהודי", "seats": 0, "pct": 1.99},
+        {"party_as_written": "צעירים בוערים בראשות הדר מוכתר", "party": "אחר", "seats": 0, "pct": 1.09},
+        {"party_as_written": "המפלגה הכלכלית החדשה בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 0.47},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.20},
+        {"party_as_written": "הבית היהודי בראשות יוסי ברודני", "party": "הבית היהודי", "seats": 0, "pct": 0.16},
+        {"party_as_written": "עלה ירוק 2.0 ואוסרת אל איסלמיה", "party": "אחר", "seats": 0, "pct": 0.16}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Column 'מנדטים' - seats only; pct shown only for below-threshold parties. No explicit question text. הרשימה המשותפת shown as one joint list -> חד\"ש-תע\"ל. Two rows map to הבית היהודי (הרוח הציונית of Shaked-Hendel, and a separate 'הבית היהודי בראשות יוסי ברודני' row, both 0 seats - they later merged). No bloc totals given in this poll."
+    },
+    {
+      "qid": 2,
+      "type": "scenario",
+      "description": "ואם המפלגות החרדיות אגודת ישראל ודגל התורה, יתמודדו כל אחת בנפרד ושאר המפלגות יתמודדו כפי שהן, למי תצביעו?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 34, "pct": null},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 23, "pct": null},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ", "party": "המחנה הממלכתי", "seats": 12, "pct": null},
+        {"party_as_written": "הציונות הדתית ועוצמה יהודית בראשות בצלאל סמוטריץ' ואיתמר בן גביר", "party": "הציונות הדתית", "seats": 11, "pct": null},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 9, "pct": null},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 4, "pct": null},
+        {"party_as_written": "הרשימה המשותפת בראשות איימן עודה", "party": "חד\"ש-תע\"ל", "seats": 6, "pct": null},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 7, "pct": null},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 5, "pct": null},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 5, "pct": null},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": null},
+        {"party_as_written": "אגודת ישראל", "party": "יהדות התורה", "seats": 0, "pct": 3.05}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "seats_total": 120,
+      "blank_pct": null,
+      "notes": "Hypothetical UTJ split: the 'יהדות התורה' row here represents Degel HaTorah alone (4 seats) and 'אגודת ישראל' runs separately at 3.05% (below threshold) - both mapped to יהדות התורה. Small parties' pct not repeated in this column."
+    }
+  ],
+  "extraction_notes": "Pollster: Direct Polls via Shlomo Filber. Page 3 has PM-suitability and Labor-Meretz merger attitude questions (not extracted). All pages clear."
+}

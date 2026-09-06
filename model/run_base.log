@@ -1,0 +1,90 @@
+pollster priors: {}
+Initializing NUTS using jitter+adapt_diag...
+/usr/local/lib/python3.11/dist-packages/pytensor/link/c/cmodule.py:2986: UserWarning: PyTensor could not link to a BLAS installation. Operations that might benefit from BLAS will be severely degraded.
+This usually happens when PyTensor is installed via pip. We recommend it be installed via conda/mamba/pixi instead.
+Alternatively, you can use an experimental backend such as Numba or JAX that perform their own BLAS optimizations, by setting `pytensor.config.mode == 'NUMBA'` or passing `mode='NUMBA'` when compiling a PyTensor function.
+For more options and details see https://pytensor.readthedocs.io/en/latest/troubleshooting.html#how-do-i-configure-test-my-blas-library
+  warnings.warn(
+Multiprocess sampling (2 chains in 2 jobs)
+NUTS: [sigma_walk, kappa_log, eta_init, innovations, sigma_house, delta_raw, shared_bias_z]
+Sampling 2 chains for 1_500 tune and 1_000 draw iterations (3_000 + 2_000 draws total) took 356 seconds.
+We recommend running at least 4 chains for robust computation of convergence diagnostics
+The effective sample size per chain is smaller than 100 for some parameters.  A higher number is needed for reliable rhat and ess computation. See https://arxiv.org/abs/1903.08008 for details
+/home/claude/project120/vendor/kronikas/forecast.py:144: ConvergenceWarning: Posterior may not have converged; treat these estimates with caution.
+  - Bulk ESS 129 is below 400 (worst: sigma_house); estimates are noisy.
+  return extract_results(trace, fit_data, metadata, config=self.config)
+==================================================
+Election Forecast Summary
+==================================================
+
+Current estimates
+-----------------
+  ישר                   18.6%  (90% CI:  16.0% –  21.3%)
+  הליכוד                18.2%  (90% CI:  16.3% –  20.2%)
+  ביחד                   9.8%  (90% CI:   8.0% –  11.8%)
+  הדמוקרטים              7.7%  (90% CI:   6.2% –   9.4%)
+  ישראל ביתנו            6.7%  (90% CI:   5.5% –   8.0%)
+  יהדות התורה            6.2%  (90% CI:   5.1% –   7.3%)
+  עוצמה יהודית           6.0%  (90% CI:   4.9% –   7.3%)
+  ש"ס                    6.2%  (90% CI:   5.0% –   7.6%)
+  הרשימה המשותפת         5.9%  (90% CI:   4.5% –   7.6%)
+  רע"ם                   4.0%  (90% CI:   3.3% –   4.8%)
+  הציונות הדתית          4.4%  (90% CI:   3.6% –   5.4%)
+  עמך ישראל              3.7%  (90% CI:   1.9% –   6.3%)
+  כחול לבן               1.2%  (90% CI:   0.9% –   1.7%)
+  אחר                    1.4%  (90% CI:   1.0% –   1.8%)
+
+Election-day forecast
+---------------------
+  ישר                   18.5%  (90% CI:  15.1% –  22.0%)
+  הליכוד                18.0%  (90% CI:  15.8% –  20.3%)
+  ביחד                   9.7%  (90% CI:   7.6% –  12.1%)
+  הדמוקרטים              7.7%  (90% CI:   5.8% –   9.7%)
+  ישראל ביתנו            6.6%  (90% CI:   5.0% –   8.5%)
+  יהדות התורה            6.1%  (90% CI:   4.9% –   7.5%)
+  עוצמה יהודית           6.0%  (90% CI:   4.6% –   7.6%)
+  ש"ס                    6.2%  (90% CI:   4.8% –   7.9%)
+  הרשימה המשותפת         5.9%  (90% CI:   4.0% –   8.4%)
+  רע"ם                   4.0%  (90% CI:   3.1% –   5.0%)
+  הציונות הדתית          4.4%  (90% CI:   3.2% –   5.8%)
+  עמך ישראל              4.2%  (90% CI:   1.2% –   9.7%)
+  כחול לבן               1.2%  (90% CI:   0.8% –   1.7%)
+  אחר                    1.5%  (90% CI:   0.7% –   2.5%)
+
+Plurality probabilities (election day)
+-------------------------------------
+  ישר                   57.3%
+  הליכוד                42.0%
+  עמך ישראל              0.6%
+  ביחד                   0.1%
+  הדמוקרטים              0.0%
+  ישראל ביתנו            0.0%
+  יהדות התורה            0.0%
+  עוצמה יהודית           0.0%
+  ש"ס                    0.0%
+  הרשימה המשותפת         0.0%
+  רע"ם                   0.0%
+  הציונות הדתית          0.0%
+  כחול לבן               0.0%
+  אחר                    0.0%
+
+Sampling diagnostics
+--------------------
+  chains x draws     2 x 1000
+  max R-hat          1.0095 (delta_raw)
+  min ESS (bulk)     129 (sigma_house)
+  min ESS (tail)     180
+  divergences        0
+  status             PROBLEMS DETECTED
+    - Bulk ESS 129 is below 400 (worst: sigma_house); estimates are noisy.
+==================================================
+Sampling diagnostics
+--------------------
+  chains x draws     2 x 1000
+  max R-hat          1.0095 (delta_raw)
+  min ESS (bulk)     129 (sigma_house)
+  min ESS (tail)     180
+  divergences        0
+  status             PROBLEMS DETECTED
+    - Bulk ESS 129 is below 400 (worst: sigma_house); estimates are noisy.
+saved to model/output_base

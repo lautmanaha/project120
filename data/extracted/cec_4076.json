@@ -1,0 +1,46 @@
+{
+  "ref": "4076",
+  "pollster_as_written": "דיירקט פולס בע\"מ בראשות צוריאל שרון",
+  "commissioner_as_written": "חדשות המזרח התיכון I24 בע\"מ (ערוץ i24NEWS)",
+  "fieldwork_start": "2026-08-13",
+  "fieldwork_end": "2026-08-13",
+  "method": "mixed",
+  "initial_sample": 8200,
+  "respondents": 512,
+  "response_rate_pct": 6.2,
+  "margin_error_pct": 4.2,
+  "population": "מדגם ארצי ומייצג של כלל האוכלוסייה בישראל בגילאי 18+, לרבות יהודים וערבים",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, למי הייתם מצביעים?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד", "party": "הליכוד", "seats": 30, "pct": 22.9},
+        {"party_as_written": "ישר", "party": "ישר", "seats": 23, "pct": 17.6},
+        {"party_as_written": "הדמוקרטים", "party": "הדמוקרטים", "seats": 10, "pct": 7.6},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 9, "pct": 6.9},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 9, "pct": 6.8},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 8, "pct": 6.1},
+        {"party_as_written": "ביחד", "party": "ביחד", "seats": 8, "pct": 6.0},
+        {"party_as_written": "עוצמה יהודית", "party": "עוצמה יהודית", "seats": 7, "pct": 5.3},
+        {"party_as_written": "חד\"ש-תע\"ל", "party": "הרשימה המשותפת", "seats": 6, "pct": 4.6},
+        {"party_as_written": "רע\"ם", "party": "רע\"ם", "seats": 5, "pct": 4.0},
+        {"party_as_written": "הציונות הדתית", "party": "הציונות הדתית", "seats": 5, "pct": 3.8},
+        {"party_as_written": "זהות", "party": "זהות", "seats": 0, "pct": 2.2},
+        {"party_as_written": "בית ציוני", "party": "בית ציוני", "seats": 0, "pct": 2.0},
+        {"party_as_written": "הכלכלית", "party": "הכלכלית החדשה", "seats": 0, "pct": 1.2},
+        {"party_as_written": "האחדות", "party": "האחדות", "seats": 0, "pct": 1.1},
+        {"party_as_written": "בל\"ד", "party": "אחר", "seats": 0, "pct": 1.1}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Below-threshold parties show their pct in the seats column (seats 0). Footnote: כחול לבן (גנץ) and נעם לישראל (אבי מעוז) sampled but received under 1% - not listed with values, so not recorded. בל\"ד separately -> אחר. Method: אינטרנטי + טלפוני, פאנל משיבים."
+    }
+  ],
+  "extraction_notes": "Fieldwork 13.08.2026 09:00-14:30. Percentages sum to ~99.2, remainder presumably the sub-1% parties."
+}

@@ -1,0 +1,43 @@
+{
+  "ref": "survey_various_srugim_28_9",
+  "pollster_as_written": "מכון \"נתוני אמת\", כנפי נשרים 13, ירושלים",
+  "commissioner_as_written": "אתר סרוגים, כנפי נשרים 13, ירושלים",
+  "fieldwork_start": "2022-09-22",
+  "fieldwork_end": "2022-09-28",
+  "method": "internet",
+  "initial_sample": 6461,
+  "respondents": 4840,
+  "response_rate_pct": null,
+  "margin_error_pct": null,
+  "population": "גולשי אתר \"סרוגים\"",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו היו נערכות בחירות היום למי היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": null, "pct": 3},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": null, "pct": 1},
+        {"party_as_written": "הציונות הדתית / עוצמה יהודית", "party": "הציונות הדתית", "seats": null, "pct": 42},
+        {"party_as_written": "הליכוד", "party": "הליכוד", "seats": null, "pct": 25},
+        {"party_as_written": "הבית היהודי בראשות איילת שקד", "party": "הבית היהודי", "seats": null, "pct": 17},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": null, "pct": 0},
+        {"party_as_written": "המחנה הממלכתי", "party": "המחנה הממלכתי", "seats": null, "pct": 3},
+        {"party_as_written": "יש עתיד", "party": "יש עתיד", "seats": null, "pct": 2},
+        {"party_as_written": "העבודה", "party": "העבודה", "seats": null, "pct": 0},
+        {"party_as_written": "מרצ", "party": "מרצ", "seats": null, "pct": 0},
+        {"party_as_written": "רע\"מ", "party": "רע\"ם", "seats": null, "pct": 0},
+        {"party_as_written": "חד\"ש / תע\"ל", "party": "חד\"ש-תע\"ל", "seats": null, "pct": 0},
+        {"party_as_written": "בל\"ד", "party": "בל\"ד", "seats": null, "pct": 0}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": 0,
+      "other_pct": 6,
+      "blank_pct": null,
+      "seats_total": null,
+      "notes": "NOT a national sample - online survey of readers of the 'Srugim' (national-religious) website. Table has no seat column; gives raw respondent counts (ש\"ס 160, יהדות התורה 30, הציונות הדתית/עוצמה יהודית 2398, הליכוד 888, הבית היהודי 921, ישראל ביתנו 18, המחנה הממלכתי 112, יש עתיד 37, העבודה 5, מרצ 10, רע\"מ 1, חד\"ש/תע\"ל 2, בל\"ד 5, לא אצביע 25, אחר 228; total 4840) and rounded pct. The pct column does not match the raw counts (e.g. Likud 888/4840=18% but shown 25%; Habayit Hayehudi 921 shown 17%) so pct appears weighted/adjusted by the pollster; recorded as printed. 'לא אצביע בבחירות הקרובות' 25 respondents = 0%; 'אחר' 228 = 6%."
+    }
+  ],
+  "extraction_notes": "Page 1 is the CEC disclosure form (appendix C): commissioner Srugim website, pollster 'נתוני אמת' institute, fieldwork 22-28.9.2022, internet questionnaire, initial sample 6,461, total participants 12,384 of whom 47.8% did not fit the survey, no margin of error stated. Respondents recorded as 4,840 = sum of the table's respondent counts. No seat figures; pct sums to 99 due to rounding. Both pages clear."
+}

@@ -1,0 +1,44 @@
+{
+  "ref": "4096",
+  "pollster_as_written": "דיאלוג - יעוץ ארגוני, מחקר והדרכה בע\"מ",
+  "commissioner_as_written": "ידיעות אחרונות ynet, שכתובתם: נח מוזס 1, ראשון לציון (תא דואר 438, מיקוד 7510302)",
+  "fieldwork_start": "2026-08-17",
+  "fieldwork_end": "2026-08-19",
+  "method": "internet",
+  "initial_sample": 4013,
+  "respondents": 509,
+  "response_rate_pct": 12.0,
+  "margin_error_pct": 4.3,
+  "population": "מדגם ארצי של משרתי מילואים מעל 20 יום, בגילאי 18+ (סקר בקרב משרתי מילואים בלבד - לא כלל האוכלוסייה)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום לאיזו מפלגה היית מצביע במצב הזה? (בקרב משרתי מילואים בלבד)",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "ישר! בראשות גדי איזנקוט", "party": "ישר", "seats": 33, "pct": 19},
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 22, "pct": 13},
+        {"party_as_written": "ביחד בראשות נפתלי בנט", "party": "ביחד", "seats": 17, "pct": 10},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 13, "pct": 8},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 11, "pct": 7},
+        {"party_as_written": "בית ציוני - המילואימניקים (יועז הנדל / חילי טרופר)", "party": "בית ציוני", "seats": 9, "pct": 5},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 8, "pct": 5},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 7, "pct": 4},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 0, "pct": 1},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנופף", "party": "יהדות התורה", "seats": 0, "pct": 1},
+        {"party_as_written": "חד\"ש-תע\"ל בראשות איימן עודה ואחמד טיבי", "party": "הרשימה המשותפת", "seats": 0, "pct": 0},
+        {"party_as_written": "בל\"ד בראשות סאמי אבו שחאדה", "party": "אחר", "seats": 0, "pct": 0},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 1},
+        {"party_as_written": "האחדות בראשות גלעד ארדן", "party": "האחדות", "seats": 0, "pct": 2}
+      ],
+      "undecided_pct": 17,
+      "not_voting_pct": 2,
+      "other_pct": 6,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "SUB-POPULATION POLL: respondents are reservists only (served 20+ days). The seat column is explicitly 'חישוב מנדטים בתרחיש בו רק משרתי מילואים יצביעו' - a hypothetical seat calculation if only reservists voted; NOT a national forecast. pct is of the whole reservist sample (includes undecided 17%, other 6%, not voting 2%). Parties with blank seat cell are below threshold in this scenario -> seats 0. רע\"ם not listed. בל\"ד separate -> אחר."
+    }
+  ],
+  "extraction_notes": "Dialog poll for Yedioth/ynet among reserve soldiers (20+ days), dated 21/08/2026; fieldwork 17-19/08/2026, internet panel. 4,013 asked, 509 responded (12%), 3,504 refused (88%). Planned initial sample 500. Questions 1-6 (reserve days, conscription policy for Haredim/Arabs, government treatment of reservists, influence on vote) are not vote-intention - ignored. Only Q7 extracted; marked 'main' but it is a sector-only poll and seats are a reservists-only scenario."
+}

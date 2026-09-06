@@ -1,0 +1,15 @@
+{
+  "ref": "4049",
+  "pollster_as_written": "Next Data בע\"מ",
+  "commissioner_as_written": null,
+  "fieldwork_start": "2026-07-27",
+  "fieldwork_end": "2026-07-27",
+  "method": "unknown",
+  "initial_sample": 4982,
+  "respondents": 656,
+  "response_rate_pct": 13.2,
+  "margin_error_pct": null,
+  "population": "בוחרי הימין בישראל - נמענים המגדירים עצמם ימין או ימין מרכז במפה הפוליטית",
+  "questions": [],
+  "extraction_notes": "'סקר בוחרי הימין בישראל' - a 9-page attitudinal survey among self-identified right-wing voters only (N=656 of 4,982 recipients; response rate computed 656/4982 = 13.2%, not stated in the PDF). It contains NO current vote-intention / seat question: respondents are grouped only by their PAST vote in the November 2022 election (Likud 387 / Religious Zionism-Otzma-Haredi parties 146 / opposition parties 114 / 9 don't know). All 17 questions are issue, approval, leadership-succession (Ohana, Katz, Barkat, Segal, Magal, Sa'ar), Haredi draft, Trump-relations and demographic questions - none extractable per spec rule 5, so questions is an empty list. Commissioner not named (only 'מזמין סקר' in the legal notice); pollster given as analysis by Next Data. Method not stated ('נשלח' to recipients suggests online, but recorded as unknown). No margin of error stated. Fieldwork date 27 July 2026."
+}

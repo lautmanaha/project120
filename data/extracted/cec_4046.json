@@ -1,0 +1,71 @@
+{
+  "ref": "4046",
+  "pollster_as_written": "מדגם יעוץ ומחקר בראשות מנו גבע, שכתובתה: מצדה 7 בני ברק 5126122",
+  "commissioner_as_written": "חברת החדשות, שכתובתה: קריית התקשורת נווה אילן ד.נ. הרי יהודה 90850",
+  "fieldwork_start": "2026-08-03",
+  "fieldwork_end": "2026-08-03",
+  "method": "mixed",
+  "initial_sample": 2515,
+  "respondents": 503,
+  "response_rate_pct": 20.0,
+  "margin_error_pct": 4.4,
+  "population": "בעלי זכות בחירה - כלל האוכלוסייה בישראל מגיל 18 ומעלה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "ישר! עם איזנקוט בראשות גדי איזנקוט", "party": "ישר", "seats": 23, "pct": 18.7},
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 23, "pct": 18.6},
+        {"party_as_written": "ביחד בראשות נפתלי בנט", "party": "ביחד", "seats": 14, "pct": 11.2},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 10, "pct": 8.0},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 9, "pct": 7.2},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנופף", "party": "יהדות התורה", "seats": 8, "pct": 6.4},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 7, "pct": 5.7},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 7, "pct": 5.6},
+        {"party_as_written": "חד\"ש-תע\"ל בראשות יוסף ג'אברין ואחמד טיבי", "party": "הרשימה המשותפת", "seats": 5, "pct": 4.1},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 5, "pct": 4.0},
+        {"party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 5, "pct": 3.9},
+        {"party_as_written": "בית ציוני - המילואימניקים בראשות חילי טרופר ויועז הנדל", "party": "בית ציוני", "seats": 4, "pct": 3.3},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 1.4},
+        {"party_as_written": "בל\"ד בראשות סמי אבו שחאדה", "party": "אחר", "seats": 0, "pct": 0.8}
+      ],
+      "undecided_pct": 10.4,
+      "not_voting_pct": null,
+      "other_pct": 1.0,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "pct column is 'אחוז גולמי (*)' - raw percentages, footnote says raw data do not include compensation for undecided ('פיצוח מתלבטים'); seats are the projected allocation. 'לא החליטו' 10.4% is listed below the 100% total (i.e. outside the base of the pct column). בל\"ד mapped to אחר."
+    },
+    {
+      "qid": 2,
+      "type": "scenario",
+      "description": "ואילו הבחירות לכנסת היו מתקיימות היום ומפלגות חד\"ש, תע\"ל ובל\"ד היו מתמודדות ברשימה אחת, ובנוסף, ח\"כ יואב סגלוביץ' יצטרף לרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס, ויתר המפלגות ללא שינוי, לאיזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 23, "pct": 18.7},
+        {"party_as_written": "ישר! עם איזנקוט בראשות גדי איזנקוט", "party": "ישר", "seats": 23, "pct": 18.6},
+        {"party_as_written": "ביחד בראשות נפתלי בנט", "party": "ביחד", "seats": 14, "pct": 11.3},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 9, "pct": 7.4},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 9, "pct": 7.4},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנופף", "party": "יהדות התורה", "seats": 8, "pct": 6.5},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 7, "pct": 5.6},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 7, "pct": 5.6},
+        {"party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס עם יואב סגלוביץ'", "party": "רע\"ם", "seats": 6, "pct": 4.8},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 5, "pct": 4.1},
+        {"party_as_written": "איחוד המפלגות הערביות של חד\"ש, תע\"ל ובל\"ד", "party": "הרשימה המשותפת", "seats": 5, "pct": 4.0},
+        {"party_as_written": "בית ציוני - המילואימניקים בראשות חילי טרופר ויועז הנדל", "party": "בית ציוני", "seats": 4, "pct": 3.3},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 1.3}
+      ],
+      "undecided_pct": 8.0,
+      "not_voting_pct": null,
+      "other_pct": 1.2,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Scenario: חד\"ש-תע\"ל-בל\"ד merged into one list (mapped to הרשימה המשותפת) and Yoav Segalovitz joins רע\"ם. pct are raw ('אחוז גולמי'), undecided 8.0% listed outside the 100% base."
+    }
+  ],
+  "extraction_notes": "Midgam (מנו גבע) for חברת החדשות (Channel 12), 6 pages, clean text. Fieldwork 3/8/2026 single day. Pages 4-6 contain PM-suitability, defence minister approval and security-issue questions - not extracted. 2,515 asked, 503 responded (20%), 2,012 refused (80%); 'גודל המדגם ההתחלתי' is written as 500 (planned sample) - initial_sample recorded as the 2,515 asked."
+}

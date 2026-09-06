@@ -1,0 +1,71 @@
+{
+  "ref": "4056",
+  "pollster_as_written": "קאנטר ישראל, אריאל שרון 4 גבעתיים",
+  "commissioner_as_written": "עיתון ישראל היום בע\"מ, השלושה 2, תל אביב 61520",
+  "fieldwork_start": "2026-08-05",
+  "fieldwork_end": "2026-08-06",
+  "method": "internet",
+  "initial_sample": 2400,
+  "respondents": 552,
+  "response_rate_pct": 23.0,
+  "margin_error_pct": 4.1,
+  "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו היו מתקיימות היום הבחירות לכנסת, והמפלגות המתמודדות יהיו המפלגות הבאות עם ראשי המפלגות שברשימה בפניך, עבור איזו מפלגה היית מצביע? (תחזית המנדטים 1 - מצב נוכחי)",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 23, "pct": 18.7},
+        {"party_as_written": "\"ביחד\" בראשות נפתלי בנט", "party": "ביחד", "seats": 13, "pct": 10.6},
+        {"party_as_written": "מפלגת ישר! בראשות גדי איזנקוט", "party": "ישר", "seats": 22, "pct": 17.9},
+        {"party_as_written": "מפלגת הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 10, "pct": 8.1},
+        {"party_as_written": "חילי טרופר ויועז הנדל – מפלגת בית ציוני המילואימניקים", "party": "בית ציוני", "seats": 4, "pct": 3.3},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 4, "pct": 3.3},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 9, "pct": 7.3},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 9, "pct": 7.3},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 7, "pct": 5.7},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנופף", "party": "יהדות התורה", "seats": 8, "pct": 6.5},
+        {"party_as_written": "חד\"ש-תע\"ל בראשות יוסף ג'אברין ואחמד טיבי", "party": "הרשימה המשותפת", "seats": 5, "pct": 4.1},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 6, "pct": 4.9},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 0.7},
+        {"party_as_written": "בל\"ד בראשות סמי אבו שחאדה", "party": "אחר", "seats": 0, "pct": 1.6}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "pct column is 'אחוזים (נתונים גולמיים)' i.e. raw percentages as labelled by Kantar; seats are the forecast. כחול לבן and בל\"ד listed under 'נבדקו בסקר ולא עברו אחוז חסימה' -> seats 0. בל\"ד running separately -> אחר."
+    },
+    {
+      "qid": 2,
+      "type": "scenario",
+      "description": "תחזית המנדטים 2 - איחוד המועמדים והמפלגות הבאות למפלגה אחת חדשה (שאינה מזדהה עם אף אחד מהגושים ומעוניינת בהקמת ממשלת אחדות): חילי טרופר, יועז הנדל והמילואימניקים, גלעד ארדן, בני גנץ וכחול לבן, דדי שמחי, יולי אדלשטיין, שרן השכל, עליזה בלוך ואיילת שקד",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 23, "pct": 18.3},
+        {"party_as_written": "\"ביחד\" בראשות נפתלי בנט", "party": "ביחד", "seats": 13, "pct": 10.4},
+        {"party_as_written": "מפלגת ישר! בראשות גדי איזנקוט", "party": "ישר", "seats": 21, "pct": 16.7},
+        {"party_as_written": "מפלגת הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 11, "pct": 8.8},
+        {"party_as_written": "איחוד של כל מפלגות האמצע שאינן מזדהות עם אף אחד מהגושים", "party": "האחדות", "seats": 8, "pct": 6.4},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 9, "pct": 7.2},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 9, "pct": 7.2},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 7, "pct": 5.6},
+        {"party_as_written": "יהדות התורה בראשות יצחק גולדקנופף", "party": "יהדות התורה", "seats": 8, "pct": 6.4},
+        {"party_as_written": "חד\"ש-תע\"ל בראשות יוסף ג'אברין ואחמד טיבי", "party": "הרשימה המשותפת", "seats": 5, "pct": 4.0},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 6, "pct": 4.8},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 0, "pct": 2.8},
+        {"party_as_written": "בל\"ד בראשות סמי אבו שחאדה", "party": "אחר", "seats": 0, "pct": 1.6}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Scenario: merged centre list (Troper/Hendel/Miluimnikim + Erdan + Gantz/כחול לבן + Simhi, Edelstein, Haskel, Bloch, Shaked) mapped to האחדות (Erdan/Edelstein party convention); it absorbs בית ציוני and כחול לבן. הציונות הדתית and בל\"ד below threshold -> 0. pct column is raw ('נתונים גולמיים')."
+    }
+  ],
+  "extraction_notes": "Kantar for Israel Hayom, report dated 6/08/2026. Fieldwork 5 Aug (14:40) - 6 Aug (07:30) 2026. initial_sample = 2,400 people approached (23% response); the form also lists 'גודל המדגם ההתחלתי' = 550 (target) while actual respondents = 552. Pages 4-5 contain non-vote questions (list importance, opposition unity, Hamas disarmament, Netanyahu/Katz/Zamir ratings) - ignored."
+}

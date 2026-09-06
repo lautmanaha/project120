@@ -1,0 +1,46 @@
+{
+  "ref": "survey_hadashut_hadshut12-8-8",
+  "pollster_as_written": "מדגם יעוץ ומחקר בראשות מנו גבע",
+  "commissioner_as_written": "חברת החדשות",
+  "fieldwork_start": "2022-08-08",
+  "fieldwork_end": "2022-08-08",
+  "method": "mixed",
+  "initial_sample": 2823,
+  "respondents": 501,
+  "response_rate_pct": null,
+  "margin_error_pct": 4.4,
+  "population": "מדגם מייצג של כלל האוכלוסייה בישראל בגילאי 18 ומעלה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 34, "pct": 26.5},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 24, "pct": 18.9},
+        {"party_as_written": "כחול לבן התקווה החדשה בראשות בני גנץ", "party": "המחנה הממלכתי", "seats": 12, "pct": 9.4},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 10, "pct": 7.8},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": 6.3},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": 5.5},
+        {"party_as_written": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) בראשות איימן עודה", "party": "חד\"ש-תע\"ל", "seats": 6, "pct": 4.7},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 5, "pct": 4.2},
+        {"party_as_written": "העבודה בראשות מרב מיכאלי", "party": "העבודה", "seats": 5, "pct": 4.1},
+        {"party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 5, "pct": 4.1},
+        {"party_as_written": "מרצ", "party": "מרצ", "seats": 4, "pct": 3.3},
+        {"party_as_written": "הרוח הציונית בראשות איילת שקד ויועז הנדל", "party": "הבית היהודי", "seats": 0, "pct": 2.1},
+        {"party_as_written": "המפלגה הכלכלית החדשה בראשות ירון זליכה", "party": "אחר", "seats": 0, "pct": 0.8},
+        {"party_as_written": "הבית היהודי בראשות יוסי ברודני", "party": "אחר", "seats": 0, "pct": 0.2},
+        {"party_as_written": "ישראל חופשית בראשות אלי אבידר", "party": "אחר", "seats": 0, "pct": 0.2},
+        {"party_as_written": "עלה ירוק 2.0 ואוסרת אל איסלמיה בראשות דקל חץ-דוד עוזר", "party": "אחר", "seats": 0, "pct": 0.2}
+      ],
+      "undecided_pct": 5.0,
+      "not_voting_pct": null,
+      "other_pct": 1.7,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "כחול לבן-התקווה החדשה (Gantz-Saar, pre-Eisenkot) mapped to המחנה הממלכתי. הציונות הדתית listed under Smotrich only; no separate עוצמה יהודית row in the table. הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) shown as one list -> חד\"ש-תע\"ל. הרוח הציונית -> הבית היהודי; 'הבית היהודי בראשות יוסי ברודני' -> אחר. Pct excludes undecided (5%)."
+    }
+  ],
+  "extraction_notes": "3 pages, all readable. Page 3 has PM suitability / Operation Breaking Dawn evaluation questions - not extracted. initial_sample recorded as number invited (2,823); planned sample size 500."
+}

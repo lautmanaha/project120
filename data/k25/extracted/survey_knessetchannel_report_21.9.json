@@ -1,0 +1,47 @@
+{
+  "ref": "survey_knessetchannel_report_21.9",
+  "pollster_as_written": "פאנלס פוליטיקס בראשות מנחם לזר, ריינס 44 תל אביב",
+  "commissioner_as_written": "ערוץ כנסת, משכן הכנסת ירושלים.",
+  "fieldwork_start": "2022-09-20",
+  "fieldwork_end": "2022-09-21",
+  "method": "internet",
+  "initial_sample": 3372,
+  "respondents": 706,
+  "response_rate_pct": 20.9,
+  "margin_error_pct": 3.7,
+  "population": "מדגם מייצג של אזרחי ישראל מגיל 18 ומעלה, יהודים וערבים כאחד",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות הקרובות לכנסת היו מתקיימות היום למי היית מצביע?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 33, "pct": 23.0},
+        {"party_as_written": "יש עתיד בראשות יאיר לפיד", "party": "יש עתיד", "seats": 24, "pct": 19.5},
+        {"party_as_written": "הציונות הדתית | עוצמה יהודית בראשות סמוטריץ ובן גביר", "party": "הציונות הדתית", "seats": 12, "pct": 11.1},
+        {"party_as_written": "המחנה הממלכתי בראשות בני גנץ גדעון סער וגדי אייזנקוט", "party": "המחנה הממלכתי", "seats": 12, "pct": 10.6},
+        {"party_as_written": "שס בראשות אריה דרעי", "party": "ש\"ס", "seats": 8, "pct": 6.1},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": 7, "pct": 5.2},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": 4.7},
+        {"party_as_written": "מרצ בראשות זהבה גלאון", "party": "מרצ", "seats": 5, "pct": 4.2},
+        {"party_as_written": "העבודה בראשות מירב מיכאלי", "party": "העבודה", "seats": 5, "pct": 4.0},
+        {"party_as_written": "הרשימה המשותפת - חדש ותעל בראשות איימן עודה ואחמד טיבי", "party": "חד\"ש-תע\"ל", "seats": 4, "pct": 3.5},
+        {"party_as_written": "רעם בראשות מנסור עבאס", "party": "רע\"ם", "seats": 4, "pct": 3.3},
+        {"party_as_written": "הבית היהודי בראשות איילת שקד", "party": "הבית היהודי", "seats": 0, "pct": 1.9},
+        {"party_as_written": "בל\"ד בראשות סאמי אבו שחאדה", "party": "בל\"ד", "seats": 0, "pct": 1.1},
+        {"party_as_written": "צעירים בוערים בראשות הדר מוכתר", "party": "אחר", "seats": 0, "pct": 0.3},
+        {"party_as_written": "חופש כלכלי ברשות אביר קארה", "party": "אחר", "seats": 0, "pct": 0.3},
+        {"party_as_written": "המפלגה הכלכלית בראשות פרופ` ירון זליכה", "party": "אחר", "seats": 0, "pct": 0.9},
+        {"party_as_written": "רשימת עלה ירוק 2.0 ואוסרת אל איסלמיה", "party": "אחר", "seats": 0, "pct": 0.3}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "'הרשימה המשותפת - חדש ותעל' is Hadash-Ta'al only (Balad listed separately) - mapped to חד\"ש-תע\"ל. pct sums to 100% among those naming a party."
+    }
+  ],
+  "extraction_notes": "Fieldwork 20.09.22 10:00 to 21.09.22 10:00. 'גודל המדגם ההתחלתי' shown as 700 (target); 3,372 invited (recorded as initial_sample), 706 actual respondents. Turnout intention, Hadash-Ta'al coalition legitimacy and Hadar Muchtar bloc questions ignored."
+}

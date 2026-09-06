@@ -1,0 +1,73 @@
+{
+  "ref": "4107",
+  "pollster_as_written": "טאטיקה מחקרים ומדיה",
+  "commissioner_as_written": "זמן ישראל",
+  "fieldwork_start": "2026-08-26",
+  "fieldwork_end": "2026-08-27",
+  "method": "mixed",
+  "initial_sample": 9072,
+  "respondents": 500,
+  "response_rate_pct": 7.0,
+  "margin_error_pct": 4.4,
+  "population": "כלל האוכלוסייה (יהודים וערבים, 18+) - לא צוין במפורש; מדגם של 500 משיבים עם פילוח גיל/מגזר/מגדר/אזור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, וכל המפלגות הקיימות היו מתמודדות בנפרד, למי היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "ישר בראשות גדי אייזנקוט", "party": "ישר", "seats": 26, "pct": 19.6},
+        {"party_as_written": "הליכוד", "party": "הליכוד", "seats": 22, "pct": 16.2},
+        {"party_as_written": "ביחד בראשות נפתלי בנט", "party": "ביחד", "seats": 14, "pct": 10.8},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 10, "pct": 8.0},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 9, "pct": 7.2},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 8, "pct": 6.4},
+        {"party_as_written": "הדמוקרטים", "party": "הדמוקרטים", "seats": 8, "pct": 6.0},
+        {"party_as_written": "חד\"ש תע\"ל בל\"ד", "party": "הרשימה המשותפת", "seats": 6, "pct": 5.0},
+        {"party_as_written": "עוצמה יהודית", "party": "עוצמה יהודית", "seats": 6, "pct": 5.0},
+        {"party_as_written": "עמך ישראל בראשות עופר וינטר", "party": "עמך ישראל", "seats": 6, "pct": 4.4},
+        {"party_as_written": "רע\"ם", "party": "רע\"ם", "seats": 5, "pct": 4.0},
+        {"party_as_written": "הציונות הדתית", "party": "הציונות הדתית", "seats": 0, "pct": 2.8},
+        {"party_as_written": "בית ציוני בהובלת חילי טרופר ויועז הנדל", "party": "בית ציוני", "seats": 0, "pct": 2.4},
+        {"party_as_written": "כחול לבן בהובלת בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 1.4},
+        {"party_as_written": "אחודות בהובלת גלעד ארדן ויולי אדלשטיין", "party": "האחדות", "seats": 0, "pct": 0.8}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Table gives number of respondents (n=500), pct of respondents and seat allocation. Parties below threshold marked 'לא עבר' -> seats 0. No undecided/not-voting rows shown; pcts sum to 100. Erdan/Edelstein list written 'אחודות' -> mapped to האחדות."
+    },
+    {
+      "qid": 2,
+      "type": "scenario",
+      "description": "אם הבחירות היו מתקיימות היום, וכל המפלגות המצויינות היו מתמודדות בנפרד, למעט איחוד בין עוצמה יהודית לציונות הדתית, למי היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "ישר בראשות גדי אייזנקוט", "party": "ישר", "seats": 25, "pct": 19.4},
+        {"party_as_written": "הליכוד", "party": "הליכוד", "seats": 22, "pct": 17.0},
+        {"party_as_written": "ביחד בראשות נפתלי בנט", "party": "ביחד", "seats": 14, "pct": 10.8},
+        {"party_as_written": "ישראל ביתנו", "party": "ישראל ביתנו", "seats": 10, "pct": 8.2},
+        {"party_as_written": "ש\"ס", "party": "ש\"ס", "seats": 9, "pct": 7.2},
+        {"party_as_written": "עוצמה יהודית", "party": "עוצמה יהודית", "seats": 8, "pct": 6.6},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 8, "pct": 6.4},
+        {"party_as_written": "הדמוקרטים", "party": "הדמוקרטים", "seats": 7, "pct": 6.0},
+        {"party_as_written": "חד\"ש תע\"ל בל\"ד", "party": "הרשימה המשותפת", "seats": 6, "pct": 5.0},
+        {"party_as_written": "עמך ישראל בראשות עופר וינטר", "party": "עמך ישראל", "seats": 6, "pct": 4.6},
+        {"party_as_written": "רע\"ם", "party": "רע\"ם", "seats": 5, "pct": 4.0},
+        {"party_as_written": "בית ציוני בהובלת חילי טרופר ויועז הנדל", "party": "בית ציוני", "seats": 0, "pct": 2.4},
+        {"party_as_written": "כחול לבן בהובלת בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 1.4},
+        {"party_as_written": "אחודות בהובלת גלעד ארדן ויולי אדלשטיין", "party": "האחדות", "seats": 0, "pct": 1.0}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Scenario: עוצמה יהודית and הציונות הדתית run as a merged list; the row is labelled 'עוצמה יהודית' only (mapped to עוצמה יהודית as larger component). 'לא עבר' -> 0 seats."
+    }
+  ],
+  "extraction_notes": "Titled 'תוצאות סקר 27.8'. PDF does not name the pollster or commissioner; taken from CEC metadata (טאטיקה מחקרים ומדיה for זמן ישראל). Fieldwork 26/8 12:00 to 27/8 15:00 (year 2026). Method: internet panel + phone completions ('פאנל אינטרנטי + השלמות טלפוניות'). Initial sample: 9,000 SMS with link + 72 phone calls = 9,072; 519 answered, 19 excluded as unfit/out of quota -> 500 respondents. Response rate recorded as 7.0 derived from the stated 93% non-response. Population not explicitly stated (CEC requested completions); demographic tables show Jews and Arabs, 18+. Margin of error 4.4%."
+}
