@@ -198,7 +198,7 @@ def main() -> int:
             sector_pop = ("מילואימ", "ימין בלבד", "מצביעי ימין", "reservist", "הזרם הדתי", "דתי-לאומי", "הדתי הלאומי",
                           "האוכלוסייה הערבית", "החברה הערבית", "המגזר הערבי", "ערביי ישראל", "Arab population")
             # שדה האוכלוסייה קובע; ההערות רק אם מצוין במפורש שהמדגם כולו מגזרי
-            if any(k in pop for k in sector_pop) or any(k in notes for k in ("מילואימ", "reservists only")):
+            if any(k in pop for k in sector_pop) or any(k in notes for k in ("reservists only", "מדגם של מילואימניקים בלבד")):
                 exclude = "מדגם של תת-אוכלוסייה"
         # זיהוי כפילות לפי (סוקר, תאריכים, מנדטים)
         if mains and not exclude:

@@ -1,0 +1,45 @@
+{
+  "ref": "4128",
+  "pollster_as_written": "חברת Next Data, המנופים 1, הרצליה",
+  "commissioner_as_written": "ערוץ עכשיו 14, צלע ההר 44, מודיעין",
+  "fieldwork_start": "2026-09-03",
+  "fieldwork_end": "2026-09-03",
+  "method": "internet",
+  "initial_sample": 868,
+  "respondents": 789,
+  "response_rate_pct": 12.4,
+  "margin_error_pct": 3.5,
+  "population": "נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "מפת המנדטים הסופית · כנסת בת 120 מושבים · אחוז חסימה 3.25%",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 31, "pct": 24.2},
+        {"party_as_written": "ישר בראשות גדי איזנקוט", "party": "ישר", "seats": 22, "pct": 16.9},
+        {"party_as_written": "יחד בראשות נפתלי בנט", "party": "ביחד", "seats": 11, "pct": 8.6},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 10, "pct": 7.5},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 10, "pct": 7.5},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 8, "pct": 6.3},
+        {"party_as_written": "הציונות הדתית וזהות בראשות בצלאל סמוטריץ'", "party": "הציונות הדתית", "seats": 7, "pct": 5.5},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 7, "pct": 5.4},
+        {"party_as_written": "חד\"ש-תע\"ל, רע\"ם ובל\"ד", "party": "הרשימה המשותפת", "seats": 7, "pct": 5.3},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 7, "pct": 5.2},
+        {"party_as_written": "עמך ישראל בראשות עופר וינטר", "party": "עמך ישראל", "seats": 0, "pct": 2.7},
+        {"party_as_written": "בית ציוני בראשות יועז הנדל וחילי טרופר", "party": "בית ציוני", "seats": 0, "pct": 1.3},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 1.2},
+        {"party_as_written": "נעם לישראל בראשות אבי מעוז", "party": "נעם", "seats": 0, "pct": 0.3},
+        {"party_as_written": "אחדות בראשות גלעד ארדן ויולי אדלשטיין", "party": "האחדות", "seats": 0, "pct": 0.1},
+        {"party_as_written": "הציבור החרדי בראשות לייטנר", "party": "הציבור החרדי", "seats": 0, "pct": 0.1}
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "seats_total": 120,
+      "notes": "Only vote-intention table in the PDF; presented as the current party map (no scenario framing), so treated as main. Pct column is labelled 'אחוז גולמי' (gross/raw share) with footnote: does not account for allocation of undecideds or Bader-Ofer calculations; seats are the final allocation. Two rows are combined lists as they run in this poll: 'הציונות הדתית וזהות' (mapped to הציונות הדתית) and 'חד\"ש-תע\"ל, רע\"ם ובל\"ד' (Joint List incl. Ra'am, mapped to הרשימה המשותפת). Below-threshold parties (second table, 3.25% threshold) recorded with seats=0. Passing parties' pct sums to 92.4 (as printed), below-threshold 5.7, total 98.1 - remaining ~1.9% not explained (no undecided/other row). Blocs: Netanyahu bloc 63, opposition 57."
+    }
+  ],
+  "extraction_notes": "All 4 pages readable. Page 1: survey details. Page 2: seat map + below-threshold table. Pages 3-4: PM suitability and 7 issue questions (not extracted). Fieldwork 3.9.2026, 11:30-15:30. Initial sample taken as 'גודל המדגם ההתחלתי' = 868 (7,024 were invited; 6,156 refused/unqualified; non-participation 87.6%). Respondents = 789. Method: 'איסוף דיגיטלי אינטרנטי' -> internet. Footer says data weighted, percentages rounded."
+}

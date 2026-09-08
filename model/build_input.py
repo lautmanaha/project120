@@ -37,6 +37,7 @@ def main() -> None:
 
     rows = []
     missing_cells: list[tuple[int, str]] = []   # (row index, party) - ערכים שיש להשלים
+    split_cells: list[tuple[int, str, str]] = []  # (row, רשימה מאוחדת, מפלגה שבתוכה) - לפצל לפי יחס סמוך
     for ref, start, end, pollster, n, qid, other_pct in polls:
         res = [(("בל\"ד" if (w or "").strip().startswith("בל\"ד") else p), se, pc) for p, w, se, pc in conn.execute("SELECT party, party_as_written, seats, pct FROM poll_results WHERE question_id=?", (qid,)).fetchall()]
         has_pct = any(r[2] is not None for r in res)
@@ -63,6 +64,12 @@ def main() -> None:
             shares["אחר"] += 4.0
             src = "seats"
         idx = len(rows)
+        # רשימה ערבית מאוחדת (רע"ם בתוך המשותפת, כמו בסקר 4128): לפצל לפי היחס בסקרים הסמוכים,
+        # ולא להשלים רע"ם מלמעלה (זה היה סופר את הקול הערבי פעמיים)
+        joint_written = [w for p, w, _, _ in conn.execute("SELECT party, party_as_written, seats, pct FROM poll_results WHERE question_id=?", (qid,)).fetchall() if p == "הרשימה המשותפת"]
+        if shares.get("רע\"ם") is None and shares.get("הרשימה המשותפת") and any("רע\"ם" in (w or "") for w in joint_written):
+            split_cells.append((idx, "הרשימה המשותפת", "רע\"ם"))
+            shares["רע\"ם"] = 0.0  # ימולא בפיצול
         for p in MODEL_PARTIES:
             if shares[p] is None:
                 missing_cells.append((idx, p))
@@ -79,6 +86,13 @@ def main() -> None:
         allv = [r[col[p]] for r in rows if r[col[p]] is not None]
         rows[idx][col[p]] = mean(near) if near else (mean(allv) if allv else 0.3)
         rows[idx][4] += f"|imputed:{p}"
+    for idx, a, b in split_cells:
+        d0 = _d.fromisoformat(rows[idx][0])
+        pairs = [(r[col[a]], r[col[b]]) for j, r in enumerate(rows) if j != idx and r[col[a]] and r[col[b]] and abs((_d.fromisoformat(r[0]) - d0).days) <= 10]
+        ratio = (sum(x for x, _ in pairs) / sum(x + y for x, y in pairs)) if pairs else 0.6
+        total = rows[idx][col[a]]
+        rows[idx][col[a]], rows[idx][col[b]] = round(total * ratio, 2), round(total * (1 - ratio), 2)
+        rows[idx][4] += f"|split:{a}+{b}"
     # אפס בדיריכלה = בעיה מספרית. רצפה 0.3% (מתחת לכל סף ולכל דיוק סקר)
     for r in rows:
         for p in MODEL_PARTIES:
