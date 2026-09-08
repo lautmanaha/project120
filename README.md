@@ -83,11 +83,11 @@ python db\build_db.py; python db\export_excel.py
 ## פרסום (DevOps)
 
 הזרימה: המחשב של אהרון (משימה יומית 09:30) -> משיכה מהוועדה -> חילוץ -> מודל (4 שרשראות, ~15 דק') -> `site/index.html` -> `git push`
--> GitHub Actions (`.github/workflows/pages.yml`) מפרסם את `site/` ב-GitHub Pages -> הדומיין `120.lautman.org` (CNAME).
+-> GitHub Actions (`.github/workflows/pages.yml`) מפרסם את `site/` ב-GitHub Pages -> הדומיין `project120.co.il` (CNAME).
 
 הגדרה חד-פעמית:
 1. ריפו ב-GitHub (ציבורי, בשם `project120`), `git init` בתיקייה הזו, `git remote add origin ...`, push ראשון.
-2. Settings -> Pages -> Source: GitHub Actions. Settings -> Pages -> Custom domain: `120.lautman.org` (הקובץ `site/CNAME` כבר קיים).
+2. Settings -> Pages -> Source: GitHub Actions. Settings -> Pages -> Custom domain: `project120.co.il` (הקובץ `site/CNAME` כבר קיים).
 3. ב-DNS של lautman.org: רשומת CNAME `120` -> `<user>.github.io`. לסמן Enforce HTTPS אחרי שהאימות עובר.
 4. במחשב: `git config user.name/email`, ו-credential helper (Git Credential Manager) כדי ש-push ירוץ ללא סיסמה מהמשימה היומית.
 
