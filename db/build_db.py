@@ -193,8 +193,12 @@ def main() -> int:
         elif not has_main:
             exclude = "אין שאלת הצבעה"
         else:
-            pop = (d.get("population") or "") + " " + (mains[0].get("notes") or "")
-            if any(k in pop for k in ("מילואימ", "ימין בלבד", "מצביעי ימין", "reservist")):
+            pop = (d.get("population") or "")
+            notes = (mains[0].get("notes") or "")
+            sector_pop = ("מילואימ", "ימין בלבד", "מצביעי ימין", "reservist", "הזרם הדתי", "דתי-לאומי", "הדתי הלאומי",
+                          "האוכלוסייה הערבית", "החברה הערבית", "המגזר הערבי", "ערביי ישראל", "Arab population")
+            # שדה האוכלוסייה קובע; ההערות רק אם מצוין במפורש שהמדגם כולו מגזרי
+            if any(k in pop for k in sector_pop) or any(k in notes for k in ("מילואימ", "reservists only")):
                 exclude = "מדגם של תת-אוכלוסייה"
         # זיהוי כפילות לפי (סוקר, תאריכים, מנדטים)
         if mains and not exclude:

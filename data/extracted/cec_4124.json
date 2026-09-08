@@ -1,0 +1,44 @@
+{
+  "ref": "4124",
+  "pollster_as_written": "דיאלוג – יעוץ ארגוני, מחקר והדרכה בע\"מ",
+  "commissioner_as_written": "ידיעות אחרונות ynet",
+  "fieldwork_start": "2026-08-31",
+  "fieldwork_end": "2026-09-01",
+  "method": "internet",
+  "initial_sample": 2849,
+  "respondents": 508,
+  "response_rate_pct": 17.0,
+  "margin_error_pct": 4.3,
+  "population": "מדגם ארצי של הזרם הדתי-לאומי, בגילאי 18+",
+  "questions": [
+    {
+      "qid": 8,
+      "type": "main",
+      "description": "כפי שמפורסם בשעות אלה בתקשורת, מפלגת \"הציונות הדתית\" בראשות בצלאל סמוטריץ' תתאחד ותרוץ ביחד עם מפלגת \"זהות\" בראשות משה פייגלין. אם הבחירות היו מתקיימות היום, לאיזו מפלגה היית מצביע במצב הזה?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "רשימה מאוחדת של הציונות הדתית בראשות סמוטריץ' וזהות בראשות פייגלין", "party": "הציונות הדתית", "seats": null, "pct": 30},
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": null, "pct": 17},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": null, "pct": 12},
+        {"party_as_written": "עמך ישראל בראשות עפר וינטר", "party": "עמך ישראל", "seats": null, "pct": 6},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": null, "pct": 4},
+        {"party_as_written": "ישר! בראשות גדי איזנקוט", "party": "ישר", "seats": null, "pct": 4},
+        {"party_as_written": "ביחד בראשות נפתלי בנט", "party": "ביחד", "seats": null, "pct": 3},
+        {"party_as_written": "בית ציוני – המילואימניקים (יועז הנדל / חילי טרופר)", "party": "בית ציוני", "seats": null, "pct": 3},
+        {"party_as_written": "האחדות בראשות גלעד ארדן", "party": "האחדות", "seats": null, "pct": 2},
+        {"party_as_written": "נעם בראשות אבי מעוז", "party": "נעם", "seats": null, "pct": 1},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": null, "pct": 1},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": null, "pct": 1},
+        {"party_as_written": "יהדות התורה בראשות משה גפני", "party": "יהדות התורה", "seats": null, "pct": 0},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": null, "pct": 0}
+      ],
+      "undecided_pct": 13,
+      "not_voting_pct": 1,
+      "other_pct": 2,
+      "blank_pct": null,
+      "seats_total": null,
+      "notes": "Sectoral poll: respondents are the religious-Zionist (הזרם הדתי-לאומי) sector only, so pct is per sector, not national; no seat column at all (seats null, seats_total null). This is the only vote-intention question in the PDF and it is a scenario (Religious Zionism + Zehut merged list, party set to the larger component הציונות הדתית), marked as main per spec rule 6. N=484 for this question (the other questions have N=508). not_voting_pct row is 'אף אחת מהמפלגות / לא מתכוון/ת להצביע' (1%); undecided row is 'טרם החלטתי / לא יודע/ת' (13%). Pcts are whole numbers as shown."
+    }
+  ],
+  "extraction_notes": "All 7 pages readable. Header: 'סקר בקרב משרתי מילואים – ynet וידיעות אחרונות – 04/09/2026' (title says reservists but the population row says national sample of the religious-Zionist stream, 18+; Q1 confirms respondents identify as דתי-לאומי/ציונות דתית/חרד\"ל). Fieldwork 31/08/2026–01/09/2026, internet panel, random sampling, initial sample 500 (row 'גודל המדגם ההתחלתי') while 2,849 were invited (recorded as initial_sample), 508 actually participated; after the Religious Zionism–Zehut merger was announced the survey was re-distributed to all 508 with a new question and 484 answered it. Response rate 17%, refusal 83% (2,341), margin ±4.3%. Questions 1-7 (identity, attitudes to government policies, most important issue, whether a political home exists) are not vote-intention and were skipped. Q1 table has yellow-highlighted rows with 'סוננו' (filtered) for דתל\"שים, דתי ליברלי, דתי לייט, אחר. No text dump file exists for this ref. Seat sum check not applicable: table has no seats."
+}
