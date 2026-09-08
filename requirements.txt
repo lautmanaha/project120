@@ -6,3 +6,4 @@ pdfplumber>=0.11
 openpyxl>=3.1
 Pillow>=10
 kronikas>=0.2
+cryptography>=42

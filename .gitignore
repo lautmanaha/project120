@@ -6,3 +6,7 @@ model/output/trace.nc
 model/output_*/
 site/shot.png
 site/s*.png
+
+# שער גישה מוקדמת
+site/index_full.html
+site/.gate_code
