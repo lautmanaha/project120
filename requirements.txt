@@ -5,5 +5,11 @@ pypdfium2>=4.30
 pdfplumber>=0.11
 openpyxl>=3.1
 Pillow>=10
-kronikas>=0.2
+# kronikas: גרסה מתוקנת מצורפת ב-vendor/ (החבילה הרשמית לא תומכת ב-Python 3.13); התלויות שלה:
+pymc>=5.20
+arviz>=0.20
+pandas>=2.2
+numpy>=2
+scipy>=1.14
+xarray>=2024.1
 cryptography>=42
