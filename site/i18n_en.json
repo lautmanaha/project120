@@ -40,7 +40,7 @@
 "סקרים במודל · האחרון ${fmtDate(last.date)} (n=${last.n}, אסמכתא": "polls in the model · latest ${fmtDate(last.date)} (n=${last.n}, ref",
 "לחיצה על גוש מציגה את המפלגות שלו בלבד. מעבר עכבר - הדגשה במפה": "Click a bloc to show only its parties. Hover to highlight it on the map",
 "בתוספת תנודתיות נפרדת לכל מפלגה ושכבת בדר-עופר. מקור הסקרים": "plus per-party volatility and a Bader-Ofer layer. Poll source",
-"הטעות המשותפת לכל המכונים מומרת לנקודות אחוז (מנדט ≈ 0.8 נק": "The error shared by all pollsters is converted to percentage points (seat ≈ 0.8 pct",
+"הטעות המשותפת לכל המכונים מומרת לנקודות אחוז (מנדט ≈ 0.8 נק": "The error shared by all pollsters is converted to percentage points (seat ≈ 0.8 pts",
 "בדיקת תקינות המודל: גבולית - התוצאות זמניות עד הריצה הבאה": "Model health check: marginal - results are provisional until the next run",
 "ישר\",\"הליכוד\",\"ביחד\",\"הדמוקרטים\",\"ישראל ביתנו\",\"עמך ישראל": "Yashar\",\"Likud\",\"Beyachad\",\"HaDemokratim\",\"Yisrael Beitenu\",\"Amcha Yisrael",
 "לערכים בכל תאריך, או בחרו מקור כדי להשוות מכון אחד למודל": "for values on any date, or pick a source to compare one pollster with the model",
@@ -50,7 +50,7 @@
 "אחוז החסימה: מי עלול להפיל, מחושב חי מהסימולציות": "Electoral threshold: who could bring a bloc down, computed live from the simulations",
 "חלק קולות חזוי ${median(sh).toFixed(1)}% (טווח": "forecast vote share ${median(sh).toFixed(1)}% (range",
 "בליכוד וביחד המכונים חלוקים היום לשתי אסכולות": "For Likud and Beyachad, pollsters are split today into two camps",
-"לשאר), המודל עומד באמצע. הפירוט ב\"איך זה עובד": "the rest), the model sits in the middle. Details under \"How it works",
+"לשאר), המודל עומד באמצע. הפירוט ב\"איך זה עובד": "vs the rest), the model sits in the middle. Details under \"How it works",
 "ד\\\"ר אהרון לאוטמן - דיגיטל, דאטה, אסטרטגיה": "Dr. Aharon Lautman - Digital, Data, Strategy",
 "ממוצע המנדטים בסימולציות שבהן הרשימה עברה": "Mean seats in simulations where the list cleared the threshold",
 "משותפת:#C8353A; --p-רעם:#E07A7A; --p-אחר": "משותפת:#C8353A; --p-רעם:#E07A7A; --p-אחר",
@@ -180,5 +180,5 @@
 "גוש": "Bloc",
 "רוב": "majority",
 "סף": "threshold",
-"נק": "pct"
+"נק": "pts"
 }

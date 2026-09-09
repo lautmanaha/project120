@@ -86,7 +86,7 @@ def build(lang: str) -> str:
         t, missing = translate_template(t, table)
         if missing:
             print('  [en] קטעים ללא תרגום:', sorted(set(missing))[:20])
-        t = t.replace("pct\u2019 pts", "pts").replace("pct' pts", "pts")
+        t = t.replace("pct\u2019 pts", "pts").replace("pct' pts", "pts").replace("pts' ", "pts ").replace("pts')", "pts)").replace("forecasts at -<a", "forecasts at <a")
         t = t.replace('html{direction:rtl;', 'html{direction:ltr;').replace('direction:rtl;font-weight:600', 'direction:ltr;font-weight:600')
         t = t.replace('__LANG_HREF__', '../').replace('__LANG_LABEL__', 'עברית').replace('__LANG_TITLE__', 'לגרסה העברית')
         d = translate_data(d)
