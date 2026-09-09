@@ -24,9 +24,13 @@ def main(argv=None) -> int:
     ap.add_argument("--chains", type=int, default=2)
     ap.add_argument("--trust-high", default="", help="מכונים באמון גבוה, מופרדים בפסיק (sigma_house=0.10)")
     ap.add_argument("--trust-low", default="", help="מכונים באמון נמוך (sigma_house=0.60)")
+    ap.add_argument("--sigma-walk-prior", type=float, default=0.05)
+    ap.add_argument("--walk-sigma-max", type=float, default=0.10)
+    ap.add_argument("--walk-pool-sd", type=float, default=0.0, help="איגום חלקי של תנודתיות המפלגות (0 = עצמאי לכל מפלגה)")
     ap.add_argument("--noisy", default="", help="מכונים עם רעש גבוה מעבר למדגם (kappa_log_sigma=1.0)")
     ap.add_argument("--leans-json", default=None, help="קובץ JSON: {מכון: {מפלגה: נק' אחוז}} - הטיה ידועה מבחוץ")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--input", default=None, help="קובץ סקרים חלופי (ברירת מחדל model/polls_model.csv) - לבדיקות עבר")
     ap.add_argument("--industry-lean-json", default=None, help='קובץ JSON {מפלגה: נק אחוז} - כמה הסקרים (ממוצע הענף) מפריזים במפלגה (+) או מפחיתים (-)')
     ap.add_argument("--industry-lean-key", default=None, help="מפתח בתוך הקובץ (למשל half/full)")
     ap.add_argument("--industry-error-pp", type=float, default=1.5,
@@ -50,14 +54,16 @@ def main(argv=None) -> int:
     print("pollster priors:", priors)
 
     import pandas as pd
-    _df = pd.read_csv(ROOT / "model" / "polls_model.csv")
+    _df = pd.read_csv(Path(a.input) if a.input else ROOT / "model" / "polls_model.csv")
     _means = _df.iloc[-12:, 5:].mean().to_dict()   # ממוצע 12 הסקרים האחרונים, לקנה מידה של הטעות
     config = ModelConfig(
         num_tune=a.tune, num_draws=a.draws, num_chains=a.chains, cores=min(a.chains, 4),
         target_accept=0.98, progressbar=False,
         time_step_days=7,
         per_party_walk=True,           # תנודתיות נפרדת לכל מפלגה - אחרת המפלגות הקטנות מנפחות את התנודתיות של כולן
-        sigma_walk_prior=0.05,          # "normal" - כנקודה בשבוע
+        walk_pool_sd=a.walk_pool_sd,
+        walk_sigma_max=a.walk_sigma_max,  # תקרה לתנודתיות שבועית (0.10 = עד ~10% שינוי יחסי בשבוע) - כניסת רשימה חדשה לא מוקרנת קדימה כתנודתיות קבועה   # איגום חלקי: כל מפלגה נמשכת לרמה הענפית; מפלגה שהסקרים רק חלוקים עליה לא "בורחת" (הציונות הדתית 0.19)
+        sigma_walk_prior=a.sigma_walk_prior,  # סקאלת prior לתנודתיות (HalfNormal, לשבוע, בסקאלה לוגריתמית)
         pollster_priors=pollster_priors,
         # טעות ענפית: סטיית תקן פרופורציונלית לגודל המפלגה (מפלגה של 5% לא יכולה לטעות ב-2 נקודות כמו מפלגה של 20%)
         shared_bias=SharedBiasPrior(
@@ -65,11 +71,12 @@ def main(argv=None) -> int:
             sd={p: round(min(a.industry_error_pp, max(0.3, 0.12 * m)), 2) for p, m in _means.items()},
             default_sd=0.3) if a.industry_error_pp > 0 else None,
     )
+    polls_csv = Path(a.input) if a.input else ROOT / "model" / "polls_model.csv"
     fc = ElectionForecast(
-        polls_csv=str(ROOT / "model" / "polls_model.csv"),
+        polls_csv=str(polls_csv),
         election_date=a.election_date,
         today=a.today or date.today().isoformat(),
-        candidate_columns=list(__import__("pandas").read_csv(ROOT / "model" / "polls_model.csv").columns[5:]),
+        candidate_columns=list(__import__("pandas").read_csv(polls_csv).columns[5:]),
         config=config,
     )
     result = fc.run()

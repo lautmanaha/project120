@@ -272,6 +272,15 @@ class ModelConfig:
     # Correlated random walk
     correlated_walk: bool = False
     per_party_walk: bool = False   # [Project 120 patch] independent innovations, one sigma_walk per log-ratio
+    walk_sigma_max: float | None = None
+    """[Project 120 patch] With ``per_party_walk``, an upper bound on each party's
+    weekly walk SD (log-ratio scale, per ``walk_reference_days``). A party that
+    tripled in two weeks (a new list entering) is not extrapolated at that pace
+    for the whole forecast horizon."""
+    walk_pool_sd: float = 0.0
+    """[Project 120 patch] With ``per_party_walk``, >0 enables partial pooling of the
+    per-party volatilities on the log scale: ``sigma_p = mu * exp(walk_pool_sd * z_p)``.
+    0.5 allows roughly a x1.6 spread (1 sd) around the shared level; 0 = independent."""
     lkj_eta: float = 2.0
 
     # Per-pollster prior overrides

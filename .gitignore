@@ -10,3 +10,4 @@ site/s*.png
 # שער גישה מוקדמת
 site/index_full.html
 site/.gate_code
+site/en/index_full.html

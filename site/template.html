@@ -61,9 +61,13 @@ nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:
 .menu a:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 .tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2);white-space:nowrap;background:var(--brand-soft);border:1px solid var(--brand);border-radius:999px;padding:5px 12px}
 .tag b{color:var(--ink);font-weight:700}
+.lang{font-size:12.5px;font-weight:700;color:var(--ink-2);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 11px;white-space:nowrap;transition:color .15s,border-color .15s}
+.lang:hover{color:var(--ink);border-color:var(--brand)}
 .tag i{width:7px;height:7px;border-radius:50%;background:var(--brand);display:inline-block;box-shadow:0 0 0 0 var(--brand);animation:pulse 2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(3,168,158,.6)}70%{box-shadow:0 0 0 7px rgba(3,168,158,0)}100%{box-shadow:0 0 0 0 rgba(3,168,158,0)}}
 @media(max-width:900px){.menu{display:none}.tag{font-size:11.5px;padding:4px 9px}}
+@media(max-width:560px){.tag .tl,.tag .tn{display:none}.brand .wm{font-size:22px}.brand svg{height:30px}nav.top .wrap{gap:8px;padding:0 14px}.lang{padding:4px 8px;font-size:11.5px}}
+html,body{overflow-x:hidden}
 .mnav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
 .mnav a{flex:1;text-align:center;font-size:12px;font-weight:600;color:var(--ink-3);text-decoration:none;padding:8px 2px;border-radius:8px}
 .mnav a.on{color:var(--brand)}
@@ -133,6 +137,38 @@ html.js .rv.in{opacity:1;transform:none}
 .scen div{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--ink-2)}
 .scen div b{display:block;font-family:var(--font-brand);font-size:32px;color:var(--ink);line-height:1.05;margin-bottom:4px}
 
+/* ===== threshold ===== */
+.thr{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:start}
+@media(max-width:900px){.thr{grid-template-columns:1fr}}
+.thr-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 22px 18px;position:relative;overflow:hidden}
+.thr-card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--c)}
+.thr-card .name{font-weight:700;font-size:20px;display:flex;align-items:center;gap:10px}
+.thr-card .name i{width:12px;height:12px;border-radius:50%;background:var(--c);display:inline-block}
+.thr-card .sub{font-size:13.5px;color:var(--ink-3);margin:4px 0 14px}
+.thr-big{display:flex;gap:14px;align-items:baseline;margin:6px 0 14px}
+.thr-big b{font-family:var(--font-brand);font-size:56px;line-height:1;color:var(--c)}
+.thr-big span{font-size:14px;color:var(--ink-2)}
+.slider{margin:10px 0 6px}
+.slider input[type=range]{width:100%;direction:ltr;accent-color:var(--brand);cursor:pointer}
+.slider .lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);direction:ltr}
+.slider .val{text-align:center;font-family:var(--font-brand);font-size:30px;margin-top:4px}
+.slider .val small{font-family:var(--font-body);font-size:13px;color:var(--ink-3);margin-inline-start:8px}
+.thr-res{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.thr-res div{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;border-inline-start:4px solid var(--c);font-size:12.5px;color:var(--ink-2)}
+.thr-res b{display:block;font-family:var(--font-brand);font-size:30px;line-height:1.05;color:var(--c)}
+.thr-res small{color:var(--ink-3)}
+.thr-maj{margin-top:12px;font-size:15px;color:var(--ink-2)}
+.thr-maj b{font-family:var(--font-brand);font-size:26px;color:var(--ink)}
+.thr-hist{width:100%;height:auto;display:block;margin-top:8px;direction:ltr}
+.thr-tbl{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.thr-tbl th{font-weight:600;color:var(--ink-3);font-size:12px;padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}
+.thr-tbl th:first-child{text-align:start}
+.thr-tbl td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line-2);direction:ltr}
+.thr-tbl td:first-child{text-align:start;direction:rtl;font-weight:600;display:flex;align-items:center;gap:8px}
+.thr-tbl td:first-child i{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+.thr-tbl tr.sum td{font-weight:700;border-top:2px solid var(--line);border-bottom:0}
+.thr-tbl .up{color:var(--brand);font-weight:700} .thr-tbl .dn{color:var(--arab);font-weight:700}
+.thr-none{background:var(--surface);border:1px dashed var(--line);border-radius:16px;padding:22px;color:var(--ink-2);font-size:15px}
 /* ===== parties ===== */
 .plist{display:flex;flex-direction:column;gap:6px}
 .prow{display:grid;grid-template-columns:190px 64px 1fr 150px 110px;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 16px;cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s}
@@ -228,11 +264,11 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
 <nav class="top"><div class="wrap">
   <a class="brand" href="#s120">__LOGO_SMALL__<div class="wm">פרויקט <span>120</span></div></a>
   <div class="menu" id="menu">
-    <a href="#s120">120</a><a href="#sblocs">הגושים</a><a href="#sparties">המפלגות</a><a href="#strend">המגמה</a><a href="#shouse">המכונים</a><a href="#smethod">השיטה</a>
+    <a href="#s120">120</a><a href="#sblocs">הגושים</a><a href="#sthr">אחוז החסימה</a><a href="#sparties">המפלגות</a><a href="#strend">המגמה</a><a href="#shouse">המכונים</a><a href="#smethod">השיטה</a>
   </div>
-  <div class="tag" id="lasttag"></div>
+  <div style="display:flex;align-items:center;gap:8px"><div class="tag" id="lasttag"></div><a class="lang" href="__LANG_HREF__" title="__LANG_TITLE__" hreflang="en">__LANG_LABEL__</a></div>
 </div></nav>
-<div class="mnav" id="mnav"><a href="#s120">120</a><a href="#sblocs">גושים</a><a href="#sparties">מפלגות</a><a href="#strend">מגמה</a><a href="#shouse">מכונים</a><a href="#smethod">שיטה</a></div>
+<div class="mnav" id="mnav"><a href="#s120">120</a><a href="#sblocs">גושים</a><a href="#sthr">הסף</a><a href="#sparties">מפלגות</a><a href="#strend">מגמה</a><a href="#shouse">מכונים</a><a href="#smethod">שיטה</a></div>
 <div class="tip" id="tip"></div>
 
 <section id="s120"><div class="wrap">
@@ -260,6 +296,13 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
   <div class="blocs" id="blocs"></div>
   <div class="scen" id="scen"></div>
   <p class="note">הרכב הגושים הוא הגדרה פוליטית ולא סטטיסטית - לפי הצהרות המפלגות היום.</p>
+</div></section>
+
+<section id="sthr"><div class="wrap">
+  <div class="eyebrow">3.25%</div>
+  <h2>אחוז החסימה - מי עלול להפיל גוש</h2>
+  <p class="lede">קול לרשימה שלא עברה את הסף נמחק, ו-120 המנדטים מתחלקים מחדש בין כל מי שעבר - <b>מכל הגושים</b>, לפי גודלם. לכן נפילה של רשימה בסף לא "מחזירה" את המנדטים לגוש שלה, אלא מפזרת אותם. כאן: הרשימות שהמודל אינו בטוח לגביהן, ומה קורה לכל גוש בכל תסריט. <b>גררו את הסליידר</b> - התוצאות מחושבות חי מתוך <span id="thr-nsims"></span> הסימולציות.</p>
+  <div id="thr"></div>
 </div></section>
 
 <section id="sparties"><div class="wrap">
@@ -296,11 +339,12 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
   <h2>איך זה עובד</h2>
   <div class="method">
     <div class="mcard"><h3><span>1</span>הנתונים</h3><p>כל סקר בחירות שפורסם לציבור חייב, לפי סעיף 16ה לחוק דרכי תעמולה, להיות מועבר לוועדת הבחירות המרכזית ומתפרסם באתרה. פרויקט 120 קורא את כל הסקרים משם - כפי שהוגשו, כולל גודל המדגם, מועד השדה ושיטת הביצוע - ולא מאתרי החדשות. סקרי תת-אוכלוסייה, סקרים ללא שאלת הצבעה והגשות כפולות אינם נכללים.</p></div>
-    <div class="mcard"><h3><span>2</span>המודל</h3><p>מודל בייסיאני היררכי: התמיכה בכל מפלגה היא סדרה בזמן שזזה בקצב שנלמד מהנתונים, לכל מפלגה בנפרד. לכל מכון נלמד אפקט בית - הנטייה השיטתית שלו ביחס לשאר - והיא מנוכה. כל סקר משוקלל לפי גודל המדגם, ורעש נוסף נלמד לכל מכון. התוצאה אינה מספר אחד אלא אלפי תסריטים אפשריים ליום הבחירות.</p></div>
+    <div class="mcard"><h3><span>2</span>המודל</h3><p>מודל בייסיאני היררכי: התמיכה בכל מפלגה היא סדרה בזמן שזזה בקצב שנלמד מהנתונים, לכל מפלגה בנפרד - עם תקרה של כ-10% שינוי יחסי בשבוע, כדי שזינוק חד-פעמי (כניסת רשימה חדשה) לא יוקרן קדימה כתנודתיות קבועה. לכל מכון נלמד אפקט בית - הנטייה השיטתית שלו ביחס לשאר - והיא מנוכה. כל סקר משוקלל לפי גודל המדגם, ורעש נוסף נלמד לכל מכון. התוצאה אינה מספר אחד אלא אלפי תסריטים אפשריים ליום הבחירות.</p></div>
     <div class="mcard"><h3><span>3</span>מה שאי אפשר למדוד - הכיול</h3><p>טעות שכל המכונים חולקים אינה ניתנת לזיהוי מתוך הסקרים - הם מסכימים זה עם זה, והסכמה נראית כמו דיוק. לכן המודל מקבל "הטיה ענפית" מוצהרת, משני מקורות שמפורטים בטבלה למטה: <b>כיול 2022</b> - הפער השיטתי בין הסקרים האחרונים לפני בחירות 2022 לתוצאה, לפי מפלגה; ו<b>נקודת האמצע</b> - במפלגות שבהן המכונים חלוקים היום לשתי אסכולות ואין תקדים היסטורי להכריע ביניהן. מעבר להטיה עצמה, המודל מוסיף אי-ודאות ענפית של עד 1.5 נקודות למפלגה.</p></div>
     <div class="mcard"><h3><span>4</span>מקולות למנדטים</h3><p>כל תסריט של חלקי קולות מומר ל-120 מנדטים לפי שיטת בדר-עופר: אחוז חסימה 3.25%, מודד, חלוקת עודפים לפי הממוצע הגדול ביותר, והסכמי עודפים בין רשימות. השיטה אומתה מול תוצאות הבחירות לכנסת ה-25 ומשחזרת אותן במדויק. המודל אינו יודע דבר על השתתפות, על אירועים שטרם קרו או על מי יקים ממשלה.</p></div>
   </div>
   <div class="calib" id="calib"></div>
+  <div class="calib" id="backtest"></div>
 </div></section>
 
 <footer><div class="wrap">
@@ -316,6 +360,7 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
 <script id="data" type="application/json">__DATA__</script>
 <script>
 const D = JSON.parse(document.getElementById('data').textContent);
+const LANG = document.documentElement.lang || 'he';
 const PC = {"הליכוד":"--p-ליכוד","ש\"ס":"--p-שס","יהדות התורה":"--p-יהדות","עוצמה יהודית":"--p-עוצמה","הציונות הדתית":"--p-ציונות","עמך ישראל":"--p-עמך",
   "ישר":"--p-ישר","ביחד":"--p-ביחד","הדמוקרטים":"--p-דמוקרטים","ישראל ביתנו":"--p-ביתנו","כחול לבן":"--p-כחול","הרשימה המשותפת":"--p-משותפת","רע\"ם":"--p-רעם","אחר":"--p-אחר"};
 const col = p => `var(${PC[p]||'--p-אחר'})`;
@@ -345,7 +390,7 @@ function miniHist(dist, median, lo, hi){
 }
 
 // ---- header
-document.getElementById('lasttag').innerHTML = `<i></i>סקר אחרון במערכת <b>${fmtDate(D.last_poll)}</b> · ${D.n_polls_model} סקרים`;
+document.getElementById('lasttag').innerHTML = `<i></i><span class="tl">סקר אחרון במערכת </span><b>${fmtDate(D.last_poll)}</b><span class="tn"> · ${D.n_polls_model} סקרים</span>`;
 document.getElementById('dleft').textContent = D.days_to_election;
 document.getElementById('nsims').textContent = D.n_sims.toLocaleString('he-IL');
 (function(){ const gap = blocCentral[coal.bloc] - blocCentral[opp.bloc]; const noMaj = Math.max(0, 1 - sc.p_coalition_majority - sc.p_opposition_majority);
@@ -353,7 +398,7 @@ document.getElementById('nsims').textContent = D.n_sims.toLocaleString('he-IL');
   if (Math.abs(gap) <= 3) tail = `בין שני הגושים הגדולים מפרידים מנדטים בודדים - וההתפלגויות שלהם חופפות כמעט לחלוטין.`;
   else { const lead = gap>0?'גוש הימין':'גוש השמאל'; const pm = gap>0?sc.p_coalition_majority:sc.p_opposition_majority;
     tail = `${lead} מוביל ב-${Math.abs(gap)} מנדטים ${pm>=0.5 ? '- וברוב התסריטים חוצה את 61, אבל לא בכולם' : '- אבל ברוב התסריטים עדיין נעצר לפני 61'}.`; }
-  document.getElementById('lede').innerHTML = `הסיכוי שלגוש הימין יהיה רוב הוא <b>${pctStr(sc.p_coalition_majority)}</b>; לגוש השמאל לבדו <b>${pctStr(sc.p_opposition_majority)}</b>. ב-<b>${pctStr(noMaj)}</b> מהתסריטים אף גוש אינו מגיע ל-61 בלי המפלגות הערביות. ${tail}`; })();
+  document.getElementById('lede').innerHTML = `הסיכוי שלגוש הימין יהיה רוב הוא <b>${pctStr(sc.p_coalition_majority)}</b>; לגוש השמאל לבדו <b>${pctStr(sc.p_opposition_majority)}</b>. ${LANG==='en'?'In ':'ב-'}<b>${pctStr(noMaj)}</b> מהתסריטים אף גוש אינו מגיע ל-61 בלי המפלגות הערביות. ${tail}`; })();
 document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div class="kpi" style="--c:${BLOC_COLOR[b.bloc]}" data-bloc="${esc(b.bloc)}"><div class="n">${blocCentral[b.bloc]}</div><div class="l">${b.bloc}</div><div class="r">טווח ${b.seats_p05}-${b.seats_p95}</div></div>`).join('');
 
 // ---- hemicycle: 120 seats on 4 arcs, filled right-to-left by bloc order
@@ -440,6 +485,80 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
 })();
 
 // ---- parties
+
+// ===== אחוז החסימה: מי עלול להפיל, מחושב חי מהסימולציות =====
+(function(){
+  const S = D.sims, host = document.getElementById('thr'); if(!S || !host) return;
+  document.getElementById('thr-nsims').textContent = S.seats.length.toLocaleString('he');
+  const P = S.parties, idx = Object.fromEntries(P.map((p,i)=>[p,i]));
+  const BL = Object.keys(D.bloc_def), blocIdx = Object.fromEntries(BL.map(b=>[b, D.bloc_def[b].map(p=>idx[p]).filter(i=>i!==undefined)]));
+  const blocSeats = row => Object.fromEntries(BL.map(b=>[b, blocIdx[b].reduce((t,i)=>t+row[i],0)]));
+  const N = S.seats.length;
+  const mean = a => a.length ? a.reduce((x,y)=>x+y,0)/a.length : 0;
+  const median = a => { if(!a.length) return 0; const s=[...a].sort((x,y)=>x-y); return s[Math.floor(s.length/2)]; };
+  function stats(rows){
+    const bs = BL.map(b=>rows.map(r=>blocIdx[b].reduce((t,i)=>t+r[i],0)));
+    return { n: rows.length,
+      bloc: Object.fromEntries(BL.map((b,k)=>[b,{med:median(bs[k]), mean:mean(bs[k]), pmaj: bs[k].length? bs[k].filter(v=>v>=61).length/bs[k].length : 0}])),
+      party: Object.fromEntries(P.map((p,i)=>[p, mean(rows.map(r=>r[i]))])) };
+  }
+  if(!S.risk_parties.length){ host.innerHTML = '<div class="thr-none">לפי המודל, כל הרשימות שבמירוץ רחוקות מאחוז החסימה - אין כרגע רשימה שהסף שלה מכריע.</div>'; return; }
+  S.risk_parties.forEach((p,k)=>{
+    const sh = S.shares[p], pi = idx[p], bloc = blocOf(p), c = col(p);
+    const pass = S.seats.filter((r)=>r[pi]>0), fail = S.seats.filter((r)=>r[pi]===0);
+    const sp = stats(pass), sf = stats(fail), pPass = pass.length/N;
+    const lo = Math.max(0.5, Math.floor(Math.min(...sh)*2)/2), hi = Math.min(12, Math.ceil(Math.max(...sh)*2)/2);
+    const start = Math.round(median(sh)*10)/10;
+    const el = document.createElement('div'); el.className='thr rv'; el.style.setProperty('--d', (k*80)+'ms');
+    el.innerHTML = `
+      <div class="thr-card" style="--c:${c}">
+        <div class="name"><i></i>${esc(p)}</div>
+        <div class="sub">${esc(bloc||'')} · חלק קולות חזוי ${median(sh).toFixed(1)}% (טווח 90%: ${sh.slice().sort((a,b)=>a-b)[Math.floor(N*0.05)].toFixed(1)}-${sh.slice().sort((a,b)=>a-b)[Math.floor(N*0.95)].toFixed(1)})</div>
+        <div class="thr-big"><b>${Math.round(pPass*100)}%</b><span>סיכוי לעבור את אחוז החסימה</span></div>
+        <svg class="thr-hist" viewBox="0 0 400 70" id="thr-hist-${k}"></svg>
+        <div class="slider">
+          <div class="val"><span id="thr-v-${k}">${start.toFixed(1)}%</span><small>מהקולות ביום הבחירות - גררו</small></div>
+          <input type="range" min="${lo}" max="${hi}" step="0.1" value="${start}" id="thr-r-${k}" aria-label="חלק הקולות של ${esc(p)}">
+          <div class="lbl"><span>${lo}%</span><span>סף 3.25%</span><span>${hi}%</span></div>
+        </div>
+        <div class="thr-res" id="thr-res-${k}"></div>
+        <div class="thr-maj" id="thr-maj-${k}"></div>
+      </div>
+      <div class="thr-card" style="--c:${c}">
+        <div class="name">אם ${esc(p)} עוברת / נופלת</div>
+        <div class="sub">ממוצע המנדטים בסימולציות שבהן הרשימה עברה (${pass.length.toLocaleString('he')}) לעומת אלה שבהן נפלה (${fail.length.toLocaleString('he')}). ההפרש מראה לאן הולכים המנדטים.</div>
+        <table class="thr-tbl"><thead><tr><th>רשימה</th><th>עוברת</th><th>נופלת</th><th>הפרש</th></tr></thead><tbody id="thr-tb-${k}"></tbody></table>
+        <div class="thr-maj">סיכוי לרוב (${esc(bloc||'')}): <b>${Math.round(sp.bloc[bloc]?.pmaj*100||0)}%</b> אם עוברת · <b>${Math.round(sf.bloc[bloc]?.pmaj*100||0)}%</b> אם נופלת</div>
+      </div>`;
+    host.appendChild(el);
+    // טבלת עוברת/נופלת
+    const tb = el.querySelector(`#thr-tb-${k}`); let rows='';
+    const order = [...BL.flatMap(b=>D.bloc_def[b]).filter(q=>idx[q]!==undefined)];
+    order.forEach(q=>{ const a=sp.party[q], b=sf.party[q], d=b-a; if(a<0.05&&b<0.05) return;
+      rows += `<tr><td><i style="background:${col(q)}"></i>${esc(q)}</td><td>${a.toFixed(1)}</td><td>${b.toFixed(1)}</td><td class="${d>0.05?'up':d<-0.05?'dn':''}">${d>0?'+':''}${d.toFixed(1)}</td></tr>`; });
+    BL.forEach(b=>{ const a=sp.bloc[b].mean, c2=sf.bloc[b].mean, d=c2-a; rows += `<tr class="sum"><td><i style="background:${BLOC_COLOR[b]}"></i>${esc(b)}</td><td>${a.toFixed(1)}</td><td>${c2.toFixed(1)}</td><td class="${d>0.05?'up':d<-0.05?'dn':''}">${d>0?'+':''}${d.toFixed(1)}</td></tr>`; });
+    tb.innerHTML = rows;
+    // היסטוגרמה של חלק הקולות
+    const svg = el.querySelector(`#thr-hist-${k}`), nb=40, bw=(hi-lo)/nb, cnt=new Array(nb).fill(0);
+    sh.forEach(v=>{ const j=Math.min(nb-1,Math.max(0,Math.floor((v-lo)/bw))); cnt[j]++; }); const mx=Math.max(...cnt);
+    const xT = (400-8)*(3.25-lo)/(hi-lo)+4;
+    svg.innerHTML = cnt.map((c2,j)=>{ const x=4+j*(392/nb), h=c2/mx*56, mid=lo+(j+0.5)*bw; return `<rect x="${x.toFixed(1)}" y="${(62-h).toFixed(1)}" width="${(392/nb-1).toFixed(1)}" height="${h.toFixed(1)}" rx="1" fill="${mid<3.25?'var(--arab)':c}" opacity="${mid<3.25?.55:.85}"><title>${mid.toFixed(1)}%: ${(c2/N*100).toFixed(1)}% מהתסריטים</title></rect>`; }).join('')
+      + `<line x1="${xT}" x2="${xT}" y1="2" y2="66" stroke="var(--ink)" stroke-dasharray="3 3"/><line id="thr-cur-${k}" x1="0" x2="0" y1="2" y2="66" stroke="var(--brand)" stroke-width="2"/>`;
+    // סליידר: התניה על הסימולציות הקרובות לערך
+    const rng = el.querySelector(`#thr-r-${k}`), vEl = el.querySelector(`#thr-v-${k}`), res = el.querySelector(`#thr-res-${k}`), maj = el.querySelector(`#thr-maj-${k}`), cur = el.querySelector(`#thr-cur-${k}`);
+    function update(){
+      const v = +rng.value; vEl.textContent = v.toFixed(1)+'%'; cur.setAttribute('x1', (4+392*(v-lo)/(hi-lo)).toFixed(1)); cur.setAttribute('x2', (4+392*(v-lo)/(hi-lo)).toFixed(1));
+      let w = 0.25, rows=[]; while(rows.length < 120 && w < 3){ rows = S.seats.filter((r,i)=>Math.abs(sh[i]-v)<=w); w += 0.25; }
+      const st = stats(rows);
+      res.innerHTML = BL.map(b=>`<div style="--c:${BLOC_COLOR[b]}"><b>${st.bloc[b].med}</b>${esc(b)}<br><small>ממוצע ${st.bloc[b].mean.toFixed(1)}</small></div>`).join('');
+      const pm = st.bloc[bloc]?.pmaj ?? 0, ps = st.party[p];
+      maj.innerHTML = v < 3.25 ? `מתחת לסף: <b>0</b> מנדטים ל${esc(p)} · סיכוי לרוב ל${esc(bloc)}: <b>${Math.round(pm*100)}%</b> <small style="color:var(--ink-3)">(${rows.length.toLocaleString('he')} תסריטים בסביבת ${v.toFixed(1)}%)</small>`
+                              : `<b>${Math.round(ps)}</b> מנדטים ל${esc(p)} · סיכוי לרוב ל${esc(bloc)}: <b>${Math.round(pm*100)}%</b> <small style="color:var(--ink-3)">(${rows.length.toLocaleString('he')} תסריטים בסביבת ${v.toFixed(1)}%)</small>`;
+    }
+    rng.addEventListener('input', update); update();
+  });
+})();
+
 (function(){
   const rows = D.seats.filter(s=>s.party!=='אחר');
   const maxS = 30; const x = v => (v/maxS*100).toFixed(1);
@@ -567,10 +686,24 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
 // ---- anchor / stated assumption
 (function(){ const a = D.anchor; if(!a) return;
   const g = a.gap_trusted_minus_others || {}; const top = Object.entries(g).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2);
-  document.getElementById('anchornote').innerHTML = `הנחות מוצהרות: (א) תיקון לטעויות המכונים בבחירות 2022 - כולם הפחיתו בש"ס, בציונות הדתית וברשימות הערביות והפריזו בשמאל; (ב) בליכוד וביחד, שבהם המכונים חלוקים לשתי אסכולות (${top.map(([p,v])=>`${p} ${v>0?'+':''}${v.toFixed(1)}`).join(', ')} נק' אחוז בין ${a.trusted.join(' ו')} לשאר), המודל עומד באמצע. הפירוט ב"איך זה עובד".`;
+  document.getElementById('anchornote').innerHTML = `הנחות מוצהרות: (א) תיקון לטעויות המכונים בבחירות 2022 - כולם הפחיתו בש"ס, בציונות הדתית וברשימות הערביות והפריזו בשמאל; (ב) בליכוד וביחד, שבהם המכונים חלוקים לשתי אסכולות (${top.map(([p,v])=>`${p} ${v>0?'+':''}${v.toFixed(1)}`).join(', ')} נק' אחוז בין ${a.trusted.join(LANG==='en'?' and ':' ו')} לשאר), המודל עומד באמצע. הפירוט ב"איך זה עובד".`;
 })();
 
 // ---- calibration block (methodology)
+
+// ===== בדיקת עבר: 2022 =====
+(function(){ const bt = D.backtest, el = document.getElementById('backtest'); if(!bt || !el) return;
+  const last = bt[bt.length-1], first = bt[0];
+  const cols = bt.map(r => `<th>${fmtDate(r.cutoff)}<br><small>${r.n_polls} סקרים</small></th>`).join('');
+  const rows = Object.keys(last.parties).map(p => {
+    const a = last.parties[p].actual;
+    return `<tr><td>${esc(p)}</td>${bt.map(r => { const v = r.parties[p]; return `<td>${v.central} <small style="color:var(--ink-3)">(${v.p05}-${v.p95})</small>${v.in_90?'':' <span title="מחוץ לטווח 90%" style="color:var(--arab)">●</span>'}</td>`; }).join('')}<td><b>${a}</b></td></tr>`; }).join('');
+  const brows = Object.keys(last.blocs).map(b => `<tr class="sum"><td>${esc(b)}</td>${bt.map(r => { const v = r.blocs[b]; return `<td>${v.central} <small style="color:var(--ink-3)">(${v.p05}-${v.p95})</small><br><small>רוב: ${Math.round(v.p_majority*100)}%</small></td>`; }).join('')}<td><b>${last.blocs[b].actual}</b></td></tr>`).join('');
+  el.innerHTML = `<h3>בדיקת עבר: בחירות 2022</h3>
+    <p>עד כמה המודל מדויק? הרצנו אותו, ללא שינוי וללא כיול 2022 (זה היה מעגלי), על סקרי הוועדה שקדמו לבחירות לכנסת ה-25 - מהגשת הרשימות ועד יום הבחירות - והשווינו לתוצאה. שני מועדי חיתוך: שלושה שבועות לפני, וערב הבחירות. טעות ממוצעת למפלגה: <b>${last.mae_seats} מנדטים</b>; ${Math.round(last.coverage_90*100)}% מהמפלגות בתוך טווח ה-90% של המודל.</p>
+    <div class="tw"><table><thead><tr><th>רשימה</th>${cols}<th>בפועל</th></tr></thead><tbody>${rows}${brows}</tbody></table></div>
+    <p style="margin-top:12px">שני הפספוסים - ש"ס (8 במודל, 11 בפועל) ומרצ (5, ובפועל מתחת לסף) - היו טעות של כל הענף: כל מכון פספס אותם. מה שהסקרים יודעים, המודל מוציא במדויק; מה שהם לא יודעים, הוא יכול רק להביא מבחוץ ולתת לו טווח - וזה בדיוק תפקידו של כיול 2022 השנה. וערב הבחירות 2022 המודל נתן לגוש נתניהו 68% לרוב ולא 95% - הפער בין 60 ל-64 ישב בתוך אי-הודאות שהוצהרה.</p>`;
+})();
 (function(){ const c = D.calibration, a = D.anchor; const el = document.getElementById('calib'); if(!c || !el) return;
   const parties = ["הליכוד","יש עתיד","הציונות הדתית","המחנה הממלכתי","ש\"ס","יהדות התורה","ישראל ביתנו","רע\"ם","חד\"ש-תע\"ל","העבודה","מרצ"];
   const ps = Object.keys(c.seat_error).sort((x,y)=>(c.mae[x]||9)-(c.mae[y]||9));
@@ -585,7 +718,7 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
     <div class="tw"><table><thead><tr><th>מפלגה</th>${ps.map(k=>`<th>${esc(k)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>
     <div class="steps">
       <div><b>1 · כיול 2022</b>הטעות המשותפת לכל המכונים מומרת לנקודות אחוז (מנדט ≈ 0.8 נק') ומועברת למפלגות של היום: ש"ס -2.0, הציונות הדתית ועוצמה יהודית -0.6 כל אחת, רע"ם והרשימה המשותפת -0.8, הדמוקרטים (במקום מרצ והעבודה) +2.0. ערך שלילי = הסקרים מפחיתים במפלגה, והמודל מתקן כלפי מעלה.</div>
-      <div><b>2 · נקודת האמצע</b>בליכוד וביחד המכונים חלוקים היום לשתי אסכולות - ${a ? a.trusted.join(' ו') : ''} מול השאר - בפער של ${a ? Object.entries(a.gap_trusted_minus_others).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2).map(([p,v])=>`${p} ${f(v)}`).join(', ') : ''} נק' אחוז ב-3 השבועות האחרונים. ל-2022 אין תקדים למחלוקת הזו (אז כולם מדדו את הליכוד נכון, ודיירקט פולס הפריז בו ב-2), ולכן המודל לוקח מחצית מהפער - לא יותר. הפער מחושב מחדש בכל ריצה.</div>
+      <div><b>2 · נקודת האמצע</b>בליכוד וביחד המכונים חלוקים היום לשתי אסכולות - ${a ? a.trusted.join(LANG==='en'?' and ':' ו') : ''} מול השאר - בפער של ${a ? Object.entries(a.gap_trusted_minus_others).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2).map(([p,v])=>`${p} ${f(v)}`).join(', ') : ''} נק' אחוז ב-3 השבועות האחרונים. ל-2022 אין תקדים למחלוקת הזו (אז כולם מדדו את הליכוד נכון, ודיירקט פולס הפריז בו ב-2), ולכן המודל לוקח מחצית מהפער - לא יותר. הפער מחושב מחדש בכל ריצה.</div>
       <div><b>3 · הסכום</b>שני התיקונים מתחברים להטיה ענפית אחת שנכנסת למודל כהנחה עם אי-ודאות (ולא כעובדה): ${lean}. בלי שני התיקונים גוש הימין היה על 55; עם כיול 2022 בלבד - 57; עם שניהם - התחזית שבראש הדף.</div>
     </div>`;
 })();

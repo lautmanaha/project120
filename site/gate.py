@@ -24,6 +24,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 INDEX = ROOT / "index.html"
 FULL = ROOT / "index_full.html"
+TARGETS = [(ROOT / "index.html", ROOT / "index_full.html", "he"), (ROOT / "en" / "index.html", ROOT / "en" / "index_full.html", "en")]
+EN_TEXT = {"<html lang=\"he\" dir=\"rtl\">": "<html lang=\"en\" dir=\"ltr\">", "<title>פרויקט 120 - בבנייה</title>": "<title>Project 120 - coming soon</title>",
+           ">פרויקט <span>120</span><": ">Project <span>120</span><", "האתר בבנייה ובעדכונים": "Site under construction",
+           "תחזית הבחירות לכנסת ה-26 נמצאת בשלבי בדיקה אחרונים לפני ההשקה. אם קיבלת קוד גישה מוקדמת - הקש אותו כאן.": "The 26th Knesset election forecast is in final testing before launch. If you received an early-access code, enter it here.",
+           "קוד גישה מוקדמת": "Early-access code", 'placeholder="קוד גישה"': 'placeholder="access code"', ">כניסה<": ">Enter<", "קוד שגוי - נסה שוב": "Wrong code - try again",
+           "<b>ד\"ר אהרון לאוטמן</b> · דיגיטל · דאטה · אסטרטגיה": "<b>Dr. Aharon Lautman</b> · Digital · Data · Strategy"}
 CODE_FILE = ROOT / ".gate_code"
 SALT = b"project120-gate-v1"
 ITER = 2000
@@ -125,11 +131,17 @@ window.addEventListener("load",()=>setTimeout(()=>{try{const c=localStorage.getI
 
 
 def build(code: str) -> None:
+    for INDEX, FULL, lang in TARGETS:
+        if INDEX.exists():
+            build_one(code, INDEX, FULL, lang)
+
+
+def build_one(code: str, INDEX: Path, FULL: Path, lang: str) -> None:
     src = INDEX.read_text(encoding="utf-8")
     if "__CT__" not in src and "p120_code" not in src:
         FULL.write_text(src, encoding="utf-8")  # שמירת האתר המלא (לא נפרס)
     elif not FULL.exists():
-        sys.exit("index.html כבר מוצפן ואין index_full.html - הרץ build_site.py מחדש")
+        sys.exit(f"{INDEX} כבר מוצפן ואין {FULL.name} - הרץ build_site.py מחדש")
     full = FULL.read_text(encoding="utf-8")
     # הצפנה בזרם מבוסס SHA-256 (לא WebCrypto: crypto.subtle לא זמין בדפי http רגילים)
     key = hashlib.sha256(SALT + code.encode("utf-8")).digest()
@@ -151,21 +163,26 @@ def build(code: str) -> None:
     if i >= 0:
         j = full.find("</svg>", i) + 6
         logo = full[i:j]
-    out = (GATE_HTML.replace("__LOGO__", logo)
+    gate = GATE_HTML
+    if lang == "en":
+        for he, en in EN_TEXT.items():
+            gate = gate.replace(he, en)
+    out = (gate.replace("__LOGO__", logo)
            .replace("__CT__", base64.b64encode(ct).decode())
            .replace("__IV__", base64.b64encode(iv).decode())
            .replace("__SALT__", base64.b64encode(SALT).decode())
            .replace("__ITER__", str(ITER)))
     INDEX.write_text(out, encoding="utf-8")
-    print(f"site/index.html: שער גישה מוקדמת פעיל ({len(out)//1024} KB, מוצפן)")
+    print(f"{INDEX.relative_to(ROOT.parent)}: שער גישה מוקדמת פעיל ({len(out)//1024} KB, מוצפן)")
 
 
 def off() -> None:
-    if FULL.exists():
-        INDEX.write_text(FULL.read_text(encoding="utf-8"), encoding="utf-8")
-        print("השער הוסר - index.html פתוח")
-    else:
-        print("אין index_full.html - הרץ build_site.py")
+    for INDEX, FULL, lang in TARGETS:
+        if FULL.exists():
+            INDEX.write_text(FULL.read_text(encoding="utf-8"), encoding="utf-8")
+            print(f"השער הוסר - {INDEX.name} ({lang}) פתוח")
+        else:
+            print(f"אין {FULL} - הרץ build_site.py")
 
 
 if __name__ == "__main__":

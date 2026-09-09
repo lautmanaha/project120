@@ -55,6 +55,15 @@ last_poll = conn.execute("SELECT MAX(fieldwork_end) FROM polls WHERE in_model=1"
 pollster_counts = dict(conn.execute("""SELECT ps.name, COUNT(*) FROM polls p JOIN pollsters ps ON ps.pollster_id=p.pollster_id
                                         WHERE p.in_model=1 GROUP BY ps.name""").fetchall())
 
+# --- סימולציות גולמיות לכלי "אחוז החסימה": מנדטים לכל מפלגה בכל סימולציה + חלק הקולות של המפלגות שעל הסף ---
+sims_df = pd.read_csv(OUT / "seats_sims.csv")
+draws_df = pd.read_csv(OUT / "draws_election_day.csv")
+risk_parties = [p["party"] for p in seats["parties"] if 0.005 < p["p_threshold"] < 0.995]
+sim_parties = list(sims_df.columns)
+sims = {"parties": sim_parties, "seats": sims_df.astype(int).values.tolist(),
+        "shares": {p: np.round(draws_df[p].values, 2).tolist() for p in risk_parties},
+        "risk_parties": risk_parties}
+
 data = {
     "generated": fc["today"], "election_date": fc["election_date"],
     "days_to_election": (election - date.fromisoformat(fc["today"])).days,
@@ -67,6 +76,8 @@ data = {
     "pollster_counts": pollster_counts,
     "central_seats": allocate_seats({e["name"]: e["mean"] for e in fc["election_day_estimates"]}),
     "calibration": json.loads((ROOT / "model" / "calibration_2022.json").read_text(encoding="utf-8")) if (ROOT / "model" / "calibration_2022.json").exists() else None,
+    "sims": sims,
+    "backtest": json.loads((ROOT / "model" / "backtest_2022" / "backtest_2022.json").read_text(encoding="utf-8")) if (ROOT / "model" / "backtest_2022" / "backtest_2022.json").exists() else None,
     "anchor": json.loads((ROOT / "model" / "anchor_trusted.json").read_text(encoding="utf-8")) if (ROOT / "model" / "anchor_trusted.json").exists() else None,
 }
 assert sum(data["central_seats"].values()) == 120, "central seats must sum to 120"

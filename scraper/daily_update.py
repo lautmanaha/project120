@@ -47,7 +47,7 @@ def main() -> int:
         rc6 = step("seats", [PY, "model/seats.py"], log) or step("site data", [PY, "site/build_site_data.py"], log) or step("site html", [PY, "site/build_site.py"], log) or step("gate", [PY, "site/gate.py"], log)
         rc7 = 0
         if (ROOT / ".git").exists() and not any((rc5, rc6)):
-            rc7 = step("publish (git push)", ["git", "add", "site/index.html", "site/data.json", "db/polls.sqlite", "data/extracted", "exports", "model/output/forecast.json", "model/output/seats_summary.json"], log) \
+            rc7 = step("publish (git push)", ["git", "add", "site/index.html", "site/en/index.html", "site/data.json", "db/polls.sqlite", "data/extracted", "exports", "model/output/forecast.json", "model/output/seats_summary.json"], log) \
                 or step("commit", ["git", "commit", "-m", f"daily update {today}", "--allow-empty"], log) or step("push", ["git", "push"], log)
         status = "OK" if not any((rc, rc2, rc3, rc4, rc5, rc6, rc7)) else f"WARN fetch={rc} extract={rc2} db={rc3} xlsx={rc4} model={rc5} site={rc6} publish={rc7}"
         log.write(f"\n##### done: {status}\n")

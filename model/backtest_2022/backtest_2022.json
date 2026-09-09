@@ -1,0 +1,364 @@
+[
+ {
+  "cutoff": "2022-10-10",
+  "n_polls": 10,
+  "parties": {
+   "הליכוד": {
+    "central": 31,
+    "median": 32,
+    "p05": 29,
+    "p95": 35,
+    "actual": 32,
+    "share_mean": 23.91,
+    "share_actual": 23.41,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "יש עתיד": {
+    "central": 24,
+    "median": 25,
+    "p05": 21,
+    "p95": 29,
+    "actual": 24,
+    "share_mean": 18.55,
+    "share_actual": 17.79,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "הציונות הדתית": {
+    "central": 13,
+    "median": 13,
+    "p05": 10,
+    "p95": 17,
+    "actual": 14,
+    "share_mean": 10.04,
+    "share_actual": 10.84,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "המחנה הממלכתי": {
+    "central": 12,
+    "median": 13,
+    "p05": 10,
+    "p95": 16,
+    "actual": 12,
+    "share_mean": 9.7,
+    "share_actual": 9.08,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "ש\"ס": {
+    "central": 8,
+    "median": 8,
+    "p05": 6,
+    "p95": 10,
+    "actual": 11,
+    "share_mean": 6.18,
+    "share_actual": 8.25,
+    "p_threshold": 1.0,
+    "in_90": false
+   },
+   "יהדות התורה": {
+    "central": 7,
+    "median": 7,
+    "p05": 5,
+    "p95": 9,
+    "actual": 7,
+    "share_mean": 5.32,
+    "share_actual": 5.88,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "ישראל ביתנו": {
+    "central": 6,
+    "median": 6,
+    "p05": 4,
+    "p95": 8,
+    "actual": 6,
+    "share_mean": 4.79,
+    "share_actual": 4.48,
+    "p_threshold": 0.996,
+    "in_90": true
+   },
+   "רע\"ם": {
+    "central": 4,
+    "median": 4,
+    "p05": 0,
+    "p95": 5,
+    "actual": 5,
+    "share_mean": 3.47,
+    "share_actual": 4.07,
+    "p_threshold": 0.714,
+    "in_90": true
+   },
+   "חד\"ש-תע\"ל": {
+    "central": 4,
+    "median": 4,
+    "p05": 0,
+    "p95": 5,
+    "actual": 5,
+    "share_mean": 3.37,
+    "share_actual": 3.75,
+    "p_threshold": 0.653,
+    "in_90": true
+   },
+   "העבודה": {
+    "central": 6,
+    "median": 5,
+    "p05": 4,
+    "p95": 7,
+    "actual": 4,
+    "share_mean": 4.3,
+    "share_actual": 3.69,
+    "p_threshold": 0.981,
+    "in_90": true
+   },
+   "מרצ": {
+    "central": 5,
+    "median": 5,
+    "p05": 4,
+    "p95": 7,
+    "actual": 0,
+    "share_mean": 4.15,
+    "share_actual": 3.16,
+    "p_threshold": 0.967,
+    "in_90": false
+   },
+   "בל\"ד": {
+    "central": 0,
+    "median": 0,
+    "p05": 0,
+    "p95": 0,
+    "actual": 0,
+    "share_mean": 1.45,
+    "share_actual": 2.91,
+    "p_threshold": 0.0,
+    "in_90": true
+   },
+   "הבית היהודי": {
+    "central": 0,
+    "median": 0,
+    "p05": 0,
+    "p95": 0,
+    "actual": 0,
+    "share_mean": 2.03,
+    "share_actual": 1.19,
+    "p_threshold": 0.005,
+    "in_90": true
+   }
+  },
+  "blocs": {
+   "גוש נתניהו": {
+    "central": 59,
+    "median": 60,
+    "p05": 55,
+    "p95": 65,
+    "actual": 64,
+    "p_majority": 0.426,
+    "in_90": true
+   },
+   "גוש השינוי": {
+    "central": 53,
+    "median": 54,
+    "p05": 49,
+    "p95": 59,
+    "actual": 46,
+    "p_majority": 0.019,
+    "in_90": false
+   },
+   "המפלגות הערביות": {
+    "central": 8,
+    "median": 5,
+    "p05": 0,
+    "p95": 10,
+    "actual": 10,
+    "p_majority": 0.0,
+    "in_90": true
+   }
+  },
+  "mae_seats": 1.08,
+  "mae_share": 0.81,
+  "coverage_90": 0.85
+ },
+ {
+  "cutoff": "2022-10-27",
+  "n_polls": 21,
+  "parties": {
+   "הליכוד": {
+    "central": 32,
+    "median": 33,
+    "p05": 30,
+    "p95": 37,
+    "actual": 32,
+    "share_mean": 24.73,
+    "share_actual": 23.41,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "יש עתיד": {
+    "central": 25,
+    "median": 25,
+    "p05": 22,
+    "p95": 29,
+    "actual": 24,
+    "share_mean": 18.87,
+    "share_actual": 17.79,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "הציונות הדתית": {
+    "central": 13,
+    "median": 13,
+    "p05": 11,
+    "p95": 16,
+    "actual": 14,
+    "share_mean": 10.17,
+    "share_actual": 10.84,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "המחנה הממלכתי": {
+    "central": 11,
+    "median": 11,
+    "p05": 9,
+    "p95": 14,
+    "actual": 12,
+    "share_mean": 8.72,
+    "share_actual": 9.08,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "ש\"ס": {
+    "central": 8,
+    "median": 8,
+    "p05": 7,
+    "p95": 10,
+    "actual": 11,
+    "share_mean": 6.46,
+    "share_actual": 8.25,
+    "p_threshold": 1.0,
+    "in_90": false
+   },
+   "יהדות התורה": {
+    "central": 7,
+    "median": 7,
+    "p05": 6,
+    "p95": 9,
+    "actual": 7,
+    "share_mean": 5.41,
+    "share_actual": 5.88,
+    "p_threshold": 1.0,
+    "in_90": true
+   },
+   "ישראל ביתנו": {
+    "central": 6,
+    "median": 6,
+    "p05": 5,
+    "p95": 7,
+    "actual": 6,
+    "share_mean": 4.76,
+    "share_actual": 4.48,
+    "p_threshold": 0.999,
+    "in_90": true
+   },
+   "רע\"ם": {
+    "central": 4,
+    "median": 4,
+    "p05": 0,
+    "p95": 5,
+    "actual": 5,
+    "share_mean": 3.48,
+    "share_actual": 4.07,
+    "p_threshold": 0.765,
+    "in_90": true
+   },
+   "חד\"ש-תע\"ל": {
+    "central": 4,
+    "median": 4,
+    "p05": 0,
+    "p95": 5,
+    "actual": 5,
+    "share_mean": 3.39,
+    "share_actual": 3.75,
+    "p_threshold": 0.683,
+    "in_90": true
+   },
+   "העבודה": {
+    "central": 5,
+    "median": 5,
+    "p05": 4,
+    "p95": 6,
+    "actual": 4,
+    "share_mean": 3.98,
+    "share_actual": 3.69,
+    "p_threshold": 0.967,
+    "in_90": true
+   },
+   "מרצ": {
+    "central": 5,
+    "median": 5,
+    "p05": 0,
+    "p95": 6,
+    "actual": 0,
+    "share_mean": 3.7,
+    "share_actual": 3.16,
+    "p_threshold": 0.886,
+    "in_90": true
+   },
+   "בל\"ד": {
+    "central": 0,
+    "median": 0,
+    "p05": 0,
+    "p95": 0,
+    "actual": 0,
+    "share_mean": 1.8,
+    "share_actual": 2.91,
+    "p_threshold": 0.003,
+    "in_90": true
+   },
+   "הבית היהודי": {
+    "central": 0,
+    "median": 0,
+    "p05": 0,
+    "p95": 0,
+    "actual": 0,
+    "share_mean": 1.97,
+    "share_actual": 1.19,
+    "p_threshold": 0.0,
+    "in_90": true
+   }
+  },
+  "blocs": {
+   "גוש נתניהו": {
+    "central": 60,
+    "median": 62,
+    "p05": 58,
+    "p95": 67,
+    "actual": 64,
+    "p_majority": 0.676,
+    "in_90": true
+   },
+   "גוש השינוי": {
+    "central": 52,
+    "median": 52,
+    "p05": 47,
+    "p95": 56,
+    "actual": 46,
+    "p_majority": 0.003,
+    "in_90": false
+   },
+   "המפלגות הערביות": {
+    "central": 8,
+    "median": 8,
+    "p05": 0,
+    "p95": 10,
+    "actual": 10,
+    "p_majority": 0.0,
+    "in_90": true
+   }
+  },
+  "mae_seats": 1.08,
+  "mae_share": 0.74,
+  "coverage_90": 0.92
+ }
+]

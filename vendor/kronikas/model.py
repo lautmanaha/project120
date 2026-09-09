@@ -1195,7 +1195,25 @@ def build_model(
         elif config.per_party_walk:
             # [Project 120 patch] per-party volatility without the LKJ correlation
             # matrix: small/new parties no longer inflate everyone's random walk.
-            sigma_walk = pm.HalfNormal("sigma_walk", sigma=walk_sigma_prior, shape=n_free)
+            if config.walk_pool_sd > 0:
+                # Hierarchical (partial pooling): log sigma_p = log(mu) + tau * z_p.
+                # A party whose polls merely disagree with each other cannot run off
+                # to an extreme volatility on its own; it is shrunk toward the
+                # industry-wide level mu, which is itself learned from the data.
+                mu_walk = pm.HalfNormal("mu_walk", sigma=walk_sigma_prior)
+                z_walk = pm.Normal("z_walk", 0.0, 1.0, shape=n_free)
+                sigma_walk = pm.Deterministic(
+                    "sigma_walk", mu_walk * pm.math.exp(config.walk_pool_sd * z_walk)
+                )
+            elif config.walk_sigma_max and config.walk_sigma_max > 0:
+                # Truncated: a party may be volatile, but weekly relative swings
+                # above walk_sigma_max are not extrapolated into the forecast.
+                _cap = config.walk_sigma_max * (config.per_step_walk_sigma / config.sigma_walk_prior)
+                sigma_walk_raw = pm.HalfNormal("sigma_walk_raw", sigma=walk_sigma_prior, shape=n_free)
+                # smooth cap: ~identity below the cap, saturates at the cap
+                sigma_walk = pm.Deterministic("sigma_walk", _cap * pt.tanh(sigma_walk_raw / _cap))
+            else:
+                sigma_walk = pm.HalfNormal("sigma_walk", sigma=walk_sigma_prior, shape=n_free)
         else:
             sigma_walk = pm.HalfNormal("sigma_walk", sigma=walk_sigma_prior)
 
