@@ -2,12 +2,15 @@
 #   כל שעתיים: בדיקה אם יש סקרים חדשים בתיקיית ה-Drive. אם יש - חילוץ (Claude), מודל, אתר, commit, פריסה.
 #   פעם ביום (06:00 UTC = 09:00 ישראל): ריצה מלאה גם בלי סקרים חדשים (אופק התחזית מתקצר).
 #   ידני: Actions -> "Update forecast" -> Run workflow (אפשר לסמן "force").
+#   בזמן אמת: השירות שמעתיק את הסקרים ל-Drive שולח webhook (repository_dispatch, event_type=new_poll) - ראה README.
 # secrets נדרשים: ANTHROPIC_API_KEY, P120_GATE_CODE (אופציונלי - בלי הקוד האתר פתוח).
 name: Update forecast
 on:
   schedule:
     - cron: "17 */2 * * *"
     - cron: "0 6 * * *"
+  repository_dispatch:
+    types: [new_poll]
   workflow_dispatch:
     inputs:
       force:
@@ -40,7 +43,8 @@ jobs:
       - name: Decide run mode
         id: mode
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then echo "flag=" >> $GITHUB_OUTPUT
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then sleep 60; echo "flag=--skip-model-if-no-new" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then echo "flag=" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.schedule }}" = "0 6 * * *" ]; then echo "flag=" >> $GITHUB_OUTPUT
           else echo "flag=--skip-model-if-no-new" >> $GITHUB_OUTPUT; fi
       - name: Fetch, extract, model, build

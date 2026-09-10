@@ -110,3 +110,13 @@ python db\build_db.py; python db\export_excel.py
 
 secrets (Settings -> Secrets and variables -> Actions): `ANTHROPIC_API_KEY` (חובה), `P120_GATE_CODE` (שער גישה מוקדמת; להסרה - למחוק את ה-secret).
 ריצה ידנית: Actions -> Update forecast -> Run workflow.
+
+### עדכון בזמן אמת (webhook)
+השירות שמזהה סקר חדש יכול להפעיל את ה-workflow מיד, במקום לחכות לבדיקה הבאה:
+```
+POST https://api.github.com/repos/lautmanaha/project120/dispatches
+Authorization: Bearer <fine-grained token: Repository permissions -> Contents: Read and write>
+Accept: application/vnd.github+json
+{"event_type": "new_poll"}
+```
+ה-workflow ממתין דקה (עד שהקובץ נוחת ב-Drive), מושך, ומריץ את המודל רק אם באמת יש סקר חדש. הבדיקה כל שעתיים נשארת כגיבוי.
