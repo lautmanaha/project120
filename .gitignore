@@ -16,3 +16,6 @@ site/en/index_full.html
 run.txt
 payload.json
 _site/
+
+# קבצי העברה זמניים
+_to_delete*
