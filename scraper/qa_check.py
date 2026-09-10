@@ -232,11 +232,11 @@ def main(argv=None) -> int:
         d = json.loads(f.read_text(encoding="utf-8"))
         flags = check_one(ref, d, conn)
         review = None
-        if a.review and os.environ.get("ANTHROPIC_API_KEY"):
+        # המבקר (Claude) הוא חוות דעת שנייה לאדם שמאשר - לא שופט: הוא רץ רק על סקר שכבר סומן, וממצאיו נכנסים ל-Issue בלבד.
+        # (בניסיון הראשון הוא סימן 39 מ-64 סקרים על דקדוקי מיפוי של רשימות קטנות - לא מספיק מדויק כדי להחריג לבד)
+        if flags and a.review and os.environ.get("ANTHROPIC_API_KEY"):
             try:
                 review = review_with_claude(ref, d)
-                if not review["ok"]:
-                    flags.append("המבקר מצא אי-התאמות")
             except Exception as ex:  # המבקר הוא תוספת; כשל שלו לא עוצר את הצינור
                 review = {"ok": True, "issues": [f"המבקר לא רץ: {ex}"]}
         if ref not in q["checked"]:
@@ -252,7 +252,7 @@ def main(argv=None) -> int:
             new_pending.append(ref)
             print(f"{ref}: הסגר - " + " | ".join(flags))
         else:
-            print(f"{ref}: תקין" + (" (מבקר: תקין)" if review else ""))
+            print(f"{ref}: תקין")
     save_q(q)
     if new_pending:
         write_report(q, new_pending, conn)
