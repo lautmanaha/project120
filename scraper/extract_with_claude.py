@@ -89,7 +89,7 @@ def extract_one(ref: str, pdf_path: Path, meta_hint: dict | None = None, retries
         if last_err:
             msgs[0]["content"] = content + [{"type": "text", "text":
                 f"Your previous answer failed validation: {last_err}. Fix it and return the full JSON again."}]
-        resp = client.messages.create(model=MODEL, max_tokens=8000, temperature=0, messages=msgs)
+        resp = client.messages.create(model=MODEL, max_tokens=8000, messages=msgs)
         text = "".join(b.text for b in resp.content if b.type == "text").strip()
         text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
         try:

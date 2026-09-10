@@ -11,3 +11,8 @@ site/s*.png
 site/index_full.html
 site/.gate_code
 site/en/index_full.html
+
+# GitHub Actions
+run.txt
+payload.json
+_site/

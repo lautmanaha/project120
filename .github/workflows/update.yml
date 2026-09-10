@@ -63,9 +63,7 @@ jobs:
         run: |
           git config user.name "project120-bot"
           git config user.email "bot@project120.co.il"
-          git add data/pdfs data/extracted db/polls.sqlite db/*.csv exports model/polls_model.csv model/anchor_trusted.json \
-                  model/output/forecast.json model/output/seats_summary.json model/output/house_effects.csv \
-                  site/index.html site/en/index.html site/data.json logs
+          git add -A -- data/pdfs data/extracted db exports model/polls_model.csv model/anchor_trusted.json model/output site
           if git diff --cached --quiet; then echo "changed=false" >> $GITHUB_OUTPUT; echo "אין שינויים"; else
             git commit -m "auto update $(date -u +%Y-%m-%d\ %H:%M) UTC" && git push && echo "changed=true" >> $GITHUB_OUTPUT; fi
       - name: Stage site
