@@ -1,0 +1,120 @@
+{
+  "ref": "4134",
+  "pollster_as_written": "מאגר מוחות",
+  "commissioner_as_written": null,
+  "fieldwork_start": "2026-09-08",
+  "fieldwork_end": "2026-09-09",
+  "method": "mixed",
+  "initial_sample": 1012,
+  "respondents": 551,
+  "response_rate_pct": 54.0,
+  "margin_error_pct": 4.2,
+  "population": "האוכלוסייה הישראלית הבוגרת גילאי 18 ומעלה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, לאיזו מפלגה הייתם מצביעים",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "ישר! בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 23,
+          "pct": 18.0
+        },
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 20,
+          "pct": 17.0
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 16,
+          "pct": 12.0
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 9,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 9,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "הרשימה המשותפת בראשות פתקי יוסף ג'באארין",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "רע\"ם בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "הציונות הדתית + זהות, בראשות בצלאל סמוטריץ'",
+          "party": "הציונות הדתית",
+          "seats": 4,
+          "pct": 3.29
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 4,
+          "pct": 3.32
+        },
+        {
+          "party_as_written": "הליברליים-תנועתיקים והכלכלית בראשות יוחנן פלסנר",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 2.0
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 1.0
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.7
+        }
+      ],
+      "undecided_pct": 6.0,
+      "not_voting_pct": null,
+      "other_pct": 1.0,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "הליברליים-תנועתיקים והכלכלית marked as אחר because it is a merged list not in canonical party names. Table also shows historical data from previous surveys."
+    }
+  ],
+  "extraction_notes": "The poll includes data from multiple survey waves (9.9.26, 2.9.26, 26.8.26, 19.8.26). The main results extracted are from the most recent wave (9.9.26). The table shows 'מפלגות אחרות' (other parties) at 1% and 'לא יודעת' (don't know) at 6%. The seats column sums to 120."
+}

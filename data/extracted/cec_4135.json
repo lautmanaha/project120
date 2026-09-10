@@ -1,0 +1,138 @@
+{
+  "ref": "4135",
+  "pollster_as_written": "מכון DRI",
+  "commissioner_as_written": "שמלת",
+  "fieldwork_start": "2026-09-07",
+  "fieldwork_end": "2026-09-07",
+  "method": "internet",
+  "initial_sample": 16196,
+  "respondents": 2100,
+  "response_rate_pct": 13.5,
+  "margin_error_pct": 3.5,
+  "population": "בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל בעלי זכות בחירה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, למי הית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בהנהגת בנימין נתניהו לראשות הממשלה",
+          "party": "הליכוד",
+          "seats": 25,
+          "pct": 19.24
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 20,
+          "pct": 15.16
+        },
+        {
+          "party_as_written": "האחדות הספרדים שמרני תורה טהורה של מרן הרב עובדי",
+          "party": "אחר",
+          "seats": 10,
+          "pct": 7.87
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 9,
+          "pct": 7.58
+        },
+        {
+          "party_as_written": "יחד בראשות נפתלי בנט ויאיר לפיד",
+          "party": "ביחד",
+          "seats": 9,
+          "pct": 7.28
+        },
+        {
+          "party_as_written": "מפלגת הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.01
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' וחנות",
+          "party": "הציונות הדתית",
+          "seats": 8,
+          "pct": 6.07
+        },
+        {
+          "party_as_written": "יהדות התורה והעבודה אגודת ישראל - דגל התורה",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 5.88
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.69
+        },
+        {
+          "party_as_written": "הרשימה הערבית המאוחדת",
+          "party": "הרשימה המשותפת",
+          "seats": 5,
+          "pct": 4.17
+        },
+        {
+          "party_as_written": "חד\"ש תע\"ל בראשות איימן עודה ואחמד טיבי",
+          "party": "אחר",
+          "seats": 7,
+          "pct": 5.69
+        },
+        {
+          "party_as_written": "מתנה הממלכתי בהנהגת בני גנץ",
+          "party": "אחר",
+          "seats": 4,
+          "pct": 3.26
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 2.08
+        },
+        {
+          "party_as_written": "המיליאונימניקים והכלכלית החדש – יונת הנדל פרופסור יניב דולברה וטונית ויליך",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 1.79
+        },
+        {
+          "party_as_written": "נעם לישראל בראשות אבי מעוז",
+          "party": "נעם",
+          "seats": 0,
+          "pct": 0.35
+        },
+        {
+          "party_as_written": "אל הדגל",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.34
+        },
+        {
+          "party_as_written": "ישראל תחילה בראשות שרן השכל",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.3
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.24
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "האחדות הספרדים (10 seats, 7.87%) and חד\"ש תע\"ל (7 seats, 5.69%) and מתנה הממלכתי (4 seats, 3.26%) and המיליאונימניקים והכלכלית החדש (0 seats, 1.79%) are marked as אחר since they don't match canonical party names exactly or are unclear mergers/new formations."
+    }
+  ],
+  "extraction_notes": "Poll conducted by מכון DRI for שמלת on 7.9.2026. The text shows this is an online panel survey with digital and analog panel system (אינטרנט). Several parties in the results do not match the canonical list exactly: האחדות הספרדים appears to be a new or non-standard formation; חד\"ש תע\"ל is likely related to הרשימה המשותפת but listed separately; מתנה הממלכתי may be related to כחול לבן/Gantz but is written differently; המיליאונימניקים והכלכלית החדש appears to be a merger. All marked as אחר except where a clear canonical match exists."
+}

@@ -1,0 +1,108 @@
+{
+  "ref": "4137",
+  "pollster_as_written": "קנטאר ישראל",
+  "commissioner_as_written": null,
+  "fieldwork_start": "2026-09-09",
+  "fieldwork_end": "2026-09-09",
+  "method": "internet",
+  "initial_sample": 2300,
+  "respondents": 554,
+  "response_rate_pct": 24.0,
+  "margin_error_pct": 4.2,
+  "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "איזו היא מתקיימות היום הבחירות לכנסת, והמפלגות המתמודדות יהיו המפלגות הבאות עם ראשי המפלגות שברשימה בפנייך, עבור איזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "ישר! בראשות בנימין נתניהו",
+          "party": "ישר",
+          "seats": 24,
+          "pct": 19.4
+        },
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 21,
+          "pct": 17.0
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 12,
+          "pct": 9.7
+        },
+        {
+          "party_as_written": "מפלגת הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.2
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.5
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל ובל\"ד בראשות יוסף ג'באריין",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "רע\"ם בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.1
+        },
+        {
+          "party_as_written": "הציונות הדתית זהות בראשות בצלאל סמוטריץ'",
+          "party": "הציונות הדתית",
+          "seats": 5,
+          "pct": 4.1
+        },
+        {
+          "party_as_written": "המילואימניקים והמפלגה הכלכלית בראשות יוחאי הנדל יורן זליכה",
+          "party": "הכלכלית החדשה",
+          "seats": 4,
+          "pct": 3.3
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 4,
+          "pct": 3.3
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Four parties shown with 0% or below threshold: כחול לבן בראשות בני גנץ (0.8%), הציבור החרדי בראשות מוטי לייטנר (0.9%), מפלגת נעם בראשות אבי מעוז (0.4%), ישראל תחילה ועלה ירוק בראשות שרון השכל (0.5%). The table shows a merged list 'הציונות הדתית זהות' which combines הציונות הדתית and זהות - attributed to the larger component הציונות הדתית. Similarly 'המילואימניקים והמפלגה הכלכלית' appears to be a merged list - attributed to הכלכלית החדשה."
+    }
+  ],
+  "extraction_notes": "Page 1 contains methodology details. Page 2 contains the main voting intention table. The poll was conducted via internet panel (אינטרנטי, פאנל משיבים). Several parties are shown below threshold with percentages but no seats. The table shows some merged party lists."
+}

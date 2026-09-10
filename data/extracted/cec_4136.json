@@ -1,0 +1,102 @@
+{
+  "ref": "4136",
+  "pollster_as_written": "דיירקט פולס בראשות צוריאל שרון",
+  "commissioner_as_written": "ערוץ i24NEWS",
+  "fieldwork_start": "2026-09-09",
+  "fieldwork_end": "2026-09-09",
+  "method": "internet",
+  "initial_sample": 15700,
+  "respondents": 1054,
+  "response_rate_pct": 6.7,
+  "margin_error_pct": 3.0,
+  "population": "מדגם ארצי ומייצג של כלל האוכלוסייה בישראל בגילאי 18+, לרבות יהודים וערבים",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, למי היית מצביע?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד",
+          "party": "הליכוד",
+          "seats": 27,
+          "pct": 21.1
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 22,
+          "pct": 17.7
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 10,
+          "pct": 7.7
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.5
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.2
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.1
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.4
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": 5.3
+        },
+        {
+          "party_as_written": "הציונות הדתית חזות",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "רע\"ם",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.5
+        },
+        {
+          "party_as_written": "עמך ישראל",
+          "party": "עמך ישראל",
+          "seats": 4,
+          "pct": 3.4
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": 1.4,
+      "blank_pct": 1.1,
+      "seats_total": 120,
+      "notes": "המילואימניקים והכלכלית are listed under 'other parties' at 1.4%"
+    }
+  ],
+  "extraction_notes": "The poll was commissioned by i24NEWS. Initial sample was 15,700 people contacted, with 1,054 respondents actually participating. The response rate is 6.7%. Margin of error is ±3.0% at 95% confidence. The footnote mentions parties below threshold including 'הציבור החרדי, צבע שחור, נעם לישראל בראשות אבי מעוז, אח\"י, הקהל, ישראל תחילה - עולה ירוק'."
+}
