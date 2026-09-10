@@ -86,6 +86,31 @@ html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-be
 html.js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){ html.js .rv{opacity:1;transform:none;transition:none} }
 
+/* ===== status strip (תמונת מצב) ===== */
+.status{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:0 0 36px}
+.st{display:block;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px 11px;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;min-width:0}
+.st:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--brand)}
+.st .q{font-size:12px;font-weight:700;color:var(--ink-3);letter-spacing:.02em}
+.st .v{font-family:var(--font-brand);font-size:30px;line-height:1.1;color:var(--ink);margin:5px 0 3px;white-space:nowrap}
+.st .v small{font-size:15px;color:var(--ink-2);font-weight:600}
+.st .s{font-size:12.5px;color:var(--ink-2);line-height:1.35}
+.st .up{color:var(--coal)} .st .dn{color:var(--arab)}
+.st .go{position:absolute;inset-inline-end:12px;top:12px;font-size:11px;color:var(--ink-3)}
+.st:hover .go{color:var(--brand)}
+@media(max-width:900px){.status{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.status{grid-template-columns:repeat(2,1fr);gap:8px}.st{padding:10px 12px}.st .v{font-size:26px}.st:last-child{grid-column:span 2}}
+/* ===== collapsible sections ===== */
+.sec-sum{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-top:10px}
+.sec-sum .txt{font-size:15.5px;color:var(--ink-2);flex:1;min-width:200px}
+.sec-sum .txt b{color:var(--ink);font-weight:600}
+.sec-sum button{font:inherit;font-size:13.5px;font-weight:700;color:var(--ink);background:var(--brand-soft);border:1px solid var(--brand);border-radius:999px;padding:6px 14px;cursor:pointer;white-space:nowrap}
+.sec-sum button:hover{background:var(--brand);color:#fff}
+.sec-body{overflow:hidden;max-height:none}
+section.collapsed .sec-body{max-height:0;opacity:0;visibility:hidden}
+section.collapsed{padding:40px 0 34px}
+.allbtn{font:inherit;font-size:12.5px;color:var(--ink-3);background:none;border:0;cursor:pointer;text-decoration:underline;padding:0;margin:-24px 0 24px}
+.allbtn:hover{color:var(--ink)}
+
 /* ===== hero ===== */
 #s120{padding:56px 0 64px;background:radial-gradient(1200px 600px at 50% -10%,var(--brand-soft),transparent 60%),var(--bg)}
 .hero{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
@@ -272,6 +297,7 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
 <div class="tip" id="tip"></div>
 
 <section id="s120"><div class="wrap">
+  <div class="status" id="status"></div>
   <div class="hero">
     <div class="hero-side">
       <div class="eyebrow">תחזית ליום הבחירות · 27.10.2026 · <span id="dleft"></span> ימים</div>
@@ -436,7 +462,7 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
   const seg = order.filter(p => cs[p]);
   document.getElementById('legend120').innerHTML = seg.map(p => `<button type="button" data-p="${esc(p)}"><i style="background:${col(p)}"></i>${esc(p)} <b>${cs[p]}</b></button>`).join('');
   document.querySelectorAll('#legend120 button').forEach(b => { b.addEventListener('mouseenter', () => focus(x => x.dataset.p === b.dataset.p)); b.addEventListener('mouseleave', clear); });
-  document.querySelectorAll('.kpi').forEach(k => { k.addEventListener('mouseenter', () => focus(x => x.dataset.b === k.dataset.bloc)); k.addEventListener('mouseleave', clear); k.addEventListener('click', () => { if (window.filterBloc) filterBloc(k.dataset.bloc); document.getElementById('sparties').scrollIntoView({behavior:'smooth'}); }); });
+  document.querySelectorAll('.kpi').forEach(k => { k.addEventListener('mouseenter', () => focus(x => x.dataset.b === k.dataset.bloc)); k.addEventListener('mouseleave', clear); k.addEventListener('click', () => { if (window.filterBloc) filterBloc(k.dataset.bloc); openSec('sparties'); }); });
 })();
 
 // ---- blocs
@@ -464,7 +490,7 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
       ${isArab ? `<div class="pm"><span>ממוצע</span><b>${b.seats_mean}</b></div>` : `<div class="pm"><span>סיכוי ל-61 ומעלה</span><b>${pctStr(b.p_majority)}</b></div>`}
     </div>`;
   }).join('');
-  el.querySelectorAll('.bloc').forEach(c => { c.style.cursor='pointer'; c.addEventListener('click', e => { if (e.target.closest('rect')) return; if (window.filterBloc) filterBloc(c.dataset.bloc); document.getElementById('sparties').scrollIntoView({behavior:'smooth'}); }); });
+  el.querySelectorAll('.bloc').forEach(c => { c.style.cursor='pointer'; c.addEventListener('click', e => { if (e.target.closest('rect')) return; if (window.filterBloc) filterBloc(c.dataset.bloc); openSec('sparties'); }); });
   el.querySelectorAll('rect.b').forEach(r => {
     r.addEventListener('mouseenter', e => showTip(`<b>${r.dataset.k} מנדטים</b><br>${r.dataset.p}% מהסימולציות`, e.clientX, e.clientY));
     r.addEventListener('mousemove', e => { tip.style.left = e.clientX+'px'; tip.style.top = e.clientY+'px'; });
@@ -729,6 +755,81 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
   el.innerHTML = `<h3>בקרת איכות: מה לא נכנס למודל</h3>
     <p>כל סקר שמגיע מהוועדה עובר חילוץ אוטומטי ואז סדרת בדיקות: זהות המכון, מיפוי כל שורה למפלגה, סכומי מנדטים ואחוזים, כפילויות והגשות חוזרות, וסטייה חריגה מהסקרים הקודמים של אותו מכון. סקר שמדליק דגל נכנס להסגר - נשמר, אבל לא במודל - עד בדיקה אנושית. ${D.n_polls_model} מתוך ${D.n_polls_all} הסקרים במודל; אלה שלא:</p>
     <div class="tw"><table><thead><tr><th>אסמכתא</th><th>מכון</th><th>תאריך</th><th>סיבה</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+})();
+
+// ---- תמונת מצב: 5 שאלות, 5 מספרים, כל אחד מגלגל לסעיף שלו
+const T = {
+  q1: 'מי מנצח?', q2: 'מה השתנה השבוע?', q3: 'הסיכון הגדול?', q4: 'על מה זה מבוסס?', q5: 'מה עוד לא ידוע?',
+  seats: 'מנדטים', polls: 'סקרים', pMaj: 'סיכוי לרוב', firstRun: 'ריצה ראשונה', toRightSince: 'לגוש הימין מאז', pts: 'נקודות',
+  passThr: 'לעבור את אחוז החסימה', noRisk: 'אין רשימה על הסף', allCec: 'כל סקרי ועדת הבחירות · האחרון',
+  range90: 'טווח 90% לגוש הימין - ההפרש הוא אי-הודאות שהסקרים לא יכולים לסגור',
+  details: 'פרטים', close: 'סגור', showAll: 'להציג את כל הפרטים בעמוד', hideAll: 'לקפל את כל הסעיפים',
+  pRight: 'סיכוי לרוב ימין', onThr: 'על הסף', toPass: 'לעבור. נפילה מפזרת את המנדטים לכל הגושים, לא רק לגוש שלה',
+  noRisk2: 'אין כרגע רשימה שהמודל מסופק לגביה', lists: 'רשימות, הטווח המלא והסיכוי לעבור את הסף לכל אחת',
+  last4: 'ב-4 השבועות האחרונים', afterHouse: 'נקודות אחוז - אחרי ניכוי הטיית המכונים',
+  twoSchools: 'שתי אסכולות', measure: 'מודדים את', more: 'יותר', less: 'פחות', thanRest: 'מהשאר', pollstersHouse: 'מכונים, אפקט בית לכל אחד',
+  method1: 'מודל בייסיאני על כל סקרי הוועדה, כיול לפי טעות 2022', backtest: 'בדיקת עבר: טעות', perParty: 'מנדטים למפלגה', excludedWhy: 'וכל מה שהוחרג ולמה',
+};
+const BR = D.blocs[0].bloc, BL = D.blocs[1].bloc, BA = D.blocs[2].bloc;
+(function(){
+  const el = document.getElementById('status'); if(!el) return;
+  const right = coal, d = D.delta, since = d ? fmtDate(d.since) : '';
+  const pMaj = Math.round(right.p_majority*100);
+  const dm = d ? d.blocs[BR] : null;
+  const dSeats = dm ? Math.round(dm.seats*10)/10 : 0, dP = dm ? Math.round(dm.p_majority*100) : 0;
+  const arrow = v => v > 0 ? '▲' : v < 0 ? '▼' : '=';
+  const cls = v => v > 0 ? 'up' : v < 0 ? 'dn' : '';
+  const sign = v => (v > 0 ? '+' : '') + v;
+  const risk = D.seats.filter(p => p.p_threshold > 0.02 && p.p_threshold < 0.98).sort((a,b)=>Math.abs(a.p_threshold-0.5)-Math.abs(b.p_threshold-0.5))[0];
+  const rightC = blocCentral[BR], lo = right.seats_p05, hi = right.seats_p95, n = D.n_polls_model, lastP = fmtDate(D.last_poll);
+  const riskP = risk ? Math.round(risk.p_threshold*100) : null, riskName = risk ? esc(risk.party) : '';
+  const cards = [
+    {q:T.q1, v:`${rightC} <small>${T.seats}</small>`, s:`${BR} · ${T.pMaj} ${pMaj}%`, href:'#sblocs'},
+    {q:T.q2, v:d ? `<span class="${cls(dSeats)}" style="direction:ltr;display:inline-block">${arrow(dSeats)} ${sign(dSeats)}</span>` : '-', s:d ? `${T.toRightSince} ${since} · ${T.pMaj} ${sign(dP)} ${T.pts}` : T.firstRun, href:'#strend'},
+    {q:T.q3, v:risk ? `${riskP}%` : '-', s:risk ? `${riskName}: ${riskP}% ${T.passThr}` : T.noRisk, href:'#sthr'},
+    {q:T.q4, v:`${n} <small>${T.polls}</small>`, s:`${T.allCec} ${lastP}`, href:'#shouse'},
+    {q:T.q5, v:`${lo}-${hi}`, s:T.range90, href:'#smethod'},
+  ];
+  el.innerHTML = cards.map(c => `<a class="st" href="${c.href}"><span class="go">↓</span><div class="q">${c.q}</div><div class="v">${c.v}</div><div class="s">${c.s}</div></a>`).join('');
+})();
+
+// ---- סעיפים מקופלים: שורת סיכום + "פרטים"; פתיחה בלחיצה על קישור/כרטיס
+function openSec(id, scroll=true){ const s = document.getElementById(id); if(!s) return; s.classList.remove('collapsed'); const b = s.querySelector('.sec-sum button'); if (b) b.textContent = T.close; if (scroll) setTimeout(() => s.scrollIntoView({behavior:'smooth', block:'start'}), 30); }
+(function(){
+  const right = coal;
+  const gap = D.anchor ? Object.entries(D.anchor.gap_trusted_minus_others||{}).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1]))[0] : null;
+  const top3 = D.seats.slice().sort((a,b)=>b.seats_mean-a.seats_mean).slice(0,3).map(p=>`${esc(p.party)} ${D.central_seats[p.party]}`).join(' · ');
+  const risk = D.seats.filter(p => p.p_threshold > 0.02 && p.p_threshold < 0.98).sort((a,b)=>Math.abs(a.p_threshold-0.5)-Math.abs(b.p_threshold-0.5))[0];
+  const tr = D.trend; let iNow = tr.dates.findIndex(x => x > D.generated); iNow = iNow < 0 ? tr.dates.length-1 : Math.max(0, iNow-1); const k = Math.max(0, iNow-4);
+  const movers = D.parties.map(p => [p, tr.series[p].mean[iNow]-tr.series[p].mean[k]]).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])).slice(0,2).map(([p,v])=>`${esc(p)} <span style="direction:ltr;display:inline-block">${(v>0?'+':'')}${v.toFixed(1)}</span>`).join(', ');
+  const bt = Array.isArray(D.backtest) && D.backtest.length ? D.backtest[D.backtest.length-1] : null;
+  const rightC = blocCentral[BR], leftC = blocCentral[BL], arabC = blocCentral[BA], lo = right.seats_p05, hi = right.seats_p95, pMaj = Math.round(right.p_majority*100);
+  const trusted = D.anchor ? esc((D.anchor.trusted||[]).join(LANG==='en'?' and ':' ו')) : '';
+  const gapName = gap ? esc(gap[0]) : '', gapV = gap ? Math.abs(gap[1]).toFixed(1) : '', gapDir = gap && gap[1] > 0 ? T.more : T.less;
+  const sums = {
+    sblocs: `<b>${BR} ${rightC}</b> (${lo}-${hi}) · ${BL} ${leftC} · ${BA} ${arabC} · ${T.pRight}: <b>${pMaj}%</b>`,
+    sthr: risk ? `<b>${esc(risk.party)}</b> ${T.onThr} - ${Math.round(risk.p_threshold*100)}% ${T.toPass}` : T.noRisk2,
+    sparties: `${top3} · ${D.parties.length} ${T.lists}`,
+    strend: `${T.last4}: <b>${movers}</b> ${T.afterHouse}`,
+    shouse: gap ? `${T.twoSchools}: ${trusted} ${T.measure} <b>${gapName}</b> ${gapV} ${T.pts} ${gapDir} ${T.thanRest}` : `${Object.keys(D.pollster_counts).length} ${T.pollstersHouse}`,
+    smethod: `${T.method1}${bt ? `, ${T.backtest} ${bt.mae_seats} ${T.perParty}` : ''} - ${T.excludedWhy}`,
+  };
+  for (const id of Object.keys(sums)){
+    const sec = document.getElementById(id); if(!sec) continue; const wrap = sec.querySelector('.wrap');
+    const body = document.createElement('div'); body.className = 'sec-body';
+    const kids = [...wrap.children]; let after = false;
+    for (const c of kids){ if (after || c.classList.contains('lede') || (!c.classList.contains('eyebrow') && c.tagName !== 'H2')) { after = true; body.appendChild(c); } }
+    const bar = document.createElement('div'); bar.className = 'sec-sum';
+    bar.innerHTML = `<div class="txt">${sums[id]}</div><button type="button">${T.details}</button>`;
+    wrap.appendChild(bar); wrap.appendChild(body);
+    sec.classList.add('collapsed');
+    bar.querySelector('button').addEventListener('click', () => { if (sec.classList.contains('collapsed')) openSec(id, false); else { sec.classList.add('collapsed'); bar.querySelector('button').textContent = T.details; } });
+  }
+  const all = document.createElement('button'); all.className = 'allbtn'; all.type = 'button'; all.textContent = T.showAll;
+  document.querySelector('#s120 .wrap').insertBefore(all, document.querySelector('#s120 .hero'));
+  all.addEventListener('click', () => { const open = all.dataset.open === '1'; Object.keys(sums).forEach(id => { const sec = document.getElementById(id); if (open){ sec.classList.add('collapsed'); sec.querySelector('.sec-sum button').textContent = T.details; } else openSec(id, false); }); all.dataset.open = open ? '0' : '1'; all.textContent = open ? T.showAll : T.hideAll; });
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => { const id = a.getAttribute('href').slice(1); if (sums[id]) { e.preventDefault(); openSec(id); history.replaceState(null, '', '#'+id); } }));
+  if (location.hash && sums[location.hash.slice(1)]) openSec(location.hash.slice(1));
 })();
 
 // ---- health, nav active state, reveal

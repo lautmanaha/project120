@@ -80,6 +80,26 @@ excluded = [{"ref": r[0], "pollster": r[1] or "", "date": r[2] or r[3] or "", "r
                                      LEFT JOIN polls_meta m ON m.reference_number=p.reference_number
                                      WHERE p.in_model=0 ORDER BY p.reference_number DESC""")]
 
+# --- היסטוריית תחזיות + "מה השתנה השבוע" (מול הרשומה שלפני 7+ ימים, או הישנה ביותר) ---
+hist_file = OUT / "history.jsonl"
+history = [json.loads(l) for l in hist_file.read_text(encoding="utf-8").splitlines() if l.strip()] if hist_file.exists() else []
+history = [h for h in history if h["date"] <= fc["today"]]
+delta = None
+if len(history) >= 2:
+    cur = history[-1]
+    target = date.fromisoformat(fc["today"]) - timedelta(days=7)
+    older = [h for h in history[:-1] if date.fromisoformat(h["date"]) <= target] or history[:1]
+    base = older[-1]
+    if base["date"] != cur["date"]:
+        delta = {"since": base["date"],
+                 "blocs": {b: {"seats": cur["blocs"][b]["mean"] - base["blocs"][b]["mean"],
+                               "median": cur["blocs"][b]["median"] - base["blocs"][b]["median"],
+                               "p_majority": cur["blocs"][b]["p_majority"] - base["blocs"][b]["p_majority"]}
+                           for b in cur["blocs"] if b in base["blocs"]},
+                 "parties": {p: round(cur["parties"][p]["mean"] - base["parties"][p]["mean"], 1)
+                             for p in cur["parties"] if p in base["parties"]},
+                 "n_polls": (cur.get("n_polls") or 0) - (base.get("n_polls") or 0)}
+
 data = {
     "generated": fc["today"], "election_date": fc["election_date"],
     "days_to_election": (election - date.fromisoformat(fc["today"])).days,
@@ -95,6 +115,8 @@ data = {
     "sims": sims,
     "backtest": json.loads((ROOT / "model" / "backtest_2022" / "backtest_2022.json").read_text(encoding="utf-8")) if (ROOT / "model" / "backtest_2022" / "backtest_2022.json").exists() else None,
     "excluded": excluded,
+    "history": [{"date": h["date"], "n_polls": h.get("n_polls"), "blocs": {b: [v["median"], v["p05"], v["p95"], v["p_majority"]] for b, v in h["blocs"].items()}} for h in history],
+    "delta": delta,
     "anchor": json.loads((ROOT / "model" / "anchor_trusted.json").read_text(encoding="utf-8")) if (ROOT / "model" / "anchor_trusted.json").exists() else None,
 }
 assert sum(data["central_seats"].values()) == 120, "central seats must sum to 120"
