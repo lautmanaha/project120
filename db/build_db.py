@@ -31,7 +31,21 @@ POLLSTER_CANON = [
     ("Next Data", "נקסט דאטה"), ("נקסט", "נקסט דאטה"), ("פילבר", "נקסט דאטה"),
     ("מדגם", "מדגם"),
     ("דיאלוג", "דיאלוג"),
+    ("DRI", "מכון DRI"), ("די אר איי", "מכון DRI"),
 ]
+
+# רשת ביטחון לשמות מפלגות: כשהחילוץ מיפה שם כתוב לא-קנוני ל"אחר" (או למפלגה הלא נכונה) - מיפוי דטרמיניסטי לפי מחרוזות חד-משמעיות
+def fix_party(written: str | None, party: str | None) -> str | None:
+    w = (written or "").replace("״", '"').replace("''", '"')
+    if 'חד"ש' in w or 'תע"ל' in w:                      # רשימה משותפת (גם כשמצוין בה רע"ם - רשימה מאוחדת)
+        return "הרשימה המשותפת" if party in (None, "אחר", "רע\"ם") else party
+    if "הערבית המאוחדת" in w or 'רע"ם' in w:
+        return "רע\"ם"
+    if "שומרי תורה" in w or "הספרדים" in w or 'ש"ס' in w:   # התאחדות הספרדים שומרי תורה
+        return "ש\"ס"
+    if party in (None, "אחר") and ("הממלכתי" in w or "כחול לבן" in w):
+        return "כחול לבן"
+    return party
 PUBLISHER_CANON = [
     ("ערוץ 13", "חדשות 13"), ("חדשות 13", "חדשות 13"),
     ("חדשות 12", "חדשות 12"), ("ערוץ 12", "חדשות 12"),
@@ -172,13 +186,17 @@ def main() -> int:
         return publisher_ids[c]
 
     # כפילויות ידועות: 4036 הוגש מחדש כ-4048 (טור מנדטים מתוקן)
-    superseded = {"4036": "הוגש מחדש כ-4048 עם טור מנדטים מתוקן"}
+    superseded = {"4036": "הוגש מחדש כ-4048 עם טור מנדטים מתוקן",
+                  "4133": "הוגש מחדש כ-4135 (מכון DRI, אותו סקר עם תיקון)"}
 
     seen_fingerprints: dict[tuple, str] = {}
     qid_counter = 0
     for f in sorted(EXTRACTED.glob("cec_*.json")):
         d = json.loads(f.read_text(encoding="utf-8"))
         ref = str(d["ref"])
+        for q in d["questions"]:
+            for r in q["results"]:
+                r["party"] = fix_party(r.get("party_as_written"), r.get("party"))
         m = meta.get(ref)
         editor_cec = m[1] if m else None
         publisher_cec = m[2] if m else None
