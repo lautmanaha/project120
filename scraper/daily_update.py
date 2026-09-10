@@ -45,7 +45,8 @@ def main(argv=None) -> int:
         if a.source == "drive":
             import io
             buf = io.StringIO()
-            r = subprocess.run([PY, "scraper/drive_fetch.py"], cwd=ROOT, capture_output=True, text=True)
+            cmd = [PY, "scraper/drive_fetch.py"] + (["--payload", "payload.json"] if (ROOT / "payload.json").exists() else [])
+            r = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
             log.write(f"\n=== fetch (drive) ===\n{r.stdout}{r.stderr}--- exit {r.returncode}\n"); rc = r.returncode
             m = [l for l in r.stdout.splitlines() if l.startswith("NEW=")]
             n_new = int(m[-1].split("=")[1]) if m else None

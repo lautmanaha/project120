@@ -95,8 +95,15 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--folder", default=os.environ.get("P120_DRIVE_FOLDER", DEFAULT_FOLDER))
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--payload", default=None, help="קובץ JSON מה-webhook (client_payload): פרטי הסקר + קישור ל-PDF")
     a = ap.parse_args(argv)
     PDF_DIR.mkdir(parents=True, exist_ok=True)
+    new_from_payload = 0
+    if a.payload and Path(a.payload).exists():
+        try:
+            new_from_payload = from_payload(json.loads(Path(a.payload).read_text(encoding="utf-8")))
+        except Exception as ex:  # ה-webhook הוא קיצור דרך; אם נכשל - סריקת התיקייה תתפוס את הסקר
+            print("payload נכשל:", ex)
     entries = list_folder(a.folder)
     print(f"בתיקייה: {len(entries)} קבצים")
     conn = sqlite3.connect(DB)
@@ -137,8 +144,40 @@ def main(argv=None) -> int:
         new += 1
         print(f"  הורד: {ref} ({len(data)//1024} KB) {e['title']}" + (f"  [תוכן זהה ל-{dup[0]}]" if dup else ""))
     conn.commit()
-    print(f"NEW={new}")
+    print(f"NEW={new + new_from_payload}")
     return 0
+
+
+def from_payload(pl: dict) -> int:
+    """סקר אחד שהגיע ב-webhook: מטא-דאטה מלא + קישור ישיר ל-PDF. מחזיר 1 אם נוסף."""
+    if not pl or not pl.get("reference_number"):
+        return 0
+    ref = str(pl["reference_number"]).strip()
+    url = pl.get("pdf_url") or ""
+    m = re.search(r"/d/([A-Za-z0-9_-]{20,})|[?&]id=([A-Za-z0-9_-]{20,})", url)
+    file_id = (m.group(1) or m.group(2)) if m else None
+    target = PDF_DIR / f"cec_{ref}.pdf"
+    conn = sqlite3.connect(DB)
+    if target.exists():
+        conn.execute("UPDATE polls_meta SET survey_editor=COALESCE(?,survey_editor), survey_publisher=COALESCE(?,survey_publisher), publish_date=COALESCE(?,publish_date) WHERE reference_number=?",
+                     (pl.get("survey_editor"), pl.get("survey_publisher"), pl.get("publish_date"), ref))
+        conn.commit(); print(f"  webhook: {ref} כבר קיים - עודכן מטא-דאטה"); return 0
+    if file_id:
+        data = download(file_id)
+    else:
+        r = requests.get(url, headers=UA, timeout=120); r.raise_for_status(); data = r.content
+        if b"%PDF" not in data[:1024]:
+            raise RuntimeError("הקישור לא מחזיר PDF")
+    sha = hashlib.sha256(data).hexdigest()
+    target.write_bytes(data)
+    now = dt.datetime.now().isoformat(timespec="seconds"); today = dt.date.today().isoformat()
+    conn.execute("INSERT OR REPLACE INTO polls_meta VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                 (ref, None, pl.get("survey_editor"), pl.get("survey_publisher"), pl.get("survey_date"), pl.get("publish_date") or today,
+                  pl.get("publish_date") or today, today, pl.get("notes"), pl.get("file_name"), len(data), url,
+                  f"data/pdfs/cec_{ref}.pdf", sha, json.dumps({"source": "webhook", "file_id": file_id, "title": pl.get("file_name")}, ensure_ascii=False), now, now))
+    conn.commit()
+    print(f"  webhook: הורד {ref} ({len(data)//1024} KB) {pl.get('survey_editor') or ''}")
+    return 1
 
 
 if __name__ == "__main__":

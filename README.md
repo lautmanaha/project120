@@ -117,6 +117,11 @@ secrets (Settings -> Secrets and variables -> Actions): `ANTHROPIC_API_KEY` (ח�
 POST https://api.github.com/repos/lautmanaha/project120/dispatches
 Authorization: Bearer <fine-grained token: Repository permissions -> Contents: Read and write>
 Accept: application/vnd.github+json
-{"event_type": "new_poll"}
+Content-Type: application/json
+{"event_type": "new_poll",
+ "client_payload": {"reference_number": "4133", "survey_editor": "מכון די אר איי", "survey_publisher": "ערוץ 13",
+                    "survey_date": "2026-09-09", "publish_date": "2026-09-10", "file_name": "סקר בחירות מיום 9.9.2026 4133 - מכון די אר איי.pdf",
+                    "pdf_url": "https://drive.google.com/file/d/<FILE_ID>/view", "notes": ""}}
 ```
-ה-workflow ממתין דקה (עד שהקובץ נוחת ב-Drive), מושך, ומריץ את המודל רק אם באמת יש סקר חדש. הבדיקה כל שעתיים נשארת כגיבוי.
+`client_payload` אופציונלי: אם יש בו `reference_number` ו-`pdf_url` (קישור Drive או קישור ישיר ל-PDF) - הסקר יורד מיד מהקישור והמטא-דאטה נשמר;
+אחרת (או אם ההורדה נכשלה) ה-workflow ממתין דקה, סורק את תיקיית ה-Drive ומושך משם. המודל רץ רק אם באמת יש סקר חדש. הבדיקה כל שעתיים נשארת כגיבוי.
