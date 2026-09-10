@@ -1,0 +1,50 @@
+# פרויקט 120 - אישור/דחייה של סקר בהסגר דרך תגובה ב-Issue.
+#   תגובה שמתחילה ב"אישור" / approve  -> הסקר נכנס למודל;   "דחייה" / reject -> נשאר בחוץ.
+#   אחרי המילה אפשר להוסיף הערה. רק בעל הריפו יכול להכריע. ואז מופעל "Update forecast" מחדש.
+name: QA approve
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: write
+  issues: write
+  actions: write
+concurrency:
+  group: update
+  cancel-in-progress: false
+jobs:
+  decide:
+    if: startsWith(github.event.issue.title, '[QA]') && github.event.comment.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse decision
+        id: d
+        env:
+          TITLE: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.comment.body }}
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import os, re
+          t, b = os.environ["TITLE"], os.environ["BODY"].strip()
+          ref = re.search(r"(\d{4})", t).group(1)
+          first = b.split()[0] if b else ""
+          if first.lstrip("*").rstrip("*:.,") in ("אישור", "approve", "מאושר", "approved", "אשר"): act = "approve"
+          elif first.lstrip("*").rstrip("*:.,") in ("דחייה", "reject", "דחה", "rejected", "נדחה"): act = "reject"
+          else: act = "none"
+          note = " ".join(b.split()[1:])[:200]
+          print(f"ref={ref}\nact={act}\nnote={note}")
+          EOF
+      - name: Apply
+        if: steps.d.outputs.act != 'none'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 scraper/qa_check.py --${{ steps.d.outputs.act }} ${{ steps.d.outputs.ref }} --note "${{ steps.d.outputs.note }}"
+          git config user.name "project120-bot"
+          git config user.email "bot@project120.co.il"
+          git add db/quarantine.json
+          git commit -m "QA: ${{ steps.d.outputs.act }} ${{ steps.d.outputs.ref }}" && git push
+          gh issue comment ${{ github.event.issue.number }} --body "$( [ "${{ steps.d.outputs.act }}" = approve ] && echo "אושר - הסקר נכנס למודל, התחזית מתעדכנת (כ-15 דקות)." || echo "נדחה - הסקר לא ייכנס למודל." )"
+          gh issue close ${{ github.event.issue.number }}
+          gh workflow run update.yml -f force=true

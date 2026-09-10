@@ -24,7 +24,7 @@ NAMES_EN = {
     "פרויקט המדגם (רוזנר)": "HaMidgam Project (Rosner)", "פרויקט המדגם (פוקס)": "HaMidgam Project (Fuchs)", "פרויקט המדגם": "HaMidgam Project",
     "דיירקט פולס (+נקסט דאטה)": "Direct Polls (+Next Data)", "דיירקט פולס": "Direct Polls", "נקסט דאטה": "Next Data",
     "לזר מחקרים": "Lazar Research", "מאגר מוחות": "Maagar Mochot", "מכון סמית": "Smith Institute", "קנטאר": "Kantar",
-    "(או הסקר האחרון)": "(or the pollster\u2019s last poll)", "טאטיקה": "Tatika", "דיאלוג": "Dialog", "אפקאר": "Afkar", "מדגם": "Midgam", "מכון DRI": "DRI Institute",
+    "(או הסקר האחרון)": "(or the pollster\u2019s last poll)", "טאטיקה": "Tatika", "דיאלוג": "Dialog", "אפקאר מחקרים וידע": "Afkar Research", "אפקאר": "Afkar", "מדגם": "Midgam", "מכון DRI": "DRI Institute",
 }
 
 

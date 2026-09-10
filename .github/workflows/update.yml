@@ -4,6 +4,8 @@
 #   ידני: Actions -> "Update forecast" -> Run workflow (אפשר לסמן "force").
 #   בזמן אמת: השירות שמעתיק את הסקרים ל-Drive שולח webhook (repository_dispatch, event_type=new_poll) - ראה README.
 # secrets נדרשים: ANTHROPIC_API_KEY, P120_GATE_CODE (אופציונלי - בלי הקוד האתר פתוח).
+# בקרת איכות: סקר חדש עם דגלים (scraper/qa_check.py) נכנס להסגר ולא למודל; נפתח Issue "[QA] סקר ...".
+#   אישור/דחייה בתגובה ל-Issue (qa_approve.yml) -> עדכון db/quarantine.json -> ריצה מחדש.
 name: Update forecast
 on:
   schedule:
@@ -21,6 +23,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 concurrency:
   group: update
   cancel-in-progress: false
@@ -51,12 +54,13 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           P120_GATE_CODE: ${{ secrets.P120_GATE_CODE }}
+          GH_TOKEN: ${{ github.token }}
           PYTHONUNBUFFERED: "1"
         run: |
           cat > payload.json <<'EOF'
           ${{ toJSON(github.event.client_payload) }}
           EOF
-          python scraper/daily_update.py --source drive --no-push ${{ steps.mode.outputs.flag }} | tee run.txt
+          python scraper/daily_update.py --source drive --no-push --notify-issues ${{ steps.mode.outputs.flag }} | tee run.txt
           tail -n 200 logs/daily_*.log || true
       - name: Commit results
         id: commit

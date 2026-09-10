@@ -189,6 +189,10 @@ def main() -> int:
     superseded = {"4036": "הוגש מחדש כ-4048 עם טור מנדטים מתוקן",
                   "4133": "הוגש מחדש כ-4135 (מכון DRI, אותו סקר עם תיקון)"}
 
+    # הסגר (בקרת איכות - scraper/qa_check.py): סקר עם דגלים לא נכנס למודל עד אישור
+    qfile = ROOT / "db" / "quarantine.json"
+    quarantine = json.loads(qfile.read_text(encoding="utf-8")).get("polls", {}) if qfile.exists() else {}
+
     seen_fingerprints: dict[tuple, str] = {}
     qid_counter = 0
     for f in sorted(EXTRACTED.glob("cec_*.json")):
@@ -206,8 +210,13 @@ def main() -> int:
         mains = [q for q in d["questions"] if q["type"] == "main"]
         has_main = int(bool(mains))
         exclude = None
+        qe = quarantine.get(ref) or {}
         if ref in superseded:
             exclude = superseded[ref]
+        elif qe.get("status") == "pending":
+            exclude = "ממתין לבדיקה (בקרת איכות)"
+        elif qe.get("status") == "rejected":
+            exclude = "נדחה בבקרת איכות" + (f": {qe['note']}" if qe.get("note") else "")
         elif not has_main:
             exclude = "אין שאלת הצבעה"
         else:

@@ -64,6 +64,22 @@ sims = {"parties": sim_parties, "seats": sims_df.astype(int).values.tolist(),
         "shares": {p: np.round(draws_df[p].values, 2).tolist() for p in risk_parties},
         "risk_parties": risk_parties}
 
+# --- יומן סקרים: מה לא נכנס למודל ולמה (שקיפות) ---
+def _reason_en(r: str) -> str:
+    import re as _re
+    for pat, en in [(r"^הוגש מחדש כ-(\d+)", r"resubmitted as \1"), (r"^כפול של (\d+)", r"duplicate of \1"),
+                    (r"^מדגם של תת-אוכלוסייה", "sector sample (not the general population)"), (r"^אין שאלת הצבעה", "no vote-intention question"),
+                    (r"^ממתין לבדיקה", "pending quality review"), (r"^נדחה בבקרת איכות", "rejected in quality review")]:
+        m = _re.match(pat, r)
+        if m:
+            return en.replace("\\1", m.group(1)) if m.groups() else en
+    return r
+excluded = [{"ref": r[0], "pollster": r[1] or "", "date": r[2] or r[3] or "", "reason": r[4], "reason_en": _reason_en(r[4] or "")}
+            for r in conn.execute("""SELECT p.reference_number, ps.name, p.fieldwork_end, m.publish_date, p.exclude_reason
+                                     FROM polls p LEFT JOIN pollsters ps ON ps.pollster_id=p.pollster_id
+                                     LEFT JOIN polls_meta m ON m.reference_number=p.reference_number
+                                     WHERE p.in_model=0 ORDER BY p.reference_number DESC""")]
+
 data = {
     "generated": fc["today"], "election_date": fc["election_date"],
     "days_to_election": (election - date.fromisoformat(fc["today"])).days,
@@ -78,6 +94,7 @@ data = {
     "calibration": json.loads((ROOT / "model" / "calibration_2022.json").read_text(encoding="utf-8")) if (ROOT / "model" / "calibration_2022.json").exists() else None,
     "sims": sims,
     "backtest": json.loads((ROOT / "model" / "backtest_2022" / "backtest_2022.json").read_text(encoding="utf-8")) if (ROOT / "model" / "backtest_2022" / "backtest_2022.json").exists() else None,
+    "excluded": excluded,
     "anchor": json.loads((ROOT / "model" / "anchor_trusted.json").read_text(encoding="utf-8")) if (ROOT / "model" / "anchor_trusted.json").exists() else None,
 }
 assert sum(data["central_seats"].values()) == 120, "central seats must sum to 120"

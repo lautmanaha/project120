@@ -345,6 +345,7 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
   </div>
   <div class="calib" id="calib"></div>
   <div class="calib" id="backtest"></div>
+  <div class="calib" id="polllog"></div>
 </div></section>
 
 <footer><div class="wrap">
@@ -721,6 +722,13 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
       <div><b>2 · נקודת האמצע</b>בליכוד וביחד המכונים חלוקים היום לשתי אסכולות - ${a ? a.trusted.join(LANG==='en'?' and ':' ו') : ''} מול השאר - בפער של ${a ? Object.entries(a.gap_trusted_minus_others).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2).map(([p,v])=>`${p} ${f(v)}`).join(', ') : ''} נק' אחוז ב-3 השבועות האחרונים. ל-2022 אין תקדים למחלוקת הזו (אז כולם מדדו את הליכוד נכון, ודיירקט פולס הפריז בו ב-2), ולכן המודל לוקח מחצית מהפער - לא יותר. הפער מחושב מחדש בכל ריצה.</div>
       <div><b>3 · הסכום</b>שני התיקונים מתחברים להטיה ענפית אחת שנכנסת למודל כהנחה עם אי-ודאות (ולא כעובדה): ${lean}. בלי שני התיקונים גוש הימין היה על 55; עם כיול 2022 בלבד - 57; עם שניהם - התחזית שבראש הדף.</div>
     </div>`;
+})();
+
+(function(){ const ex = D.excluded, el = document.getElementById('polllog'); if(!ex || !el) return;
+  const rows = ex.map(r => `<tr><td>${esc(r.ref)}</td><td>${esc(r.pollster)}</td><td>${r.date ? fmtDate(r.date) : ''}</td><td>${esc(LANG==='en' ? r.reason_en : r.reason)}</td></tr>`).join('');
+  el.innerHTML = `<h3>בקרת איכות: מה לא נכנס למודל</h3>
+    <p>כל סקר שמגיע מהוועדה עובר חילוץ אוטומטי ואז סדרת בדיקות: זהות המכון, מיפוי כל שורה למפלגה, סכומי מנדטים ואחוזים, כפילויות והגשות חוזרות, וסטייה חריגה מהסקרים הקודמים של אותו מכון. סקר שמדליק דגל נכנס להסגר - נשמר, אבל לא במודל - עד בדיקה אנושית. ${D.n_polls_model} מתוך ${D.n_polls_all} הסקרים במודל; אלה שלא:</p>
+    <div class="tw"><table><thead><tr><th>אסמכתא</th><th>מכון</th><th>תאריך</th><th>סיבה</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 })();
 
 // ---- health, nav active state, reveal
