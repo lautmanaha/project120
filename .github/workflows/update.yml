@@ -1,0 +1,81 @@
+# פרויקט 120 - עדכון אוטומטי בענן:
+#   כל שעתיים: בדיקה אם יש סקרים חדשים בתיקיית ה-Drive. אם יש - חילוץ (Claude), מודל, אתר, commit, פריסה.
+#   פעם ביום (06:00 UTC = 09:00 ישראל): ריצה מלאה גם בלי סקרים חדשים (אופק התחזית מתקצר).
+#   ידני: Actions -> "Update forecast" -> Run workflow (אפשר לסמן "force").
+# secrets נדרשים: ANTHROPIC_API_KEY, P120_GATE_CODE (אופציונלי - בלי הקוד האתר פתוח).
+name: Update forecast
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "להריץ את המודל גם אם אין סקרים חדשים"
+        type: boolean
+        default: true
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install -q -r requirements.txt
+          sudo apt-get install -y -qq poppler-utils >/dev/null
+      - name: Decide run mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then echo "flag=" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 6 * * *" ]; then echo "flag=" >> $GITHUB_OUTPUT
+          else echo "flag=--skip-model-if-no-new" >> $GITHUB_OUTPUT; fi
+      - name: Fetch, extract, model, build
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          P120_GATE_CODE: ${{ secrets.P120_GATE_CODE }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python scraper/daily_update.py --source drive --no-push ${{ steps.mode.outputs.flag }} | tee run.txt
+          tail -n 200 logs/daily_*.log || true
+      - name: Commit results
+        id: commit
+        run: |
+          git config user.name "project120-bot"
+          git config user.email "bot@project120.co.il"
+          git add data/pdfs data/extracted db/polls.sqlite db/*.csv exports model/polls_model.csv model/anchor_trusted.json \
+                  model/output/forecast.json model/output/seats_summary.json model/output/house_effects.csv \
+                  site/index.html site/en/index.html site/data.json logs
+          if git diff --cached --quiet; then echo "changed=false" >> $GITHUB_OUTPUT; echo "אין שינויים"; else
+            git commit -m "auto update $(date -u +%Y-%m-%d\ %H:%M) UTC" && git push && echo "changed=true" >> $GITHUB_OUTPUT; fi
+      - name: Stage site
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          mkdir -p _site/en && cp site/index.html _site/index.html && cp site/CNAME _site/CNAME && cp site/logo.svg _site/logo.svg && cp site/en/index.html _site/en/index.html
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.commit.outputs.changed == 'true'
+        with:
+          path: _site
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

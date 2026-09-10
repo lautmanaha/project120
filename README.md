@@ -100,3 +100,13 @@ python db\build_db.py; python db\export_excel.py
 - `half` - מחצית הפער ב-21 הימים האחרונים בין המכונים המהימנים (נקסט דאטה, דיירקט פולס) לשאר, לכל מפלגה.
 - `combined` - הסכום; זה מה שהריצה היומית מעבירה ל-`run_model.py --industry-lean-json ... --industry-lean-key combined`.
 המספרים מופיעים באתר בחלק "איך זה עובד".
+
+
+## עדכון אוטומטי בענן (GitHub Actions)
+
+שירות חיצוני מעתיק כל PDF חדש מאתר הוועדה לתיקיית Google Drive ציבורית. ה-workflow `.github/workflows/update.yml`
+בודק את התיקייה כל שעתיים (`scraper/drive_fetch.py`), מחלץ סקרים חדשים עם Claude, מריץ את המודל, בונה את האתר
+בשתי השפות, עושה commit ופורס. פעם ביום (09:00 ישראל) ריצה מלאה גם בלי סקרים חדשים.
+
+secrets (Settings -> Secrets and variables -> Actions): `ANTHROPIC_API_KEY` (חובה), `P120_GATE_CODE` (שער גישה מוקדמת; להסרה - למחוק את ה-secret).
+ריצה ידנית: Actions -> Update forecast -> Run workflow.
