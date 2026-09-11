@@ -87,7 +87,9 @@ html.js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){ html.js .rv{opacity:1;transform:none;transition:none} }
 
 /* ===== status strip (תמונת מצב) ===== */
-.status{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:0 0 36px}
+.status{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:34px 0 22px}
+.hero-text{max-width:72ch}
+.hero-text .lede{max-width:none}
 .st{display:block;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px 11px;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;min-width:0}
 .st:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--brand)}
 .st .q{font-size:12px;font-weight:700;color:var(--ink-3);letter-spacing:.02em}
@@ -108,7 +110,7 @@ html.js .rv.in{opacity:1;transform:none}
 .sec-body{overflow:hidden;max-height:none}
 section.collapsed .sec-body{max-height:0;opacity:0;visibility:hidden}
 section.collapsed{padding:40px 0 34px}
-.allbtn{font:inherit;font-size:12.5px;color:var(--ink-3);background:none;border:0;cursor:pointer;text-decoration:underline;padding:0;margin:-24px 0 24px}
+.allbtn{font:inherit;font-size:12.5px;color:var(--ink-3);background:none;border:0;cursor:pointer;text-decoration:underline;padding:0;margin:14px 0 0;display:block}
 .allbtn:hover{color:var(--ink)}
 
 /* ===== hero ===== */
@@ -297,7 +299,6 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
 <div class="tip" id="tip"></div>
 
 <section id="s120"><div class="wrap">
-  <div class="status" id="status"></div>
   <div class="hero">
     <div class="hero-side">
       <div class="eyebrow">תחזית ליום הבחירות · 27.10.2026 · <span id="dleft"></span> ימים</div>
@@ -308,10 +309,13 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
     <div>
       <div class="hemi" id="hemi"></div>
       <div class="legend" id="legend120"></div>
-      <p class="lede" id="lede" style="margin:14px 0 6px;font-size:16.5px"></p>
-      <p class="note">כל נקודה - מושב. החלוקה המרכזית: ממוצע חלקי הקולות החזויים, מומר לפי בדר-עופר עם אחוז חסימה 3.25%. הטווחים המלאים בהמשך.</p>
-      <p class="note" id="anchornote"></p>
     </div>
+  </div>
+  <div class="status" id="status"></div>
+  <div class="hero-text">
+    <p class="lede" id="lede" style="margin:0 0 6px;font-size:16.5px"></p>
+    <p class="note">כל נקודה - מושב. החלוקה המרכזית: ממוצע חלקי הקולות החזויים, מומר לפי בדר-עופר עם אחוז חסימה 3.25%. הטווחים המלאים בהמשך.</p>
+    <p class="note" id="anchornote"></p>
   </div>
 </div></section>
 
@@ -826,7 +830,7 @@ function openSec(id, scroll=true){ const s = document.getElementById(id); if(!s)
     bar.querySelector('button').addEventListener('click', () => { if (sec.classList.contains('collapsed')) openSec(id, false); else { sec.classList.add('collapsed'); bar.querySelector('button').textContent = T.details; } });
   }
   const all = document.createElement('button'); all.className = 'allbtn'; all.type = 'button'; all.textContent = T.showAll;
-  document.querySelector('#s120 .wrap').insertBefore(all, document.querySelector('#s120 .hero'));
+  document.querySelector('#s120 .hero-text').appendChild(all);
   all.addEventListener('click', () => { const open = all.dataset.open === '1'; Object.keys(sums).forEach(id => { const sec = document.getElementById(id); if (open){ sec.classList.add('collapsed'); sec.querySelector('.sec-sum button').textContent = T.details; } else openSec(id, false); }); all.dataset.open = open ? '0' : '1'; all.textContent = open ? T.showAll : T.hideAll; });
   document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => { const id = a.getAttribute('href').slice(1); if (sums[id]) { e.preventDefault(); openSec(id); history.replaceState(null, '', '#'+id); } }));
   if (location.hash && sums[location.hash.slice(1)]) openSec(location.hash.slice(1));
