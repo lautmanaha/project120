@@ -48,6 +48,8 @@ GATE_HTML = r"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNTFBMjYiLz4KICA8ZyBmaWxsPSIjRjFGM0Y4Ij4KICAgIDxjaXJjbGUgY3g9IjExIiBjeT0iNDIiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjE1LjUiIGN5PSIyOS41IiByPSI0LjIiLz48Y2lyY2xlIGN4PSIyNCIgY3k9IjIwIiByPSI0LjIiLz4KICAgIDxjaXJjbGUgY3g9IjQ0IiBjeT0iMjAiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjUyLjUiIGN5PSIyOS41IiByPSI0LjIiLz48Y2lyY2xlIGN4PSI1NyIgY3k9IjQyIiByPSI0LjIiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iMzQiIGN5PSIxNiIgcj0iNS4yIiBmaWxsPSIjMDNBODlFIi8+CiAgPHRleHQgeD0iMzQiIHk9IjUyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSIxOSIgZmlsbD0iI0YxRjNGOCI+MTIwPC90ZXh0Pgo8L3N2Zz4K">
+<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c0577a42bf76400f822d4b8382150152"}'></script><!-- End Cloudflare Web Analytics -->
 <title>פרויקט 120 - בבנייה</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Alef:wght@400;700&family=Assistant:wght@300;400;600;700&display=swap">
 <style>

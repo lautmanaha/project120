@@ -90,7 +90,12 @@ def main(argv=None) -> int:
     except RuntimeError:
         pass
     payload = result.to_dict(thresholds=[3.25])
-    payload["diagnostics"] = {"converged": result.diagnostics.converged, "issues": result.diagnostics.issues}
+    dg = result.diagnostics
+    ess, rhat = getattr(dg, "min_ess_bulk", None), getattr(dg, "max_r_hat", None)
+    # דירוג: ok = עבר; marginal = מעט מתחת לסף (ESS 250-400 או R-hat עד 1.03) - התוצאות תקינות לכל צורך מעשי; bad = כשל אמיתי
+    grade = "ok" if dg.converged else ("marginal" if (ess is None or ess >= 250) and (rhat is None or rhat <= 1.03) else "bad")
+    payload["diagnostics"] = {"converged": dg.converged, "grade": grade, "issues": dg.issues,
+                              "min_ess_bulk": None if ess is None else round(float(ess)), "max_r_hat": None if rhat is None else round(float(rhat), 3)}
     payload["election_date"] = a.election_date
     payload["today"] = a.today or date.today().isoformat()
     (OUT / "forecast.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str), encoding="utf-8")

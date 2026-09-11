@@ -68,11 +68,15 @@ def translate_data(d: str) -> str:
     return d
 
 
+ANALYTICS = ('<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" '
+             'data-cf-beacon=\'{"token": "c0577a42bf76400f822d4b8382150152"}\'></script><!-- End Cloudflare Web Analytics -->')
+
+
 def wrap(body: str, lang: str) -> str:
     direction = 'rtl' if lang == 'he' else 'ltr'
     return (f'<!doctype html>\n<html lang="{lang}" dir="{direction}">\n<head>\n<meta charset="utf-8">\n'
-            f'<meta name="viewport" content="width=device-width,initial-scale=1">\n'
-            f'<meta name="description" content="{"פרויקט 120 - תחזית הבחירות לכנסת ה-26 מכל סקרי ועדת הבחירות" if lang=="he" else "Project 120 - a statistical forecast of the 26th Knesset election, built from every poll filed with the Central Elections Committee"}">\n'
+            f'<meta name="viewport" content="width=device-width,initial-scale=1">\n<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNTFBMjYiLz4KICA8ZyBmaWxsPSIjRjFGM0Y4Ij4KICAgIDxjaXJjbGUgY3g9IjExIiBjeT0iNDIiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjE1LjUiIGN5PSIyOS41IiByPSI0LjIiLz48Y2lyY2xlIGN4PSIyNCIgY3k9IjIwIiByPSI0LjIiLz4KICAgIDxjaXJjbGUgY3g9IjQ0IiBjeT0iMjAiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjUyLjUiIGN5PSIyOS41IiByPSI0LjIiLz48Y2lyY2xlIGN4PSI1NyIgY3k9IjQyIiByPSI0LjIiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iMzQiIGN5PSIxNiIgcj0iNS4yIiBmaWxsPSIjMDNBODlFIi8+CiAgPHRleHQgeD0iMzQiIHk9IjUyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSIxOSIgZmlsbD0iI0YxRjNGOCI+MTIwPC90ZXh0Pgo8L3N2Zz4K">\n{ANALYTICS}\n'
+            f'<meta name="description" content="{"פרויקט 120 - תחזית הבחירות לכנסת ה-26 מכל הסקרים שפורסמו רשמית באתר ועדת הבחירות" if lang=="he" else "Project 120 - a statistical forecast of the 26th Knesset election, built from every poll filed with the Central Elections Committee"}">\n'
             + body + '\n</html>\n')
 
 

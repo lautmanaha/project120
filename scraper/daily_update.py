@@ -93,7 +93,7 @@ def main(argv=None) -> int:
                 notify_issues(log)
         rc3 = step("rebuild db + exports", [PY, "db/build_db.py"], log)
         rc4 = step("export excel", [PY, "db/export_excel.py"], log)
-        rc5 = step("model", [PY, "model/build_input.py"], log) or step("anchor", [PY, "model/anchor.py"], log) or step("model fit", [PY, "model/run_model.py", "--chains", "4", "--industry-lean-json", "model/anchor_trusted.json", "--industry-lean-key", "combined"], log)
+        rc5 = step("model", [PY, "model/build_input.py"], log) or step("anchor", [PY, "model/anchor.py"], log) or step("model fit", [PY, "model/run_model.py", "--chains", "4", "--draws", "1500", "--industry-lean-json", "model/anchor_trusted.json", "--industry-lean-key", "combined"], log)
         rc6 = step("seats", [PY, "model/seats.py"], log) or step("history", [PY, "model/history.py"], log) or step("site data", [PY, "site/build_site_data.py"], log) or step("site html", [PY, "site/build_site.py"], log) or step("gate", [PY, "site/gate.py"], log)
         rc7 = 0
         if (ROOT / ".git").exists() and not a.no_push and not any((rc5, rc6)):

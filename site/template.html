@@ -731,7 +731,7 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
     return `<tr><td>${esc(p)}</td>${bt.map(r => { const v = r.parties[p]; return `<td>${v.central} <small style="color:var(--ink-3)">(${v.p05}-${v.p95})</small>${v.in_90?'':' <span title="מחוץ לטווח 90%" style="color:var(--arab)">●</span>'}</td>`; }).join('')}<td><b>${a}</b></td></tr>`; }).join('');
   const brows = Object.keys(last.blocs).map(b => `<tr class="sum"><td>${esc(b)}</td>${bt.map(r => { const v = r.blocs[b]; return `<td>${v.central} <small style="color:var(--ink-3)">(${v.p05}-${v.p95})</small><br><small>רוב: ${Math.round(v.p_majority*100)}%</small></td>`; }).join('')}<td><b>${last.blocs[b].actual}</b></td></tr>`).join('');
   el.innerHTML = `<h3>בדיקת עבר: בחירות 2022</h3>
-    <p>עד כמה המודל מדויק? הרצנו אותו, ללא שינוי וללא כיול 2022 (זה היה מעגלי), על סקרי הוועדה שקדמו לבחירות לכנסת ה-25 - מהגשת הרשימות ועד יום הבחירות - והשווינו לתוצאה. שני מועדי חיתוך: שלושה שבועות לפני, וערב הבחירות. טעות ממוצעת למפלגה: <b>${last.mae_seats} מנדטים</b>; ${Math.round(last.coverage_90*100)}% מהמפלגות בתוך טווח ה-90% של המודל.</p>
+    <p>עד כמה המודל מדויק? הרצנו אותו, ללא שינוי וללא כיול 2022 (זה היה מעגלי), על הסקרים שפורסמו באתר ועדת הבחירות לפני הבחירות לכנסת ה-25 - מהגשת הרשימות ועד יום הבחירות - והשווינו לתוצאה. שני מועדי חיתוך: שלושה שבועות לפני, וערב הבחירות. טעות ממוצעת למפלגה: <b>${last.mae_seats} מנדטים</b>; ${Math.round(last.coverage_90*100)}% מהמפלגות בתוך טווח ה-90% של המודל.</p>
     <div class="tw"><table><thead><tr><th>רשימה</th>${cols}<th>בפועל</th></tr></thead><tbody>${rows}${brows}</tbody></table></div>
     <p style="margin-top:12px">שני הפספוסים - ש"ס (8 במודל, 11 בפועל) ומרצ (5, ובפועל מתחת לסף) - היו טעות של כל הענף: כל מכון פספס אותם. מה שהסקרים יודעים, המודל מוציא במדויק; מה שהם לא יודעים, הוא יכול רק להביא מבחוץ ולתת לו טווח - וזה בדיוק תפקידו של כיול 2022 השנה. וערב הבחירות 2022 המודל נתן לגוש נתניהו 68% לרוב ולא 95% - הפער בין 60 ל-64 ישב בתוך אי-הודאות שהוצהרה.</p>`;
 })();
@@ -757,7 +757,7 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
 (function(){ const ex = D.excluded, el = document.getElementById('polllog'); if(!ex || !el) return;
   const rows = ex.map(r => `<tr><td>${esc(r.ref)}</td><td>${esc(r.pollster)}</td><td>${r.date ? fmtDate(r.date) : ''}</td><td>${esc(LANG==='en' ? r.reason_en : r.reason)}</td></tr>`).join('');
   el.innerHTML = `<h3>בקרת איכות: מה לא נכנס למודל</h3>
-    <p>כל סקר שמגיע מהוועדה עובר חילוץ אוטומטי ואז סדרת בדיקות: זהות המכון, מיפוי כל שורה למפלגה, סכומי מנדטים ואחוזים, כפילויות והגשות חוזרות, וסטייה חריגה מהסקרים הקודמים של אותו מכון. סקר שמדליק דגל נכנס להסגר - נשמר, אבל לא במודל - עד בדיקה אנושית. ${D.n_polls_model} מתוך ${D.n_polls_all} הסקרים במודל; אלה שלא:</p>
+    <p>כל סקר שמתפרסם באתר ועדת הבחירות עובר חילוץ אוטומטי ואז סדרת בדיקות: זהות המכון, מיפוי כל שורה למפלגה, סכומי מנדטים ואחוזים, כפילויות והגשות חוזרות, וסטייה חריגה מהסקרים הקודמים של אותו מכון. סקר שמדליק דגל נכנס להסגר - נשמר, אבל לא במודל - עד בדיקה אנושית. ${D.n_polls_model} מתוך ${D.n_polls_all} הסקרים במודל; אלה שלא:</p>
     <div class="tw"><table><thead><tr><th>אסמכתא</th><th>מכון</th><th>תאריך</th><th>סיבה</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 })();
 
@@ -765,14 +765,14 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
 const T = {
   q1: 'מי מנצח?', q2: 'מה השתנה השבוע?', q3: 'הסיכון הגדול?', q4: 'על מה זה מבוסס?', q5: 'מה עוד לא ידוע?',
   seats: 'מנדטים', polls: 'סקרים', pMaj: 'סיכוי לרוב', firstRun: 'ריצה ראשונה', toRightSince: 'לגוש הימין מאז', pts: 'נקודות',
-  passThr: 'לעבור את אחוז החסימה', noRisk: 'אין רשימה על הסף', allCec: 'כל סקרי ועדת הבחירות · האחרון',
+  passThr: 'לעבור את אחוז החסימה', noRisk: 'אין רשימה על הסף', allCec: 'כל הסקרים שפורסמו באתר ועדת הבחירות · האחרון',
   range90: 'טווח 90% לגוש הימין - ההפרש הוא אי-הודאות שהסקרים לא יכולים לסגור',
   details: 'פרטים', close: 'סגור', showAll: 'להציג את כל הפרטים בעמוד', hideAll: 'לקפל את כל הסעיפים',
   pRight: 'סיכוי לרוב ימין', onThr: 'על הסף', toPass: 'לעבור. נפילה מפזרת את המנדטים לכל הגושים, לא רק לגוש שלה',
   noRisk2: 'אין כרגע רשימה שהמודל מסופק לגביה', lists: 'רשימות, הטווח המלא והסיכוי לעבור את הסף לכל אחת',
   last4: 'ב-4 השבועות האחרונים', afterHouse: 'נקודות אחוז - אחרי ניכוי הטיית המכונים',
   twoSchools: 'שתי אסכולות', measure: 'מודדים את', more: 'יותר', less: 'פחות', thanRest: 'מהשאר', pollstersHouse: 'מכונים, אפקט בית לכל אחד',
-  method1: 'מודל בייסיאני על כל סקרי הוועדה, כיול לפי טעות 2022', backtest: 'בדיקת עבר: טעות', perParty: 'מנדטים למפלגה', excludedWhy: 'וכל מה שהוחרג ולמה',
+  method1: 'מודל בייסיאני על כל הסקרים שפורסמו רשמית באתר ועדת הבחירות, כיול לפי טעות 2022', backtest: 'בדיקת עבר: טעות', perParty: 'מנדטים למפלגה', excludedWhy: 'וכל מה שהוחרג ולמה',
 };
 const BR = D.blocs[0].bloc, BL = D.blocs[1].bloc, BA = D.blocs[2].bloc;
 (function(){
@@ -837,8 +837,10 @@ function openSec(id, scroll=true){ const s = document.getElementById(id); if(!s)
 })();
 
 // ---- health, nav active state, reveal
-(function(){ const ok = D.diagnostics.converged; document.getElementById('health').innerHTML =
-  `<span class="health ${ok?'':'bad'}"><i></i>${ok ? 'בדיקת תקינות המודל עברה' : 'בדיקת תקינות המודל: גבולית - התוצאות זמניות עד הריצה הבאה'}</span> <span style="margin-inline-start:10px">${D.n_sims.toLocaleString('he-IL')} סימולציות · ${D.n_polls_model} מתוך ${D.n_polls_all} סקרים שפורסמו</span>`;
+(function(){ const g = D.diagnostics.grade || (D.diagnostics.converged ? 'ok' : 'marginal'); const ok = g !== 'bad';
+  const txt = g === 'ok' ? 'בדיקת תקינות המודל עברה' : g === 'marginal' ? 'בדיקת תקינות המודל עברה (הערה טכנית קלה בדגימה)' : 'בדיקת תקינות המודל: כשל - התוצאות זמניות עד הריצה הבאה';
+  document.getElementById('health').innerHTML =
+  `<span class="health ${ok?'':'bad'}" title="${esc((D.diagnostics.issues||[]).join(' | '))}"><i></i>${txt}</span> <span style="margin-inline-start:10px">${D.n_sims.toLocaleString('he-IL')} סימולציות · ${D.n_polls_model} מתוך ${D.n_polls_all} סקרים שפורסמו</span>`;
   const links = [...document.querySelectorAll('#menu a, #mnav a')];
   const secs = [...document.querySelectorAll('section')];
   if ('IntersectionObserver' in window){
