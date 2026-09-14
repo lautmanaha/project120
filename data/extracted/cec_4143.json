@@ -1,0 +1,96 @@
+{
+  "ref": "4143",
+  "pollster_as_written": "חברת Next Data",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-09-09",
+  "fieldwork_end": "2026-09-09",
+  "method": "internet",
+  "initial_sample": 7862,
+  "respondents": 870,
+  "response_rate_pct": 11.0,
+  "margin_error_pct": 4.4,
+  "population": "537 דתיים בוגרים (בני 18+), התחומים מדגם מייצג של אוכלוסיית אזרחי ישראל הראשים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "תוצאות עיקריות — מנדטים והתאמה לראשות הממשלה",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 31,
+          "pct": 24.0
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 22,
+          "pct": 17.0
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 10,
+          "pct": 8.0
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' החות",
+          "party": "הציונות הדתית",
+          "seats": 8,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 8,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "יחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 7,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 6,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד",
+          "party": "הרשימה המשותפת",
+          "seats": 6,
+          "pct": 5.0
+        }
+      ],
+      "undecided_pct": 3.0,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Table shows only parties crossing the threshold. The footnote indicates that parties that did not cross 3.25% threshold are not shown. The 3% 'לא החליטו' refers to undecided voters within those who responded to the vote-intention question (after excluding the 8% who did not answer)."
+    }
+  ],
+  "extraction_notes": "Page 1 contains methodology details. The main vote-intention table appears on page 2. Initial sample is 7,862, respondents 870 (11% response rate). The population is described as 537 religious adults 18+ from a representative sample. Pages 3-4 contain non-vote-intention questions (suitability for PM, content questions) which were ignored per spec. The percentage column labeled 'אחוז גולמי' appears to be weighted as the table title indicates these are the main results and the methodology section mentions weighting. The 8% noted at bottom as those who didn't answer the question (שלא השתתפו בסקר / לא התאימו להשתתף בסקר) is not counted as 'not voting' - these are non-respondents to the particular question."
+}
