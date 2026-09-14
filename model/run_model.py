@@ -53,6 +53,14 @@ def main(argv=None) -> int:
     pollster_priors = {k: PollsterPrior(**v) for k, v in priors.items()}
     print("pollster priors:", priors)
 
+    def _zero_sum_lean(lean_pp: dict, means: dict) -> dict:
+        """ההטיה הענפית חייבת להסתכם לאפס (חלקי הקולות מסתכמים ל-100). kronikas מטיל את השארית על המפלגות
+        שלא צוינו - וכשנשארת מפלגה אחת בלבד בלי ערך (יהדות התורה, 14.9.2026) היא ספגה לבדה -2.85 נק' והמודל הוריד אותה
+        מ-6% ל-3.7%. כאן השארית מתפזרת על כל המפלגות לפי גודלן (שינוי יחסי אחיד, כמעט חסר השפעה), וכולן מקבלות ערך מפורש."""
+        tot = sum(means.values()) or 1.0
+        resid = -sum(lean_pp.values())
+        return {p: round(lean_pp.get(p, 0.0) + resid * m / tot, 3) for p, m in means.items()}
+
     import pandas as pd
     _df = pd.read_csv(Path(a.input) if a.input else ROOT / "model" / "polls_model.csv")
     _means = _df.iloc[-12:, 5:].mean().to_dict()   # ממוצע 12 הסקרים האחרונים, לקנה מידה של הטעות
@@ -67,7 +75,7 @@ def main(argv=None) -> int:
         pollster_priors=pollster_priors,
         # טעות ענפית: סטיית תקן פרופורציונלית לגודל המפלגה (מפלגה של 5% לא יכולה לטעות ב-2 נקודות כמו מפלגה של 20%)
         shared_bias=SharedBiasPrior(
-            mean={p: v for p, v in lean.items() if p in _means},
+            mean=_zero_sum_lean({p: v for p, v in lean.items() if p in _means}, _means),
             sd={p: round(min(a.industry_error_pp, max(0.3, 0.12 * m)), 2) for p, m in _means.items()},
             default_sd=0.3) if a.industry_error_pp > 0 else None,
     )
