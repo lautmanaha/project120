@@ -74,7 +74,7 @@
  ],
  "polls": {
   "4140": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "סכום אחוזים 76.7 (צפוי ~100)",
     "חריג: ביחד 11.5% מול הסקרים הקודמים של המכון 9.8% (לא בהכרח שגיאה)",
@@ -89,7 +89,9 @@
    "pollster": "פרויקט המדגם (רוזנר)",
    "fieldwork": "2026-09-09..2026-09-09",
    "created": "2026-09-14T08:54:54",
-   "issue": "https://github.com/lautmanaha/project120/issues/40"
+   "issue": "https://github.com/lautmanaha/project120/issues/40",
+   "decided": "2026-09-14T22:08:54",
+   "note": ""
   }
  }
 }
