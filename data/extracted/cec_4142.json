@@ -1,0 +1,96 @@
+{
+  "ref": "4142",
+  "pollster_as_written": "נקסט דאטה",
+  "commissioner_as_written": "ערוץ 14",
+  "fieldwork_start": "2026-09-07",
+  "fieldwork_end": "2026-09-07",
+  "method": "internet",
+  "initial_sample": 7300,
+  "respondents": 1237,
+  "response_rate_pct": 17.0,
+  "margin_error_pct": 3.0,
+  "population": "אוכלוסייה בוגרת אחרת של 18+",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, לאיזו מפלגה היית מצביע",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 30,
+          "pct": 23.2
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 22,
+          "pct": 17.0
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 10,
+          "pct": 8.5
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 10,
+          "pct": 7.9
+        },
+        {
+          "party_as_written": "הציונות הדתית חתות בראשות בצלאל סמוטריץ'",
+          "party": "הציונות הדתית",
+          "seats": 8,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד בראשות יוסף ג'באריו",
+          "party": "הרשימה המשותפת",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.2
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "יחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 6,
+          "pct": 5.2
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 6,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 3.9
+        }
+      ],
+      "undecided_pct": 3.7,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "אחוז גולמי column shown but represents weighted percentage; parties below threshold listed separately showing small percentages"
+    }
+  ],
+  "extraction_notes": "Page 1 shows survey methodology. Page 2 shows the main voting intention table with seats and percentages for parties crossing the threshold (3.25%), plus a list of parties that didn't cross threshold. The undecided ('לא החליטו') is 3.7%. Pages 3-4 contain other questions (PM suitability, policy questions) that are not vote-intention and were ignored per spec. The bloc breakdown (63 Netanyahu, 57 opposition) is shown but not extracted as it's not a separate question."
+}
