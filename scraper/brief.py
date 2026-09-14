@@ -240,6 +240,10 @@ def chat_id(token: str) -> str | None:
     if f.exists():
         return json.loads(f.read_text(encoding="utf-8")).get("chat_id")
     up = telegram(token, "getUpdates")
+    if not up.get("ok"):
+        print("Telegram:", up.get("error_code"), up.get("description"), "- הטוקן ב-secret TELEGRAM_BOT_TOKEN שגוי?")
+        return None
+    print(f"getUpdates: {len(up.get('result', []))} עדכונים")
     for u in reversed(up.get("result", [])):
         m = u.get("message") or u.get("channel_post")
         if m and m.get("chat", {}).get("type") == "private":
