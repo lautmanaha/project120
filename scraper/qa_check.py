@@ -29,7 +29,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "db"))
 sys.path.insert(0, str(ROOT / "scraper"))
-from build_db import POLLSTER_CANON, canon, fix_party  # noqa: E402
+from build_db import POLLSTER_CANON, canon, fix_party, fix_pct_columns  # noqa: E402
 
 EXTRACTED = ROOT / "data" / "extracted"
 DB = ROOT / "db" / "polls.sqlite"
@@ -80,7 +80,8 @@ def check_one(ref: str, d: dict, conn: sqlite3.Connection) -> list[str]:
     mains = [q for q in d.get("questions", []) if q.get("type") == "main"]
     if not mains:
         return ["אין שאלת הצבעה ראשית"]
-    m = mains[0]
+    m = dict(mains[0]); m["results"] = [dict(r) for r in m["results"]]
+    pct_note = fix_pct_columns(m)     # אותה נורמליזציה כמו ב-build_db: עמודות תת-מדגם -> מנדטים בלבד
     rows = [dict(r, party=fix_party(r.get("party_as_written"), r.get("party"))) for r in m["results"]]
 
     # 1. מכון לא מוכר (אין לו סקר קודם במאגר)

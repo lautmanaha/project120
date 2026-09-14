@@ -34,6 +34,27 @@ POLLSTER_CANON = [
     ("DRI", "מכון DRI"), ("די אר איי", "מכון DRI"),
 ]
 
+# רשת ביטחון לעמודות אחוזים: אם האחוזים בשאלה הראשית לא מסתכמים לכ-100 אבל המנדטים מסתכמים ל-120,
+# החילוץ לקח עמודת תת-מדגם (למשל "בוגרים יהודים" אצל רוזנר) במקום עמודה ארצית - מוחקים את האחוזים ומשתמשים במנדטים בלבד
+def fix_pct_columns(q: dict) -> str | None:
+    rows = q.get("results", [])
+    pcts = [r.get("pct") for r in rows if r.get("pct") is not None]
+    seats = [r.get("seats") for r in rows if r.get("seats") is not None]
+    if not pcts or not seats or not 118 <= sum(seats) <= 120:
+        return None
+    # המנדטים הם התוצאה הארצית שהמכון פרסם. אם מפלגה עם 4+ מנדטים מקבלת בעמודת האחוזים פחות מ-40% ממה שמגיע לה
+    # לפי חלקה במנדטים (למשל הרשימה המשותפת: 8 מנדטים אבל 0.0% - כי העמודה היא "בוגרים יהודים") - העמודה אינה ארצית
+    tot = sum(pcts)
+    bad = [r for r in rows if r.get("pct") is not None and (r.get("seats") or 0) >= 4 and r["pct"] < 0.4 * (r["seats"] / 120) * tot]
+    if bad:
+        for r in rows:
+            r["pct"] = None
+        note = "אחוזים הוסרו אוטומטית: עמודת האחוזים אינה ארצית (סותרת את המנדטים ב-%s); המודל משתמש במנדטים" % ", ".join(r["party"] for r in bad)
+        q["notes"] = ((q.get("notes") or "") + " | " + note).strip(" |")
+        return note
+    return None
+
+
 # רשת ביטחון לשמות מפלגות: כשהחילוץ מיפה שם כתוב לא-קנוני ל"אחר" (או למפלגה הלא נכונה) - מיפוי דטרמיניסטי לפי מחרוזות חד-משמעיות
 def fix_party(written: str | None, party: str | None) -> str | None:
     w = (written or "").replace("״", '"').replace("''", '"')
@@ -201,6 +222,8 @@ def main() -> int:
         for q in d["questions"]:
             for r in q["results"]:
                 r["party"] = fix_party(r.get("party_as_written"), r.get("party"))
+            if q.get("type") == "main":
+                fix_pct_columns(q)
         m = meta.get(ref)
         editor_cec = m[1] if m else None
         publisher_cec = m[2] if m else None
