@@ -3,7 +3,7 @@
 #   פעם ביום (06:00 UTC = 09:00 ישראל): ריצה מלאה גם בלי סקרים חדשים (אופק התחזית מתקצר).
 #   ידני: Actions -> "Update forecast" -> Run workflow (אפשר לסמן "force").
 #   בזמן אמת: השירות שמעתיק את הסקרים ל-Drive שולח webhook (repository_dispatch, event_type=new_poll) - ראה README.
-# secrets נדרשים: ANTHROPIC_API_KEY, P120_GATE_CODE (אופציונלי - בלי הקוד האתר פתוח).
+# secrets נדרשים: ANTHROPIC_API_KEY, P120_GATE_CODE (אופציונלי - בלי הקוד האתר פתוח), TELEGRAM_BOT_TOKEN (בריף אחרי כל ריצה, scraper/brief.py).
 # בקרת איכות: סקר חדש עם דגלים (scraper/qa_check.py) נכנס להסגר ולא למודל; נפתח Issue "[QA] סקר ...".
 #   אישור/דחייה בתגובה ל-Issue (qa_approve.yml) -> עדכון db/quarantine.json -> ריצה מחדש.
 name: Update forecast
@@ -43,6 +43,7 @@ jobs:
         run: |
           python -m pip install -q -r requirements.txt
           sudo apt-get install -y -qq poppler-utils >/dev/null
+          python -m playwright install --with-deps chromium >/dev/null 2>&1 || echo "playwright install failed (brief card will be skipped)"
       - name: Decide run mode
         id: mode
         run: |
@@ -54,6 +55,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           P120_GATE_CODE: ${{ secrets.P120_GATE_CODE }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           GH_TOKEN: ${{ github.token }}
           PYTHONUNBUFFERED: "1"
         run: |
