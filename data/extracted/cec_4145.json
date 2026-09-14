@@ -1,7 +1,7 @@
 {
   "ref": "4145",
   "pollster_as_written": "מדגם יעוץ ומחקר",
-  "commissioner_as_written": null,
+  "commissioner_as_written": "חדשות 12",
   "fieldwork_start": "2026-09-09",
   "fieldwork_end": "2026-09-09",
   "method": "mixed",
@@ -60,7 +60,7 @@
           "pct": 5.4
         },
         {
-          "party_as_written": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) בראשות יוסף ג בארין",
+          "party_as_written": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) בראשות יוסף ג׳בארין",
           "party": "הרשימה המשותפת",
           "seats": 7,
           "pct": 5.3
@@ -72,7 +72,7 @@
           "pct": 4.6
         },
         {
-          "party_as_written": "הציונות הדתית – זהות בראשות בצלאל סמוטריץ' ומשה פייגלין",
+          "party_as_written": "הציונות הדתית – זהות בראשות בצלאל סמוטריץ׳ ומשה פייגלין",
           "party": "הציונות הדתית",
           "seats": 5,
           "pct": 4.4
@@ -84,14 +84,14 @@
           "pct": 3.9
         },
         {
-          "party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס ויאיב סלובינר",
+          "party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס ויאיב סלג׳וביץ",
           "party": "רע\"ם",
           "seats": 4,
           "pct": 3.3
         },
         {
-          "party_as_written": "המיליאימניקים והכלכלית בראשות יועז הנדל וערן זליכה",
-          "party": "אחר",
+          "party_as_written": "המיליאונימניקים והכלכלית בראשות יועז הנדל וארין זליכה",
+          "party": "הכלכלית החדשה",
           "seats": 0,
           "pct": 2.9
         },
@@ -108,19 +108,19 @@
           "pct": 1.0
         },
         {
-          "party_as_written": "ישראל מחילה – עליה יזק בראשות שקד השכל",
+          "party_as_written": "ישראל תחילה – עלה יזרק בראשות שקד השכל",
           "party": "אחר",
           "seats": 0,
           "pct": 0.3
         },
         {
-          "party_as_written": "נעם לישראל בראשות אבי מועד",
+          "party_as_written": "נעם לישראל בראשות אבי מעוז",
           "party": "נעם",
           "seats": 0,
           "pct": 0.2
         },
         {
-          "party_as_written": "הקול בראשות שלמה אלבויים",
+          "party_as_written": "הקול בראשות שלמה אלבובים",
           "party": "אחר",
           "seats": 0,
           "pct": 0.1
@@ -131,8 +131,8 @@
       "other_pct": 0.5,
       "blank_pct": null,
       "seats_total": 120,
-      "notes": "Note under column header (*): התוצאים הסופיים אינם לוקחים בחשבון פיצוח מקלטבים - final results do not take threshold splitting into account. The party 'המיליאימניקים והכלכלית בראשות יועז הנדל וערן זליכה' appears to be a merged or joint list not matching canonical parties exactly, set to אחר."
+      "notes": "Parties shown: 'ישראל תחילה – עלה יזרק בראשות שקד השכל' and 'הקול בראשות שלמה אלבובים' mapped to 'אחר' as they are not in the canonical list."
     }
   ],
-  "extraction_notes": "Page 1 is methodology page. Page 2 contains the main vote-intention table. Page 3 contains non-vote-intention questions about party leader suitability for PM (not extracted per spec). Pollster and commissioner not explicitly named in the PDF itself; used CEC registry data. The party 'המיליאימניקים והכלכלית' is likely a merger/joint list involving potentially 'בית ציוני' (המילואימניקים) and 'הכלכלית החדשה', marked as אחר. Also 'ישראל מחילה – עליה יזק בראשות שקד השכל' and 'הקול בראשות שלמה אלבויים' do not match canonical parties and are marked אחר."
+  "extraction_notes": "Page 3 contains questions about preferred PM candidates and voting certainty, which are not vote-intention questions and were not extracted per spec."
 }

@@ -1,7 +1,7 @@
 {
   "ref": "4142",
   "pollster_as_written": "נקסט דאטה",
-  "commissioner_as_written": "ערוץ 14",
+  "commissioner_as_written": "ערוץ עכשיו 14",
   "fieldwork_start": "2026-09-07",
   "fieldwork_end": "2026-09-07",
   "method": "internet",
@@ -9,7 +9,7 @@
   "respondents": 1237,
   "response_rate_pct": 17.0,
   "margin_error_pct": 3.0,
-  "population": "אוכלוסייה בוגרת אחרת של 18+",
+  "population": "מדגם בוגרים (בני 18+), המהווה מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
   "questions": [
     {
       "qid": 1,
@@ -42,13 +42,13 @@
           "pct": 7.9
         },
         {
-          "party_as_written": "הציונות הדתית חתות בראשות בצלאל סמוטריץ'",
+          "party_as_written": "הציונות הדתית החות בראשות בצלאל סמוטריץ'",
           "party": "הציונות הדתית",
           "seats": 8,
           "pct": 7.0
         },
         {
-          "party_as_written": "חד\"ש-תע\"ל-בל\"ד בראשות יוסף ג'באריו",
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד בראשות יוסף ג'באריין",
           "party": "הרשימה המשותפת",
           "seats": 8,
           "pct": 6.4
@@ -89,8 +89,8 @@
       "other_pct": null,
       "blank_pct": null,
       "seats_total": 120,
-      "notes": "אחוז גולמי column shown but represents weighted percentage; parties below threshold listed separately showing small percentages"
+      "notes": "אחת גולמי column is present showing raw percentages; the mandatim (seats) column is weighted."
     }
   ],
-  "extraction_notes": "Page 1 shows survey methodology. Page 2 shows the main voting intention table with seats and percentages for parties crossing the threshold (3.25%), plus a list of parties that didn't cross threshold. The undecided ('לא החליטו') is 3.7%. Pages 3-4 contain other questions (PM suitability, policy questions) that are not vote-intention and were ignored per spec. The bloc breakdown (63 Netanyahu, 57 opposition) is shown but not extracted as it's not a separate question."
+  "extraction_notes": "Pages 3-4 contain non-vote-intention questions (suitability for PM, who should head opposition, etc.) and were not extracted per spec. Page 2 shows bloc results (63-57) but not individual party breakdowns for blocs."
 }
