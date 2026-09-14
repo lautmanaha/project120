@@ -149,7 +149,7 @@
  "בחירות": "Election",
  "מנדטים": "seats",
  "מפלגות": "Parties",
- "אסמכתא": "ref",
+ "אסמכתא": "ref.",
  "רשימות": "lists",
  "הגושים": "Blocs",
  "מכונים": "Pollsters",
@@ -221,5 +221,8 @@
  "מנדטים למפלגה": "seats per party",
  "וכל מה שהוחרג ולמה": "and everything excluded, with the reason",
  "מודל בייסיאני על כל הסקרים שפורסמו רשמית באתר ועדת הבחירות, כיול לפי טעות": "A Bayesian model on every poll officially published on the Central Elections Committee site, calibrated on the polling error of",
- "בדיקת תקינות המודל עברה (הערה טכנית קלה בדגימה": "Model health check passed (minor technical note on sampling"
+ "בדיקת תקינות המודל עברה (הערה טכנית קלה בדגימה": "Model health check passed (minor technical note on sampling",
+ "אודות · תנאי שימוש · פרטיות · נגישות": "About · Terms of use · Privacy · Accessibility",
+ "מזמין": "commissioned by",
+ "שדה": "fieldwork"
 }

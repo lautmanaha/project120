@@ -92,10 +92,10 @@ def build(lang: str) -> str:
             print('  [en] קטעים ללא תרגום:', sorted(set(missing))[:20])
         t = t.replace("pct\u2019 pts", "pts").replace("pct' pts", "pts").replace("pts' ", "pts ").replace("pts')", "pts)").replace("forecasts at -<a", "forecasts at <a")
         t = t.replace('html{direction:rtl;', 'html{direction:ltr;').replace('direction:rtl;font-weight:600', 'direction:ltr;font-weight:600')
-        t = t.replace('__LANG_HREF__', '../').replace('__LANG_LABEL__', 'עברית').replace('__LANG_TITLE__', 'לגרסה העברית')
+        t = t.replace('__LANG_HREF__', '../').replace('__LANG_LABEL__', 'עברית').replace('__LANG_TITLE__', 'לגרסה העברית').replace('__ABOUT_HREF__', 'about.html')
         d = translate_data(d)
     else:
-        t = t.replace('__LANG_HREF__', 'en/').replace('__LANG_LABEL__', 'English').replace('__LANG_TITLE__', 'English version')
+        t = t.replace('__LANG_HREF__', 'en/').replace('__LANG_LABEL__', 'English').replace('__LANG_TITLE__', 'English version').replace('__ABOUT_HREF__', 'about.html')
     html = (t.replace('__DATA__', d).replace('__LOGO_SMALL__', logo_svg())
              .replace('__LOGO_BIG__', logo_svg(' style="width:220px;height:auto"')).replace('__LA_LOGO_B64__', b64).replace('__LA_MARK_B64__', mark))
     return wrap(html, lang)

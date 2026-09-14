@@ -38,7 +38,15 @@ for k, p in enumerate(parties):
 # --- נקודות הסקרים (הקלט למודל, מנורמל ל-100) ---
 df = pd.read_csv(ROOT / "model" / "polls_model.csv")
 vals = df[parties].div(df[parties].sum(axis=1), axis=0) * 100
+conn = sqlite3.connect(ROOT / "db" / "polls.sqlite")
+# פרטי הגילוי לפי סעיף 16ה: מזמין, תאריכי שדה, טעות דגימה, שיטה - מוצגים בריחוף על כל סקר
+meta16 ={str(r[0]): {"publisher": r[1] or "", "start": r[2] or "", "moe": r[3], "method": r[4] or ""}
+          for r in conn.execute("""SELECT p.reference_number, pub.name, p.fieldwork_start, p.margin_error_pct, p.method
+                                   FROM polls p LEFT JOIN publishers pub ON pub.publisher_id=p.publisher_id""")}
+METHOD_HE = {"internet": "אינטרנט", "phone": "טלפוני", "mixed": "משולב", "panel": "פאנל", "unknown": ""}
 polls = [{"date": r.date, "pollster": r.pollster, "n": int(r.sample_size), "ref": str(r.ref),
+          "publisher": meta16.get(str(r.ref), {}).get("publisher", ""), "start": meta16.get(str(r.ref), {}).get("start", ""),
+          "moe": meta16.get(str(r.ref), {}).get("moe"), "method": METHOD_HE.get(meta16.get(str(r.ref), {}).get("method", ""), meta16.get(str(r.ref), {}).get("method", "")),
           **{p: round(float(vals.loc[i, p]), 2) for p in parties}} for i, r in df.iterrows()]
 
 # --- אפקטי סוקרים (נקודות אחוז, ממוצע) ---

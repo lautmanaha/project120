@@ -382,6 +382,7 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
   <div class="credit"><b>פרויקט 120</b> - התאמה לישראל, מסד הנתונים והבנייה: <b>ד"ר אהרון לאוטמן</b></div>
   <div>מנוע החיזוי מבוסס על <a href="https://github.com/vtisza/kronikas" target="_blank" rel="noopener">kronikas</a> (Viktor Tisza, Apache 2.0), המנוע שמאחורי תחזיות הבחירות בהונגריה ב-<a href="https://www.szazkilencvenkilenc.hu/" target="_blank" rel="noopener">szazkilencvenkilenc.hu</a>, בתוספת תנודתיות נפרדת לכל מפלגה ושכבת בדר-עופר. מקור הסקרים: <a href="https://www.gov.il/he/Departments/DynamicCollectors/knesset_election_polls_26" target="_blank" rel="noopener">ועדת הבחירות המרכזית לכנסת</a>.</div>
   <div style="margin-top:12px" id="health"></div>
+  <div style="margin-top:14px"><a href="__ABOUT_HREF__" style="color:var(--ink-2);font-weight:600">אודות · תנאי שימוש · פרטיות · נגישות</a></div>
   <div class="la"><a class="lg" href="https://lautman.org" target="_blank" rel="noopener" aria-label="ד\"ר אהרון לאוטמן - דיגיטל, דאטה, אסטרטגיה">
     <img src="data:image/png;base64,__LA_MARK_B64__" alt="">
     <span class="t"><b>ד"ר אהרון לאוטמן</b><small>דיגיטל · דאטה · אסטרטגיה</small></span>
@@ -684,7 +685,8 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
     const svg = chart.querySelector('svg'), xh = chart.querySelector('#xh'), hr = chart.querySelector('.hover-rect');
     chart.querySelectorAll('#dots circle').forEach(c => {
       c.addEventListener('mouseenter', e => { const q = D.polls[+c.dataset.i], p = c.dataset.p; c.setAttribute('r', 6);
-        showTip(`<b>${esc(q.pollster)}</b> · ${fmtDate(q.date)} · n=${q.n}<br>${esc(p)}: <b>${q[p].toFixed(1)}%</b> · אסמכתא ${q.ref}`, e.clientX, e.clientY); });
+        const meta = [q.publisher ? `${T.commissioner}: ${esc(q.publisher)}` : '', q.start && q.start !== q.date ? `${T.fieldwork}: ${fmtDate(q.start)}-${fmtDate(q.date)}` : `${T.fieldwork}: ${fmtDate(q.date)}`, `n=${q.n}`, q.moe ? `±${q.moe}%` : '', q.method ? esc(q.method) : ''].filter(Boolean).join(' · ');
+        showTip(`<b>${esc(q.pollster)}</b><br>${meta}<br>${esc(p)}: <b>${q[p].toFixed(1)}%</b> · ${T.ref} ${q.ref}`, e.clientX, e.clientY); });
       c.addEventListener('mouseleave', () => { hideTip(); c.setAttribute('r', (!src||D.polls[+c.dataset.i].pollster===src)&&src?4.5:3.2); });
     });
     // crosshair: nearest grid date, values of visible parties
@@ -772,6 +774,7 @@ const T = {
   noRisk2: 'אין כרגע רשימה שהמודל מסופק לגביה', lists: 'רשימות, הטווח המלא והסיכוי לעבור את הסף לכל אחת',
   last4: 'ב-4 השבועות האחרונים', afterHouse: 'נקודות אחוז - אחרי ניכוי הטיית המכונים',
   twoSchools: 'שתי אסכולות', measure: 'מודדים את', more: 'יותר', less: 'פחות', thanRest: 'מהשאר', pollstersHouse: 'מכונים, אפקט בית לכל אחד',
+  commissioner: 'מזמין', fieldwork: 'שדה', ref: 'אסמכתא',
   method1: 'מודל בייסיאני על כל הסקרים שפורסמו רשמית באתר ועדת הבחירות, כיול לפי טעות 2022', backtest: 'בדיקת עבר: טעות', perParty: 'מנדטים למפלגה', excludedWhy: 'וכל מה שהוחרג ולמה',
 };
 const BR = D.blocs[0].bloc, BL = D.blocs[1].bloc, BA = D.blocs[2].bloc;
