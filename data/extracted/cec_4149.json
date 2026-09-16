@@ -1,7 +1,7 @@
 {
   "ref": "4149",
-  "pollster_as_written": "חברת Next Data",
-  "commissioner_as_written": "ערוץ עכשיו 14",
+  "pollster_as_written": "Next Data חברת, התוכנית 1, תרצליה",
+  "commissioner_as_written": "ערוץ עכשיו 14, צלע תרד 44, פתח תקווה",
   "fieldwork_start": "2026-09-15",
   "fieldwork_end": "2026-09-15",
   "method": "internet",
@@ -9,12 +9,12 @@
   "respondents": 550,
   "response_rate_pct": 4.0,
   "margin_error_pct": 4.7,
-  "population": "מדגמים בוגרים (בני 18+), תחומים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "population": "בוגרים (בני 18+), תושבים מזווים מייצג של אוכלוסיית אזרחי ישראל הרוצאים להצביע",
   "questions": [
     {
       "qid": 1,
       "type": "main",
-      "description": "אם הבחירות היו מתקיימות היום",
+      "description": "מפת המנדטים הסופית · כנסת בת 120 מושבים · אחוז חסימה 3.25%",
       "weighted": true,
       "results": [
         {
@@ -54,7 +54,7 @@
           "pct": 6.0
         },
         {
-          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' להחזיר",
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' החזות",
           "party": "הציונות הדתית",
           "seats": 8,
           "pct": 4.0
@@ -89,8 +89,8 @@
       "other_pct": null,
       "blank_pct": null,
       "seats_total": 120,
-      "notes": "Seat total is 120. The table shows אחוז גולמי (raw percentage) which differs from final seats distribution. The percentage column shown appears to be raw/unweighted based on footnote indicating differences between samples."
+      "notes": "Total respondents who decided is 433 (89%), which results in 120 seats. 4% did not decide (לא החליטו)."
     }
   ],
-  "extraction_notes": "Page 1 contains methodological details. Page 2 contains the main voting intention table with 120 seats total. The פרטי הסקר section indicates initial sample 13,486, respondents 550 (מספר המשיבים), response rate 4%, margin of error ±4.7% at 95% confidence. Pages 3-4 contain non-vote-intention questions (suitability for PM, issue questions) which were not extracted per spec. The אחוז גולמי column appears to show raw percentages with weighting applied for seat calculation."
+  "extraction_notes": "Pages 3-4 contain non-vote-intention questions (suitability for PM, who are the main contenders, government coalitions, satisfaction with Smotrich/Ben Gvir) which per spec are ignored. The main vote-intention table is on page 2 with clear seats and percentages. The footnote indicates the percentages shown are weighted (אחוז גולמי vs אופמציה noted but the main table is weighted). Initial sample was 13,486 individuals who were contacted; 550 actual respondents (המדגם ההתחלתי); response rate 4%; margin of error ±4.7% at 95% confidence."
 }
