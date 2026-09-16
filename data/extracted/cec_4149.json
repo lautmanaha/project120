@@ -1,0 +1,96 @@
+{
+  "ref": "4149",
+  "pollster_as_written": "חברת Next Data",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-09-15",
+  "fieldwork_end": "2026-09-15",
+  "method": "internet",
+  "initial_sample": 13486,
+  "respondents": 550,
+  "response_rate_pct": 4.0,
+  "margin_error_pct": 4.7,
+  "population": "מדגמים בוגרים (בני 18+), תחומים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 30,
+          "pct": 21.0
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 21,
+          "pct": 17.0
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 10,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "יחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 8,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' להחזיר",
+          "party": "הציונות הדתית",
+          "seats": 8,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 6,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.0
+        }
+      ],
+      "undecided_pct": 4.0,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Seat total is 120. The table shows אחוז גולמי (raw percentage) which differs from final seats distribution. The percentage column shown appears to be raw/unweighted based on footnote indicating differences between samples."
+    }
+  ],
+  "extraction_notes": "Page 1 contains methodological details. Page 2 contains the main voting intention table with 120 seats total. The פרטי הסקר section indicates initial sample 13,486, respondents 550 (מספר המשיבים), response rate 4%, margin of error ±4.7% at 95% confidence. Pages 3-4 contain non-vote-intention questions (suitability for PM, issue questions) which were not extracted per spec. The אחוז גולמי column appears to show raw percentages with weighting applied for seat calculation."
+}
