@@ -1,6 +1,6 @@
 {
   "ref": "4147",
-  "pollster_as_written": "מדגם יעוץ ומחקר בע\"מ",
+  "pollster_as_written": "מדגם ייעוץ ומחקר",
   "commissioner_as_written": "חדשות 12",
   "fieldwork_start": "2026-09-14",
   "fieldwork_end": "2026-09-14",
@@ -9,12 +9,12 @@
   "respondents": 502,
   "response_rate_pct": 20.0,
   "margin_error_pct": 4.4,
-  "population": "בעלי זכות בחירה - כלל האוכלוסייה בישראל מגיל 18 ומעלה",
+  "population": "כלל האוכלוסייה בישראל מגיל 18 ומעלה",
   "questions": [
     {
       "qid": 1,
       "type": "main",
-      "description": "אילו הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע?",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה הית מצביע?",
       "weighted": true,
       "results": [
         {
@@ -42,7 +42,7 @@
           "pct": 8.2
         },
         {
-          "party_as_written": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) בראשות יוסף ג'באראן",
+          "party_as_written": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) בראשות יוסף ג'בארין",
           "party": "הרשימה המשותפת",
           "seats": 8,
           "pct": 6.6
@@ -78,13 +78,13 @@
           "pct": 4.1
         },
         {
-          "party_as_written": "המילואימניקים והכלכלית בראשות יועד הגדל וערן זליכה",
-          "party": "בית ציוני",
+          "party_as_written": "הליאימניקים והכלכלית בראשות יועד הגדי ארון זליכה",
+          "party": "אחר",
           "seats": 4,
           "pct": 3.4
         },
         {
-          "party_as_written": "הרשימה הערבית המאוחדת - רע\"מ בראשות מנסור עבאס ויאיב סלאמיבר",
+          "party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס ויאסר סלאלובייר",
           "party": "רע\"ם",
           "seats": 4,
           "pct": 3.3
@@ -102,20 +102,20 @@
           "pct": 0.5
         },
         {
-          "party_as_written": "ישראל מתחילה – עלה ירוק בראשות שאן השכל",
+          "party_as_written": "ישראל מחילה – עלה ידיק בראשות שגן השכל",
           "party": "אחר",
           "seats": 0,
           "pct": 0.3
         },
         {
-          "party_as_written": "הציבור החרדי בראשות מוטי לייטנר",
+          "party_as_written": "היצירו החדש בראשות מוטי לייטנר",
           "party": "הציבור החרדי",
           "seats": 0,
           "pct": 0.2
         },
         {
-          "party_as_written": "הקהל בראשות שלמה אלבויים",
-          "party": "מפלגת הקהל",
+          "party_as_written": "הקול בראשות שלמה אלבוים",
+          "party": "אחר",
           "seats": 0,
           "pct": 0.1
         },
@@ -131,8 +131,8 @@
       "other_pct": 0.3,
       "blank_pct": null,
       "seats_total": 120,
-      "notes": ""
+      "notes": "הליאימניקים והכלכלית and היצירו החדש and הקול and ישראל מחילה mapped to אחר as they are not in the canonical list"
     }
   ],
-  "extraction_notes": "Page 1 contains the survey methodology and metadata. Page 2 contains the main vote intention table. Pages 3 and 4 contain non-vote-intention questions (suitability for PM, bloc preferences, coalition preferences) which are not extracted per the spec."
+  "extraction_notes": "Survey conducted by מדגם (Madgam) for חדשות 12. Fieldwork date given as 14/9/2026. Initial sample 2,514, respondents 502, response rate 20%, margin of error ±4.4%. Pages 3-4 contain non-vote-intention questions (coalition preferences, leadership questions) which were not extracted per spec."
 }
