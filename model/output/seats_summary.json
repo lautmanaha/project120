@@ -5,7 +5,7 @@
       "seats_median": 26,
       "seats_mean": 25.6,
       "seats_p05": 23,
-      "seats_p95": 28,
+      "seats_p95": 29,
       "share_mean": 20.0,
       "p_threshold": 1.0,
       "seat_dist": {
@@ -111,7 +111,7 @@
       "seats_mean": 8.0,
       "seats_p05": 6,
       "seats_p95": 11,
-      "share_mean": 6.7,
+      "share_mean": 6.6,
       "p_threshold": 1.0,
       "seat_dist": {
         "0": 0.0002,
@@ -178,7 +178,7 @@
     {
       "party": "ישראל ביתנו",
       "seats_median": 7,
-      "seats_mean": 7.1,
+      "seats_mean": 7.2,
       "seats_p05": 5,
       "seats_p95": 9,
       "share_mean": 5.8,
