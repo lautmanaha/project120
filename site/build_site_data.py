@@ -124,7 +124,8 @@ if len(history) >= 2:
                            for b in cur["blocs"] if b in base["blocs"]},
                  "parties": {p: round(cur["parties"][p]["mean"] - base["parties"][p]["mean"], 1)
                              for p in cur["parties"] if p in base["parties"]},
-                 "n_polls": (cur.get("n_polls") or 0) - (base.get("n_polls") or 0)}
+                 "n_polls": (cur.get("n_polls") or 0) - (base.get("n_polls") or 0),
+                 "method_changed": (cur.get("model_version") or "") != (base.get("model_version") or "")}
 
 data = {
     "generated": fc["today"], "election_date": fc["election_date"],

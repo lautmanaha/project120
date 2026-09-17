@@ -239,5 +239,6 @@
  "לשאר), המודל עומד באמצע, עם אי-ודאות בגודל הפער. הפירוט ב\"איך זה עובד": "and the rest), the model stands in the middle, with uncertainty the size of the gap. Details under \"How it works",
  "משפחה": "Family",
  "פיזור": "Spread",
- "שני התיקונים מתחברים להטיה ענפית אחת שנכנסת למודל כהתפלגות (ממוצע ± סטיית תקן, נקודות אחוז": "The two corrections combine into one industry bias that enters the model as a distribution (mean ± standard deviation, percentage points"
+ "שני התיקונים מתחברים להטיה ענפית אחת שנכנסת למודל כהתפלגות (ממוצע ± סטיית תקן, נקודות אחוז": "The two corrections combine into one industry bias that enters the model as a distribution (mean ± standard deviation, percentage points",
+ "כולל עדכון שיטה": "incl. a method update"
 }

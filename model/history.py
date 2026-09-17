@@ -19,10 +19,13 @@ OUT = ROOT / "model" / "output"
 HIST = OUT / "history.jsonl"
 
 
+# גרסת השיטה - לעדכן בכל שינוי במודל/בכיול; "מה השתנה השבוע" מסמן השוואה שחוצה גרסה
+MODEL_VERSION = "2026-09-17"   # prior היררכי + מסכת כניסה + כיול רב-מערכתי + מחצית הפער כהתפלגות
 def entry(seats: dict, forecast: dict, n_polls: int | None = None) -> dict:
     return {
         "date": forecast["today"],
         "n_polls": n_polls,
+        "model_version": MODEL_VERSION,
         "blocs": {b["bloc"]: {"median": b["seats_median"], "mean": round(b["seats_mean"], 1), "p05": b["seats_p05"], "p95": b["seats_p95"],
                              "p_majority": round(b["p_majority"], 3)} for b in seats["blocs"]},
         "parties": {p["party"]: {"median": p["seats_median"], "mean": round(p["seats_mean"], 1), "p_threshold": round(p["p_threshold"], 3)}
