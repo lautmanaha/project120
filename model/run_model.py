@@ -35,6 +35,7 @@ def main(argv=None) -> int:
     ap.add_argument("--industry-lean-key", default=None, help="מפתח בתוך הקובץ (למשל half/full)")
     ap.add_argument("--entry-skip-weeks", type=float, default=1.0,
                     help="רשימה שנכנסה באמצע הסדרה: הסקרים שלפני כניסתה ובשבועות הראשונים אחריה אינם מלמדים עליה (0 = רק הסקרים שלא דיווחו עליה; -1 = בלי מסכה כלל)")
+    ap.add_argument("--industry-sd-key", default=None, help="מפתח בקובץ ה-lean עם סטיית תקן לכל מפלגה (למשל hist_sd); בלעדיו: 12% מגודל המפלגה, 0.3-1.5")
     ap.add_argument("--industry-error-pp", type=float, default=1.5,
                     help="טעות ענפית משותפת (סטיית תקן בנקודות אחוז), מתוצאות עבר בישראל")
     a = ap.parse_args(argv)
@@ -44,9 +45,13 @@ def main(argv=None) -> int:
     lean = {}
     if a.industry_lean_json:
         lean = json.loads(Path(a.industry_lean_json).read_text(encoding="utf-8"))
+        _all = lean
         if a.industry_lean_key: lean = lean[a.industry_lean_key]
         print("industry lean (polls overstate +):", lean)
+        if a.industry_sd_key:
+            sd_file = _all[a.industry_sd_key]; print("industry sd (pp):", sd_file)
     leans = json.loads(Path(a.leans_json).read_text(encoding="utf-8")) if a.leans_json else {}
+    sd_file = locals().get("sd_file", {})
     priors = {}
     for name in [x.strip() for x in a.trust_high.split(",") if x.strip()]: priors.setdefault(name, {})["sigma_house"] = 0.10
     for name in [x.strip() for x in a.trust_low.split(",") if x.strip()]: priors.setdefault(name, {})["sigma_house"] = 0.60
@@ -78,7 +83,7 @@ def main(argv=None) -> int:
         # טעות ענפית: סטיית תקן פרופורציונלית לגודל המפלגה (מפלגה של 5% לא יכולה לטעות ב-2 נקודות כמו מפלגה של 20%)
         shared_bias=SharedBiasPrior(
             mean=_zero_sum_lean({p: v for p, v in lean.items() if p in _means}, _means),
-            sd={p: round(min(a.industry_error_pp, max(0.3, 0.12 * m)), 2) for p, m in _means.items()},
+            sd={p: (round(float(sd_file[p]), 2) if p in sd_file else round(min(a.industry_error_pp, max(0.3, 0.12 * m)), 2)) for p, m in _means.items()},
             default_sd=0.3) if a.industry_error_pp > 0 else None,
     )
     polls_csv = Path(a.input) if a.input else ROOT / "model" / "polls_model.csv"

@@ -144,6 +144,7 @@ data = {
     "history": [{"date": h["date"], "n_polls": h.get("n_polls"), "blocs": {b: [v["median"], v["p05"], v["p95"], v["p_majority"]] for b, v in h["blocs"].items()}} for h in history],
     "delta": delta,
     "entry_mask": em,
+    "calibration_hist": json.loads((ROOT / "model" / "calibration_hist.json").read_text(encoding="utf-8")) if (ROOT / "model" / "calibration_hist.json").exists() else None,
     "anchor": json.loads((ROOT / "model" / "anchor_trusted.json").read_text(encoding="utf-8")) if (ROOT / "model" / "anchor_trusted.json").exists() else None,
 }
 assert sum(data["central_seats"].values()) == 120, "central seats must sum to 120"

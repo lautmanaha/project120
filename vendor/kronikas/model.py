@@ -1257,7 +1257,11 @@ def build_model(
         # === Initial latent support (K-1 log-ratios) ===
         eta_init = pm.Normal(
             "eta_init",
-            mu=initial_logratios,
+            # [Project 120 patch] the first polls carry the industry bias too: centre the
+            # initial-state prior on the bias-corrected latent, otherwise a wide bias prior
+            # is silently pulled toward zero by this prior (polls-as-truth) instead of
+            # widening the forecast.
+            mu=initial_logratios - (shared_mean_logit[free_indices] - shared_mean_logit[reference_idx]),
             sigma=config.initial_sigma,
             shape=n_free,
         )

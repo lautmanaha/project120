@@ -1,0 +1,506 @@
+{
+ "2019a": {
+  "election": "2019-04-09",
+  "n_polls": 32,
+  "window_from": "2019-03-19",
+  "firms": [
+   "Dialog",
+   "Direct Polls",
+   "Maagar Mochot",
+   "Maagar Mohot",
+   "Midgam",
+   "Miskar",
+   "Panel Project HaMidgam",
+   "Panels Politics",
+   "Smith",
+   "TNS"
+  ],
+  "party_seat_error": {
+   "Likud": {
+    "seats": -6.34,
+    "n": 32,
+    "actual": 35.0
+   },
+   "Labor": {
+    "seats": 3.28,
+    "n": 32,
+    "actual": 6.0
+   },
+   "Blue & White": {
+    "seats": -4.97,
+    "n": 32,
+    "actual": 35.0
+   },
+   "Kulanu": {
+    "seats": 0.55,
+    "n": 32,
+    "actual": 4.0
+   },
+   "Ra'am –Balad": {
+    "seats": -0.24,
+    "n": 29,
+    "actual": 4.0
+   },
+   "Shas": {
+    "seats": -2.75,
+    "n": 32,
+    "actual": 8.0
+   },
+   "UTJ": {
+    "seats": -1.47,
+    "n": 32,
+    "actual": 8.0
+   },
+   "URWP": {
+    "seats": 1.31,
+    "n": 32,
+    "actual": 5.0
+   },
+   "Yisrael Beiteinu": {
+    "seats": -1.27,
+    "n": 31,
+    "actual": 5.0
+   },
+   "Meretz": {
+    "seats": 1.34,
+    "n": 32,
+    "actual": 4.0
+   },
+   "Hadash –Ta'al": {
+    "seats": 1.22,
+    "n": 32,
+    "actual": 6.0
+   },
+   "New Right": {
+    "seats": 1.81,
+    "n": 32,
+    "actual": 4.03
+   },
+   "Gesher": {
+    "seats": 0.9,
+    "n": 29,
+    "actual": 2.16
+   },
+   "Zehut": {
+    "seats": 1.79,
+    "n": 32,
+    "actual": 3.43
+   }
+  },
+  "family_seat_error": {
+   "הליכוד": -6.34,
+   "שמאל": 4.62,
+   "מרכז": -3.52,
+   "רע\"ם": -0.24,
+   "ש\"ס": -2.75,
+   "יהדות התורה": -1.47,
+   "ימין דתי": 4.91,
+   "ישראל ביתנו": -1.27,
+   "הרשימה המשותפת": 1.22
+  },
+  "family_pp": {
+   "הליכוד": -5.07,
+   "שמאל": 3.7,
+   "מרכז": -2.82,
+   "רע\"ם": -0.19,
+   "ש\"ס": -2.2,
+   "יהדות התורה": -1.18,
+   "ימין דתי": 3.93,
+   "ישראל ביתנו": -1.02,
+   "הרשימה המשותפת": 0.98
+  }
+ },
+ "2019b": {
+  "election": "2019-09-17",
+  "n_polls": 23,
+  "window_from": "2019-08-27",
+  "firms": [
+   "KANTAR",
+   "Maagar Mohot",
+   "Midgam",
+   "Panel Project HaMidgam",
+   "Panels Politics",
+   "Shvakim Panorama",
+   "Smith"
+  ],
+  "party_seat_error": {
+   "Likud": {
+    "seats": -0.09,
+    "n": 23,
+    "actual": 32.0
+   },
+   "Blue & White": {
+    "seats": -1.3,
+    "n": 23,
+    "actual": 33.0
+   },
+   "Joint List": {
+    "seats": -2.52,
+    "n": 23,
+    "actual": 13.0
+   },
+   "Shas": {
+    "seats": -1.96,
+    "n": 23,
+    "actual": 9.0
+   },
+   "UTJ": {
+    "seats": 0.39,
+    "n": 23,
+    "actual": 7.0
+   },
+   "Yamina": {
+    "seats": 2.04,
+    "n": 23,
+    "actual": 7.0
+   },
+   "Labor- Gesher": {
+    "seats": -0.65,
+    "n": 23,
+    "actual": 6.0
+   },
+   "Yisrael Beiteinu": {
+    "seats": 1.26,
+    "n": 23,
+    "actual": 8.0
+   },
+   "Dem. Union": {
+    "seats": 0.91,
+    "n": 23,
+    "actual": 5.0
+   },
+   "Otzma Yehudit": {
+    "seats": 1.32,
+    "n": 21,
+    "actual": 2.35
+   }
+  },
+  "family_seat_error": {
+   "הליכוד": -0.09,
+   "מרכז": -1.3,
+   "הרשימה המשותפת": -2.52,
+   "ש\"ס": -1.96,
+   "יהדות התורה": 0.39,
+   "ימין דתי": 3.36,
+   "שמאל": 0.26,
+   "ישראל ביתנו": 1.26
+  },
+  "family_pp": {
+   "הליכוד": -0.07,
+   "מרכז": -1.04,
+   "הרשימה המשותפת": -2.02,
+   "ש\"ס": -1.57,
+   "יהדות התורה": 0.31,
+   "ימין דתי": 2.69,
+   "שמאל": 0.21,
+   "ישראל ביתנו": 1.01
+  }
+ },
+ "2020": {
+  "election": "2020-03-02",
+  "n_polls": 24,
+  "window_from": "2020-02-10",
+  "firms": [
+   "Direct Polls",
+   "Kantar",
+   "Maagar Mohot",
+   "Midgam",
+   "Panel Project HaMidgam",
+   "Panels Politics",
+   "Smith"
+  ],
+  "party_seat_error": {
+   "Blue & White": {
+    "seats": 0.92,
+    "n": 24,
+    "actual": 33.0
+   },
+   "Likud": {
+    "seats": -2.5,
+    "n": 24,
+    "actual": 36.0
+   },
+   "Joint List": {
+    "seats": -1.29,
+    "n": 24,
+    "actual": 15.0
+   },
+   "Emet": {
+    "seats": 1.83,
+    "n": 24,
+    "actual": 7.0
+   },
+   "Shas": {
+    "seats": -0.79,
+    "n": 24,
+    "actual": 9.0
+   },
+   "Yisrael Beiteinu": {
+    "seats": 0.0,
+    "n": 24,
+    "actual": 7.0
+   },
+   "UTJ": {
+    "seats": 0.5,
+    "n": 24,
+    "actual": 7.0
+   },
+   "Yamina": {
+    "seats": 1.38,
+    "n": 24,
+    "actual": 6.0
+   },
+   "Otzma": {
+    "seats": 1.71,
+    "n": 23,
+    "actual": 0.53
+   }
+  },
+  "family_seat_error": {
+   "מרכז": 0.92,
+   "הליכוד": -2.5,
+   "הרשימה המשותפת": -1.29,
+   "שמאל": 1.83,
+   "ש\"ס": -0.79,
+   "ישראל ביתנו": 0.0,
+   "יהדות התורה": 0.5,
+   "ימין דתי": 3.09
+  },
+  "family_pp": {
+   "מרכז": 0.74,
+   "הליכוד": -2.0,
+   "הרשימה המשותפת": -1.03,
+   "שמאל": 1.46,
+   "ש\"ס": -0.63,
+   "ישראל ביתנו": 0.0,
+   "יהדות התורה": 0.4,
+   "ימין דתי": 2.47
+  }
+ },
+ "2021": {
+  "election": "2021-03-23",
+  "n_polls": 24,
+  "window_from": "2021-03-02",
+  "firms": [
+   "Camil Fuchs",
+   "Direct Polls",
+   "Kantar",
+   "Maagar Mohot",
+   "Midgam",
+   "Panels Politics",
+   "Smith"
+  ],
+  "party_seat_error": {
+   "Likud": {
+    "seats": -0.88,
+    "n": 24,
+    "actual": 30.0
+   },
+   "Yesh Atid": {
+    "seats": 1.88,
+    "n": 24,
+    "actual": 17.0
+   },
+   "Blue & White": {
+    "seats": -3.42,
+    "n": 24,
+    "actual": 8.0
+   },
+   "Joint List": {
+    "seats": 2.38,
+    "n": 24,
+    "actual": 6.0
+   },
+   "Shas": {
+    "seats": -1.21,
+    "n": 24,
+    "actual": 9.0
+   },
+   "UTJ": {
+    "seats": -0.12,
+    "n": 24,
+    "actual": 7.0
+   },
+   "Yisrael Beiteinu": {
+    "seats": 0.38,
+    "n": 24,
+    "actual": 7.0
+   },
+   "Meretz": {
+    "seats": -2.09,
+    "n": 24,
+    "actual": 6.0
+   },
+   "Ra'am": {
+    "seats": -0.34,
+    "n": 24,
+    "actual": 4.0
+   },
+   "Yamina": {
+    "seats": 3.75,
+    "n": 24,
+    "actual": 7.0
+   },
+   "New Hope": {
+    "seats": 4.38,
+    "n": 24,
+    "actual": 6.0
+   },
+   "Labor": {
+    "seats": -1.42,
+    "n": 24,
+    "actual": 7.0
+   },
+   "Religious Zionist": {
+    "seats": -1.42,
+    "n": 24,
+    "actual": 6.0
+   },
+   "New Economic": {
+    "seats": 0.98,
+    "n": 23,
+    "actual": 0.99
+   }
+  },
+  "family_seat_error": {
+   "הליכוד": -0.88,
+   "מרכז": 3.82,
+   "הרשימה המשותפת": 2.38,
+   "ש\"ס": -1.21,
+   "יהדות התורה": -0.12,
+   "ישראל ביתנו": 0.38,
+   "שמאל": -3.51,
+   "רע\"ם": -0.34,
+   "ימין דתי": 2.33
+  },
+  "family_pp": {
+   "הליכוד": -0.7,
+   "מרכז": 3.06,
+   "הרשימה המשותפת": 1.9,
+   "ש\"ס": -0.97,
+   "יהדות התורה": -0.1,
+   "ישראל ביתנו": 0.3,
+   "שמאל": -2.81,
+   "רע\"ם": -0.27,
+   "ימין דתי": 1.86
+  }
+ },
+ "combined": {
+  "half_life_years": 3.0,
+  "weights": {
+   "2019a": 0.21,
+   "2019b": 0.23,
+   "2020": 0.26,
+   "2021": 0.33,
+   "2022": 0.48
+  },
+  "families": {
+   "הליכוד": {
+    "mean_pp": -1.18,
+    "sd_pp": 1.74,
+    "n_elections": 5,
+    "per_election_pp": {
+     "2019a": -5.07,
+     "2019b": -0.07,
+     "2020": -2.0,
+     "2021": -0.7,
+     "2022": 0.12
+    }
+   },
+   "ש\"ס": {
+    "mean_pp": -1.63,
+    "sd_pp": 0.71,
+    "n_elections": 5,
+    "per_election_pp": {
+     "2019a": -2.2,
+     "2019b": -1.57,
+     "2020": -0.63,
+     "2021": -0.97,
+     "2022": -2.4
+    }
+   },
+   "יהדות התורה": {
+    "mean_pp": -0.15,
+    "sd_pp": 0.49,
+    "n_elections": 5,
+    "per_election_pp": {
+     "2019a": -1.18,
+     "2019b": 0.31,
+     "2020": 0.4,
+     "2021": -0.1,
+     "2022": -0.26
+    }
+   },
+   "ימין דתי": {
+    "mean_pp": 0.3,
+    "sd_pp": 1.3,
+    "n_elections": 2,
+    "per_election_pp": {
+     "2019a": 3.93,
+     "2019b": 2.69,
+     "2020": 2.47,
+     "2021": 1.86,
+     "2022": -0.78
+    }
+   },
+   "ישראל ביתנו": {
+    "mean_pp": 0.03,
+    "sd_pp": 0.57,
+    "n_elections": 5,
+    "per_election_pp": {
+     "2019a": -1.02,
+     "2019b": 1.01,
+     "2020": 0.0,
+     "2021": 0.3,
+     "2022": -0.16
+    }
+   },
+   "הרשימה המשותפת": {
+    "mean_pp": -0.15,
+    "sd_pp": 1.36,
+    "n_elections": 5,
+    "per_election_pp": {
+     "2019a": 0.98,
+     "2019b": -2.02,
+     "2020": -1.03,
+     "2021": 1.9,
+     "2022": -0.69
+    }
+   },
+   "רע\"ם": {
+    "mean_pp": -0.5,
+    "sd_pp": 0.28,
+    "n_elections": 3,
+    "per_election_pp": {
+     "2019a": -0.19,
+     "2021": -0.27,
+     "2022": -0.8
+    }
+   },
+   "שמאל": {
+    "mean_pp": 1.41,
+    "sd_pp": 2.59,
+    "n_elections": 5,
+    "per_election_pp": {
+     "2019a": 3.7,
+     "2019b": 0.21,
+     "2020": 1.46,
+     "2021": -2.81,
+     "2022": 3.86
+    }
+   },
+   "מרכז": {
+    "mean_pp": 0.59,
+    "sd_pp": 1.86,
+    "n_elections": 5,
+    "per_election_pp": {
+     "2019a": -2.82,
+     "2019b": -1.04,
+     "2020": 0.74,
+     "2021": 3.06,
+     "2022": 1.1
+    }
+   }
+  }
+ }
+}
