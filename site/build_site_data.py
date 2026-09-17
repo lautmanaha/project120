@@ -92,6 +92,15 @@ excluded = [{"ref": r[0], "pollster": r[1] or "", "date": r[2] or r[3] or "", "r
 hist_file = OUT / "history.jsonl"
 history = [json.loads(l) for l in hist_file.read_text(encoding="utf-8").splitlines() if l.strip()] if hist_file.exists() else []
 history = [h for h in history if h["date"] <= fc["today"]]
+# ריצה שבורה (למשל 10.9: בקרת האיכות סימנה 39 סקרים והמודל רץ על 24) לא משמשת בסיס להשוואה: מדלגים על רשומה
+# שמספר הסקרים שלה נמוך ביותר מ-40% מהמקסימום עד אותו יום
+_clean, _mx = [], 0
+for h in history:
+    n = h.get("n_polls") or 0
+    if _mx and n < 0.6 * _mx:
+        continue
+    _mx = max(_mx, n); _clean.append(h)
+history = _clean
 delta = None
 if len(history) >= 2:
     cur = history[-1]
