@@ -44,10 +44,19 @@ meta16 ={str(r[0]): {"publisher": r[1] or "", "start": r[2] or "", "moe": r[3], 
           for r in conn.execute("""SELECT p.reference_number, pub.name, p.fieldwork_start, p.margin_error_pct, p.method
                                    FROM polls p LEFT JOIN publishers pub ON pub.publisher_id=p.publisher_id""")}
 METHOD_HE = {"internet": "אינטרנט", "phone": "טלפוני", "mixed": "משולב", "panel": "פאנל", "unknown": ""}
+# מסכת כניסה (המלצת ויקטור טיסה): תאים שהמודל לא ראה - השלמות אוטומטיות וסקרים שלפני כניסת רשימה - לא מוצגים כנקודות,
+# והמסלול של רשימה מאוחרת מתחיל במועד הכניסה
+em = fc.get("entry_mask") or {}
+hidden = {(ref, p) for ref, p in em.get("hidden", [])}
+for p, entry in em.get("entries", {}).items():
+    if p in trend:
+        cut = (date.fromisoformat(entry) + timedelta(days=int(7 * em.get("skip_weeks", 0)))).isoformat()
+        for key in ("mean", "lo", "hi"):
+            trend[p][key] = [None if d < cut else v for d, v in zip(dates, trend[p][key])]
 polls = [{"date": r.date, "pollster": r.pollster, "n": int(r.sample_size), "ref": str(r.ref),
           "publisher": meta16.get(str(r.ref), {}).get("publisher", ""), "start": meta16.get(str(r.ref), {}).get("start", ""),
           "moe": meta16.get(str(r.ref), {}).get("moe"), "method": METHOD_HE.get(meta16.get(str(r.ref), {}).get("method", ""), meta16.get(str(r.ref), {}).get("method", "")),
-          **{p: round(float(vals.loc[i, p]), 2) for p in parties}} for i, r in df.iterrows()]
+          **{p: (None if (str(r.ref), p) in hidden else round(float(vals.loc[i, p]), 2)) for p in parties}} for i, r in df.iterrows()]
 
 # --- אפקטי סוקרים (נקודות אחוז, ממוצע) ---
 he = pd.read_csv(OUT / "house_effects.csv", header=[0, 1], index_col=0)
@@ -134,6 +143,7 @@ data = {
     "excluded": excluded,
     "history": [{"date": h["date"], "n_polls": h.get("n_polls"), "blocs": {b: [v["median"], v["p05"], v["p95"], v["p_majority"]] for b, v in h["blocs"].items()}} for h in history],
     "delta": delta,
+    "entry_mask": em,
     "anchor": json.loads((ROOT / "model" / "anchor_trusted.json").read_text(encoding="utf-8")) if (ROOT / "model" / "anchor_trusted.json").exists() else None,
 }
 assert sum(data["central_seats"].values()) == 120, "central seats must sum to 120"

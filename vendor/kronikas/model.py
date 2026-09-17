@@ -1077,6 +1077,24 @@ def build_model(
     # into the initial-state prior.
     early_mask = time_indices == time_indices.min()
     initial_props = poll_data.poll_values[early_mask].mean(axis=0) / 100.0
+    # [Project 120 patch] a candidate not reported at the first node (a list
+    # that entered later) is initialised from its first *observed* node instead
+    # of from imputed values, so the walk need not manufacture its entry jump.
+    cell_mask = None
+    if poll_data.mask is not None:
+        cell_mask = np.asarray(poll_data.mask, dtype=bool)
+        if cell_mask.shape != poll_data.poll_values.shape:
+            raise ValueError("PollData.mask must have the same shape as poll_values")
+        if cell_mask.all():
+            cell_mask = None
+    if cell_mask is not None:
+        for k in range(n_candidates):
+            if cell_mask[early_mask, k].any():
+                initial_props[k] = poll_data.poll_values[early_mask & cell_mask[:, k], k].mean() / 100.0
+            elif cell_mask[:, k].any():
+                first_t = time_indices[cell_mask[:, k]].min()
+                rows_k = (time_indices == first_t) & cell_mask[:, k]
+                initial_props[k] = poll_data.poll_values[rows_k, k].mean() / 100.0
 
     initial_props = np.clip(initial_props, 1e-4, None)
     initial_props = initial_props / initial_props.sum()
@@ -1338,10 +1356,31 @@ def build_model(
             kappa = kappa_scale[poll_data.pollster_ids, None] * sample_sizes
         else:
             kappa = kappa_scale * sample_sizes  # (N, 1)
-        raw_alpha = mu_obs * kappa
-        alpha_dir = 0.01 + pt.softplus(100.0 * (raw_alpha - 0.01)) / 100.0
-
-        pm.Dirichlet("obs", a=alpha_dir, observed=observed_fractions)
+        if cell_mask is None:
+            raw_alpha = mu_obs * kappa
+            alpha_dir = 0.01 + pt.softplus(100.0 * (raw_alpha - 0.01)) / 100.0
+            pm.Dirichlet("obs", a=alpha_dir, observed=observed_fractions)
+        else:
+            # [Project 120 patch] masked cells: a poll that did not report a
+            # candidate (or one taken before a list existed) is modelled on the
+            # sub-simplex of the candidates it did report. If x ~ Dirichlet(alpha)
+            # then the renormalised sub-vector is Dirichlet(alpha_kept), so the
+            # likelihood is exact: the hidden candidate's latent support is left
+            # untouched by that poll. Polls are grouped by mask pattern.
+            patterns = {}
+            for i, row in enumerate(cell_mask):
+                key = tuple(bool(v) for v in row)
+                patterns.setdefault(key, []).append(i)
+            for g, (key, idx) in enumerate(patterns.items()):
+                idx = np.array(idx, dtype=np.int64)
+                keep = np.array([k for k in range(n_candidates) if key[k]], dtype=np.int64)
+                if len(keep) < 2:
+                    raise ValueError("PollData.mask must keep at least two candidates per poll")
+                obs_g = observed_fractions[idx][:, keep]
+                obs_g = obs_g / obs_g.sum(axis=1, keepdims=True)
+                raw_alpha = mu_obs[idx][:, keep] * kappa[idx]
+                alpha_dir = 0.01 + pt.softplus(100.0 * (raw_alpha - 0.01)) / 100.0
+                pm.Dirichlet(f"obs_{g}" if g else "obs", a=alpha_dir, observed=obs_g)
 
     metadata = {
         "today_idx": today_idx,

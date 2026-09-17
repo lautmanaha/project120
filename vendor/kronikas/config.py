@@ -282,6 +282,10 @@ class ModelConfig:
     per-party volatilities on the log scale: ``sigma_p = mu * exp(walk_pool_sd * z_p)``.
     0.5 allows roughly a x1.6 spread (1 sd) around the shared level; 0 = independent."""
     lkj_eta: float = 2.0
+    other_candidate: str | None = "אחר"
+    """[Project 120 patch] Candidate that absorbs masked cells (``PollData.mask``):
+    a poll that did not report a list is modelled as having counted it under
+    "other". Required only when a mask with ``False`` cells is supplied."""
 
     # Per-pollster prior overrides
     pollster_priors: dict[str, PollsterPrior] = field(default_factory=dict)

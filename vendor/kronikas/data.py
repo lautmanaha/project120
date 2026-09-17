@@ -35,6 +35,12 @@ class PollData:
     candidates: list[str]
     pollsters: list[str]
     first_poll_date: date
+    mask: np.ndarray | None = None
+    """[Project 120 patch] Optional ``(N, K)`` boolean array: ``True`` where the
+    poll actually reports the candidate. ``False`` cells (a list that did not
+    exist yet, an imputed value) carry no information about that candidate:
+    in the likelihood the cell is folded into the "other" candidate for that
+    poll only (Dirichlet aggregation), see ``ModelConfig.other_candidate``."""
 
     @property
     def poll_dates(self) -> list[date]:
@@ -86,6 +92,7 @@ class PollData:
             candidates=list(self.candidates),
             pollsters=remaining,
             first_poll_date=new_first,
+            mask=None if self.mask is None else self.mask[mask].copy(),
         )
 
 

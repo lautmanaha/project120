@@ -73,12 +73,12 @@ def build_input(cutoff: str) -> Path:
     print(f"{cutoff}: {len(rows)} polls -> {out.name}")
     return out
 
-def run(cutoff: str, chains=4):
+def run(cutoff: str, chains=4, tag: str = "", model_args: list | None = None):
     inp = build_input(cutoff)
-    od = OUT / f"out_{cutoff}"
+    od = OUT / (f"out_{cutoff}" + (f"_{tag}" if tag else ""))
     if not (od / "draws_election_day.csv").exists():
         cmd = [sys.executable, str(ROOT / "model/run_model.py"), "--input", str(inp), "--out", str(od), "--election-date", "2022-11-01",
-               "--today", cutoff, "--chains", str(chains)]
+               "--today", cutoff, "--chains", str(chains)] + list(model_args or [])
         print(" ".join(cmd)); subprocess.run(cmd, check=False)
     draws = pd.read_csv(od / "draws_election_day.csv")
     S.BLOCS = BLOCS22
@@ -101,8 +101,13 @@ def run(cutoff: str, chains=4):
     return res
 
 if __name__ == "__main__":
-    results = [run(c) for c in ["2022-10-10", "2022-10-27"]]
-    (OUT / "backtest_2022.json").write_text(json.dumps(results, ensure_ascii=False, indent=1), encoding="utf-8")
+    # שימוש: backtest_2022.py [--tag NAME -- <דגלים ל-run_model.py>]  (בלי tag: הריצה הרשמית, נכתבת ל-backtest_2022.json)
+    tag, extra = "", []
+    if "--tag" in sys.argv:
+        i = sys.argv.index("--tag"); tag = sys.argv[i + 1]
+        extra = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+    results = [run(c, tag=tag, model_args=extra) for c in ["2022-10-10", "2022-10-27"]]
+    (OUT / ("backtest_2022.json" if not tag else f"backtest_2022_{tag}.json")).write_text(json.dumps(results, ensure_ascii=False, indent=1), encoding="utf-8")
     for r in results:
         print(f"\n=== חיתוך {r['cutoff']} ({r['n_polls']} סקרים) | MAE מנדטים {r['mae_seats']} | MAE אחוזים {r['mae_share']} | כיסוי 90%: {r['coverage_90']:.0%}")
         print(f"{'מפלגה':<16}{'מרכזי':>6}{'טווח':>10}{'בפועל':>7}{'סף':>6}")
