@@ -75,7 +75,8 @@ pollster_counts = dict(conn.execute("""SELECT ps.name, COUNT(*) FROM polls p JOI
 # --- סימולציות גולמיות לכלי "אחוז החסימה": מנדטים לכל מפלגה בכל סימולציה + חלק הקולות של המפלגות שעל הסף ---
 sims_df = pd.read_csv(OUT / "seats_sims.csv")
 draws_df = pd.read_csv(OUT / "draws_election_day.csv")
-risk_parties = [p["party"] for p in seats["parties"] if 0.005 < p["p_threshold"] < 0.995]
+# רשימות שהסף רלוונטי להן, מהמסוכנת ביותר לבטוחה ביותר; מי שמעל 95% לעבור לא מוצגת בכלי (הטבלה בסעיף המפלגות מציגה את כולן)
+risk_parties = [p["party"] for p in sorted(seats["parties"], key=lambda x: x["p_threshold"]) if 0.005 < p["p_threshold"] < 0.95]
 sim_parties = list(sims_df.columns)
 sims = {"parties": sim_parties, "seats": sims_df.astype(int).values.tolist(),
         "shares": {p: np.round(draws_df[p].values, 2).tolist() for p in risk_parties},
