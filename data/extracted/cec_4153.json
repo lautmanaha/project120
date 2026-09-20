@@ -1,0 +1,150 @@
+{
+  "ref": "4153",
+  "pollster_as_written": "שמואל רוזנר",
+  "commissioner_as_written": null,
+  "fieldwork_start": "2026-09-16",
+  "fieldwork_end": "2026-09-16",
+  "method": "internet",
+  "initial_sample": null,
+  "respondents": 1023,
+  "response_rate_pct": null,
+  "margin_error_pct": 3.1,
+  "population": "כלל המדגם התחלתי - 886 משיבים - 137 משיבים חרדים ולא יהודים מהמדגם הכללי + הצבאי כדי למנוע סטייה בפועל עם מדגם החרדים והערבים",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "כחול לבן",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ליכוד",
+          "party": "הליכוד",
+          "seats": 18,
+          "pct": null
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציונות הדתית",
+          "party": "הציונות הדתית",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "עופר ישראל (לייטנר)",
+          "party": "עמך ישראל",
+          "seats": 6,
+          "pct": null
+        },
+        {
+          "party_as_written": "רע\"מ",
+          "party": "רע\"ם",
+          "seats": 6,
+          "pct": null
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 10,
+          "pct": null
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 12,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 22,
+          "pct": null
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית",
+          "party": "בית ציוני",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציבור החרדי",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "נועם (מהרר \"מפלגה אחרת\")",
+          "party": "נעם",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "זהות (מהרר \"מפלגה אחרת\")",
+          "party": "זהות",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "צבע שחור (מהרר \"מפלגה אחרת\")",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל תחילה (מהרר \"מפלגה אחרת\")",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "מפלגת החדש – סלסלת החופשי",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        }
+      ],
+      "undecided_pct": 11.7,
+      "not_voting_pct": 0.2,
+      "other_pct": null,
+      "blank_pct": 6.8,
+      "seats_total": 120,
+      "notes": "pct columns are per-sector raw samples; only seats (מנדטים) are national"
+    }
+  ],
+  "extraction_notes": "The poll shows detailed methodology with multiple sample groups (4,365 approached, 1,591 responded for general, plus 600 youth panel, 1,982 Haredim for secondary samples). The main table shows seat distribution based on weighted national results, but percentage columns are split by sector (Jewish adults, youth, Haredim, Arab sector) rather than showing national percentages. Bottom of page 1 and page 2 show coalition preference questions which are not extracted per spec."
+}
