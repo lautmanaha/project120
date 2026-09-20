@@ -50,6 +50,17 @@ def notify_issues(log) -> None:
     (ROOT / "db" / "quarantine.json").write_text(json.dumps(q, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def input_fingerprint() -> str:
+    """sha256 של כל מה שהמודל קורא: קלט הסקרים, העוגן/הכיול, ההסגר, קוד המודל וגרסת השיטה."""
+    import hashlib
+    h = hashlib.sha256()
+    for rel in ["model/polls_model.csv", "model/anchor_trusted.json", "model/calibration_hist.json", "db/quarantine.json",
+                "model/run_model.py", "model/seats.py", "vendor/kronikas/model.py", "model/history.py"]:
+        f = ROOT / rel
+        h.update(rel.encode()); h.update(f.read_bytes() if f.exists() else b"-")
+    return h.hexdigest()
+
+
 def main(argv=None) -> int:
     import argparse
     ap = argparse.ArgumentParser()
@@ -93,7 +104,16 @@ def main(argv=None) -> int:
                 notify_issues(log)
         rc3 = step("rebuild db + exports", [PY, "db/build_db.py"], log)
         rc4 = step("export excel", [PY, "db/export_excel.py"], log)
-        rc5 = step("model", [PY, "model/build_input.py"], log) or step("anchor", [PY, "model/anchor.py"], log) or step("model fit", [PY, "model/run_model.py", "--chains", "4", "--draws", "1500", "--industry-lean-json", "model/anchor_trusted.json", "--industry-lean-key", "combined_hist", "--industry-sd-key", "hist_sd"], log)
+        rc5 = step("model input", [PY, "model/build_input.py"], log) or step("anchor", [PY, "model/anchor.py"], log)
+        # טביעת אצבע של הקלט למודל: אם שום דבר שהמודל רואה לא השתנה מאז הריצה הקודמת - אין מה להריץ מחדש
+        # (ריצה חוזרת על אותם נתונים במכונה אחרת נותנת תוצאה מעט שונה ומזיזה את האתר בלי סיבה). הריצה היומית (בלי הדגל) תמיד רצה.
+        fp_file = ROOT / "model" / "output" / "input_fingerprint.txt"
+        fp = input_fingerprint()
+        if not rc5 and a.skip_model_if_no_new and fp_file.exists() and fp_file.read_text().strip() == fp:
+            log.write(f"\n##### model input unchanged ({fp[:12]}) - skipping model\n"); print("NO_CHANGE"); return 0
+        rc5 = rc5 or step("model fit", [PY, "model/run_model.py", "--chains", "4", "--draws", "1500", "--industry-lean-json", "model/anchor_trusted.json", "--industry-lean-key", "combined_hist", "--industry-sd-key", "hist_sd"], log)
+        if not rc5:
+            fp_file.write_text(fp)
         rc6 = step("seats", [PY, "model/seats.py"], log) or step("history", [PY, "model/history.py"], log) or step("site data", [PY, "site/build_site_data.py"], log) or step("site html", [PY, "site/build_site.py"], log) or step("gate", [PY, "site/gate.py"], log)
         if not rc6:
             step("brief (telegram)", [PY, "scraper/brief.py", "--send"], log)   # בריף אחרי כל ריצה; כשל בו לא מפיל את הריצה

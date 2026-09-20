@@ -52,7 +52,9 @@ def list_folder(folder_id: str) -> list[dict]:
 def parse_title(title: str) -> dict | None:
     m = NAME_RE.search(title.replace("׳", "'").replace("’", "'"))
     if not m:
-        return None
+        # שם גנרי מהשירות שמעתיק את הקבצים (Survey_4150.pdf): רק מספר סימוכין; התאריך והמכון יגיעו מהחילוץ
+        g = re.search(r"(?i)survey[_ -]?(\d{4})\.pdf$", title.strip())
+        return {"ref": g.group(1), "date": None, "editor": None} if g else None
     d, mo, y, ref, editor = m.groups()
     try:
         date = dt.date(int(y), int(mo), int(d)).isoformat()
@@ -104,7 +106,12 @@ def main(argv=None) -> int:
             new_from_payload = from_payload(json.loads(Path(a.payload).read_text(encoding="utf-8")))
         except Exception as ex:  # ה-webhook הוא קיצור דרך; אם נכשל - סריקת התיקייה תתפוס את הסקר
             print("payload נכשל:", ex)
-    entries = list_folder(a.folder)
+    try:
+        entries = list_folder(a.folder)
+    except Exception as ex:   # רשימת התיקייה לא נגישה (חסימה זמנית של Drive): לא לקרוס, לנסות שוב בריצה הבאה
+        print(f"רשימת התיקייה נכשלה: {type(ex).__name__}: {ex}", file=sys.stderr)
+        print(f"NEW={new_from_payload}")
+        return 1
     print(f"בתיקייה: {len(entries)} קבצים")
     conn = sqlite3.connect(DB)
     new = 0
@@ -118,7 +125,9 @@ def main(argv=None) -> int:
         if prev and (prev["info"]["date"] or "") >= (info["date"] or ""):
             continue
         seen_refs[info["ref"]] = {"entry": e, "info": info}
+    failed = []
     for ref, item in sorted(seen_refs.items()):
+      try:   # קובץ אחד שנכשל בהורדה לא עוצר את השאר, ו-NEW= מודפס תמיד
         e, info = item["entry"], item["info"]
         target = PDF_DIR / f"cec_{ref}.pdf"
         if target.exists():
@@ -143,9 +152,13 @@ def main(argv=None) -> int:
         upsert_meta(conn, ref, info, e["title"], len(data), sha, e["id"])
         new += 1
         print(f"  הורד: {ref} ({len(data)//1024} KB) {e['title']}" + (f"  [תוכן זהה ל-{dup[0]}]" if dup else ""))
+      except Exception as ex:
+        failed.append(ref); print(f"  נכשל: {ref} - {type(ex).__name__}: {ex}", file=sys.stderr)
     conn.commit()
+    if failed:
+        print("נכשלו בהורדה (ינוסו שוב בריצה הבאה):", failed, file=sys.stderr)
     print(f"NEW={new + new_from_payload}")
-    return 0
+    return 1 if failed else 0
 
 
 def from_payload(pl: dict) -> int:

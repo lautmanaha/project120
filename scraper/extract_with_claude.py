@@ -84,18 +84,20 @@ def extract_one(ref: str, pdf_path: Path, meta_hint: dict | None = None, retries
         content.append({"type": "image", "source": {"type": "base64", "media_type": "image/png",
                                                      "data": _png_b64(p)}})
     last_err = ""
+    candidate: dict | None = None
     for attempt in range(retries + 1):
         msgs = [{"role": "user", "content": content}]
         if last_err:
             msgs[0]["content"] = content + [{"type": "text", "text":
                 f"Your previous answer failed validation: {last_err}. Fix it and return the full JSON again."}]
-        resp = client.messages.create(model=MODEL, max_tokens=8000, messages=msgs)
+        resp = client.messages.create(model=MODEL, max_tokens=16000, messages=msgs)
         text = "".join(b.text for b in resp.content if b.type == "text").strip()
         text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
         try:
             d = json.loads(text)
         except json.JSONDecodeError as e:
-            last_err = f"invalid JSON: {e}"
+            last_err = f"invalid JSON: {e}" + (" (output truncated at max_tokens)" if resp.stop_reason == "max_tokens" else "")
+            print(f"[{ref}] attempt {attempt + 1}: {last_err}", file=sys.stderr)
             continue
         errs = validate(d, ref)
         if not errs:
@@ -104,6 +106,10 @@ def extract_one(ref: str, pdf_path: Path, meta_hint: dict | None = None, retries
         d["extraction_notes"] = (d.get("extraction_notes") or "") + f" [VALIDATION: {last_err}]"
         candidate = d
     # החזרת הניסיון האחרון עם דגל, כדי שאדם יבדוק
+    if candidate is None:
+        # אף ניסיון לא החזיר JSON תקין: קובץ-שלד מסומן לבדיקה, כדי שסקר אחד לא יחסום את כל השאר
+        candidate = {"ref": ref, "questions": [], "needs_review": True,
+                     "extraction_notes": f"[EXTRACTION FAILED after {retries + 1} attempts: {last_err}]"}
     candidate["needs_review"] = True
     return candidate
 
@@ -136,9 +142,13 @@ def main(argv: list[str] | None = None) -> int:
         print("חסר ANTHROPIC_API_KEY - לא ניתן לחלץ אוטומטית. הקבצים ממתינים:", [r for r, _ in todo], file=sys.stderr)
         return 3
     flagged = []
+    failed = []
     for ref, pdf in todo:
         print(f"מחלץ {ref} ...", end=" ", flush=True)
-        d = extract_one(ref, pdf, meta.get(ref))
+        try:
+            d = extract_one(ref, pdf, meta.get(ref))
+        except Exception as ex:   # סקר אחד שנכשל (PDF פגום, שגיאת API) לא עוצר את החילוץ של האחרים
+            print(f"נכשל: {type(ex).__name__}: {ex}", file=sys.stderr); failed.append(ref); continue
         (OUT_DIR / f"cec_{ref}.json").write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
         if d.get("needs_review"):
             flagged.append(ref)
@@ -147,6 +157,9 @@ def main(argv: list[str] | None = None) -> int:
             print("נשמר")
     if flagged:
         print("דורשים בדיקה ידנית:", flagged, file=sys.stderr)
+    if failed:
+        print("נכשלו (ינוסו שוב בריצה הבאה):", failed, file=sys.stderr)
+        return 1
     return 0
 
 
