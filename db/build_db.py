@@ -241,7 +241,7 @@ def main() -> int:
         elif qe.get("status") == "rejected":
             exclude = "נדחה בבקרת איכות" + (f": {qe['note']}" if qe.get("note") else "")
         elif not has_main:
-            exclude = "אין שאלת הצבעה"
+            exclude = "חילוץ אוטומטי נכשל - ממתין לבדיקה" if "[EXTRACTION FAILED" in (d.get("extraction_notes") or "") else "אין שאלת הצבעה"
         else:
             pop = (d.get("population") or "")
             notes = (mains[0].get("notes") or "")

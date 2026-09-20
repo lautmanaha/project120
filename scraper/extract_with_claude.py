@@ -98,6 +98,7 @@ def extract_one(ref: str, pdf_path: Path, meta_hint: dict | None = None, retries
         except json.JSONDecodeError as e:
             last_err = f"invalid JSON: {e}" + (" (output truncated at max_tokens)" if resp.stop_reason == "max_tokens" else "")
             print(f"[{ref}] attempt {attempt + 1}: {last_err}", file=sys.stderr)
+            (OUT_DIR / f"cec_{ref}.raw{attempt + 1}.txt").write_text(text, encoding="utf-8")   # לאבחון
             continue
         errs = validate(d, ref)
         if not errs:

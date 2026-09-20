@@ -87,7 +87,7 @@ def _reason_en(r: str) -> str:
     import re as _re
     for pat, en in [(r"^הוגש מחדש כ-(\d+)", r"resubmitted as \1"), (r"^כפול של (\d+)", r"duplicate of \1"),
                     (r"^מדגם של תת-אוכלוסייה", "sector sample (not the general population)"), (r"^אין שאלת הצבעה", "no vote-intention question"),
-                    (r"^ממתין לבדיקה", "pending quality review"), (r"^נדחה בבקרת איכות", "rejected in quality review")]:
+                    (r"^ממתין לבדיקה", "pending quality review"), (r"^חילוץ אוטומטי נכשל", "automatic extraction failed - pending review"), (r"^נדחה בבקרת איכות", "rejected in quality review")]:
         m = _re.match(pat, r)
         if m:
             return en.replace("\\1", m.group(1)) if m.groups() else en

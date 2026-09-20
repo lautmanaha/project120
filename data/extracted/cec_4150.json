@@ -1,6 +1,45 @@
 {
   "ref": "4150",
-  "questions": [],
-  "needs_review": true,
-  "extraction_notes": "[EXTRACTION FAILED after 3 attempts: invalid JSON: Expecting value: line 1 column 1 (char 0)]"
+  "pollster_as_written": "חברת Next Data, המנופים 1, הרצליה",
+  "commissioner_as_written": "ערוץ עכשיו 14, צלע ההר 44, מודיעין",
+  "fieldwork_start": "2026-09-15",
+  "fieldwork_end": "2026-09-15",
+  "method": "internet",
+  "initial_sample": 550,
+  "respondents": 433,
+  "response_rate_pct": 4.0,
+  "margin_error_pct": 4.7,
+  "population": "433 נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "extraction_notes": "חולץ ידנית מה-PDF (ד\"ר אהרון לאוטמן, 20.9.2026) אחרי שהחילוץ האוטומטי נכשל. עמוד 2: מפת המנדטים הסופית, אחוז גולמי לצד כל רשימה; 4.0% לא החליטו; ארבע רשימות מתחת לסף עם אחוזים בלבד. 'הציונות הדתית בראשות בצלאל סמוטריץ' וזהות' - רשימה מאוחדת, משויכת להציונות הדתית. 'חד\"ש-תע\"ל-בל\"ד' - הרשימה המשותפת. 'יחד בראשות נפתלי בנט' - ביחד. עמודים 3-4: התאמה לראשות הממשלה ושאלות תוכן - לא נכללו.",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "מפת המנדטים הסופית · כנסת בת 120 מושבים · אחוז חסימה 3.25%",
+      "weighted": true,
+      "undecided_pct": 4.0,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "אחוז גולמי אינו לוקח בחשבון פיצוח מתלבטים וחישובי בדר-עופר; סה\"כ מנדטים 120, סה\"כ אחוזים 92.5%. גוש נתניהו 64, אופוזיציה 56 לפי הסקר.",
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": 30, "pct": 23.1},
+        {"party_as_written": "ישר בראשות גדי איזנקוט", "party": "ישר", "seats": 21, "pct": 16.0},
+        {"party_as_written": "ש\"ס בראשות אריה דרעי", "party": "ש\"ס", "seats": 10, "pct": 7.7},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": 9, "pct": 7.1},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": 8, "pct": 6.5},
+        {"party_as_written": "יחד בראשות נפתלי בנט", "party": "ביחד", "seats": 8, "pct": 6.0},
+        {"party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' וזהות", "party": "הציונות הדתית", "seats": 8, "pct": 6.1},
+        {"party_as_written": "יהדות התורה", "party": "יהדות התורה", "seats": 8, "pct": 6.3},
+        {"party_as_written": "חד\"ש-תע\"ל-בל\"ד", "party": "הרשימה המשותפת", "seats": 7, "pct": 5.5},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": 6, "pct": 4.6},
+        {"party_as_written": "רע\"מ בראשות מנסור עבאס", "party": "רע\"ם", "seats": 5, "pct": 3.6},
+        {"party_as_written": "המילואימניקים והכלכלית בראשות הנדל וזליכה", "party": "הכלכלית החדשה", "seats": 0, "pct": 2.1},
+        {"party_as_written": "עמך ישראל בראשות עופר וינטר", "party": "עמך ישראל", "seats": 0, "pct": 2.3},
+        {"party_as_written": "נועם לישראל בראשות אבי מעוז", "party": "נעם", "seats": 0, "pct": 0.3},
+        {"party_as_written": "כחול לבן בראשות בני גנץ", "party": "כחול לבן", "seats": 0, "pct": 0.4}
+      ]
+    }
+  ]
 }
