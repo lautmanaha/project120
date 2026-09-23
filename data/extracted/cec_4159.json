@@ -1,0 +1,96 @@
+{
+  "ref": "4159",
+  "pollster_as_written": "חברת Next Data",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-09-17",
+  "fieldwork_end": "2026-09-17",
+  "method": "internet",
+  "initial_sample": 8331,
+  "respondents": 920,
+  "response_rate_pct": 11.0,
+  "margin_error_pct": 3.4,
+  "population": "בוגרים (בני 18+), התחומים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "מפת המנדטים הסופית · כנסת בת 120 מושבים · אחוז חסימה 3.25%",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 31,
+          "pct": 24.0
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 20,
+          "pct": 15.4
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 10,
+          "pct": 7.9
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט ויאיר לפיד",
+          "party": "ביחד",
+          "seats": 9,
+          "pct": 6.9
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יצחק גולדקנופף",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.1
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "הציונות הדתית חדת בראשות בצלאל סמוטריץ' ומשה פייגלין",
+          "party": "הציונות הדתית",
+          "seats": 7,
+          "pct": 5.3
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.5
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 6.8
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.0
+        }
+      ],
+      "undecided_pct": 2.2,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "התאמה לראשות הממשלה question is not extracted. Parties below threshold listed separately with their pct."
+    }
+  ],
+  "extraction_notes": "The PDF includes bloc preference and PM suitability questions which are not extracted per spec. The main vote intention table includes percentages (אחוז גולמי) and seats. Parties that did not pass the threshold (3.25%): ענר ישראל בראשות עופר וינטר (2.6%), המילואימניקים והמפלגה הכלכלית בראשות יועז הנדל ויורן זליכה (2.2%), כחול לבן בראשות בני גנץ (0.4%), הציבור החרדי (0.3%). Undecided percentage is listed as לא החליטו (2.2%)."
+}

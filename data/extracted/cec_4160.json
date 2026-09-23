@@ -1,0 +1,132 @@
+{
+  "ref": "4160",
+  "pollster_as_written": "קנטר ישראל",
+  "commissioner_as_written": null,
+  "fieldwork_start": "2026-09-16",
+  "fieldwork_end": "2026-09-17",
+  "method": "internet",
+  "initial_sample": 2489,
+  "respondents": 1938,
+  "response_rate_pct": 78.0,
+  "margin_error_pct": 4.2,
+  "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "פירוט השאלות ואחוזי התמיכה המקומיים - איזו היא מקדימות היום הבחירות לכנסת, והמפלגות המתמודדות יהיו המפלגות הבאות עם ראשי המפלגות שבראשה בפועל",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 20,
+          "pct": 16.2
+        },
+        {
+          "party_as_written": "\"בחד\" בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 13,
+          "pct": 10.5
+        },
+        {
+          "party_as_written": "מפלגת 'ישר! בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 22,
+          "pct": 17.8
+        },
+        {
+          "party_as_written": "מפלגת הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.2
+        },
+        {
+          "party_as_written": "המיליאונרקים והמפלגה הכלכלית בראשות יוחי הנדל וירון זליכה",
+          "party": "הכלכלית החדשה",
+          "seats": 4,
+          "pct": 3.3
+        },
+        {
+          "party_as_written": "הציונות הדתית זהות בראשות בצלאל סמוטריץ'",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": 4.9
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.5
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 4,
+          "pct": 3.3
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 8,
+          "pct": 6.5
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": 5.6
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "חד\"-ש-תע\"ל ובל\"ד בראשות יוסף ג'אברין",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.6
+        },
+        {
+          "party_as_written": "רע\"ם בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 1.2
+        },
+        {
+          "party_as_written": "היבור החרדי בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.8
+        },
+        {
+          "party_as_written": "מפלגת נעם בראשות אבי משה",
+          "party": "נעם",
+          "seats": 0,
+          "pct": 0.4
+        },
+        {
+          "party_as_written": "\"יבצע שחור – מקן שלום התורה\" בראשות אליהו באומריינד",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.5
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "The table includes parties that did not pass the threshold with 0 seats. The party 'יבצע שחור – מקן שלום התורה' does not match the canonical list and is marked as 'אחר'."
+    }
+  ],
+  "extraction_notes": "Page 1 contains methodological details: survey name 'ישראל היום - ממצאי סקר מנדטים 17/09/2026 - דיווח לועדת הבחירות', fieldwork dates 16-17 September, conducted by Kantar Israel via internet panel, initial sample 2489, respondents 1938 (78% participation rate), margin of error ±4.2%. Page 2 contains the main vote intention table with both percentages and seats (mandates). Page 3 contains non-vote-intention questions which were not extracted per spec."
+}

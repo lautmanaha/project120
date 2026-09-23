@@ -76,7 +76,12 @@
   "4150",
   "4151",
   "4153",
-  "4146"
+  "4146",
+  "4154",
+  "4158",
+  "4159",
+  "4160",
+  "4161"
  ],
  "polls": {
   "4140": {
@@ -98,6 +103,34 @@
    "issue": "https://github.com/lautmanaha/project120/issues/40",
    "decided": "2026-09-14T22:08:54",
    "note": ""
+  },
+  "4158": {
+   "status": "pending",
+   "flags": [
+    "מכון חדש במאגר: ערוך סיגר מעריב (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי)"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "ערוך סיגר מעריב",
+   "fieldwork": "2026-09-16..2026-09-17",
+   "created": "2026-09-23T20:17:51",
+   "issue": "https://github.com/lautmanaha/project120/issues/42"
+  },
+  "4160": {
+   "status": "pending",
+   "flags": [
+    "מכון חדש במאגר: קנטר ישראל (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי)"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "קנטר ישראל",
+   "fieldwork": "2026-09-16..2026-09-17",
+   "created": "2026-09-23T20:17:53",
+   "issue": "https://github.com/lautmanaha/project120/issues/43"
   }
  }
 }
