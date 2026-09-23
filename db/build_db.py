@@ -23,8 +23,8 @@ EXPORTS = ROOT / "exports"
 # מפתח: תת-מחרוזת שמופיעה ב"עורך הסקר" (ברשומת הוועדה או ב-PDF) -> שם קנוני
 POLLSTER_CANON = [
     ("רוזנר", "פרויקט המדגם (רוזנר)"),
-    ("קנטאר", "קנטאר"), ("קאנטר", "קנטאר"),
-    ("לזר", "לזר מחקרים"),
+    ("קנטאר", "קנטאר"), ("קאנטר", "קנטאר"), ("קנטר", "קנטאר"), ("Kantar", "קנטאר"),
+    ("לזר", "לזר מחקרים"), ("פאנלס", "לזר מחקרים"), ("Panels", "לזר מחקרים"),
     ("מאגר מוחות", "מאגר מוחות"),
     ("דיירקט", "דיירקט פולס"),
     ("טאטיקה", "טאטיקה"),
@@ -158,6 +158,10 @@ CREATE INDEX idx_results_ref ON poll_results(reference_number);
 """
 
 
+_OV = Path(__file__).resolve().parent / "pollster_override.json"
+OVERRIDE: dict = {k: v for k, v in (json.loads(_OV.read_text(encoding="utf-8")) if _OV.exists() else {}).items() if not k.startswith("_")}
+
+
 def canon(text: str | None, table: list[tuple[str, str]]) -> str | None:
     if not text:
         return None
@@ -178,12 +182,20 @@ def main() -> int:
     publisher_ids: dict[str, int] = {}
     publisher_alias: dict[str, set] = {}
 
-    def get_pollster(*names: str | None) -> int | None:
-        c = None
-        for n in names:
-            c = canon(n, POLLSTER_CANON)
-            if c:
-                break
+    def get_pollster(*names: str | None, ref: str | None = None) -> int | None:
+        # 1) שיוך ידני מפורש (db/pollster_override.json) - כשהחילוץ שיבש את שם המכון
+        # 2) התאמה למכון מוכר בכל אחד מהשמות (לא רק הראשון שאינו ריק)
+        # 3) רק אם אף שם לא מוכר - השם הראשון כמו שהוא (מכון חדש באמת)
+        c = OVERRIDE.get(str(ref)) if ref else None
+        if not c:
+            for n in names:
+                if n and any(k.lower() in n.lower() for k, _ in POLLSTER_CANON):
+                    c = canon(n, POLLSTER_CANON); break
+        if not c:
+            for n in names:
+                c = canon(n, POLLSTER_CANON)
+                if c:
+                    break
         if not c:
             return None
         if c not in pollster_ids:
@@ -227,7 +239,7 @@ def main() -> int:
         m = meta.get(ref)
         editor_cec = m[1] if m else None
         publisher_cec = m[2] if m else None
-        pid = get_pollster(editor_cec, d.get("pollster_as_written"))
+        pid = get_pollster(editor_cec, d.get("pollster_as_written"), ref=ref)
         pubid = get_publisher(publisher_cec, d.get("commissioner_as_written"))
 
         mains = [q for q in d["questions"] if q["type"] == "main"]
