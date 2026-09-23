@@ -75,14 +75,24 @@ def main(argv=None) -> int:
         log.write(f"\n##### daily_update {dt.datetime.now():%Y-%m-%d %H:%M:%S} #####\n")
         n_new = None
         if a.source == "drive":
-            import io
-            buf = io.StringIO()
             cmd = [PY, "scraper/drive_fetch.py"] + (["--payload", "payload.json"] if (ROOT / "payload.json").exists() else [])
             r = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
             log.write(f"\n=== fetch (drive) ===\n{r.stdout}{r.stderr}--- exit {r.returncode}\n"); rc = r.returncode
             m = [l for l in r.stdout.splitlines() if l.startswith("NEW=")]
             n_new = int(m[-1].split("=")[1]) if m else None
-            print(f"new polls: {n_new}")
+            # גישוש ישיר באתר הוועדה (כתובת PDF קבועה לפי מספר הפרסום והאסמכתא) - עצמאי מהסוכן שמעתיק ל-Drive
+            r2 = subprocess.run([PY, "scraper/cec_probe.py"], cwd=ROOT, capture_output=True, text=True)
+            log.write(f"\n=== probe (gov.il) ===\n{r2.stdout}{r2.stderr}--- exit {r2.returncode}\n")
+            m2 = [l for l in r2.stdout.splitlines() if l.startswith("NEW=")]
+            n_probe = int(m2[-1].split("=")[1]) if m2 else 0
+            if "BLOCKED" in r2.stdout:
+                print("probe: gov.il blocked (Cloudflare) - relying on Drive")
+            n_new = (n_new or 0) + n_probe if (n_new is not None or n_probe) else n_new
+            # PDF שהגיע בדרך אחרת (הועלה ידנית ל-repo) ועדיין לא חולץ - נחשב חדש
+            pending = [p for p in (ROOT / "data" / "pdfs").glob("cec_*.pdf") if not (ROOT / "data" / "extracted" / (p.stem + ".json")).exists()]
+            if pending:
+                n_new = (n_new or 0) + len(pending)
+            print(f"new polls: {n_new} (drive={m[-1][4:] if m else '?'}, probe={n_probe}, pending={len(pending)})")
         else:
             try:
                 import playwright  # noqa: F401

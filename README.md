@@ -154,6 +154,13 @@ secrets (Settings -> Secrets and variables -> Actions): `ANTHROPIC_API_KEY` (ח�
 וכרטיס 1080x1080 (`brief/card.png`, Playwright), ושולח לצ'אט הפרטי של הבוט @TheProject120_bot. דורש secret `TELEGRAM_BOT_TOKEN`;
 מזהה הצ'אט מתגלה בריצה הראשונה (שלח הודעה לבוט לפניה) ונשמר ב-`db/telegram.json`. הטיוטה מיועדת להעברה ידנית לערוץ/קבוצה.
 
+### גישוש ישיר באתר הוועדה (cec_probe)
+כתובת ה-PDF באתר הוועדה קבועה: `.../knesset_election<N>/he/Survey_<REF>.pdf` (N = מספר פרסום רץ, REF = אסמכתא).
+`scraper/cec_probe.py` מנסה לפרסום הבא את האסמכתאות שאחרי האחרונה הידועה (`db/cec_index.json`), מוריד פגיעות ל-`data/pdfs`
+ורושם ב-`polls_meta`. רץ בכל ריצה לצד סריקת ה-Drive; אם gov.il חוסם (Cloudflare) מודפס BLOCKED והצינור נשען על ה-Drive.
+אפשר להריץ גם מקומית (מהמחשב הביתי Cloudflare בדרך כלל לא חוסם): `python scraper\cec_probe.py` ואז commit+push - הריצה
+הבאה בענן תחלץ כל PDF שאין לו JSON.
+
 ### עדכון בזמן אמת (webhook)
 השירות שמזהה סקר חדש יכול להפעיל את ה-workflow מיד, במקום לחכות לבדיקה הבאה:
 ```
