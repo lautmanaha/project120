@@ -114,6 +114,7 @@ def main(argv=None) -> int:
                 notify_issues(log)
         rc3 = step("rebuild db + exports", [PY, "db/build_db.py"], log)
         rc4 = step("export excel", [PY, "db/export_excel.py"], log)
+        step("alert new polls (telegram)", [PY, "scraper/brief.py", "--alert-new"], log)   # התראה מיידית, לפני המודל; כשל לא מפיל את הריצה
         rc5 = step("model input", [PY, "model/build_input.py"], log) or step("anchor", [PY, "model/anchor.py"], log)
         # טביעת אצבע של הקלט למודל: אם שום דבר שהמודל רואה לא השתנה מאז הריצה הקודמת - אין מה להריץ מחדש
         # (ריצה חוזרת על אותם נתונים במכונה אחרת נותנת תוצאה מעט שונה ומזיזה את האתר בלי סיבה). הריצה היומית (בלי הדגל) תמיד רצה.

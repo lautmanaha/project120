@@ -1,5 +1,6 @@
 # פרויקט 120 - עדכון אוטומטי בענן:
-#   כל שעתיים: בדיקה אם יש סקרים חדשים בתיקיית ה-Drive. אם יש - חילוץ (Claude), מודל, אתר, commit, פריסה.
+#   כל 30 דקות: גישוש ישיר באתר הוועדה + סריקת תיקיית ה-Drive. אם יש סקר חדש - התראה בטלגרם, חילוץ (Claude), מודל, אתר, commit, פריסה.
+#   בלי סקר חדש הריצה מסתיימת תוך 1-2 דקות (המודל לא רץ).
 #   פעם ביום (06:00 UTC = 09:00 ישראל): ריצה מלאה גם בלי סקרים חדשים (אופק התחזית מתקצר).
 #   ידני: Actions -> "Update forecast" -> Run workflow (אפשר לסמן "force").
 #   בזמן אמת: השירות שמעתיק את הסקרים ל-Drive שולח webhook (repository_dispatch, event_type=new_poll) - ראה README.
@@ -9,7 +10,7 @@
 name: Update forecast
 on:
   schedule:
-    - cron: "17 */2 * * *"
+    - cron: "*/30 * * * *"
     - cron: "0 6 * * *"
   repository_dispatch:
     types: [new_poll]

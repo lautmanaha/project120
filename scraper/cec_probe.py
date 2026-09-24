@@ -80,6 +80,7 @@ def register(conn: sqlite3.Connection, ref: int, n: int, data: bytes) -> None:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--max-ahead", type=int, default=40, help="כמה אסמכתאות קדימה לנסות לכל פרסום")
+    ap.add_argument("--max-behind", type=int, default=30, help="כמה אסמכתאות אחורה (פרסום באיחור של אסמכתא נמוכה - קרה 7 פעמים ב-81 הראשונים)")
     ap.add_argument("--max-new", type=int, default=12, help="כמה פרסומים חדשים לכל היותר בריצה אחת")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args(argv)
@@ -88,14 +89,17 @@ def main(argv=None) -> int:
     idx = load_index(conn)
     if not idx:
         print("אין מיפוי ידוע (db/cec_index.json) - אין מאיפה להתחיל"); print("NEW=0"); return 1
-    n = max(idx); ref = idx[n]
-    print(f"אחרון ידוע: knesset_election{n} -> {ref}")
+    n = max(idx); ref = max(idx.values())
+    known = set(idx.values()) | {int(r[0]) for r in conn.execute("SELECT reference_number FROM polls_meta") if str(r[0]).isdigit()}
+    print(f"אחרון ידוע: knesset_election{n} -> {idx[n]} (אסמכתא מקסימלית {ref})")
     session = requests.Session()
     new, blocked = 0, False
     for _ in range(a.max_new):
         n += 1
         hit = None
-        for cand in range(ref + 1, ref + 1 + a.max_ahead):
+        # קודם קדימה (המקרה הרגיל), אחר כך אחורה - אסמכתאות שעוד לא ראינו בכלל
+        cands = list(range(ref + 1, ref + 1 + a.max_ahead)) + [c for c in range(ref, ref - a.max_behind, -1) if c not in known]
+        for cand in cands:
             try:
                 code, data = fetch(session, n, cand)
             except Exception as ex:
@@ -107,11 +111,11 @@ def main(argv=None) -> int:
             time.sleep(0.3)
         if blocked or not hit:
             break
-        ref, data = hit
-        idx[n] = ref
-        print(f"  חדש: knesset_election{n} -> {ref} ({len(data)//1024} KB)")
+        found, data = hit
+        idx[n] = found; known.add(found); ref = max(ref, found)
+        print(f"  חדש: knesset_election{n} -> {found} ({len(data)//1024} KB)")
         if not a.dry_run:
-            register(conn, ref, n, data)
+            register(conn, found, n, data)
             save_index(idx)
         new += 1
     if blocked:

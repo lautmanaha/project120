@@ -87,7 +87,7 @@ def build_texts(d: dict, prev: dict | None, polls: list[dict]) -> tuple[str, str
                    "parties": {p["party"]: p["seats_mean"] - next((q["seats_mean"] for q in prev["parties"] if q["party"] == p["party"]), p["seats_mean"]) for p in d["seats"]}}
     movers = sorted(chg.get("parties", {}).items(), key=lambda kv: -abs(kv[1]))[:3] if chg else []
     movers = [(p, v) for p, v in movers if abs(v) >= 0.3]
-    risk = [p for p in d["seats"] if 0.02 < p["p_threshold"] < 0.98]
+    risk = [p for p in d["seats"] if 0.02 < p["p_threshold"] < 0.80]   # כמו באתר: מעל 80% לעבור - לא "על הסף"
     wk = d.get("delta")
     n_new = len(polls)
     in_model = [p for p in polls if p["in_model"]]
@@ -253,11 +253,63 @@ def chat_id(token: str) -> str | None:
     return None
 
 
+ALERTS = ROOT / "db" / "telegram_alerts.json"
+
+
+def alert_new(conn: sqlite3.Connection) -> int:
+    """התראה מיידית לטלגרם על כל סקר חדש שנקלט (לפני הרצת המודל): מכון, מזמין, תאריך, גושים לפי הסקר עצמו, והאם נכנס למודל.
+    כל אסמכתא מתריעה פעם אחת (db/telegram_alerts.json)."""
+    global BLOC_DEF
+    if not BLOC_DEF:
+        try:
+            BLOC_DEF = json.loads((ROOT / "site" / "data.json").read_text(encoding="utf-8"))["bloc_def"]
+        except Exception:
+            pass
+    sent = set(json.loads(ALERTS.read_text(encoding="utf-8"))) if ALERTS.exists() else set()
+    since = (dt.date.today() - dt.timedelta(days=3)).isoformat()
+    refs = [r[0] for r in conn.execute("SELECT reference_number FROM polls_meta WHERE substr(first_seen,1,10)>=? ORDER BY reference_number", (since,))]
+    todo = [r for r in refs if r not in sent]
+    if not todo:
+        print("אין סקרים חדשים להתרעה"); return 0
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    cid = chat_id(token) if token else None
+    for ref in todo:
+        row = conn.execute("""SELECT ps.name, pub.name, m.survey_publisher, p.fieldwork_end, p.respondents, p.in_model, p.exclude_reason
+                              FROM polls_meta m LEFT JOIN polls p ON p.reference_number=m.reference_number
+                              LEFT JOIN pollsters ps ON ps.pollster_id=p.pollster_id LEFT JOIN publishers pub ON pub.publisher_id=p.publisher_id
+                              WHERE m.reference_number=?""", (ref,)).fetchone()
+        if not row or row[0] is None:
+            continue   # עוד לא חולץ - נתריע בריצה הבאה
+        pollster, pub, pub_meta, fe, n, in_model, reason = row
+        seats = conn.execute("""SELECT r.party, r.seats FROM poll_results r JOIN poll_questions q ON q.question_id=r.question_id
+                                WHERE r.reference_number=? AND q.type='main' AND r.seats IS NOT NULL AND r.seats>0 ORDER BY r.seats DESC""", (ref,)).fetchall()
+        blocs = {b: sum(int(s) for p_, s in seats if p_ in ms) for b, ms in BLOC_DEF.items()}
+        top = " · ".join(f"{p_} {s}" for p_, s in seats[:6])
+        status = "✅ נכנס למודל - התחזית מתעדכנת (כ-10 דקות)" if in_model else f"⏸️ לא נכנס למודל: {reason or ''}"
+        if reason and reason.startswith("ממתין"):
+            status += "\nלאישור: תגובה 'אישור' ב-Issue שנפתח ב-GitHub"
+        text = (f"🆕 סקר חדש באתר ועדת הבחירות - {ref}\n{pollster or ''}" + (f" / {pub or pub_meta}" if (pub or pub_meta) else "") +
+                (f" · {fmt_date(fe)}" if fe else "") + (f" · n={n}" if n else "") + "\n" +
+                (" | ".join(f"{b} {v}" for b, v in blocs.items() if v) + "\n" if any(blocs.values()) else "") +
+                (top + "\n" if top else "") + status)
+        print(text)
+        if cid:
+            r = telegram(token, "sendMessage", chat_id=cid, text=text, disable_web_page_preview="true")
+            if not r.get("ok"):
+                print("Telegram:", r.get("description")); continue
+        sent.add(ref)
+    ALERTS.write_text(json.dumps(sorted(sent), ensure_ascii=False), encoding="utf-8")
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--send", action="store_true")
     ap.add_argument("--no-card", action="store_true")
+    ap.add_argument("--alert-new", action="store_true", help="רק התראה מיידית על סקרים חדשים (לפני המודל)")
     a = ap.parse_args(argv)
+    if a.alert_new:
+        return alert_new(sqlite3.connect(ROOT / "db" / "polls.sqlite"))
     OUT.mkdir(exist_ok=True)
     d = json.loads((ROOT / "site" / "data.json").read_text(encoding="utf-8"))
     global BLOC_DEF

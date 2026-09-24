@@ -136,6 +136,9 @@ def main(argv=None) -> int:
             stored_title = (json.loads(row[0]).get("title") if row and row[0] else None)
             if stored_title == e["title"] or a.dry_run:
                 continue
+            if not stored_title:
+                # הקובץ כבר אצלנו מדרך אחרת (גישוש באתר הוועדה / העלאה ידנית) - רק רושמים את שם הקובץ ב-Drive, בלי הורדה חוזרת
+                upsert_meta(conn, ref, info, e["title"], target.stat().st_size, hashlib.sha256(target.read_bytes()).hexdigest(), e["id"]); continue
             data = download(e["id"]); sha = hashlib.sha256(data).hexdigest()
             if sha == hashlib.sha256(target.read_bytes()).hexdigest():
                 upsert_meta(conn, ref, info, e["title"], len(data), sha, e["id"]); continue
