@@ -120,7 +120,7 @@
    "issue": "https://github.com/lautmanaha/project120/issues/42"
   },
   "4160": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "מכון חדש במאגר: קנטר ישראל (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי)"
    ],
@@ -131,7 +131,9 @@
    "pollster": "קנטר ישראל",
    "fieldwork": "2026-09-16..2026-09-17",
    "created": "2026-09-23T20:17:53",
-   "issue": "https://github.com/lautmanaha/project120/issues/43"
+   "issue": "https://github.com/lautmanaha/project120/issues/43",
+   "decided": "2026-09-24T19:35:41",
+   "note": ""
   }
  }
 }
