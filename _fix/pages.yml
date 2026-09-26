@@ -10,6 +10,8 @@ on:
       - "site/en/index.html"
       - "site/about.html"
       - "site/en/about.html"
+      - "site/og.png"
+      - "site/og_en.png"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 permissions:
@@ -35,6 +37,7 @@ jobs:
           cp site/logo.svg _site/logo.svg
           mkdir -p _site/en && cp site/en/index.html _site/en/index.html
           cp site/about.html _site/about.html && cp site/en/about.html _site/en/about.html
+          cp site/og.png site/og_en.png _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

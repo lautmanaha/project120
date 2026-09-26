@@ -77,7 +77,29 @@ def wrap(body: str, lang: str) -> str:
     return (f'<!doctype html>\n<html lang="{lang}" dir="{direction}">\n<head>\n<meta charset="utf-8">\n'
             f'<meta name="viewport" content="width=device-width,initial-scale=1">\n<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNTFBMjYiLz4KICA8ZyBmaWxsPSIjRjFGM0Y4Ij4KICAgIDxjaXJjbGUgY3g9IjExIiBjeT0iNDIiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjE1LjUiIGN5PSIyOS41IiByPSI0LjIiLz48Y2lyY2xlIGN4PSIyNCIgY3k9IjIwIiByPSI0LjIiLz4KICAgIDxjaXJjbGUgY3g9IjQ0IiBjeT0iMjAiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjUyLjUiIGN5PSIyOS41IiByPSI0LjIiLz48Y2lyY2xlIGN4PSI1NyIgY3k9IjQyIiByPSI0LjIiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iMzQiIGN5PSIxNiIgcj0iNS4yIiBmaWxsPSIjMDNBODlFIi8+CiAgPHRleHQgeD0iMzQiIHk9IjUyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSIxOSIgZmlsbD0iI0YxRjNGOCI+MTIwPC90ZXh0Pgo8L3N2Zz4K">\n{ANALYTICS}\n'
             f'<meta name="description" content="{"פרויקט 120 - תחזית הבחירות לכנסת ה-26 מכל הסקרים שפורסמו רשמית באתר ועדת הבחירות" if lang=="he" else "Project 120 - a statistical forecast of the 26th Knesset election, built from every poll filed with the Central Elections Committee"}">\n'
-            + body + '\n</html>\n')
+            + og_tags(lang) + body + '\n</html>\n')
+
+
+def og_tags(lang: str) -> str:
+    """תצוגה מקדימה בשיתוף (וואטסאפ, טלגרם, פייסבוק, X): כותרת, תיאור ותמונה קבועה (site/og.png / og_en.png)."""
+    base = "https://project120.co.il/"
+    if lang == "he":
+        t, d, img, url, loc = ("פרויקט 120 - תחזית הבחירות לכנסת ה-26",
+                               "מודל סטטיסטי מכל הסקרים שפורסמו רשמית באתר ועדת הבחירות: מנדטים, גושים, סיכוי לרוב ומי על אחוז החסימה. מתעדכן אוטומטית עם כל סקר חדש.",
+                               base + "og.png", base, "he_IL")
+    else:
+        t, d, img, url, loc = ("Project 120 - Israel election forecast",
+                               "A statistical forecast of the 26th Knesset election from every poll officially published by the Central Elections Committee: seats, blocs, majority odds and the threshold. Updated automatically.",
+                               base + "og_en.png", base + "en/", "en_US")
+    return ("\n".join([
+        f'<meta property="og:type" content="website">', f'<meta property="og:site_name" content="פרויקט 120 · Project 120">',
+        f'<meta property="og:title" content="{t}">', f'<meta property="og:description" content="{d}">',
+        f'<meta property="og:url" content="{url}">', f'<meta property="og:image" content="{img}">',
+        '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
+        f'<meta property="og:locale" content="{loc}">', '<meta name="twitter:card" content="summary_large_image">',
+        f'<meta name="twitter:title" content="{t}">', f'<meta name="twitter:description" content="{d}">', f'<meta name="twitter:image" content="{img}">',
+        f'<link rel="canonical" href="{url}">',
+        f'<link rel="alternate" hreflang="he" href="{base}">', f'<link rel="alternate" hreflang="en" href="{base}en/">']) + "\n")
 
 
 def build(lang: str) -> str:

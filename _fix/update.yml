@@ -76,7 +76,7 @@ jobs:
       - name: Stage site
         if: steps.commit.outputs.changed == 'true'
         run: |
-          mkdir -p _site/en && cp site/index.html _site/index.html && cp site/CNAME _site/CNAME && cp site/logo.svg _site/logo.svg && cp site/en/index.html _site/en/index.html && cp site/about.html _site/about.html && cp site/en/about.html _site/en/about.html
+          mkdir -p _site/en && cp site/index.html _site/index.html && cp site/CNAME _site/CNAME && cp site/logo.svg _site/logo.svg && cp site/en/index.html _site/en/index.html && cp site/about.html _site/about.html && cp site/en/about.html _site/en/about.html && cp site/og.png site/og_en.png _site/
       - uses: actions/upload-pages-artifact@v3
         if: steps.commit.outputs.changed == 'true'
         with:
