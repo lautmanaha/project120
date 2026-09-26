@@ -22,12 +22,15 @@ jobs:
         id: d
         env:
           TITLE: ${{ github.event.issue.title }}
+          ISSUE: ${{ github.event.issue.body }}
           BODY: ${{ github.event.comment.body }}
         run: |
           python3 - <<'EOF' >> "$GITHUB_OUTPUT"
           import os, re
           t, b = os.environ["TITLE"], os.environ["BODY"].strip()
-          ref = re.search(r"(\d{4})", t).group(1)
+          # כל הסקרים שב-Issue (כותרת + "סקר NNNN" בגוף) - Issue אחד יכול לרכז כמה סקרים
+          refs = list(dict.fromkeys(re.findall(r"(?<!\d)(4\d{3})(?!\d)", t) + re.findall(r"סקר (4\d{3})", os.environ.get("ISSUE", ""))))
+          ref = " ".join(refs)
           first = b.split()[0] if b else ""
           if first.lstrip("*").rstrip("*:.,") in ("אישור", "approve", "מאושר", "approved", "אשר"): act = "approve"
           elif first.lstrip("*").rstrip("*:.,") in ("דחייה", "reject", "דחה", "rejected", "נדחה"): act = "reject"
@@ -35,16 +38,22 @@ jobs:
           note = " ".join(b.split()[1:])[:200]
           print(f"ref={ref}\nact={act}\nnote={note}")
           EOF
+      - name: Unrecognized comment
+        if: steps.d.outputs.act == 'none'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body "לא בוצעה פעולה - כדי להכריע יש להתחיל את התגובה במילה **אישור** או **דחייה** (אפשר להוסיף הערה אחריה). סקרים ב-Issue - ${{ steps.d.outputs.ref }}"
       - name: Apply
         if: steps.d.outputs.act != 'none'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python3 scraper/qa_check.py --${{ steps.d.outputs.act }} ${{ steps.d.outputs.ref }} --note "${{ steps.d.outputs.note }}"
+          for r in ${{ steps.d.outputs.ref }}; do python3 scraper/qa_check.py --${{ steps.d.outputs.act }} $r --note "${{ steps.d.outputs.note }}"; done
           git config user.name "project120-bot"
           git config user.email "bot@project120.co.il"
           git add db/quarantine.json
-          git commit -m "QA: ${{ steps.d.outputs.act }} ${{ steps.d.outputs.ref }}" && git push
-          gh issue comment ${{ github.event.issue.number }} --body "$( [ "${{ steps.d.outputs.act }}" = approve ] && echo "אושר - הסקר נכנס למודל, התחזית מתעדכנת (כ-15 דקות)." || echo "נדחה - הסקר לא ייכנס למודל." )"
+          git commit -m "QA: ${{ steps.d.outputs.act }} ${{ steps.d.outputs.ref }}" && git pull --rebase -X theirs origin main && git push
+          gh issue comment ${{ github.event.issue.number }} --body "$( [ "${{ steps.d.outputs.act }}" = approve ] && echo "אושר (${{ steps.d.outputs.ref }}) - נכנס למודל, התחזית מתעדכנת (כ-15 דקות)." || echo "נדחה (${{ steps.d.outputs.ref }}) - לא ייכנס למודל." )"
           gh issue close ${{ github.event.issue.number }}
           gh workflow run update.yml -f force=true
