@@ -1,0 +1,132 @@
+{
+  "ref": "4163",
+  "pollster_as_written": "קנטר ישראל",
+  "commissioner_as_written": null,
+  "fieldwork_start": "2026-09-09",
+  "fieldwork_end": "2026-09-09",
+  "method": "internet",
+  "initial_sample": 2300,
+  "respondents": 554,
+  "response_rate_pct": 24.0,
+  "margin_error_pct": 4.2,
+  "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו היו מתקיימות היום הבחירות לכנסת, והמפלגות המתמודדות יהיו המפלגות הבאות עם ראשי המפלגות שבראשה בפועל, עבור איזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "ישר! בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 24,
+          "pct": 19.4
+        },
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 21,
+          "pct": 17.0
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 12,
+          "pct": 9.7
+        },
+        {
+          "party_as_written": "מפלגת הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.2
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.5
+        },
+        {
+          "party_as_written": "המיליאימניקים והמפלגה הכלכלית בראשות יוח המדל ויורן זליכה",
+          "party": "אחר",
+          "seats": 4,
+          "pct": 3.3
+        },
+        {
+          "party_as_written": "הציונות הדתית והזהות בראשות בצלאל סמוטריץ'",
+          "party": "הציונות הדתית",
+          "seats": 5,
+          "pct": 4.1
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר ווינטר",
+          "party": "עמך ישראל",
+          "seats": 4,
+          "pct": 3.3
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל ובל\"ד בראשות יוסף ג'אבארין",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "רע\"ם בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.1
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.8
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות משה ליצמן",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.9
+        },
+        {
+          "party_as_written": "מפלגת נעם בראשות אבי מעוז",
+          "party": "נעם",
+          "seats": 0,
+          "pct": 0.4
+        },
+        {
+          "party_as_written": "ישראל תחילה ועלה ירוק בראשות שרן השכל",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.5
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "המיליאימניקים והמפלגה הכלכלית is a merged label of בית ציוני + הכלכלית החדשה, mapped to אחר. ישראל תחילה ועלה ירוק mapped to אחר."
+    }
+  ],
+  "extraction_notes": "Survey conducted on 9.9.2026. Fieldwork methodology: אינטרנט פאנל משיבים. The merged list 'המיליאימניקים והמפלגה הכלכלית בראשות יוח המדל ויורן זליכה' represents בית ציוני + הכלכלית החדשה; as neither is the canonical larger component nor are they in the canonical list separately, mapped to אחר. 'ישראל תחילה ועלה ירוק' also not in canonical list, mapped to אחר. Page 3 contains additional questions not related to vote intention (preferential/coalition questions)."
+}

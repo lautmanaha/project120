@@ -82,7 +82,9 @@
   "4159",
   "4160",
   "4161",
-  "4162"
+  "4162",
+  "4163",
+  "4164"
  ],
  "polls": {
   "4140": {
@@ -133,6 +135,28 @@
    "created": "2026-09-23T20:17:53",
    "issue": "https://github.com/lautmanaha/project120/issues/43",
    "decided": "2026-09-24T19:35:41",
+   "note": ""
+  },
+  "4163": {
+   "status": "rejected",
+   "flags": [
+    "כמעט זהה לסקר 4137 (אותם תאריכי שדה, אותם מספרים) - כפילות/הגשה חוזרת?"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "קנטאר",
+   "fieldwork": "2026-09-09..2026-09-09",
+   "created": "2026-09-27T08:28:24",
+   "issue": "https://github.com/lautmanaha/project120/issues/44",
+   "decided": "2026-09-27T11:54:20",
+   "note": ""
+  },
+  "4137": {
+   "flags": [],
+   "status": "rejected",
+   "decided": "2026-09-27T11:54:20",
    "note": ""
   }
  }
