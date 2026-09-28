@@ -336,7 +336,7 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
 </div></section>
 
 <section id="sparties"><div class="wrap">
-  <div class="eyebrow">13 רשימות</div>
+  <div class="eyebrow" id="nlists-eyebrow">13 רשימות</div>
   <h2>המפלגות</h2>
   <p class="lede">המנדטים בתסריט המרכזי (סכום המפלגות תמיד 120), הטווח שבו נופלות 90% מהסימולציות, חלק הקולות והסיכוי לעבור את אחוז החסימה. <b>לחצו על מפלגה</b> להתפלגות המלאה ולמסלול שלה בזמן.</p>
   <div class="chips" id="blocfilter" style="margin-bottom:12px"></div>
@@ -353,6 +353,7 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
     <div class="chips" id="toggles"></div>
   </div>
   <div class="chart" id="trend"></div>
+  <p class="note" id="trendsum" style="margin-top:8px"></p>
   <div class="srcbox" id="srcbox"></div>
 </div></section>
 
@@ -369,8 +370,8 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
   <h2>איך זה עובד</h2>
   <div class="method">
     <div class="mcard"><h3><span>1</span>הנתונים</h3><p>כל סקר בחירות שפורסם לציבור חייב, לפי סעיף 16ה לחוק דרכי תעמולה, להיות מועבר לוועדת הבחירות המרכזית ומתפרסם באתרה. פרויקט 120 קורא את כל הסקרים משם - כפי שהוגשו, כולל גודל המדגם, מועד השדה ושיטת הביצוע - ולא מאתרי החדשות. סקרי תת-אוכלוסייה, סקרים ללא שאלת הצבעה והגשות כפולות אינם נכללים.</p></div>
-    <div class="mcard"><h3><span>2</span>המודל</h3><p>מודל בייסיאני היררכי: התמיכה בכל מפלגה היא סדרה בזמן שזזה בקצב שנלמד מהנתונים, לכל מפלגה בנפרד - עם תקרה של כ-10% שינוי יחסי בשבוע, כדי שזינוק חד-פעמי (כניסת רשימה חדשה) לא יוקרן קדימה כתנודתיות קבועה. לכל מכון נלמד אפקט בית - הנטייה השיטתית שלו ביחס לשאר - והיא מנוכה. כל סקר משוקלל לפי גודל המדגם, ורעש נוסף נלמד לכל מכון. התוצאה אינה מספר אחד אלא אלפי תסריטים אפשריים ליום הבחירות.</p></div>
-    <div class="mcard"><h3><span>3</span>מה שאי אפשר למדוד - הכיול</h3><p>טעות שכל המכונים חולקים אינה ניתנת לזיהוי מתוך הסקרים - הם מסכימים זה עם זה, והסכמה נראית כמו דיוק. לכן המודל מקבל "הטיה ענפית" מוצהרת, משני מקורות שמפורטים בטבלה למטה: <b>כיול 2022</b> - הפער השיטתי בין הסקרים האחרונים לפני בחירות 2022 לתוצאה, לפי מפלגה; ו<b>נקודת האמצע</b> - במפלגות שבהן המכונים חלוקים היום לשתי אסכולות ואין תקדים היסטורי להכריע ביניהן. מעבר להטיה עצמה, המודל מוסיף אי-ודאות ענפית של עד 1.5 נקודות למפלגה.</p></div>
+    <div class="mcard"><h3><span>2</span>המודל</h3><p>מודל בייסיאני היררכי: התמיכה בכל מפלגה היא סדרה בזמן שזזה בקצב שנלמד מהנתונים, לכל מפלגה בנפרד, כשהקצבים נמשכים לרמה ענפית משותפת (רשימה עם היסטוריה קצרה שואלת כוח מהאחרות במקום להיחתך ידנית). רשימה שנכנסה באמצע הסדרה נמדדת רק מהסקרים שאחרי כניסתה: סקרים שלא שאלו עליה, והשבוע הראשון אחרי הכניסה, אינם נחשבים נתון לגביה. לכל מכון נלמד אפקט בית - הנטייה השיטתית שלו ביחס לשאר - והיא מנוכה. כל סקר משוקלל לפי גודל המדגם, ורעש נוסף נלמד לכל מכון. התוצאה אינה מספר אחד אלא אלפי תסריטים אפשריים ליום הבחירות.</p></div>
+    <div class="mcard"><h3><span>3</span>מה שאי אפשר למדוד - הכיול</h3><p>טעות שכל המכונים חולקים אינה ניתנת לזיהוי מתוך הסקרים - הם מסכימים זה עם זה, והסכמה נראית כמו דיוק. לכן המודל מקבל "הטיה ענפית" מוצהרת, משני מקורות שמפורטים בטבלאות למטה: <b>כיול רב-מערכתי</b> - הפער השיטתי בין הסקרים האחרונים לתוצאה בחמש מערכות הבחירות 2019-2022, לפי משפחה פוליטית, בשקלול שנותן משקל גדול יותר למערכות האחרונות; ו<b>נקודת האמצע</b> - במפלגות שבהן המכונים חלוקים היום לשתי אסכולות. שני המקורות נכנסים כהתפלגות ולא כמספר: לכל מפלגה סטיית תקן שנמדדה מהפיזור בין המערכות, ונקודת האמצע מקבלת אי-ודאות בגודלה.</p></div>
     <div class="mcard"><h3><span>4</span>מקולות למנדטים</h3><p>כל תסריט של חלקי קולות מומר ל-120 מנדטים לפי שיטת בדר-עופר: אחוז חסימה 3.25%, מודד, חלוקת עודפים לפי הממוצע הגדול ביותר, והסכמי העודפים שנחתמו בפועל: הליכוד-הציונות הדתית, ש"ס-יהדות התורה, ישר-הדמוקרטים, ישראל ביתנו-ביחד. השיטה אומתה מול תוצאות הבחירות לכנסת ה-25 ומשחזרת אותן במדויק. המודל אינו יודע דבר על השתתפות, על אירועים שטרם קרו או על מי יקים ממשלה.</p></div>
   </div>
   <div class="calib" id="calib"></div>
@@ -540,17 +541,17 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
     const pass = S.seats.filter((r)=>r[pi]>0), fail = S.seats.filter((r)=>r[pi]===0);
     const sp = stats(pass), sf = stats(fail), pPass = pass.length/N;
     const lo = Math.max(0.5, Math.floor(Math.min(...sh)*2)/2), hi = Math.min(12, Math.ceil(Math.max(...sh)*2)/2);
-    const start = Math.round(median(sh)*10)/10;
+    const start = Math.round(mean(sh)*10)/10;   // אותו מספר כמו בטבלת המפלגות (ממוצע)
     const el = document.createElement('div'); el.className='thr rv'; el.style.setProperty('--d', (k*80)+'ms');
     el.innerHTML = `
       <div class="thr-card" style="--c:${c}">
         <div class="name"><i></i>${esc(p)}</div>
-        <div class="sub">${esc(bloc||'')} · חלק קולות חזוי ${median(sh).toFixed(1)}% (טווח 90%: ${sh.slice().sort((a,b)=>a-b)[Math.floor(N*0.05)].toFixed(1)}-${sh.slice().sort((a,b)=>a-b)[Math.floor(N*0.95)].toFixed(1)})</div>
+        <div class="sub">${esc(bloc||'')} · חלק קולות חזוי ${mean(sh).toFixed(1)}% (טווח 90%: ${sh.slice().sort((a,b)=>a-b)[Math.floor(N*0.05)].toFixed(1)}-${sh.slice().sort((a,b)=>a-b)[Math.floor(N*0.95)].toFixed(1)})</div>
         <div class="thr-big"><b>${Math.round(pPass*100)}%</b><span>סיכוי לעבור את אחוז החסימה</span></div>
         <svg class="thr-hist" viewBox="0 0 400 70" id="thr-hist-${k}"></svg>
         <div class="slider">
           <div class="val"><span id="thr-v-${k}">${start.toFixed(1)}%</span><small>מהקולות ביום הבחירות - גררו</small></div>
-          <input type="range" min="${lo}" max="${hi}" step="0.1" value="${start}" id="thr-r-${k}" aria-label="חלק הקולות של ${esc(p)}">
+          <input type="range" min="${lo}" max="${hi}" step="0.1" value="${start}" autocomplete="off" id="thr-r-${k}" aria-label="חלק הקולות של ${esc(p)}">
           <div class="lbl"><span>${lo}%</span><span>סף 3.25%</span><span>${hi}%</span></div>
         </div>
         <div class="thr-res" id="thr-res-${k}"></div>
@@ -611,11 +612,11 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
     const s = seatsBy[p], dist = s.seat_dist, ks = Object.keys(dist).map(Number), a = Math.max(0,Math.min(...ks)-1), b = Math.max(...ks)+1, mx = Math.max(...Object.values(dist));
     const W=420,H=120,pad=4,bw=(W-2*pad)/(b-a+1); let h='';
     for (let k=a;k<=b;k++){ const v=dist[k]||0; const hh=v/mx*(H-30); h+=`<rect x="${(pad+(k-a)*bw+1).toFixed(1)}" y="${(H-22-hh).toFixed(1)}" width="${(bw-2).toFixed(1)}" height="${Math.max(hh,1).toFixed(1)}" rx="2" fill="${col(p)}" opacity="${k===(CS[p] ?? s.seats_median)?1:.55}"><title>${k}: ${(v*100).toFixed(1)}%</title></rect><text x="${(pad+(k-a+0.5)*bw).toFixed(1)}" y="${H-6}" font-size="11" text-anchor="middle" fill="var(--ink-3)">${k}</text>`; }
-    const tr = D.trend.series[p]; const W2=420,H2=120,L=30,R=8,T=10,B=22; const ymax = Math.max(...tr.hi)*1.15;
+    const tr = D.trend.series[p]; const W2=420,H2=120,L=30,R=8,T=10,B=22; const ymax = Math.max(...tr.hi.filter(v=>v!=null))*1.15; const ok=i=>tr.mean[i]!=null;
     const xs=i=>L+i/(dates.length-1)*(W2-L-R), ys=v=>T+(1-v/ymax)*(H2-T-B);
-    const up=tr.hi.map((v,i)=>`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`), dn=tr.lo.map((v,i)=>`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`).reverse();
-    let t=`<polygon points="${up.join(' ')} ${dn.join(' ')}" fill="${col(p)}" opacity=".18"/><polyline points="${tr.mean.map((v,i)=>`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`).join(' ')}" fill="none" stroke="${col(p)}" stroke-width="2.2"/>`;
-    for (const q of D.polls) t+=`<circle cx="${xs((new Date(q.date)-new Date(dates[0]))/(new Date(dates[dates.length-1])-new Date(dates[0]))*(dates.length-1)).toFixed(1)}" cy="${ys(q[p]).toFixed(1)}" r="2.5" fill="${col(p)}" opacity=".5"/>`;
+    const up=tr.hi.map((v,i)=>ok(i)?`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`:null).filter(Boolean), dn=tr.lo.map((v,i)=>ok(i)?`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`:null).filter(Boolean).reverse();
+    let t=`<polygon points="${up.join(' ')} ${dn.join(' ')}" fill="${col(p)}" opacity=".18"/><polyline points="${tr.mean.map((v,i)=>ok(i)?`${xs(i).toFixed(1)},${ys(v).toFixed(1)}`:null).filter(Boolean).join(' ')}" fill="none" stroke="${col(p)}" stroke-width="2.2"/>`;
+    for (const q of D.polls) if(q[p]!=null) t+=`<circle cx="${xs((new Date(q.date)-new Date(dates[0]))/(new Date(dates[dates.length-1])-new Date(dates[0]))*(dates.length-1)).toFixed(1)}" cy="${ys(q[p]).toFixed(1)}" r="2.5" fill="${col(p)}" opacity=".5"/>`;
     for (const v of [0, Math.round(ymax/2)]) t+=`<text x="${L-4}" y="${ys(v)+4}" font-size="10" text-anchor="end" fill="var(--ink-3)">${v}%</text>`;
     t+=`<text x="${xs(0)}" y="${H2-6}" font-size="10" fill="var(--ink-3)">${fmtDate(dates[0]).slice(0,-5)}</text><text x="${xs(dates.length-1)}" y="${H2-6}" font-size="10" text-anchor="end" fill="var(--ink-3)">בחירות</text>`;
     return `<div><h4>התפלגות המנדטים · ${D.n_sims.toLocaleString('he-IL')} סימולציות</h4><svg viewBox="0 0 ${W} ${H}" direction="ltr">${h}</svg></div>
@@ -670,33 +671,41 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
     g += `<rect x="${xs(today)}" y="${T}" width="${xs(t1)-xs(today)}" height="${H-T-B}" fill="var(--brand)" opacity=".04"/><text x="${xs(t1)}" y="${T+10}" font-size="11" text-anchor="end" fill="var(--brand)" font-weight="700">בחירות</text>`;
     let bands='', lines='', dots='', labels=[];
     for (const p of parties){ if(!on.has(p)) continue; const s = D.trend.series[p];
-      const up = s.hi.map((v,i)=>`${xs(dates[i].getTime()).toFixed(1)},${ys(v).toFixed(1)}`), dn = s.lo.map((v,i)=>`${xs(dates[i].getTime()).toFixed(1)},${ys(v).toFixed(1)}`).reverse();
+      const ok=i=>s.mean[i]!=null; const up = s.hi.map((v,i)=>ok(i)?`${xs(dates[i].getTime()).toFixed(1)},${ys(v).toFixed(1)}`:null).filter(Boolean), dn = s.lo.map((v,i)=>ok(i)?`${xs(dates[i].getTime()).toFixed(1)},${ys(v).toFixed(1)}`:null).filter(Boolean).reverse();
       bands += `<polygon points="${up.join(' ')} ${dn.join(' ')}" fill="${col(p)}" opacity=".13"/>`;
-      lines += `<polyline points="${s.mean.map((v,i)=>`${xs(dates[i].getTime()).toFixed(1)},${ys(v).toFixed(1)}`).join(' ')}" fill="none" stroke="${col(p)}" stroke-width="2.4" stroke-linejoin="round"/>`;
-      if (src){ const mine = D.polls.filter(q=>q.pollster===src).sort((a,b)=>a.date<b.date?-1:1);
+      lines += `<polyline points="${s.mean.map((v,i)=>ok(i)?`${xs(dates[i].getTime()).toFixed(1)},${ys(v).toFixed(1)}`:null).filter(Boolean).join(' ')}" fill="none" stroke="${col(p)}" stroke-width="2.4" stroke-linejoin="round"/>`;
+      if (src){ const mine = D.polls.filter(q=>q.pollster===src&&q[p]!=null).sort((a,b)=>a.date<b.date?-1:1);
         lines += `<polyline points="${mine.map(q=>`${xs(new Date(q.date).getTime()).toFixed(1)},${ys(q[p]).toFixed(1)}`).join(' ')}" fill="none" stroke="${col(p)}" stroke-width="1.3" stroke-dasharray="4 3"/>`; }
-      D.polls.forEach((q,qi) => { const mine = !src || q.pollster===src;
+      D.polls.forEach((q,qi) => { const mine = !src || q.pollster===src; if(q[p]==null) return;
         dots += `<circle cx="${xs(new Date(q.date).getTime()).toFixed(1)}" cy="${ys(q[p]).toFixed(1)}" r="${mine&&src?4.5:3.2}" fill="${col(p)}" opacity="${mine?(src?.95:.6):.1}" stroke="var(--surface)" stroke-width="1" data-p="${esc(p)}" data-i="${qi}"/>`; });
       labels.push([p, ys(s.mean[s.mean.length-1])]);
     }
+    // סה"כ המפלגות המסומנות - היום מול לפני שבוע (רשימה בלי מסלול באותו תאריך לא נספרת)
+    (function(){ const el = document.getElementById('trendsum'); if(!el) return; const sel = parties.filter(p=>on.has(p));
+      let iNow = D.trend.dates.findIndex(x => x > D.generated); iNow = iNow < 0 ? dates.length-1 : Math.max(0, iNow-1);
+      const sum = i => sel.reduce((t,p)=>t+((D.trend.series[p].mean[i])||0),0);
+      if (sel.length < 2 || iNow < 1){ el.textContent=''; return; }
+      const now = sum(iNow), prev = sum(iNow-1), dd = Math.round((now-prev)*10)/10 || 0;
+      el.innerHTML = `סה"כ המסומנות (${sel.length}): <b>${now.toFixed(1)}%</b> היום · לפני שבוע ${prev.toFixed(1)}% <span style="direction:ltr;display:inline-block;color:${dd>0?'var(--coal)':dd<0?'var(--arab)':'inherit'}">(${dd>0?'+':''}${dd.toFixed(1)})</span>`;
+    })();
     labels.sort((a,b)=>a[1]-b[1]); for (let i=1;i<labels.length;i++) if (labels[i][1]-labels[i-1][1]<14) labels[i][1]=labels[i-1][1]+14;
     const lab = labels.map(([p,y])=>`<text x="${W-R-4}" y="${y+4}" font-size="12.5" font-weight="700" text-anchor="end" fill="var(--ink)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">${esc(p)}</text>`).join('');
     chart.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="מגמת התמיכה לפי מפלגה">${g}${bands}${lines}<g id="dots">${dots}</g>${lab}<g id="xh"></g><rect class="hover-rect" x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}"/></svg>`;
     const svg = chart.querySelector('svg'), xh = chart.querySelector('#xh'), hr = chart.querySelector('.hover-rect');
     chart.querySelectorAll('#dots circle').forEach(c => {
       c.addEventListener('mouseenter', e => { const q = D.polls[+c.dataset.i], p = c.dataset.p; c.setAttribute('r', 6);
-        const meta = [q.publisher ? `${T.commissioner}: ${esc(q.publisher)}` : '', q.start && q.start !== q.date ? `${T.fieldwork}: ${fmtDate(q.start)}-${fmtDate(q.date)}` : `${T.fieldwork}: ${fmtDate(q.date)}`, `n=${q.n}`, q.moe ? `±${q.moe}%` : '', q.method ? esc(q.method) : ''].filter(Boolean).join(' · ');
-        showTip(`<b>${esc(q.pollster)}</b><br>${meta}<br>${esc(p)}: <b>${q[p].toFixed(1)}%</b> · ${T.ref} ${q.ref}`, e.clientX, e.clientY); });
+        const meta = [q.publisher ? `מזמין: ${esc(q.publisher)}` : '', q.start && q.start !== q.date ? `שדה: ${fmtDate(q.start)}-${fmtDate(q.date)}` : `שדה: ${fmtDate(q.date)}`, `n=${q.n}`, q.moe ? `±${q.moe}%` : '', q.method ? esc(q.method) : ''].filter(Boolean).join(' · ');
+        showTip(`<b>${esc(q.pollster)}</b><br>${meta}<br>${esc(p)}: <b>${q[p].toFixed(1)}%</b> · אסמכתא ${q.ref}`, e.clientX, e.clientY); });
       c.addEventListener('mouseleave', () => { hideTip(); c.setAttribute('r', (!src||D.polls[+c.dataset.i].pollster===src)&&src?4.5:3.2); });
     });
     // crosshair: nearest grid date, values of visible parties
     hr.addEventListener('mousemove', e => { const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY; const m = pt.matrixTransform(svg.getScreenCTM().inverse());
       const t = t0 + (m.x-L)/(W-L-R)*(t1-t0); let i = 0; for (let k=0;k<dates.length;k++) if (Math.abs(dates[k]-t) < Math.abs(dates[i]-t)) i=k; const x = xs(dates[i].getTime());
       let h = `<line x1="${x}" x2="${x}" y1="${T}" y2="${H-B}" stroke="var(--ink-2)" stroke-width="1"/>`;
-      const vis = parties.filter(p=>on.has(p)).map(p=>[p, D.trend.series[p].mean[i], D.trend.series[p].lo[i], D.trend.series[p].hi[i]]).sort((a,b)=>b[1]-a[1]);
+      const vis = parties.filter(p=>on.has(p)&&D.trend.series[p].mean[i]!=null).map(p=>[p, D.trend.series[p].mean[i], D.trend.series[p].lo[i], D.trend.series[p].hi[i]]).sort((a,b)=>b[1]-a[1]);
       for (const [p,v] of vis) h += `<circle cx="${x}" cy="${ys(v)}" r="4.5" fill="${col(p)}" stroke="var(--surface)" stroke-width="2"/>`;
       xh.innerHTML = h;
-      showTip(`<b>${fmtDate(D.trend.dates[i])}${dates[i]>today?' · תחזית':''}</b><br>` + vis.map(([p,v,lo,hi])=>`<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${col(p)};margin-inline-end:6px"></span>${esc(p)} <b>${v.toFixed(1)}%</b> <span style="opacity:.7">(${lo.toFixed(1)}-${hi.toFixed(1)})</span>`).join('<br>'), e.clientX, e.clientY); });
+      showTip(`<b>${fmtDate(D.trend.dates[i])}${dates[i]>today?' · תחזית':''}</b><br>` + (vis.length>1 ? `סה"כ המסומנות: <b>${vis.reduce((t,x)=>t+x[1],0).toFixed(1)}%</b><br>` : '') + vis.map(([p,v,lo,hi])=>`<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${col(p)};margin-inline-end:6px"></span>${esc(p)} <b>${v.toFixed(1)}%</b> <span style="opacity:.7">(${lo.toFixed(1)}-${hi.toFixed(1)})</span>`).join('<br>'), e.clientX, e.clientY); });
     hr.addEventListener('mouseleave', () => { xh.innerHTML=''; hideTip(); });
   }
   draw();
@@ -719,7 +728,7 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
 // ---- anchor / stated assumption
 (function(){ const a = D.anchor; if(!a) return;
   const g = a.gap_trusted_minus_others || {}; const top = Object.entries(g).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2);
-  document.getElementById('anchornote').innerHTML = `הנחות מוצהרות: (א) תיקון לטעויות המכונים בבחירות 2022 - כולם הפחיתו בש"ס, בציונות הדתית וברשימות הערביות והפריזו בשמאל; (ב) בליכוד וביחד, שבהם המכונים חלוקים לשתי אסכולות (${top.map(([p,v])=>`${p} ${v>0?'+':''}${v.toFixed(1)}`).join(', ')} נק' אחוז בין ${a.trusted.join(LANG==='en'?' and ':' ו')} לשאר), המודל עומד באמצע. הפירוט ב"איך זה עובד".`;
+  document.getElementById('anchornote').innerHTML = `הנחות מוצהרות: (א) תיקון לטעויות השיטתיות של הסקרים בחמש מערכות הבחירות 2019-2022 - בכולן הפחיתו בש"ס, ברובן בליכוד, והפריזו בשמאל בממוצע אך לא בעקביות; (ב) בליכוד וביחד, שבהם המכונים חלוקים לשתי אסכולות (${top.map(([p,v])=>`${p} ${v>0?'+':''}${v.toFixed(1)}`).join(', ')} נק' אחוז בין ${a.trusted.join(LANG==='en'?' and ':' ו')} לשאר), המודל עומד באמצע, עם אי-ודאות בגודל הפער. הפירוט ב"איך זה עובד".`;
 })();
 
 // ---- calibration block (methodology)
@@ -744,15 +753,21 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
   let rows = parties.map(p => `<tr><td>${esc(p)}</td>${ps.map(k=>`<td style="color:${Math.abs(c.seat_error[k][p]||0)>=2?'var(--ink)':'var(--ink-3)'}">${f(c.seat_error[k][p]||0)}</td>`).join('')}</tr>`).join('');
   rows += `<tr class="sum"><td>גוש הימין (64 בפועל)</td>${ps.map(k=>`<td>${f(c.bloc_err[k])}</td>`).join('')}</tr>`;
   rows += `<tr><td>טעות ממוצעת למפלגה</td>${ps.map(k=>`<td>${(c.mae[k]).toFixed(2)}</td>`).join('')}</tr>`;
-  const cal = (a && a.cal2022) || {}; const half = (a && a.half) || {}; const comb = (a && a.combined) || {};
-  const lean = Object.keys(comb).sort((x,y)=>Math.abs(comb[y])-Math.abs(comb[x])).map(p=>`${esc(p)} <span style="direction:ltr;display:inline-block">${f(comb[p])}</span>`).join(' · ');
+  const half = (a && a.half) || {}; const comb = (a && a.combined_hist) || (a && a.combined) || {}; const sdv = (a && a.hist_sd) || {};
+  const lean = Object.keys(comb).sort((x,y)=>Math.abs(comb[y])-Math.abs(comb[x])).map(p=>`${esc(p)} <span style="direction:ltr;display:inline-block">${f(comb[p])}${sdv[p]?` ±${sdv[p].toFixed(1)}`:''}</span>`).join(' · ');
+  const H = D.calibration_hist; let hrows = '';
+  if (H && H.combined){ const fam = H.combined.families; const ks = ['2019a','2019b','2020','2021','2022']; const kn = {'2019a':'2019א','2019b':'2019ב','2020':'2020','2021':'2021','2022':'2022'};
+    hrows = Object.entries(fam).map(([fm,r])=>`<tr><td>${esc(fm)}</td>${ks.map(k=>`<td style="color:${Math.abs(r.per_election_pp[k]||0)>=1.5?'var(--ink)':'var(--ink-3)'}">${r.per_election_pp[k]==null?'':f(r.per_election_pp[k])}</td>`).join('')}<td><b>${f(r.mean_pp)}</b></td><td>±${r.sd_pp.toFixed(1)}</td></tr>`).join('');
+    hrows = `<div class="tw"><table><thead><tr><th>משפחה</th>${ks.map(k=>`<th>${kn[k]}</th>`).join('')}<th>ממוצע</th><th>פיזור</th></tr></thead><tbody>${hrows}</tbody></table></div>`; }
   el.innerHTML = `<h3>הכיול, במספרים</h3>
-    <p>הטבלה: כמה כל מכון פספס בסקריו האחרונים לפני בחירות 2022 (${c.window}), במנדטים - סקר מינוס תוצאה, חיובי = הסקר הפריז. ${ps.length} מכונים, כל הסקרים מאתר ועדת הבחירות.</p>
+    <p>הטבלה הראשונה: טעות הסקרים ב-3 השבועות האחרונים לפני כל אחת מחמש מערכות הבחירות 2019-2022, בנקודות אחוז - סקר מינוס תוצאה, חיובי = הסקרים הפריזו. לפי משפחה פוליטית, כי המפלגות מתחלפות והמשפחות נשארות; מפלגה שנפלה בסף נמדדת לפי קולותיה. הממוצע משוקלל בדעיכה מעריכית (2022 שוקלת פי 2.3 מ-2019א); לימין הדתי נספרות רק 2021-2022, כשהציונות הדתית רצה כרשימה מבוססת. הפיזור בין המערכות הוא סטיית התקן שבה ההטיה נכנסת למודל.</p>
+    ${hrows}
+    <p style="margin-top:14px">הטבלה השנייה: כמה כל מכון פספס בסקריו האחרונים לפני בחירות 2022 (${c.window}), במנדטים. ${ps.length} מכונים, כל הסקרים מאתר ועדת הבחירות.</p>
     <div class="tw"><table><thead><tr><th>מפלגה</th>${ps.map(k=>`<th>${esc(k)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>
     <div class="steps">
-      <div><b>1 · כיול 2022</b>הטעות המשותפת לכל המכונים מומרת לנקודות אחוז (מנדט ≈ 0.8 נק') ומועברת למפלגות של היום: ש"ס -2.0, הציונות הדתית ועוצמה יהודית -0.6 כל אחת, רע"ם והרשימה המשותפת -0.8, הדמוקרטים (במקום מרצ והעבודה) +2.0. ערך שלילי = הסקרים מפחיתים במפלגה, והמודל מתקן כלפי מעלה.</div>
-      <div><b>2 · נקודת האמצע</b>בליכוד וביחד המכונים חלוקים היום לשתי אסכולות - ${a ? a.trusted.join(LANG==='en'?' and ':' ו') : ''} מול השאר - בפער של ${a ? Object.entries(a.gap_trusted_minus_others).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2).map(([p,v])=>`${p} ${f(v)}`).join(', ') : ''} נק' אחוז ב-3 השבועות האחרונים. ל-2022 אין תקדים למחלוקת הזו (אז כולם מדדו את הליכוד נכון, ודיירקט פולס הפריז בו ב-2), ולכן המודל לוקח מחצית מהפער - לא יותר. הפער מחושב מחדש בכל ריצה.</div>
-      <div><b>3 · הסכום</b>שני התיקונים מתחברים להטיה ענפית אחת שנכנסת למודל כהנחה עם אי-ודאות (ולא כעובדה): ${lean}. בלי שני התיקונים גוש הימין היה על 55; עם כיול 2022 בלבד - 57; עם שניהם - התחזית שבראש הדף.</div>
+      <div><b>1 · כיול רב-מערכתי</b>הטעות הממוצעת של כל משפחה מועברת למפלגות של היום לפי גודלן: הליכוד, ש"ס, יהדות התורה, ישראל ביתנו, המשותפת ורע"ם ישירות; הימין הדתי מתחלק בין הציונות הדתית לעוצמה יהודית; השמאל להדמוקרטים; המרכז לישר, ביחד וכחול לבן. ערך שלילי = הסקרים מפחיתים במפלגה, והמודל מתקן כלפי מעלה. לעמך ישראל אין היסטוריה - היא מקבלת אי-ודאות רחבה בלי תיקון.</div>
+      <div><b>2 · נקודת האמצע</b>בליכוד וביחד המכונים חלוקים היום לשתי אסכולות - ${a ? a.trusted.join(LANG==='en'?' and ':' ו') : ''} מול השאר - בפער של ${a ? Object.entries(a.gap_trusted_minus_others).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2).map(([p,v])=>`${p} ${f(v)}`).join(', ') : ''} נק' אחוז ב-3 השבועות האחרונים. ברקורד ההיסטורי המכון הזה היה קרוב יותר בליכוד ב-3 מ-4 מערכות, אבל בפערים של 1-2 מנדטים - לפער בגודל הזה אין תקדים. לכן המודל לוקח מחצית מהפער כממוצע, ומצרף לה אי-ודאות בגודל המחצית עצמה: האמת יכולה להיות בכל מקום בין שתי האסכולות. הפער מחושב מחדש בכל ריצה.</div>
+      <div><b>3 · הסכום</b>שני התיקונים מתחברים להטיה ענפית אחת שנכנסת למודל כהתפלגות (ממוצע ± סטיית תקן, נקודות אחוז): ${lean}.</div>
     </div>`;
 })();
 
@@ -766,7 +781,7 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
 // ---- תמונת מצב: 5 שאלות, 5 מספרים, כל אחד מגלגל לסעיף שלו
 const T = {
   q1: 'מי מנצח?', q2: 'מה השתנה השבוע?', q3: 'הסיכון הגדול?', q4: 'על מה זה מבוסס?', q5: 'מה עוד לא ידוע?',
-  seats: 'מנדטים', polls: 'סקרים', pMaj: 'סיכוי לרוב', firstRun: 'ריצה ראשונה', toRightSince: 'לגוש הימין מאז', pts: 'נקודות',
+  seats: 'מנדטים', polls: 'סקרים', pMaj: 'סיכוי לרוב', firstRun: 'ריצה ראשונה', toRightSince: 'לגוש הימין מאז', pts: 'נקודות', methodChanged: 'כולל עדכון שיטה', toRightWeek: 'לגוש הימין בשבוע האחרון, לפי המודל', ptsShort: 'נקודות אחוז',
   passThr: 'לעבור את אחוז החסימה', noRisk: 'אין רשימה על הסף', allCec: 'כל הסקרים שפורסמו באתר ועדת הבחירות · האחרון',
   range90: 'טווח 90% לגוש הימין - ההפרש הוא אי-הודאות שהסקרים לא יכולים לסגור',
   details: 'פרטים', close: 'סגור', showAll: 'להציג את כל הפרטים בעמוד', hideAll: 'לקפל את כל הסעיפים',
@@ -775,7 +790,7 @@ const T = {
   last4: 'ב-4 השבועות האחרונים', afterHouse: 'נקודות אחוז - אחרי ניכוי הטיית המכונים',
   twoSchools: 'שתי אסכולות', measure: 'מודדים את', more: 'יותר', less: 'פחות', thanRest: 'מהשאר', pollstersHouse: 'מכונים, אפקט בית לכל אחד',
   commissioner: 'מזמין', fieldwork: 'שדה', ref: 'אסמכתא',
-  method1: 'מודל בייסיאני על כל הסקרים שפורסמו רשמית באתר ועדת הבחירות, כיול לפי טעות 2022', backtest: 'בדיקת עבר: טעות', perParty: 'מנדטים למפלגה', excludedWhy: 'וכל מה שהוחרג ולמה',
+  method1: 'מודל בייסיאני על כל הסקרים שפורסמו רשמית באתר ועדת הבחירות, מכויל לפי טעויות הסקרים בבחירות 2019-2022', backtest: 'בדיקת עבר: טעות', perParty: 'מנדטים למפלגה', excludedWhy: 'וכל מה שהוחרג ולמה',
 };
 const BR = D.blocs[0].bloc, BL = D.blocs[1].bloc, BA = D.blocs[2].bloc;
 (function(){
@@ -783,7 +798,12 @@ const BR = D.blocs[0].bloc, BL = D.blocs[1].bloc, BA = D.blocs[2].bloc;
   const right = coal, d = D.delta, since = d ? fmtDate(d.since) : '';
   const pMaj = Math.round(right.p_majority*100);
   const dm = d ? d.blocs[BR] : null;
-  const dSeats = dm ? Math.round(dm.seats*10)/10 : 0, dP = dm ? Math.round(dm.p_majority*100) : 0;
+  // השינוי השבועי נמדד מהמסלול של המודל הנוכחי (אותם מספרים כמו בגרף המגמה): סכום חלקי הקולות של גוש הימין היום מול לפני שבוע.
+  // השוואת תחזית-מול-תחזית מההיסטוריה מתערבבת עם שינויי שיטה; היא נשארת רק לסיכוי לרוב, וגם זה רק כשהשיטה לא השתנתה.
+  const _tr = D.trend; let _iNow = _tr.dates.findIndex(x => x > D.generated); _iNow = _iNow < 0 ? _tr.dates.length-1 : Math.max(0, _iNow-1);
+  const _sum = i => D.bloc_def[BR].reduce((t,p)=>t+((_tr.series[p]&&_tr.series[p].mean[i])||0),0);
+  const dPts = _iNow > 0 ? Math.round((_sum(_iNow)-_sum(_iNow-1))*10)/10 : 0;
+  const dSeats = dPts, dP = (dm && !d.method_changed) ? Math.round(dm.p_majority*100) : null;
   const arrow = v => v > 0 ? '▲' : v < 0 ? '▼' : '=';
   const cls = v => v > 0 ? 'up' : v < 0 ? 'dn' : '';
   const sign = v => (v > 0 ? '+' : '') + v;
@@ -792,7 +812,7 @@ const BR = D.blocs[0].bloc, BL = D.blocs[1].bloc, BA = D.blocs[2].bloc;
   const riskP = risk ? Math.round(risk.p_threshold*100) : null, riskName = risk ? esc(risk.party) : '';
   const cards = [
     {q:T.q1, v:`${rightC} <small>${T.seats}</small>`, s:`${BR} · ${T.pMaj} ${pMaj}%`, href:'#sblocs'},
-    {q:T.q2, v:d ? `<span class="${cls(dSeats)}" style="direction:ltr;display:inline-block">${arrow(dSeats)} ${sign(dSeats)}</span>` : '-', s:d ? `${T.toRightSince} ${since} · ${T.pMaj} ${sign(dP)} ${T.pts}` : T.firstRun, href:'#strend'},
+    {q:T.q2, v:`<span class="${cls(dSeats)}" style="direction:ltr;display:inline-block">${arrow(dSeats)} ${sign(dSeats)}</span> <small>${T.ptsShort}</small>`, s:`${T.toRightWeek}${dP!==null ? ` · ${T.pMaj} ${sign(dP)} ${T.pts}` : ''}${d && d.n_polls ? ` · ${sign(d.n_polls)} ${T.polls}` : ''}`, href:'#strend'},
     {q:T.q3, v:risk ? `${riskP}%` : '-', s:risk ? `${riskName}: ${riskP}% ${T.passThr}` : T.noRisk, href:'#sthr'},
     {q:T.q4, v:`${n} <small>${T.polls}</small>`, s:`${T.allCec} ${lastP}`, href:'#shouse'},
     {q:T.q5, v:`${lo}-${hi}`, s:T.range90, href:'#smethod'},
@@ -808,7 +828,7 @@ function openSec(id, scroll=true){ const s = document.getElementById(id); if(!s)
   const top3 = D.seats.slice().sort((a,b)=>b.seats_mean-a.seats_mean).slice(0,3).map(p=>`${esc(p.party)} ${D.central_seats[p.party]}`).join(' · ');
   const risk = D.seats.filter(p => p.p_threshold > 0.02 && p.p_threshold < 0.98).sort((a,b)=>Math.abs(a.p_threshold-0.5)-Math.abs(b.p_threshold-0.5))[0];
   const tr = D.trend; let iNow = tr.dates.findIndex(x => x > D.generated); iNow = iNow < 0 ? tr.dates.length-1 : Math.max(0, iNow-1); const k = Math.max(0, iNow-4);
-  const movers = D.parties.map(p => [p, tr.series[p].mean[iNow]-tr.series[p].mean[k]]).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])).slice(0,2).map(([p,v])=>`${esc(p)} <span style="direction:ltr;display:inline-block">${(v>0?'+':'')}${v.toFixed(1)}</span>`).join(', ');
+  const movers = D.parties.map(p => [p, tr.series[p].mean[k]==null?0:tr.series[p].mean[iNow]-tr.series[p].mean[k]]).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])).slice(0,2).map(([p,v])=>`${esc(p)} <span style="direction:ltr;display:inline-block">${(v>0?'+':'')}${v.toFixed(1)}</span>`).join(', ');
   const bt = Array.isArray(D.backtest) && D.backtest.length ? D.backtest[D.backtest.length-1] : null;
   const rightC = blocCentral[BR], leftC = blocCentral[BL], arabC = blocCentral[BA], lo = right.seats_p05, hi = right.seats_p95, pMaj = Math.round(right.p_majority*100);
   const trusted = D.anchor ? esc((D.anchor.trusted||[]).join(LANG==='en'?' and ':' ו')) : '';
@@ -816,7 +836,7 @@ function openSec(id, scroll=true){ const s = document.getElementById(id); if(!s)
   const sums = {
     sblocs: `<b>${BR} ${rightC}</b> (${lo}-${hi}) · ${BL} ${leftC} · ${BA} ${arabC} · ${T.pRight}: <b>${pMaj}%</b>`,
     sthr: risk ? `<b>${esc(risk.party)}</b> ${T.onThr} - ${Math.round(risk.p_threshold*100)}% ${T.toPass}` : T.noRisk2,
-    sparties: `${top3} · ${D.parties.length} ${T.lists}`,
+    sparties: `${top3} · ${D.seats.length} ${T.lists}`,
     strend: `${T.last4}: <b>${movers}</b> ${T.afterHouse}`,
     shouse: gap ? `${T.twoSchools}: ${trusted} ${T.measure} <b>${gapName}</b> ${gapV} ${T.pts} ${gapDir} ${T.thanRest}` : `${Object.keys(D.pollster_counts).length} ${T.pollstersHouse}`,
     smethod: `${T.method1}${bt ? `, ${T.backtest} ${bt.mae_seats} ${T.perParty}` : ''} - ${T.excludedWhy}`,
