@@ -1,0 +1,15 @@
+{
+  "ref": "4166",
+  "pollster_as_written": "דיאלוג – יועץ ארגוני, מחקר וחוזרת בע\"מ",
+  "commissioner_as_written": "ynet ידיעות אחרונות",
+  "fieldwork_start": "2026-09-22",
+  "fieldwork_end": "2026-09-23",
+  "method": "internet",
+  "initial_sample": 2080,
+  "respondents": 500,
+  "response_rate_pct": 24.0,
+  "margin_error_pct": 4.4,
+  "population": "מדגם ארצי מייצג של ליברלים, בגילאי 18+",
+  "questions": [],
+  "extraction_notes": "This PDF contains no vote-intention questions. All questions (pages 2-4) deal with coalition preferences, the judicial reform, and party primaries - none ask 'if elections were held today, which party would you vote for'. Therefore the questions array is empty per the spec."
+}
