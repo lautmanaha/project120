@@ -20,7 +20,7 @@ HIST = OUT / "history.jsonl"
 
 
 # גרסת השיטה - לעדכן בכל שינוי במודל/בכיול; "מה השתנה השבוע" מסמן השוואה שחוצה גרסה
-MODEL_VERSION = "2026-09-17"   # prior היררכי + מסכת כניסה + כיול רב-מערכתי + מחצית הפער כהתפלגות
+MODEL_VERSION = "2026-09-30"   # prior היררכי + מסכת כניסה + כיול רב-מערכתי + מחצית הפער כהתפלגות; נקודת האמצע מול ממוצע המכונים (תיקון ספירה כפולה)
 def entry(seats: dict, forecast: dict, n_polls: int | None = None) -> dict:
     return {
         "date": forecast["today"],

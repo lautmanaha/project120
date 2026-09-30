@@ -20,10 +20,21 @@ def main():
     recent = df[df.date >= cutoff]
     t = recent[recent.pollster.isin(TRUSTED)]; o = recent[~recent.pollster.isin(TRUSTED)]
     gap = (t[parties].mean() - o[parties].mean())
+    # נקודת האמצע נמדדת מול נקודת הייחוס של המודל, לא מול "השאר": אפקטי הבית במודל הם zero-sum על פני המכונים,
+    # כך שהמודל כבר עומד בממוצע (הלא-משוקלל) של כל המכונים - כולל המכונים המהימנים. תיקון של מחצית הפער מול "השאר"
+    # סופר את חלקם של המהימנים בממוצע פעמיים (בליכוד: כ-2 נק' אחוז עודפות). לכן: התיקון = ממוצע המכונים פחות נקודת האמצע
+    # בין שתי האסכולות (ערך שלילי = הממוצע מפחית במפלגה). זיהוי: ויקטור טיסה, 30.9.2026.
+    pm = recent.groupby("pollster")[parties].mean()
+    ref = pm.mean()
+    mid = (pm[pm.index.isin(TRUSTED)].mean() + pm[~pm.index.isin(TRUSTED)].mean()) / 2
+    shift = ref - mid
     out = {"trusted": TRUSTED, "window_from": cutoff, "n_trusted": int(len(t)), "n_others": int(len(o)),
            "gap_trusted_minus_others": {p: round(float(g), 2) for p, g in gap.items()},
            "full": {p: round(-float(g), 2) for p, g in gap.items() if abs(g) >= 0.3},
-           "half": {p: round(-float(g) / 2, 2) for p, g in gap.items() if abs(g) >= 0.3}}
+           "half_vs_others": {p: round(-float(g) / 2, 2) for p, g in gap.items() if abs(g) >= 0.3},
+           "model_ref": {p: round(float(ref[p]), 2) for p in parties},
+           "midpoint": {p: round(float(mid[p]), 2) for p in parties},
+           "half": {p: round(float(v), 2) for p, v in shift.items() if abs(v) >= 0.3}}
     # שילוב עם כיול 2022 (טעויות הענף בשלושת השבועות האחרונים לפני בחירות 2022)
     cal_path = ROOT / "model" / "industry_lean_2022.json"
     if cal_path.exists():
