@@ -1,0 +1,120 @@
+{
+  "ref": "4173",
+  "pollster_as_written": "פרופ' יצחק כ\"ץ, מאגר מוחות בע\"ם",
+  "commissioner_as_written": "ערוץ 16 קלאזמר 16 ת\"א",
+  "fieldwork_start": "2026-09-29",
+  "fieldwork_end": "2026-09-29",
+  "method": "mixed",
+  "initial_sample": 2403,
+  "respondents": 550,
+  "response_rate_pct": 23.0,
+  "margin_error_pct": 4.2,
+  "population": "האוכלוסייה הישראלית הבוגרת גילי 18 ומעלה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, לאיזו מפלגה הייתם מצביעים",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "ישר! בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 21,
+          "pct": 17.0
+        },
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 19,
+          "pct": 16.0
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 14,
+          "pct": 12.0
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 8,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 8.0
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "הרשימה המשותפת בראשות פרופ' יוסף ג'באראן",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "רע\"ם בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "הציונות הדתית + זהות, בראשות בצלאל סמוטריץ'",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 5,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית בראשות תמיר טרופר",
+          "party": "בית ציוני",
+          "seats": 4,
+          "pct": 3.3
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.4
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מוטי ליטשר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.6
+        }
+      ],
+      "undecided_pct": 4.0,
+      "not_voting_pct": null,
+      "other_pct": 0.8,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "The table shows a merged list 'הציונות הדתית + זהות' attributed to הציונות הדתית as the larger component"
+    }
+  ],
+  "extraction_notes": "Page 3 shows a tracking table with four waves (29.9.26, 24.9.26, 16.9.26, 9.9.26). The main results are from the most recent wave 29.9.26. The גוש הקואליציה note indicates 53 mandates for the coalition bloc, גוש האופוזיציה 51 mandates, מפלגות ערביות 12 mandates, המילואימניקים והכלכלית 4 mandates."
+}

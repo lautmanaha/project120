@@ -1,0 +1,96 @@
+{
+  "ref": "4171",
+  "pollster_as_written": "חברת Next Data",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-09-23",
+  "fieldwork_end": "2026-09-23",
+  "method": "internet",
+  "initial_sample": 7260,
+  "respondents": 647,
+  "response_rate_pct": 8.9,
+  "margin_error_pct": 4.2,
+  "population": "535 גדולים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "מפת המנדטים הסופית - נכסת בת 120 מושבים - אחוז חסימה 3.25%",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 32,
+          "pct": 24.3
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 22,
+          "pct": 17.2
+        },
+        {
+          "party_as_written": "ע\"ש בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 11,
+          "pct": 8.6
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.2
+        },
+        {
+          "party_as_written": "יחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 7,
+          "pct": 5.1
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' התווך",
+          "party": "הציונות הדתית",
+          "seats": 7,
+          "pct": 5.5
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 5.1
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.4
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.5
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 6,
+          "pct": 4.5
+        },
+        {
+          "party_as_written": "רע\"ם בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.0
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": 2.5,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Main table shows weighted results (משוקללים). Undecided voters ('לא החליטו') shown separately as 2.5%. Parties below threshold listed separately with Golmi% (אחוז גולמי) but not included in main table."
+    }
+  ],
+  "extraction_notes": "Poll conducted by Next Data for Channel 14. Date: 23.9.2026. Initial sample 7,260 people, 647 respondents (535 eligible adult voters 18+). Response rate 8.9%, margin of error 4.2% at 95% confidence. Internet panel collection method. Weighted results shown. Bloc results: Netanyahu bloc 63, anti-Netanyahu bloc 57. Several additional questions on political topics not extracted per spec (suitability for PM, views on Iran deal, October 7th anniversary, etc.)."
+}

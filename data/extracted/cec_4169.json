@@ -1,0 +1,237 @@
+{
+  "ref": "4169",
+  "pollster_as_written": "שמואל רוזנר עם חברת פאנל פרוייקט המדגם",
+  "commissioner_as_written": "חדשות 13",
+  "fieldwork_start": "2026-09-22",
+  "fieldwork_end": "2026-09-23",
+  "method": "internet",
+  "initial_sample": 13237,
+  "respondents": 1698,
+  "response_rate_pct": 2.4,
+  "margin_error_pct": null,
+  "population": "כלל האוכלוסייה הבוגרת 18+",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, לאיזו מפלגה היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 22,
+          "pct": null
+        },
+        {
+          "party_as_written": "הליכוד",
+          "party": "הליכוד",
+          "seats": 18,
+          "pct": null
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציונות הדתית והזהות",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": null
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "עמך ישראל",
+          "party": "עמך ישראל",
+          "seats": 5,
+          "pct": null
+        },
+        {
+          "party_as_written": "רע\"ם",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": null
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 11,
+          "pct": null
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 11,
+          "pct": null
+        },
+        {
+          "party_as_written": "כחול לבן",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "המאוחדים והכלכלית",
+          "party": "האחדות",
+          "seats": 4,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציבור החרדי",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "נעם (מגזר \"מפלגה אחרת\")",
+          "party": "נעם",
+          "seats": 0,
+          "pct": null
+        }
+      ],
+      "undecided_pct": 13.1,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "pct columns are per-sector raw samples; only seats are national. הציונות הדתית והזהות is a merged list."
+    },
+    {
+      "qid": 2,
+      "type": "scenario",
+      "description": "אחרת שעדיין לא החלטת, לאיזו רשימה אתה/ה נוטה כרגע (נשאל רק מי שענה \"עדיין לא החלטתי\")",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "כחול לבן",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ליכוד",
+          "party": "הליכוד",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציונות הדתית",
+          "party": "הציונות הדתית",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "עמך ישראל",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "רע\"ם",
+          "party": "רע\"ם",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "המאוחדים והכלכלית",
+          "party": "האחדות",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציבור החרדי",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "מפלגה אחרת",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        }
+      ],
+      "undecided_pct": 38.2,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 0,
+      "notes": "This is a follow-up question asked only to those who answered 'undecided' in the main question. No seats column, percentages are among undecided voters only (n=220 from the 1,378 weighted)."
+    }
+  ],
+  "extraction_notes": "Page 1 contains the main voting intention table with seats only (no national pct column, only sector-specific percentages). Page 2 contains a follow-up question for undecided voters and non-vote intention questions which were ignored per spec. [VALIDATION: q2 seats sum 0 != 120]",
+  "needs_review": true
+}

@@ -1,0 +1,102 @@
+{
+  "ref": "4165",
+  "pollster_as_written": "דיירקט פולס בראשות צוריאל שרון",
+  "commissioner_as_written": "ערוץ I24NEWS",
+  "fieldwork_start": "2026-09-24",
+  "fieldwork_end": "2026-09-24",
+  "method": "internet",
+  "initial_sample": 8850,
+  "respondents": 537,
+  "response_rate_pct": 6.1,
+  "margin_error_pct": 4.2,
+  "population": "מדגם ארצי ומייצג של כלל האוכלוסייה בישראל בגילאי 18+, לרבות יהודים וערבים",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, למי הייתם מצביע?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד",
+          "party": "הליכוד",
+          "seats": 27,
+          "pct": 20.4
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 22,
+          "pct": 17.5
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 9,
+          "pct": 7.2
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.6
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.1
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.6
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": 5.3
+        },
+        {
+          "party_as_written": "הציונות הדתית תחת",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": 4.4
+        },
+        {
+          "party_as_written": "רע\"ם",
+          "party": "רע\"ם",
+          "seats": 6,
+          "pct": 4.4
+        },
+        {
+          "party_as_written": "עמך ישראל",
+          "party": "עמך ישראל",
+          "seats": 4,
+          "pct": 3.3
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": 1.6,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Other parties listed as 'המילואימניקים והכלכלית' with 1.6% and 1.6% (presumably seats not shown as below threshold). Bottom note indicates random and Vickrey methods used, white votes counted at head of Benny Gantz list, Neama in Avi Maoz leadership, Israel Betcha at start."
+    }
+  ],
+  "extraction_notes": "Poll conducted by Direct Polls by Tzuriel Sharon for i24NEWS on September 24, 2026. Initial sample 8,850, respondents who participated 537 (response rate 6.1%). Margin of error ±4.2% at 95% confidence. Method is internet (אינטרנט, פאנל משיבים). Population is national representative sample of all Israeli population 18+, including Jews and Arabs. The 'other parties' row shows המילואימניקים והכלכלית at 1.6% (appears to show percentage rather than seats, indicating below threshold)."
+}
