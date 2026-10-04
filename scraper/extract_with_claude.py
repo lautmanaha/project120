@@ -77,7 +77,9 @@ def extract_one(ref: str, pdf_path: Path, meta_hint: dict | None = None, retries
     content: list[dict] = [{"type": "text", "text":
         f"Extract poll cec_{ref} according to the spec below. The CEC registry says: "
         f"{json.dumps(meta_hint or {}, ensure_ascii=False)}. Use it only to fill pollster/commissioner "
-        f"if the PDF itself does not name them.\n\n=== SPEC ===\n{spec}\n\n"
+        f"if the PDF itself does not name them. pollster_as_written must be the research company that CONDUCTED the poll "
+        f"(e.g. Next Data, Kantar, Lazar, Midgam, Direct Polls - often written in English); a TV channel, newspaper or website "
+        f"is the commissioner (commissioner_as_written), never the pollster.\n\n=== SPEC ===\n{spec}\n\n"
         f"Return ONLY the JSON object, no prose, no code fences."}]
     for i, p in enumerate(pages):
         content.append({"type": "text", "text": f"--- page {i + 1} of {len(pages)} ---"})

@@ -90,7 +90,7 @@ def check_one(ref: str, d: dict, conn: sqlite3.Connection) -> list[str]:
     prev = conn.execute("""SELECT COUNT(*) FROM polls p JOIN pollsters ps ON ps.pollster_id=p.pollster_id
                            WHERE ps.name=? AND p.reference_number<>?""", (name, ref)).fetchone()[0]
     if not prev:
-        flags.append(f"מכון חדש במאגר: {name} (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי)")
+        flags.append(f"מכון חדש במאגר: {name} (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי. אם זה בעצם מכון מוכר, לכתוב את שמו בתגובת האישור, למשל: אישור - נקסט דאטה)")
 
     # 2. "אחר" משמעותי - כנראה מפלגה שלא זוהתה
     for r in rows:

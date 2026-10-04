@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import sqlite3
 import sys
 from pathlib import Path
@@ -182,15 +183,36 @@ def main() -> int:
     publisher_ids: dict[str, int] = {}
     publisher_alias: dict[str, set] = {}
 
-    def get_pollster(*names: str | None, ref: str | None = None) -> int | None:
+    def known(n: str | None) -> str | None:
+        return canon(n, POLLSTER_CANON) if n and any(k.lower() in n.lower() for k, _ in POLLSTER_CANON) else None
+
+    # ברמזים (טקסט חופשי) רק שמות חד-משמעיים: "מדגם" ו"דיאלוג" הן גם מילים רגילות בעברית
+    HINT_NEEDLES = [(re.compile(rx, re.I), v) for rx, v in [
+        (r"\bnext\s*data\b|נקסט דאטה|פילבר", "נקסט דאטה"), (r"\bkantar\b|קנטאר|קאנטר", "קנטאר"),
+        (r"\blazar\b|לזר מחקרים|\bpanels\b|פאנלס", "לזר מחקרים"), (r"מאגר מוחות|\bmaagar", "מאגר מוחות"),
+        (r"\bdirect\s*polls\b|דיירקט פולס", "דיירקט פולס"), (r"\btatika\b|טאטיקה", "טאטיקה"),
+        (r"רוזנר|\brosner\b", "פרויקט המדגם (רוזנר)"), (r"\bDRI\b", "מכון DRI")]]
+
+    def known_hint(h: str | None) -> str | None:
+        hits = {v for rx, v in HINT_NEEDLES if h and rx.search(h)}
+        return hits.pop() if len(hits) == 1 else None   # שני מכונים בטקסט = לא חד-משמעי
+
+    def get_pollster(*names: str | None, ref: str | None = None, hints: tuple = ()) -> int | None:
         # 1) שיוך ידני מפורש (db/pollster_override.json) - כשהחילוץ שיבש את שם המכון
         # 2) התאמה למכון מוכר בכל אחד מהשמות (לא רק הראשון שאינו ריק)
-        # 3) רק אם אף שם לא מוכר - השם הראשון כמו שהוא (מכון חדש באמת)
+        # 3) רמזים: הערות החילוץ והערת האישור ב-Issue (למשל 4175: המכון נכתב באנגלית "Next Data" והחילוץ רשם את ערוץ 14)
+        # 4) רק אם אף שם לא מוכר - השם הראשון כמו שהוא (מכון חדש; לא נכנס למודל בלי שיוך ידני - ראה unknown_pollster)
         c = OVERRIDE.get(str(ref)) if ref else None
         if not c:
             for n in names:
-                if n and any(k.lower() in n.lower() for k, _ in POLLSTER_CANON):
-                    c = canon(n, POLLSTER_CANON); break
+                c = known(n)
+                if c:
+                    break
+        if not c:
+            for h in hints:
+                c = known_hint(h)
+                if c:
+                    break
         if not c:
             for n in names:
                 c = canon(n, POLLSTER_CANON)
@@ -239,7 +261,13 @@ def main() -> int:
         m = meta.get(ref)
         editor_cec = m[1] if m else None
         publisher_cec = m[2] if m else None
-        pid = get_pollster(editor_cec, d.get("pollster_as_written"), ref=ref)
+        qe0 = quarantine.get(ref) or {}
+        pid = get_pollster(editor_cec, d.get("pollster_as_written"), d.get("commissioner_as_written"), ref=ref,
+                           hints=(qe0.get("note"), d.get("extraction_notes")))
+        # מכון שאינו ברשימת המכונים המוכרים ולא שויך ידנית לא נכנס למודל - גם אם אושר בבקרת האיכות,
+        # כי שם מכון שגוי יוצר "מכון חדש" עם אפקט בית משלו. שם של כלי תקשורת במקום מכון הוא הסימן הנפוץ.
+        pname = next((k for k, v in pollster_ids.items() if v == pid), None)
+        unknown_pollster = pid is None or (str(ref) not in OVERRIDE and pname not in {v for _, v in POLLSTER_CANON})
         pubid = get_publisher(publisher_cec, d.get("commissioner_as_written"))
 
         mains = [q for q in d["questions"] if q["type"] == "main"]
@@ -270,6 +298,8 @@ def main() -> int:
                 exclude = f"כפול של {seen_fingerprints[fp]}"
             else:
                 seen_fingerprints[fp] = ref
+        if not exclude and unknown_pollster:
+            exclude = "מכון לא מזוהה - ממתין לשיוך ידני"
 
         conn.execute(
             """INSERT INTO polls VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
