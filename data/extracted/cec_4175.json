@@ -1,0 +1,96 @@
+{
+  "ref": "4175",
+  "pollster_as_written": "ערוץ עכשיו 14, צלע הר 44, מתדיין",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-09-28",
+  "fieldwork_end": "2026-09-28",
+  "method": "internet",
+  "initial_sample": 7346,
+  "respondents": 600,
+  "response_rate_pct": 8.2,
+  "margin_error_pct": 4.1,
+  "population": "דגמים בוגרים (בני 18+), התחום מדגם מייצג של אוכלוסית אזרחי ישראל הראשים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, לאיזו מפלגה היית מצביע",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 31,
+          "pct": 24.0
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 21,
+          "pct": 16.3
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 10,
+          "pct": 7.5
+        },
+        {
+          "party_as_written": "יהד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 9,
+          "pct": 6.9
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.1
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' התחת",
+          "party": "הציונות הדתית",
+          "seats": 7,
+          "pct": 5.3
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 7,
+          "pct": 5.1
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.2
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 6,
+          "pct": 4.8
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 3.8
+        }
+      ],
+      "undecided_pct": 3.2,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Seat total sums to 120. Percentages are listed with Hebrew text indicating this is from the coalition vs opposition column (92.4% decided, 3.2% undecided)."
+    }
+  ],
+  "extraction_notes": "This is a retrospective poll comparing 2022 coalition vs opposition voters. The main table on page 2 shows voting intentions with both seats and percentages. The document contains numerous attitudinal questions comparing coalition vs opposition voters from 2022, but only the vote-intention table was extracted per spec. Pollster is identified as 'ערוץ עכשיו 14, צלע הר 44, מתדיין' and commissioner as 'Next Data, מוצפים ב.1, תרציליה' with fieldwork conducted on 28.9.2026 between 10:50-12:30. The survey used digital data collection methods via internet panel."
+}

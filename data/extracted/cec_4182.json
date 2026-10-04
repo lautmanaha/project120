@@ -1,0 +1,242 @@
+{
+  "ref": "4182",
+  "pollster_as_written": "שמואל רוזנר עם חברת פאנל פרויקט המדגם בתהלת ד\"ר אריאל איילון",
+  "commissioner_as_written": "חדשות 13",
+  "fieldwork_start": "2026-09-29",
+  "fieldwork_end": "2026-09-30",
+  "method": "internet",
+  "initial_sample": 7066,
+  "respondents": 1013,
+  "response_rate_pct": 3.1,
+  "margin_error_pct": null,
+  "population": "אוכלוסייה המדינה בגילאי +18",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימת היום, לאיזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "כחול לבן",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ליכוד",
+          "party": "הליכוד",
+          "seats": 19,
+          "pct": null
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציונות הדתית",
+          "party": "הציונות הדתית",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 9,
+          "pct": null
+        },
+        {
+          "party_as_written": "עמך ישראל (וינטר)",
+          "party": "עמך ישראל",
+          "seats": 5,
+          "pct": null
+        },
+        {
+          "party_as_written": "רע\"ם",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": null
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
+          "pct": null
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 11,
+          "pct": null
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 11,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 21,
+          "pct": null
+        },
+        {
+          "party_as_written": "התליי'אימניקים והכלכלית",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציבור החרדי",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "נעם (מחוך \"מפלגה אחרת\")",
+          "party": "נעם",
+          "seats": 0,
+          "pct": null
+        }
+      ],
+      "undecided_pct": 11.2,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": 0.3,
+      "seats_total": 120,
+      "notes": "pct columns are per-sector raw samples; only seats are national. Table shows four sample columns: adults (n=67), young adults (n=47), ultra-Orthodox (n=15), and Arab sector (n=13). No national percentage column provided. Results based on weighted seats only."
+    },
+    {
+      "qid": 2,
+      "type": "scenario",
+      "description": "אמרת שעדיין לא החלטת. לאיזו רשימה אתה נוטה כרגע (נשאל רק מי שענה \"עדיין לא החלטתי\")",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "כחול לבן",
+          "party": "כחול לבן",
+          "seats": null,
+          "pct": 0.0
+        },
+        {
+          "party_as_written": "ליכוד",
+          "party": "הליכוד",
+          "seats": null,
+          "pct": 11.9
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": null,
+          "pct": 1.5
+        },
+        {
+          "party_as_written": "הציונות הדתית",
+          "party": "הציונות הדתית",
+          "seats": null,
+          "pct": 0.0
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": null,
+          "pct": 1.5
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": null,
+          "pct": 7.5
+        },
+        {
+          "party_as_written": "עמך ישראל (וינטר)",
+          "party": "עמך ישראל",
+          "seats": null,
+          "pct": 3.0
+        },
+        {
+          "party_as_written": "רע\"ם",
+          "party": "רע\"ם",
+          "seats": null,
+          "pct": 0.0
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": null,
+          "pct": 0.0
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": null,
+          "pct": 4.5
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": null,
+          "pct": 1.5
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": null,
+          "pct": 10.4
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": null,
+          "pct": 9.0
+        },
+        {
+          "party_as_written": "התליי'אימניקים והכלכלית",
+          "party": "אחר",
+          "seats": null,
+          "pct": 3.0
+        },
+        {
+          "party_as_written": "הציבור החרדי",
+          "party": "הציבור החרדי",
+          "seats": null,
+          "pct": 3.0
+        },
+        {
+          "party_as_written": "מפלגה אחרת",
+          "party": "אחר",
+          "seats": null,
+          "pct": 0.0
+        },
+        {
+          "party_as_written": "פתק לבן",
+          "party": "אחר",
+          "seats": null,
+          "pct": 0.0
+        }
+      ],
+      "undecided_pct": 43.3,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": null,
+      "notes": "Question asked only to undecided voters from Q1. Shows percentages only, no seats."
+    }
+  ],
+  "extraction_notes": "Page 1 contains main voting intention table with seats and four sub-sample percentage columns (adults/Jewish n=67, young adults n=47, ultra-Orthodox n=15, Arab sector n=13). No national percentage column provided, only seats. Page 2 contains follow-up question for undecided voters with percentages. Also includes a final table about voting certainty (not extracted per spec). התליי'אימניקים והכלכלית appears to be a typo or OCR error, possibly intended as התליימניקים והכלכלית or similar - mapped to אחר."
+}

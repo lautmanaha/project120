@@ -1,0 +1,96 @@
+{
+  "ref": "4176",
+  "pollster_as_written": "חברת Next Data",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-10-01",
+  "fieldwork_end": "2026-10-01",
+  "method": "internet",
+  "initial_sample": 14970,
+  "respondents": 2200,
+  "response_rate_pct": 14.7,
+  "margin_error_pct": 2.1,
+  "population": "2,145 נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "מי מבין האישים הבאים, לדעתכם, המתאים ביותר לכהן בתפקיד ראש הממשלה",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 32,
+          "pct": 24.9
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 21,
+          "pct": 16.4
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 10,
+          "pct": 7.7
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.1
+        },
+        {
+          "party_as_written": "יחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 8,
+          "pct": 6.1
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.1
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' ואוהת",
+          "party": "הציונות הדתית",
+          "seats": 7,
+          "pct": 5.2
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.1
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 7,
+          "pct": 5.5
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 6,
+          "pct": 4.7
+        },
+        {
+          "party_as_written": "רע\"ם בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 3.6
+        }
+      ],
+      "undecided_pct": 1.2,
+      "not_voting_pct": null,
+      "other_pct": 3.25,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "אחוז גולמי column present, represents raw weighted percentages. Parties below threshold (not crossing 3.25%) listed separately and included in other_pct."
+    }
+  ],
+  "extraction_notes": "The document is labeled 'ערוץ עכשיו 14' (Channel Now 14) as commissioner. Pollster is 'חברת Next Data'. The main question table on page 2 shows results with both weighted percentages (אחוז גולמי) and seats (מנדטים). Below-threshold parties totaling 3.25% are listed separately and aggregated into other_pct. Response rate is 14.7% (2,200 respondents out of 14,970 initial sample). Margin of error ±2.1% at 95% confidence. The remaining pages contain non-vote-intention questions (PM suitability, bloc preferences, issue questions) which were not extracted per spec."
+}
