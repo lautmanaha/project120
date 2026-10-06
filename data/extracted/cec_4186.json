@@ -1,0 +1,15 @@
+{
+  "ref": "4186",
+  "pollster_as_written": "מכון DRI",
+  "commissioner_as_written": "שמלת",
+  "fieldwork_start": "2026-09-18",
+  "fieldwork_end": "2026-09-20",
+  "method": "internet",
+  "initial_sample": 39148,
+  "respondents": 500,
+  "response_rate_pct": 1.29,
+  "margin_error_pct": 4.69,
+  "population": "505 נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל בעלי זכות בחירה",
+  "questions": [],
+  "extraction_notes": "This PDF contains only non-vote-intention questions. Page 2 shows a table with questions about party mergers and voting intentions under different scenarios (questions about 'if X party merges with Y', 'if the current government falls'), but these are not standard vote-intention questions showing party seat allocations. They appear to be yes/no/don't know responses to hypothetical scenarios about voting behavior, not actual party preference results. Therefore, no questions are extracted per the spec."
+}
