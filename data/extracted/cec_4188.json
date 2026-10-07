@@ -1,0 +1,102 @@
+{
+  "ref": "4188",
+  "pollster_as_written": "קאנטר",
+  "commissioner_as_written": null,
+  "fieldwork_start": "2026-10-04",
+  "fieldwork_end": "2026-10-04",
+  "method": "internet",
+  "initial_sample": 2390,
+  "respondents": 553,
+  "response_rate_pct": 23.0,
+  "margin_error_pct": 4.2,
+  "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "תחזית המנדטים",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 21,
+          "pct": 16.2
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 12,
+          "pct": 9.4
+        },
+        {
+          "party_as_written": "ישר! בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 23,
+          "pct": 18.0
+        },
+        {
+          "party_as_written": "מפלגת הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "המיליאומניקים והמפלגה הכלכלית בראשות יואב הנדל וירון זליכה",
+          "party": "אחר",
+          "seats": 4,
+          "pct": 3.4
+        },
+        {
+          "party_as_written": "הציונות הדתית דתות בראשות בצלאל סמוטריץ'",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": 4.6
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 9,
+          "pct": 6.9
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "הד\"ש-תע\"ל ובל\"ד בראשות יוסף לאברמי",
+          "party": "הרשימה המשותפת",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "רע\"ם בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 3.9
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "המיליאומניקים והמפלגה הכלכלית appears as a merged entity with 4 seats; mapped to אחר as it represents two parties (בית ציוני + הכלכלית החדשה). Five parties shown below threshold (no seats): עמך ישראל בראשות עופר וינטר (2.6%), כחול לבן בראשות בני גנץ (1.3%), הציבור החרדי בראשות מוטי לייטנר (0.9%), מפלגה אחת בראשות הרב אברגיל (0.7%), צבע שחור מן עולם התורה בראשות אליהו בוימירק (0.6%)."
+    }
+  ],
+  "extraction_notes": "Poll conducted by Kantar on 4.10.2026 (October 4, 2026). Page 1 shows methodology: internet panel, 550 total initial sample size, adult Israeli population 18+ (Jews and Arabs), 2,390 invited, 553 participated, 23% response rate, margin of error ±4.2%. Page 2 contains the main vote-intention table with both percentages and seats. The remaining pages (3-5) contain additional questions about Netanyahu vs. Bennett vs. Gantz, PM suitability, coalition preferences, and other non-vote-intention questions that are not extracted per the specification."
+}
