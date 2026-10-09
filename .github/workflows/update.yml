@@ -43,7 +43,9 @@ jobs:
       - name: Install
         run: |
           python -m pip install -q -r requirements.txt
-          sudo apt-get install -y -qq poppler-utils >/dev/null
+          # apt-get update קודם: בלי זה, כשמראת אובונטו מתעדכנת הגרסה הישנה מחזירה 404 והריצה נופלת (9.10.2026)
+          sudo apt-get update -qq >/dev/null || true
+          sudo apt-get install -y -qq poppler-utils >/dev/null || sudo apt-get install -y -qq --fix-missing poppler-utils >/dev/null || echo "poppler install failed"
           python -m playwright install --with-deps chromium >/dev/null 2>&1 || echo "playwright install failed (brief card will be skipped)"
       - name: Decide run mode
         id: mode
