@@ -38,7 +38,8 @@ def render_pages(pdf_path: Path, ref: str) -> list[Path]:
     PAGES_DIR.mkdir(parents=True, exist_ok=True)
     pdf = pdfium.PdfDocument(str(pdf_path))
     out = []
-    for i in range(len(pdf)):
+    # תוצאות ההצבעה תמיד בעמודים הראשונים. סקר של 135 עמודים (4183, אקורד) נכשל ב-API בכל ריצה ונוסה שוב כל 30 דקות
+    for i in range(min(len(pdf), 12)):
         p = PAGES_DIR / f"cec_{ref}_p{i + 1}.png"
         if not p.exists():
             pdf[i].render(scale=1.6).to_pil().save(p)

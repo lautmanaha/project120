@@ -1,0 +1,15 @@
+{
+  "ref": "4183",
+  "pollster_as_written": "אקורד - פסיכולוגיה חברתית לשינוי חברתי (באמצעות iPanel)",
+  "commissioner_as_written": "סקר עצמאי",
+  "fieldwork_start": "2026-09-10",
+  "fieldwork_end": "2026-09-18",
+  "method": "internet",
+  "initial_sample": 1000,
+  "respondents": 1001,
+  "response_rate_pct": 22.7,
+  "margin_error_pct": 3.1,
+  "population": "מדגם של תת-אוכלוסייה: אזרחים יהודים שאינם חרדים בגילאי 22-34 (חילונים, מסורתיים ודתיים)",
+  "extraction_notes": "נרשם ידנית 9.10.2026: סקר עמדות של 135 עמודים על צעירים יהודים לא-חרדים בני 22-34 - לא סקר ארצי ולא נכנס למודל. החילוץ האוטומטי נכשל בו בכל ריצה בגלל אורכו.",
+  "questions": []
+}

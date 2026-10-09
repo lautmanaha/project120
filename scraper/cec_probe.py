@@ -29,6 +29,8 @@ DB = ROOT / "db" / "polls.sqlite"
 PDF_DIR = ROOT / "data" / "pdfs"
 INDEX = ROOT / "db" / "cec_index.json"
 URL = "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/knesset_election{n}/he/Survey_{ref}.pdf"
+# הוועדה לא עקבית בשם הקובץ: 4190 (פרסום 99) פורסם כ-Survey4190.pdf, בלי קו תחתון - מה שעצר את הגישוש ב-9.10.2026
+URLS = [URL, "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/knesset_election{n}/he/Survey{ref}.pdf"]
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36",
     "Accept": "application/pdf,*/*;q=0.8", "Accept-Language": "he-IL,he;q=0.9,en;q=0.8",
@@ -53,15 +55,25 @@ def save_index(idx: dict[int, int]) -> None:
     INDEX.write_text(json.dumps({str(k): v for k, v in sorted(idx.items())}, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+LAST_URL = {}
+
+
 def fetch(session: requests.Session, n: int, ref: int, timeout: int = 40) -> tuple[int, bytes | None]:
-    r = session.get(URL.format(n=n, ref=ref), headers=HEADERS, timeout=timeout, allow_redirects=True)
-    if r.status_code == 200 and r.content[:5] == b"%PDF-":
-        return 200, r.content
-    return r.status_code, None
+    code = 0
+    for u in URLS:
+        r = session.get(u.format(n=n, ref=ref), headers=HEADERS, timeout=timeout, allow_redirects=True)
+        if r.status_code == 200 and r.content[:5] == b"%PDF-":
+            LAST_URL[(n, ref)] = u.format(n=n, ref=ref)
+            return 200, r.content
+        code = r.status_code
+        if code in (403, 429, 503):
+            break
+    return code, None
 
 
 def register(conn: sqlite3.Connection, ref: int, n: int, data: bytes) -> None:
-    fname = f"Survey_{ref}.pdf"
+    url = LAST_URL.get((n, ref), URL.format(n=n, ref=ref))
+    fname = url.rsplit("/", 1)[-1]
     target = PDF_DIR / f"cec_{ref}.pdf"
     target.write_bytes(data)
     sha = hashlib.sha256(data).hexdigest()
@@ -69,19 +81,20 @@ def register(conn: sqlite3.Connection, ref: int, n: int, data: bytes) -> None:
     row = conn.execute("SELECT reference_number FROM polls_meta WHERE reference_number=?", (str(ref),)).fetchone()
     if row:
         conn.execute("UPDATE polls_meta SET url_name=?, file_name=?, file_url=?, file_size=?, local_pdf=?, pdf_sha256=?, last_seen=? WHERE reference_number=?",
-                     (f"knesset_election{n}", fname, URL.format(n=n, ref=ref), len(data), str(target), sha, today, str(ref)))
+                     (f"knesset_election{n}", fname, url, len(data), str(target), sha, today, str(ref)))
     else:
         conn.execute("INSERT INTO polls_meta (reference_number, url_name, publish_date, file_name, file_size, file_url, local_pdf, pdf_sha256, raw_json, first_seen, last_seen) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
-                     (str(ref), f"knesset_election{n}", today, fname, len(data), URL.format(n=n, ref=ref), str(target), sha,
+                     (str(ref), f"knesset_election{n}", today, fname, len(data), url, str(target), sha,
                       json.dumps({"source": "cec_probe", "title": fname}, ensure_ascii=False), today, today))
     conn.commit()
 
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--max-ahead", type=int, default=40, help="כמה אסמכתאות קדימה לנסות לכל פרסום")
+    ap.add_argument("--max-ahead", type=int, default=15, help="כמה אסמכתאות קדימה לנסות לכל פרסום")
     ap.add_argument("--max-behind", type=int, default=30, help="כמה אסמכתאות אחורה (פרסום באיחור של אסמכתא נמוכה - קרה 7 פעמים ב-81 הראשונים)")
     ap.add_argument("--max-new", type=int, default=12, help="כמה פרסומים חדשים לכל היותר בריצה אחת")
+    ap.add_argument("--max-gap", type=int, default=3, help="כמה מספרי פרסום רצופים בלי פגיעה לפני שמפסיקים (פרסום שהוסר או שם קובץ חריג לא עוצר את הגישוש)")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args(argv)
     PDF_DIR.mkdir(parents=True, exist_ok=True)
@@ -93,7 +106,7 @@ def main(argv=None) -> int:
     known = set(idx.values()) | {int(r[0]) for r in conn.execute("SELECT reference_number FROM polls_meta") if str(r[0]).isdigit()}
     print(f"אחרון ידוע: knesset_election{n} -> {idx[n]} (אסמכתא מקסימלית {ref})")
     session = requests.Session()
-    new, blocked = 0, False
+    new, blocked, misses = 0, False, 0
     for _ in range(a.max_new):
         n += 1
         hit = None
@@ -109,8 +122,14 @@ def main(argv=None) -> int:
             if code == 200 and data:
                 hit = (cand, data); break
             time.sleep(0.3)
-        if blocked or not hit:
+        if blocked:
             break
+        if not hit:
+            misses += 1
+            if misses >= a.max_gap:
+                break
+            continue
+        misses = 0
         found, data = hit
         idx[n] = found; known.add(found); ref = max(ref, found)
         print(f"  חדש: knesset_election{n} -> {found} ({len(data)//1024} KB)")
