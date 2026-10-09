@@ -217,18 +217,10 @@
    "note": "מדובר בסקר של נקסט דאטה פשוט כתוב באנגלית next data"
   },
   "4193": {
-   "status": "pending",
-   "flags": [
-    "גודל מדגם 1263 חריג למכון (חציון 502) - לבדוק 'מספר המשיבים בפועל'"
-   ],
-   "review": {
-    "ok": true,
-    "issues": []
-   },
-   "pollster": "מדגם",
-   "fieldwork": "2026-10-07..2026-10-07",
-   "created": "2026-10-09T13:40:01",
-   "issue": "https://github.com/lautmanaha/project120/issues/47"
+   "flags": [],
+   "status": "approved",
+   "decided": "2026-10-09T14:06:26",
+   "note": ""
   }
  }
 }
