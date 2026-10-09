@@ -16,7 +16,7 @@ import pandas as pd
 warnings.filterwarnings("ignore")
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "model"))
-from seats import BLOCS, DEFAULT_SURPLUS_PAIRS, allocate_seats  # noqa: E402
+from seats import BLOCS, DEFAULT_SURPLUS_PAIRS, UNALIGNED, allocate_seats  # noqa: E402
 
 OUT = ROOT / "model" / "output"
 fc = json.loads((OUT / "forecast.json").read_text(encoding="utf-8"))
@@ -135,7 +135,7 @@ data = {
     "n_sims": seats["n_sims"], "diagnostics": fc["diagnostics"],
     "parties": parties, "party_estimates": fc["election_day_estimates"], "today_estimates": fc["today_estimates"],
     "seats": seats["parties"], "blocs": seats["blocs"], "scenarios": seats["scenarios"],
-    "bloc_def": BLOCS, "surplus_pairs": DEFAULT_SURPLUS_PAIRS,
+    "bloc_def": BLOCS, "unaligned": UNALIGNED, "surplus_pairs": DEFAULT_SURPLUS_PAIRS,
     "trend": {"dates": dates, "series": trend}, "polls": polls, "house": house,
     "pollster_counts": pollster_counts,
     "central_seats": allocate_seats({e["name"]: e["mean"] for e in fc["election_day_estimates"]}),

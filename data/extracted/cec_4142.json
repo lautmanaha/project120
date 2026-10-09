@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-09-07",
   "method": "internet",
   "initial_sample": 7300,
-  "respondents": 1237,
+  "respondents": 1057,
   "response_rate_pct": 17.0,
   "margin_error_pct": 3.0,
   "population": "מדגם בוגרים (בני 18+), המהווה מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
@@ -82,6 +82,30 @@
           "party": "רע\"ם",
           "seats": 5,
           "pct": 3.9
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 3.0
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.4
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.3
+        },
+        {
+          "party_as_written": "נועם לישראל בראשות אבי מעוז",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.2
         }
       ],
       "undecided_pct": 3.7,
@@ -92,5 +116,5 @@
       "notes": "אחת גולמי column is present showing raw percentages; the mandatim (seats) column is weighted."
     }
   ],
-  "extraction_notes": "Pages 3-4 contain non-vote-intention questions (suitability for PM, who should head opposition, etc.) and were not extracted per spec. Page 2 shows bloc results (63-57) but not individual party breakdowns for blocs."
+  "extraction_notes": "Pages 3-4 contain non-vote-intention questions (suitability for PM, who should head opposition, etc.) and were not extracted per spec. Page 2 shows bloc results (63-57) but not individual party breakdowns for blocs. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 1057 (בחילוץ: 1237 - נלקח מספר המסרבים או גודל המדגם ההתחלתי) | תיקון 4.10.2026: נוספה טבלת 'מפלגות שלא עברו את אחוז החסימה' מה-PDF: עמך ישראל 3.0, כחול לבן 0.4, הציבור החרדי 0.3, אחר 0.2"
 }

@@ -1254,14 +1254,30 @@ def build_model(
             kappa_log = pm.Normal("kappa_log", mu=0.0, sigma=config.kappa_log_sigma)
             kappa_scale = pt.exp(kappa_log)  # scalar
 
+        # === Industry-wide bias (not identifiable; scale must be supplied) ===
+        # [Project 120 patch, 5.10.2026] defined BEFORE the initial state so that the initial-state prior can be
+        # centred on the bias-corrected latent for every draw of the bias (not only its mean). Otherwise the
+        # initial-state prior (polls-as-truth, sd 0.5) fights each draw of the bias and squeezes the supplied
+        # industry SD - for the reference party (Likud) by ~30%.
+        shared = None
+        if shared_bias_active:
+            shift = pt.as_tensor_variable(shared_mean_logit)
+            if np.any(shared_sd_logit > 0):
+                z = pm.ZeroSumNormal(
+                    "shared_bias_z",
+                    sigma=math.sqrt(n_candidates / (n_candidates - 1)),
+                    shape=n_candidates,
+                )
+                shift = shift + z * pt.as_tensor_variable(shared_sd_logit)
+            shared = pm.Deterministic("shared_bias", shift)
+
         # === Initial latent support (K-1 log-ratios) ===
+        _bias_free = (shared[free_indices] - shared[reference_idx]) if shared is not None else 0.0
         eta_init = pm.Normal(
             "eta_init",
             # [Project 120 patch] the first polls carry the industry bias too: centre the
-            # initial-state prior on the bias-corrected latent, otherwise a wide bias prior
-            # is silently pulled toward zero by this prior (polls-as-truth) instead of
-            # widening the forecast.
-            mu=initial_logratios - (shared_mean_logit[free_indices] - shared_mean_logit[reference_idx]),
+            # initial-state prior on the bias-corrected latent.
+            mu=initial_logratios - _bias_free,
             sigma=config.initial_sigma,
             shape=n_free,
         )
@@ -1334,19 +1350,8 @@ def build_model(
         else:
             eta_obs = eta_full[time_indices]
 
-        # === Industry-wide bias (not identifiable; scale must be supplied) ===
-        if shared_bias_active:
-            shift = pt.as_tensor_variable(shared_mean_logit)
-            if np.any(shared_sd_logit > 0):
-                # Non-centred, and candidates with sd == 0 contribute nothing
-                # extra, so a pure point scenario needs no special case.
-                z = pm.ZeroSumNormal(
-                    "shared_bias_z",
-                    sigma=math.sqrt(n_candidates / (n_candidates - 1)),
-                    shape=n_candidates,
-                )
-                shift = shift + z * pt.as_tensor_variable(shared_sd_logit)
-            shared = pm.Deterministic("shared_bias", shift)
+        # === Industry-wide bias (defined above) ===
+        if shared is not None:
             # Polls show latent support PLUS the industry's common error, so
             # `pi` remains the bias-corrected estimate of true support.
             eta_obs = eta_obs + shared[None, :]

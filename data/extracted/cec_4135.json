@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-09-07",
   "method": "internet",
   "initial_sample": 16196,
-  "respondents": 2100,
+  "respondents": 2185,
   "response_rate_pct": 13.5,
   "margin_error_pct": 3.5,
   "population": "בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל בעלי זכות בחירה",
@@ -134,5 +134,5 @@
       "notes": "האחדות הספרדים (10 seats, 7.87%) and חד\"ש תע\"ל (7 seats, 5.69%) and מתנה הממלכתי (4 seats, 3.26%) and המיליאונימניקים והכלכלית החדש (0 seats, 1.79%) are marked as אחר since they don't match canonical party names exactly or are unclear mergers/new formations."
     }
   ],
-  "extraction_notes": "Poll conducted by מכון DRI for שמלת on 7.9.2026. The text shows this is an online panel survey with digital and analog panel system (אינטרנט). Several parties in the results do not match the canonical list exactly: האחדות הספרדים appears to be a new or non-standard formation; חד\"ש תע\"ל is likely related to הרשימה המשותפת but listed separately; מתנה הממלכתי may be related to כחול לבן/Gantz but is written differently; המיליאונימניקים והכלכלית החדש appears to be a merger. All marked as אחר except where a clear canonical match exists."
+  "extraction_notes": "Poll conducted by מכון DRI for שמלת on 7.9.2026. The text shows this is an online panel survey with digital and analog panel system (אינטרנט). Several parties in the results do not match the canonical list exactly: האחדות הספרדים appears to be a new or non-standard formation; חד\"ש תע\"ל is likely related to הרשימה המשותפת but listed separately; מתנה הממלכתי may be related to כחול לבן/Gantz but is written differently; המיליאונימניקים והכלכלית החדש appears to be a merger. All marked as אחר except where a clear canonical match exists. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 2185 (בחילוץ: 2100 - נלקח מספר המסרבים או גודל המדגם ההתחלתי)"
 }

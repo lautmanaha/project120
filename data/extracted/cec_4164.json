@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-09-24",
   "method": "internet",
   "initial_sample": 4217,
-  "respondents": 3607,
+  "respondents": 610,
   "response_rate_pct": 86.0,
   "margin_error_pct": 4.4,
   "population": "מדגם מייצג של אזרחי ישראל מגיל 18 ומעלה, יהודים וערבים",
@@ -128,5 +128,5 @@
       "notes": "אחרון המתכוונים עומד בסקר הנוכחי על 7.7%"
     }
   ],
-  "extraction_notes": "The PDF header shows 'WAPOR' and 'לזר מחקרים' logo. Pollster is לזר מחקרים בראשות ד\"ר מנחם לזר (Lazar Research). The commissioner is ועדת הבחירות המרכזית (The Central Elections Committee). Fieldwork dates are 23.09.2026 12:00 to 24.09.2026 13:30. Initial sample (גודל המדגם ההתחלתי) 4,217; actual respondents (מספר המתבקשים להשתתף בסקר) 3,607. Response rate 86%. Margin of error +/- 4.4%. The poll was conducted via Internet using dynamic regional and demographic weighting. The vote-intention results are from the first table on page 1 showing percentages and mandates. The 'אחרון המתכוונים' (undecided) is 7.7%. Two parties listed at bottom (כחול לבן and הציבור החרדי, עמם לישראל, צומת בית ישראל) received 0 mandates but some pct, indicating below threshold. Pages 2-3 contain non-vote-intention questions (suitability for PM, government coalition preference, etc.) which are not extracted per spec."
+  "extraction_notes": "The PDF header shows 'WAPOR' and 'לזר מחקרים' logo. Pollster is לזר מחקרים בראשות ד\"ר מנחם לזר (Lazar Research). The commissioner is ועדת הבחירות המרכזית (The Central Elections Committee). Fieldwork dates are 23.09.2026 12:00 to 24.09.2026 13:30. Initial sample (גודל המדגם ההתחלתי) 4,217; actual respondents (מספר המתבקשים להשתתף בסקר) 3,607. Response rate 86%. Margin of error +/- 4.4%. The poll was conducted via Internet using dynamic regional and demographic weighting. The vote-intention results are from the first table on page 1 showing percentages and mandates. The 'אחרון המתכוונים' (undecided) is 7.7%. Two parties listed at bottom (כחול לבן and הציבור החרדי, עמם לישראל, צומת בית ישראל) received 0 mandates but some pct, indicating below threshold. Pages 2-3 contain non-vote-intention questions (suitability for PM, government coalition preference, etc.) which are not extracted per spec. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 610 (בחילוץ: 3607 - נלקח מספר המסרבים או גודל המדגם ההתחלתי)"
 }

@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-09-17",
   "method": "internet",
   "initial_sample": 8331,
-  "respondents": 920,
+  "respondents": 817,
   "response_rate_pct": 11.0,
   "margin_error_pct": 3.4,
   "population": "בוגרים (בני 18+), התחומים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
@@ -82,6 +82,30 @@
           "party": "רע\"ם",
           "seats": 5,
           "pct": 4.0
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 2.6
+        },
+        {
+          "party_as_written": "המילואימניקים והמפלגה הכלכלית בראשות יועז הנדל וירון זליכה",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 2.2
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.4
+        },
+        {
+          "party_as_written": "הציבור החרדי",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.3
         }
       ],
       "undecided_pct": 2.2,
@@ -92,5 +116,5 @@
       "notes": "התאמה לראשות הממשלה question is not extracted. Parties below threshold listed separately with their pct."
     }
   ],
-  "extraction_notes": "The PDF includes bloc preference and PM suitability questions which are not extracted per spec. The main vote intention table includes percentages (אחוז גולמי) and seats. Parties that did not pass the threshold (3.25%): ענר ישראל בראשות עופר וינטר (2.6%), המילואימניקים והמפלגה הכלכלית בראשות יועז הנדל ויורן זליכה (2.2%), כחול לבן בראשות בני גנץ (0.4%), הציבור החרדי (0.3%). Undecided percentage is listed as לא החליטו (2.2%)."
+  "extraction_notes": "The PDF includes bloc preference and PM suitability questions which are not extracted per spec. The main vote intention table includes percentages (אחוז גולמי) and seats. Parties that did not pass the threshold (3.25%): ענר ישראל בראשות עופר וינטר (2.6%), המילואימניקים והמפלגה הכלכלית בראשות יועז הנדל ויורן זליכה (2.2%), כחול לבן בראשות בני גנץ (0.4%), הציבור החרדי (0.3%). Undecided percentage is listed as לא החליטו (2.2%). | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 817 (בחילוץ: 920 - נלקח מספר המסרבים או גודל המדגם ההתחלתי) | תיקון 4.10.2026: נוספה טבלת 'מפלגות שלא עברו את אחוז החסימה' מה-PDF: עמך ישראל 2.6, המילואימניקים והכלכלית 2.2, כחול לבן 0.4, הציבור החרדי 0.3"
 }

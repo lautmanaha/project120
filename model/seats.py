@@ -35,6 +35,8 @@ BLOCS = {
     "גוש השמאל": ["ישר", "ביחד", "הדמוקרטים", "ישראל ביתנו", "כחול לבן"],
     "המפלגות הערביות": ["הרשימה המשותפת", "רע\"ם"],
 }
+# רשימות שלא הצהירו לאיזה גוש הן שייכות - לא נספרות באף גוש (המילואימניקים והכלכלית, 4.10.2026)
+UNALIGNED = ["המילואימניקים והכלכלית"]
 
 
 def _dhondt(votes: dict[str, float], seats: int) -> dict[str, int]:
@@ -117,12 +119,15 @@ def summarize(seat_df: pd.DataFrame, bloc_df: pd.DataFrame, draws: pd.DataFrame)
             "seat_dist": {int(k): round(float(v), 4) for k, v in s.value_counts(normalize=True).sort_index().items()},
         })
     opp_plus_arab = bloc_df["גוש השמאל"] + bloc_df["המפלגות הערביות"]
+    unal = seat_df[[p for p in UNALIGNED if p in seat_df.columns]].sum(axis=1) if any(p in seat_df.columns for p in UNALIGNED) else 0 * opp_plus_arab
     coalition = bloc_df["גוש הימין"]
     scenarios = {
         "p_coalition_majority": round(float((coalition >= 61).mean()), 3),
         "p_opposition_majority": round(float((bloc_df["גוש השמאל"] >= 61).mean()), 3),
         "p_opposition_with_arab_majority": round(float((opp_plus_arab >= 61).mean()), 3),
         "p_deadlock": round(float(((coalition < 61) & (opp_plus_arab < 61)).mean()), 3),
+        # הרשימות הלא-משויכות מכריעות: אף צד לא מגיע ל-61 לבד, אבל צד אחד מגיע איתן
+        "p_unaligned_pivotal": round(float(((coalition < 61) & (opp_plus_arab < 61) & ((coalition + unal >= 61) | (opp_plus_arab + unal >= 61))).mean()), 3),
     }
     return {"parties": parties, "blocs": blocs, "scenarios": scenarios, "n_sims": int(len(seat_df))}
 

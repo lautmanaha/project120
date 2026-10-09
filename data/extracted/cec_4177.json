@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-10-01",
   "method": "internet",
   "initial_sample": 4432,
-  "respondents": 3830,
+  "respondents": 602,
   "response_rate_pct": 86.0,
   "margin_error_pct": 4.0,
   "population": "מדגם מייצג של אזרחי ישראל מגיל 18 ומעלה, יהודים, נוצרים וערבים",
@@ -128,5 +128,5 @@
       "notes": "Last party 'עוצמת בית ישראל בראשות ר' דוד ברבען' marked as אחר - no matching canonical party."
     }
   ],
-  "extraction_notes": "Poll commissioned by WAPOR and conducted by לזר מחקרים. Fieldwork dates: 30.09.2026 to 01.10.2026 (13:30 to 14:00 on 01.10.2026). Internet panel survey using double opt-in and quota sampling. Page 2 contains government formation scenarios and retroactive 2023 vote questions which are not vote-intention questions and were not extracted per spec."
+  "extraction_notes": "Poll commissioned by WAPOR and conducted by לזר מחקרים. Fieldwork dates: 30.09.2026 to 01.10.2026 (13:30 to 14:00 on 01.10.2026). Internet panel survey using double opt-in and quota sampling. Page 2 contains government formation scenarios and retroactive 2023 vote questions which are not vote-intention questions and were not extracted per spec. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 602 (בחילוץ: 3830 - נלקח מספר המסרבים או גודל המדגם ההתחלתי)"
 }

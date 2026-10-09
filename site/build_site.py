@@ -16,7 +16,7 @@ HEB = r'[֐-׿]'
 NAMES_EN = {
     "הרשימה המשותפת": "HaReshima HaMeshutefet", "המחנה הממלכתי": "HaMachane HaMamlachti", "הציונות הדתית": "HaTzionut HaDatit",
     "המפלגות הערביות": "Arab parties", "ישראל ביתנו": "Yisrael Beitenu", "יהדות התורה": "Yahadut HaTorah", "עוצמה יהודית": "Otzma Yehudit",
-    "הבית היהודי": "HaBayit HaYehudi", "הדמוקרטים": "HaDemokratim", "עמך ישראל": "Amcha Yisrael", "גוש נתניהו": "Netanyahu bloc",
+    "הבית היהודי": "HaBayit HaYehudi", "הדמוקרטים": "HaDemokratim", "עמך ישראל": "Amcha Yisrael", "המילואימניקים והכלכלית": "HaMiluimnikim VeHaKalkalit", "גוש נתניהו": "Netanyahu bloc",
     "גוש השינוי": "Change bloc", "גוש הימין": "Right bloc", "גוש השמאל": "Left bloc", "חד\"ש-תע\"ל": "Hadash-Ta'al",
     "כחול לבן": "Kachol Lavan", "יש עתיד": "Yesh Atid", "הליכוד": "Likud", "העבודה": "HaAvoda", "ביחד": "Beyachad",
     "זהות": "Zehut", "בל\"ד": "Balad", "רע\"ם": "Ra'am", "ש\"ס": "Shas", "מרצ": "Meretz", "ישר": "Yashar", "אחר": "Other",

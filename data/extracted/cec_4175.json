@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-09-28",
   "method": "internet",
   "initial_sample": 7346,
-  "respondents": 600,
+  "respondents": 573,
   "response_rate_pct": 8.2,
   "margin_error_pct": 4.1,
   "population": "דגמים בוגרים (בני 18+), התחום מדגם מייצג של אוכלוסית אזרחי ישראל הראשים לבחור",
@@ -82,6 +82,36 @@
           "party": "רע\"ם",
           "seats": 5,
           "pct": 3.8
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית בראשות הנדל וזליכה",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 2.1
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 1.6
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.6
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.2
+        },
+        {
+          "party_as_written": "נועם לישראל בראשות אבי מעוז",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.2
         }
       ],
       "undecided_pct": 3.2,
@@ -92,5 +122,5 @@
       "notes": "Seat total sums to 120. Percentages are listed with Hebrew text indicating this is from the coalition vs opposition column (92.4% decided, 3.2% undecided)."
     }
   ],
-  "extraction_notes": "This is a retrospective poll comparing 2022 coalition vs opposition voters. The main table on page 2 shows voting intentions with both seats and percentages. The document contains numerous attitudinal questions comparing coalition vs opposition voters from 2022, but only the vote-intention table was extracted per spec. Pollster is identified as 'ערוץ עכשיו 14, צלע הר 44, מתדיין' and commissioner as 'Next Data, מוצפים ב.1, תרציליה' with fieldwork conducted on 28.9.2026 between 10:50-12:30. The survey used digital data collection methods via internet panel."
+  "extraction_notes": "This is a retrospective poll comparing 2022 coalition vs opposition voters. The main table on page 2 shows voting intentions with both seats and percentages. The document contains numerous attitudinal questions comparing coalition vs opposition voters from 2022, but only the vote-intention table was extracted per spec. Pollster is identified as 'ערוץ עכשיו 14, צלע הר 44, מתדיין' and commissioner as 'Next Data, מוצפים ב.1, תרציליה' with fieldwork conducted on 28.9.2026 between 10:50-12:30. The survey used digital data collection methods via internet panel. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 573 (בחילוץ: 600 - נלקח מספר המסרבים או גודל המדגם ההתחלתי) | תיקון 4.10.2026: נוספה טבלת 'מפלגות שלא עברו את אחוז החסימה' מה-PDF: המילואימניקים והכלכלית 2.1, עמך ישראל 1.6, כחול לבן 0.6, הציבור החרדי 0.2, אחר 0.2"
 }

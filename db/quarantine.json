@@ -119,7 +119,7 @@
    "note": ""
   },
   "4158": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "מכון חדש במאגר: ערוך סיגר מעריב (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי)"
    ],
@@ -130,7 +130,9 @@
    "pollster": "ערוך סיגר מעריב",
    "fieldwork": "2026-09-16..2026-09-17",
    "created": "2026-09-23T20:17:51",
-   "issue": "https://github.com/lautmanaha/project120/issues/42"
+   "issue": "https://github.com/lautmanaha/project120/issues/42",
+   "note": "אושר 4.10.2026: לזר/מעריב 16-17.9, ה-PDF תקין",
+   "decided": "2026-10-04T23:00:00"
   },
   "4160": {
    "status": "approved",
@@ -162,13 +164,13 @@
    "created": "2026-09-27T08:28:24",
    "issue": "https://github.com/lautmanaha/project120/issues/44",
    "decided": "2026-09-27T11:54:20",
-   "note": ""
+   "note": "כפול של 4137 (הגשה חוזרת זהה)"
   },
   "4137": {
    "flags": [],
-   "status": "rejected",
-   "decided": "2026-09-27T11:54:20",
-   "note": ""
+   "status": "approved",
+   "decided": "2026-10-04T23:00:00",
+   "note": "אושר 4.10.2026: הסקר המקורי של כאן/קנטאר מ-9.9; 4163 הוא ההגשה החוזרת שלו (נדחה ככפול)"
   },
   "4169": {
    "status": "approved",

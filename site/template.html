@@ -8,7 +8,7 @@
   --coal:#5B8AD6; --opp:#2FA982; --arab:#E25A5A;
   --p-ליכוד:#5B8AD6; --p-שס:#7AA3E4; --p-יהדות:#3F6BBF; --p-עוצמה:#9BB8EC; --p-ציונות:#7286CE; --p-עמך:#B5C7F0;
   --p-ישר:#2FA982; --p-ביחד:#5CC2A0; --p-דמוקרטים:#1E8A67; --p-ביתנו:#8DD9BC; --p-כחול:#BDEBD8;
-  --p-משותפת:#E25A5A; --p-רעם:#F09090; --p-אחר:#6A7184;
+  --p-משותפת:#E25A5A; --p-רעם:#F09090; --p-אחר:#6A7184; --p-res:#D9A520;
   --shadow:0 20px 60px rgba(0,0,0,.45);
   --font-display:"Frank Ruhl Libre","David","Times New Roman",serif;
   --font-body:"Assistant","Arial Hebrew",Arial,sans-serif;
@@ -23,7 +23,7 @@
     --coal:#2255A4; --opp:#18A07A; --arab:#C8353A;
     --p-ליכוד:#2255A4; --p-שס:#3D6FBF; --p-יהדות:#1B3F80; --p-עוצמה:#6B8FD1; --p-ציונות:#4A62A8; --p-עמך:#8FA9DC;
     --p-ישר:#18A07A; --p-ביחד:#3FB894; --p-דמוקרטים:#0E7A5A; --p-ביתנו:#7ACFB0; --p-כחול:#B7E4D2;
-    --p-משותפת:#C8353A; --p-רעם:#E07A7A; --p-אחר:#B9BEC9;
+    --p-משותפת:#C8353A; --p-רעם:#E07A7A; --p-אחר:#B9BEC9; --p-res:#E8B93A;
     --shadow:0 20px 50px rgba(20,25,39,.12);
     color-scheme:light;
   }
@@ -34,7 +34,7 @@
   --coal:#2255A4; --opp:#18A07A; --arab:#C8353A;
   --p-ליכוד:#2255A4; --p-שס:#3D6FBF; --p-יהדות:#1B3F80; --p-עוצמה:#6B8FD1; --p-ציונות:#4A62A8; --p-עמך:#8FA9DC;
   --p-ישר:#18A07A; --p-ביחד:#3FB894; --p-דמוקרטים:#0E7A5A; --p-ביתנו:#7ACFB0; --p-כחול:#B7E4D2;
-  --p-משותפת:#C8353A; --p-רעם:#E07A7A; --p-אחר:#B9BEC9;
+  --p-משותפת:#C8353A; --p-רעם:#E07A7A; --p-אחר:#B9BEC9; --p-res:#E8B93A;
   --shadow:0 20px 50px rgba(20,25,39,.12);
   color-scheme:light;
 }
@@ -336,7 +336,7 @@ footer .la .t small{font-size:12.5px;letter-spacing:.14em;color:var(--brand);fon
 </div></section>
 
 <section id="sparties"><div class="wrap">
-  <div class="eyebrow" id="nlists-eyebrow">13 רשימות</div>
+  <div class="eyebrow" id="nlists-eyebrow">14 רשימות</div>
   <h2>המפלגות</h2>
   <p class="lede">המנדטים בתסריט המרכזי (סכום המפלגות תמיד 120), הטווח שבו נופלות 90% מהסימולציות, חלק הקולות והסיכוי לעבור את אחוז החסימה. <b>לחצו על מפלגה</b> להתפלגות המלאה ולמסלול שלה בזמן.</p>
   <div class="chips" id="blocfilter" style="margin-bottom:12px"></div>
@@ -396,6 +396,7 @@ const D = JSON.parse(document.getElementById('data').textContent);
 const LANG = document.documentElement.lang || 'he';
 const PC = {"הליכוד":"--p-ליכוד","ש\"ס":"--p-שס","יהדות התורה":"--p-יהדות","עוצמה יהודית":"--p-עוצמה","הציונות הדתית":"--p-ציונות","עמך ישראל":"--p-עמך",
   "ישר":"--p-ישר","ביחד":"--p-ביחד","הדמוקרטים":"--p-דמוקרטים","ישראל ביתנו":"--p-ביתנו","כחול לבן":"--p-כחול","הרשימה המשותפת":"--p-משותפת","רע\"ם":"--p-רעם","אחר":"--p-אחר"};
+(D.unaligned||[]).forEach(p => { PC[p] = '--p-res'; });
 const col = p => `var(${PC[p]||'--p-אחר'})`;
 const BLOC_COLOR = {"גוש הימין":"var(--coal)","גוש השמאל":"var(--opp)","המפלגות הערביות":"var(--arab)"};
 const blocOf = p => Object.keys(D.bloc_def).find(b => D.bloc_def[b].includes(p)) || null;
@@ -436,7 +437,7 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
 
 // ---- hemicycle: 120 seats on 4 arcs, filled right-to-left by bloc order
 (function(){
-  const order = [...D.bloc_def["גוש הימין"], ...D.bloc_def["המפלגות הערביות"], ...D.bloc_def["גוש השמאל"]];
+  const order = [...D.bloc_def["גוש הימין"], ...(D.unaligned||[]), ...D.bloc_def["המפלגות הערביות"], ...D.bloc_def["גוש השמאל"]];
   const cs = D.central_seats;
   const seats = []; for (const p of order) for (let i=0;i<(cs[p]||0);i++) seats.push(p);
   const rows = [22, 28, 34, 36]; // 120
@@ -765,7 +766,7 @@ document.getElementById('kpis').innerHTML = [coal, opp, arab].map(b => `<div cla
     <p style="margin-top:14px">הטבלה השנייה: כמה כל מכון פספס בסקריו האחרונים לפני בחירות 2022 (${c.window}), במנדטים. ${ps.length} מכונים, כל הסקרים מאתר ועדת הבחירות.</p>
     <div class="tw"><table><thead><tr><th>מפלגה</th>${ps.map(k=>`<th>${esc(k)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>
     <div class="steps">
-      <div><b>1 · כיול רב-מערכתי</b>הטעות הממוצעת של כל משפחה מועברת למפלגות של היום לפי גודלן: הליכוד, ש"ס, יהדות התורה, ישראל ביתנו, המשותפת ורע"ם ישירות; הימין הדתי מתחלק בין הציונות הדתית לעוצמה יהודית; השמאל להדמוקרטים; המרכז לישר, ביחד וכחול לבן. ערך שלילי = הסקרים מפחיתים במפלגה, והמודל מתקן כלפי מעלה. לעמך ישראל אין היסטוריה - היא מקבלת אי-ודאות רחבה בלי תיקון.</div>
+      <div><b>1 · כיול רב-מערכתי</b>הטעות הממוצעת של כל משפחה מועברת למפלגות של היום לפי גודלן: הליכוד, ש"ס, יהדות התורה, ישראל ביתנו, המשותפת ורע"ם ישירות; הימין הדתי מתחלק בין הציונות הדתית לעוצמה יהודית; השמאל להדמוקרטים; המרכז לישר, ביחד וכחול לבן. ערך שלילי = הסקרים מפחיתים במפלגה, והמודל מתקן כלפי מעלה. לעמך ישראל ולמילואימניקים והכלכלית אין היסטוריה - הן מקבלות אי-ודאות רחבה בלי תיקון.</div>
       <div><b>2 · נקודת האמצע</b>בליכוד וביחד המכונים חלוקים היום לשתי אסכולות - ${a ? a.trusted.join(LANG==='en'?' and ':' ו') : ''} מול השאר - בפער של ${a ? Object.entries(a.gap_trusted_minus_others).sort((x,y)=>Math.abs(y[1])-Math.abs(x[1])).slice(0,2).map(([p,v])=>`${p} ${f(v)}`).join(', ') : ''} נק' אחוז ב-3 השבועות האחרונים. ברקורד ההיסטורי המכון הזה היה קרוב יותר בליכוד ב-3 מ-4 מערכות, אבל בפערים של 1-2 מנדטים - לפער בגודל הזה אין תקדים. לכן המודל מניח שהאמת באמצע בין שתי האסכולות. ממוצע המכונים, שממנו המודל מודד, כבר כולל את שתיהן, ולכן התיקון בפועל הוא רק המרחק מהממוצע לנקודת האמצע, עם אי-ודאות בגודלו: האמת יכולה להיות בכל מקום בין שתי האסכולות. הפער מחושב מחדש בכל ריצה.</div>
       <div><b>3 · הסכום</b>שני התיקונים מתחברים להטיה ענפית אחת שנכנסת למודל כהתפלגות (ממוצע ± סטיית תקן, נקודות אחוז): ${lean}.</div>
     </div>`;

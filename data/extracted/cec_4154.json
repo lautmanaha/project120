@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-09-15",
   "method": "internet",
   "initial_sample": 18184,
-  "respondents": 1800,
+  "respondents": 1891,
   "response_rate_pct": 10.39,
   "margin_error_pct": 3.5,
   "population": "1,891 נדגמים בוגרים (בני +18), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל בעלי זכות בחירה",
@@ -128,5 +128,5 @@
       "notes": "Two parties with seats do not map cleanly to the canonical list: 'האחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדי' (10 seats) appears to be a Sephardic Haredi party not in the canonical list; 'חד\"ש תע\"ל בראשות איימן עודה ואחמד טיבי' (8 seats) is a component of the Joint List but listed separately here. Both marked as 'אחר'. 'המיליאימניקים והכלכלית החדשה' appears to be a merger involving הכלכלית החדשה but also marked as 'אחר' given unclear canonical mapping."
     }
   ],
-  "extraction_notes": "The poll was conducted by DRI Institute for שמאלת. Fieldwork date is 15.9.2026 from 12:00 to 22:00. Several parties in the table do not have clear canonical mappings: 'האחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדי' seems to be a Sephardic Haredi party (possibly related to Shas but listed separately), 'חד\"ש תע\"ל' is typically a component of the Joint List but appears standalone here, and 'המיליאימניקים והכלכלית החדשה – יועז הנדל פרופסור יוני זילבר ועינת ויליף' appears to involve הכלכלית החדשה but with additional components. 'ישראל תחילה בראשות שקן השכל' is not in the canonical list. All these have been marked as 'אחר' as instructed."
+  "extraction_notes": "The poll was conducted by DRI Institute for שמאלת. Fieldwork date is 15.9.2026 from 12:00 to 22:00. Several parties in the table do not have clear canonical mappings: 'האחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדי' seems to be a Sephardic Haredi party (possibly related to Shas but listed separately), 'חד\"ש תע\"ל' is typically a component of the Joint List but appears standalone here, and 'המיליאימניקים והכלכלית החדשה – יועז הנדל פרופסור יוני זילבר ועינת ויליף' appears to involve הכלכלית החדשה but with additional components. 'ישראל תחילה בראשות שקן השכל' is not in the canonical list. All these have been marked as 'אחר' as instructed. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 1891 (בחילוץ: 1800 - נלקח מספר המסרבים או גודל המדגם ההתחלתי)"
 }

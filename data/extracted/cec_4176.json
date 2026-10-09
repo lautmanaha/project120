@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-10-01",
   "method": "internet",
   "initial_sample": 14970,
-  "respondents": 2200,
+  "respondents": 2145,
   "response_rate_pct": 14.7,
   "margin_error_pct": 2.1,
   "population": "2,145 נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
@@ -82,15 +82,51 @@
           "party": "רע\"ם",
           "seats": 5,
           "pct": 3.6
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 1.7
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית בראשות הנדל וזליכה",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 1.2
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.4
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.2
+        },
+        {
+          "party_as_written": "נועם לישראל בראשות אבי מעוז",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.1
+        },
+        {
+          "party_as_written": "אח\"י – חוזרים לשורשים",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.1
         }
       ],
       "undecided_pct": 1.2,
       "not_voting_pct": null,
-      "other_pct": 3.25,
+      "other_pct": null,
       "blank_pct": null,
       "seats_total": 120,
       "notes": "אחוז גולמי column present, represents raw weighted percentages. Parties below threshold (not crossing 3.25%) listed separately and included in other_pct."
     }
   ],
-  "extraction_notes": "The document is labeled 'ערוץ עכשיו 14' (Channel Now 14) as commissioner. Pollster is 'חברת Next Data'. The main question table on page 2 shows results with both weighted percentages (אחוז גולמי) and seats (מנדטים). Below-threshold parties totaling 3.25% are listed separately and aggregated into other_pct. Response rate is 14.7% (2,200 respondents out of 14,970 initial sample). Margin of error ±2.1% at 95% confidence. The remaining pages contain non-vote-intention questions (PM suitability, bloc preferences, issue questions) which were not extracted per spec."
+  "extraction_notes": "The document is labeled 'ערוץ עכשיו 14' (Channel Now 14) as commissioner. Pollster is 'חברת Next Data'. The main question table on page 2 shows results with both weighted percentages (אחוז גולמי) and seats (מנדטים). Below-threshold parties totaling 3.25% are listed separately and aggregated into other_pct. Response rate is 14.7% (2,200 respondents out of 14,970 initial sample). Margin of error ±2.1% at 95% confidence. The remaining pages contain non-vote-intention questions (PM suitability, bloc preferences, issue questions) which were not extracted per spec. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 2145 (בחילוץ: 2200 - נלקח מספר המסרבים או גודל המדגם ההתחלתי) | תיקון 4.10.2026: נוספה טבלת 'מפלגות שלא עברו את אחוז החסימה' מה-PDF: עמך ישראל 1.7, המילואימניקים והכלכלית 1.2, כחול לבן 0.4, הציבור החרדי 0.2, אחר 0.1, אחר 0.1"
 }

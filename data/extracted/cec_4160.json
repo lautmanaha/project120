@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-09-17",
   "method": "internet",
   "initial_sample": 2489,
-  "respondents": 1938,
+  "respondents": 551,
   "response_rate_pct": 78.0,
   "margin_error_pct": 4.2,
   "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי 18+ (יהודים וערבים)",
@@ -128,5 +128,5 @@
       "notes": "The table includes parties that did not pass the threshold with 0 seats. The party 'יבצע שחור – מקן שלום התורה' does not match the canonical list and is marked as 'אחר'."
     }
   ],
-  "extraction_notes": "Page 1 contains methodological details: survey name 'ישראל היום - ממצאי סקר מנדטים 17/09/2026 - דיווח לועדת הבחירות', fieldwork dates 16-17 September, conducted by Kantar Israel via internet panel, initial sample 2489, respondents 1938 (78% participation rate), margin of error ±4.2%. Page 2 contains the main vote intention table with both percentages and seats (mandates). Page 3 contains non-vote-intention questions which were not extracted per spec."
+  "extraction_notes": "Page 1 contains methodological details: survey name 'ישראל היום - ממצאי סקר מנדטים 17/09/2026 - דיווח לועדת הבחירות', fieldwork dates 16-17 September, conducted by Kantar Israel via internet panel, initial sample 2489, respondents 1938 (78% participation rate), margin of error ±4.2%. Page 2 contains the main vote intention table with both percentages and seats (mandates). Page 3 contains non-vote-intention questions which were not extracted per spec. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 551 (בחילוץ: 1938 - נלקח מספר המסרבים או גודל המדגם ההתחלתי)"
 }

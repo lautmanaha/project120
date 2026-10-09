@@ -118,6 +118,22 @@ def check_one(ref: str, d: dict, conn: sqlite3.Connection) -> list[str]:
     seats = [r.get("seats") for r in rows if r.get("seats") is not None]
     if seats and not 118 <= sum(seats) <= 120:
         flags.append(f"סכום מנדטים {sum(seats)} (צפוי 120)")
+
+    # 6. גודל המדגם - הוא המשקל של הסקר במודל. החילוץ כבר לקח בטעות "מספר המסרבים" (פי 6) או את גודל המדגם ההתחלתי.
+    n_resp = d.get("respondents")
+    moe = d.get("margin_error_pct")
+    if n_resp:
+        if moe:
+            implied = 0.9604 / (float(moe) / 100) ** 2          # n שמתאים לטעות הדגימה המוצהרת (95%)
+            if not 0.5 * implied <= n_resp <= 2.0 * implied:
+                flags.append(f"גודל מדגם {n_resp} לא מתיישב עם טעות דגימה ±{moe}% (מתאים לכ-{implied:.0f}) - לבדוק 'מספר המשיבים בפועל'")
+        med = conn.execute("""SELECT p.respondents FROM polls p JOIN pollsters ps ON ps.pollster_id=p.pollster_id
+                              WHERE ps.name=? AND p.reference_number<>? AND p.in_model=1""", (name, ref)).fetchall()
+        vals = sorted(v[0] for v in med if v[0])
+        if len(vals) >= 3:
+            mdn = vals[len(vals) // 2]
+            if not 0.4 * mdn <= n_resp <= 2.5 * mdn:
+                flags.append(f"גודל מדגם {n_resp} חריג למכון (חציון {mdn}) - לבדוק 'מספר המשיבים בפועל'")
     pcts = [r.get("pct") for r in rows if r.get("pct") is not None]
     if pcts and not 85 <= sum(pcts) <= 102:
         flags.append(f"סכום אחוזים {sum(pcts):.1f} (צפוי ~100)")

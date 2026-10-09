@@ -1,7 +1,7 @@
 {
   "ref": "4158",
-  "pollster_as_written": "ערוך סיגר מעריב",
-  "commissioner_as_written": "לדר מחקרים",
+  "pollster_as_written": "לזר מחקרים",
+  "commissioner_as_written": "מעריב",
   "fieldwork_start": "2026-09-16",
   "fieldwork_end": "2026-09-17",
   "method": "internet",
@@ -134,5 +134,5 @@
       "notes": ""
     }
   ],
-  "extraction_notes": "Pages 2 and 3 contain non-vote-intention questions (support for government figures, negotiation with Hamas, division in government) and were not extracted. The main vote-intention table is on page 1. The parties 'תנועת אתי מועלמה של הרב יורם אברג'ל ואלינור', 'עוץ לישראל בראשות אבי מועד', and 'צומת בית ישראל בראשות גדי ויברקן' do not match canonical party names and were marked as 'אחר'."
+  "extraction_notes": "Pages 2 and 3 contain non-vote-intention questions (support for government figures, negotiation with Hamas, division in government) and were not extracted. The main vote-intention table is on page 1. The parties 'תנועת אתי מועלמה של הרב יורם אברג'ל ואלינור', 'עוץ לישראל בראשות אבי מועד', and 'צומת בית ישראל בראשות גדי ויברקן' do not match canonical party names and were marked as 'אחר'. | תיקון 4.10.2026: מכון לזר מחקרים, מזמין מעריב (החילוץ שיבש את השמות)"
 }

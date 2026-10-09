@@ -6,7 +6,7 @@
   "fieldwork_end": "2026-09-17",
   "method": "internet",
   "initial_sample": 8550,
-  "respondents": 500,
+  "respondents": 525,
   "response_rate_pct": 6.1,
   "margin_error_pct": 4.2,
   "population": "מדגם ארצי ומייצג של כלל האוכלוסייה בישראל בגילאי 18+, לרבות יהודים וערבים",
@@ -98,5 +98,5 @@
       "notes": "Other parties listed in text below table: נדגמו וקיבלו פחות מ-1%: צבע שחור, הציבור החרדי, אחד, כחול לבן בראשות בני גנץ, נעם לישראל בראשות אבי מעוז, הקול, ישראל חזקה."
     }
   ],
-  "extraction_notes": "The table shows 'המילואימניקים והכלכלית' with 2.2% listed, which represents other parties below threshold. The text below the table specifies these parties include צבע שחור, הציבור החרדי, אחד, כחול לבן, נעם, הקול, and ישראל חזקה."
+  "extraction_notes": "The table shows 'המילואימניקים והכלכלית' with 2.2% listed, which represents other parties below threshold. The text below the table specifies these parties include צבע שחור, הציבור החרדי, אחד, כחול לבן, נעם, הקול, and ישראל חזקה. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 525 (בחילוץ: 500 - נלקח מספר המסרבים או גודל המדגם ההתחלתי)"
 }
