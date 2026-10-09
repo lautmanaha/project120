@@ -1,0 +1,168 @@
+{
+  "ref": "4193",
+  "pollster_as_written": "פאנל פרוייקט המדגם",
+  "commissioner_as_written": "שמואל רוזנר",
+  "fieldwork_start": "2026-10-07",
+  "fieldwork_end": "2026-10-07",
+  "method": "internet",
+  "initial_sample": 9694,
+  "respondents": 1263,
+  "response_rate_pct": null,
+  "margin_error_pct": 2.8,
+  "population": "כלל האוכלוסייה הבוגרת 18+",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "כחול לבן",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ליכוד",
+          "party": "הליכוד",
+          "seats": 20,
+          "pct": null
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציונות הדתית",
+          "party": "הציונות הדתית",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "עופר ישראל (וינטר)",
+          "party": "עמך ישראל",
+          "seats": 5,
+          "pct": null
+        },
+        {
+          "party_as_written": "רע\"מ",
+          "party": "רע\"ם",
+          "seats": 6,
+          "pct": null
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
+          "pct": null
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 10,
+          "pct": null
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 12,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 20,
+          "pct": null
+        },
+        {
+          "party_as_written": "המיליאומניקים והכלכלית",
+          "party": "בית ציוני",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "העצמיי הערבי",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "נעם (בחרן \"מפלגה אחרת\")",
+          "party": "נעם",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "זהות (בחרן \"מפלגה אחרת\")",
+          "party": "זהות",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "עוץ (בחרן \"מפלגה אחרת\")",
+          "party": "עוז",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל חזקה (בחרן \"מפלגה אחרת\")",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "מפלגה אחרת - סקטוס חופשי",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "עדיין לא החלטתי",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "פתח לבן",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "לא מתכוון להצביע",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        }
+      ],
+      "undecided_pct": 11.3,
+      "not_voting_pct": 2.5,
+      "other_pct": 1.7,
+      "blank_pct": 0.0,
+      "seats_total": 120,
+      "notes": "pct columns are per-sector raw samples; only seats are national"
+    }
+  ],
+  "extraction_notes": "The table shows percentage columns for different sectors (מדגם יהודים, מדגם צעירים, מדגם חרדים, מגזר ערבי) but no national percentage column. Only the seats (מנדטים) column represents national results. Parties below threshold are listed with 0 seats. העצמיי הערבי and ישראל חזקה mapped to אחר as they don't match canonical party names."
+}

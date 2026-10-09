@@ -1,0 +1,132 @@
+{
+  "ref": "4192",
+  "pollster_as_written": "Next Data",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-10-07",
+  "fieldwork_end": "2026-10-07",
+  "method": "internet",
+  "initial_sample": 14983,
+  "respondents": 1100,
+  "response_rate_pct": 7.3,
+  "margin_error_pct": 3.0,
+  "population": "נדגמים בוגרים (גבאי 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, לאיזו מפלגה היית מצביע",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 31,
+          "pct": 24.0
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 23,
+          "pct": 17.4
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 10,
+          "pct": 7.9
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 6.7
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.1
+        },
+        {
+          "party_as_written": "יהד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 8,
+          "pct": 6.2
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.3
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' התורה",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": 4.6
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 5,
+          "pct": 3.9
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "ענק ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 2.2
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית בראשות הדר גלילנד הליכה",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 1.8
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 1.3
+        },
+        {
+          "party_as_written": "נעם לישראל בראשות אבי מעוז",
+          "party": "נעם",
+          "seats": 0,
+          "pct": 0.9
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מועיז ליטנטאן",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.4
+        },
+        {
+          "party_as_written": "אז\"י – החזרה לשורשים",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.1
+        }
+      ],
+      "undecided_pct": 0.9,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Below-threshold parties included in results. 'המילואימניקים והכלכלית' mapped to אחר as it does not match canonical list exactly (likely merger/coalition). 'אז\"י – החזרה לשורשים' also mapped to אחר."
+    }
+  ],
+  "extraction_notes": "Poll conducted by Next Data for Channel 14. The main voting table on page 2 includes both parties passing the threshold (with seats) and parties below threshold (with 0 seats). All percentages are weighted ('אחוז גולמי' column). The 'undecided' percentage (0.9%) is labeled 'לא החליטו'. Initial sample was 14,983 people invited; 1,100 respondents completed the survey; response rate was 7.3%; margin of error ±3.0% at 95% confidence. Pages 3-6 contain non-voting questions (government head preferences, coalition scenarios, issue positions) which are not extracted per spec."
+}
