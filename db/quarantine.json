@@ -226,7 +226,7 @@
    "note": ""
   },
   "4197": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "גודל מדגם 3967 לא מתיישב עם טעות דגימה ±3.7% (מתאים לכ-702) - לבדוק 'מספר המשיבים בפועל'",
     "גודל מדגם 3967 חריג למכון (חציון 506) - לבדוק 'מספר המשיבים בפועל'"
@@ -240,7 +240,9 @@
    "pollster": "לזר מחקרים",
    "fieldwork": "2026-10-08..2026-10-08",
    "created": "2026-10-11T16:27:12",
-   "issue": "https://github.com/lautmanaha/project120/issues/48"
+   "issue": "https://github.com/lautmanaha/project120/issues/48",
+   "decided": "2026-10-11T20:21:37",
+   "note": ""
   }
  }
 }
