@@ -1,7 +1,7 @@
 {
   "ref": "4193",
   "pollster_as_written": "פאנל פרוייקט המדגם",
-  "commissioner_as_written": "שמואל רוזנר",
+  "commissioner_as_written": "חדשות 13",
   "fieldwork_start": "2026-10-07",
   "fieldwork_end": "2026-10-07",
   "method": "internet",
@@ -164,5 +164,5 @@
       "notes": "pct columns are per-sector raw samples; only seats are national"
     }
   ],
-  "extraction_notes": "The table shows percentage columns for different sectors (מדגם יהודים, מדגם צעירים, מדגם חרדים, מגזר ערבי) but no national percentage column. Only the seats (מנדטים) column represents national results. Parties below threshold are listed with 0 seats. העצמיי הערבי and ישראל חזקה mapped to אחר as they don't match canonical party names."
+  "extraction_notes": "The table shows percentage columns for different sectors (מדגם יהודים, מדגם צעירים, מדגם חרדים, מגזר ערבי) but no national percentage column. Only the seats (מנדטים) column represents national results. Parties below threshold are listed with 0 seats. העצמיי הערבי and ישראל חזקה mapped to אחר as they don't match canonical party names. | תיקון 11.10.2026: מזמין הסקר חדשות 13 (ה-PDF), לא שמואל רוזנר"
 }

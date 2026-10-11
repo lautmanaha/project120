@@ -23,7 +23,8 @@ EXPORTS = ROOT / "exports"
 # --- מיפוי שמות קנוניים -----------------------------------------------------
 # מפתח: תת-מחרוזת שמופיעה ב"עורך הסקר" (ברשומת הוועדה או ב-PDF) -> שם קנוני
 POLLSTER_CANON = [
-    ("רוזנר", "פרויקט המדגם (רוזנר)"),
+    ("רוזנר", "פרויקט המדגם (רוזנר)"), ("פרויקט המדגם", "פרויקט המדגם (רוזנר)"), ("פרוייקט המדגם", "פרויקט המדגם (רוזנר)"),   # לפני "מדגם" (4193, 11.10.2026)
+    ("Direct Polls", "דיירקט פולס"), ("Midgam", "מדגם"), ("Lazar", "לזר מחקרים"), ("Maagar", "מאגר מוחות"), ("Tatika", "טאטיקה"),   # שמות באנגלית (4199)
     ("קנטאר", "קנטאר"), ("קאנטר", "קנטאר"), ("קנטר", "קנטאר"), ("Kantar", "קנטאר"),
     ("לזר", "לזר מחקרים"), ("פאנלס", "לזר מחקרים"), ("Panels", "לזר מחקרים"),
     ("מאגר מוחות", "מאגר מוחות"),
@@ -169,6 +170,37 @@ _OV = Path(__file__).resolve().parent / "pollster_override.json"
 OVERRIDE: dict = {k: v for k, v in (json.loads(_OV.read_text(encoding="utf-8")) if _OV.exists() else {}).items() if not k.startswith("_")}
 
 
+# מספר המשיבים בפועל - נקרא ישירות מטקסט ה-PDF (עמודים 1-2) ומחליף את ערך החילוץ כשהוא שונה ביותר מ-5%.
+# החילוץ האוטומטי לקח שוב ושוב את "מספר המסרבים" (פי 6) או את גודל המדגם ההתחלתי, ומספר המשיבים הוא המשקל של הסקר במודל.
+# בדיקה מול 105 קובצי PDF (11.10.2026): נמצא ב-95, ושני פערים בלבד - 4197 (3967 מול 700) ו-4149 (כפול).
+RESP_PATS = [r"([\d,]{3,6})\s+בפועל\s+(?:לסקר\s+|בסקר\s+)?(?:המשיבים|שהשתתפו)",
+             r"([\d,]{3,6})\s+נדגמים\s+[^\n]{0,20}בפועל",
+             r"נדגמים\s+([\d,]{3,6})\b",
+             r"בפועל\s+(?:לסקר\s+|בסקר\s+)?המשיבים\s+מספר\s*\n?\s*([\d,]{3,6})",
+             r"([\d,]{3,6})\s*\n?\s*(?:מס'|מספר)\s+האנשים\s+שהשתתפו\s+בסקר\s+בפועל",
+             r"\)להשתתף\s+מהמתבקשים\s+[\d.]+%\s+\)\s*([\d,]{3,6})"]
+
+
+def respondents_from_pdf(ref: str) -> int | None:
+    pdf = ROOT / "data" / "pdfs" / f"cec_{ref}.pdf"
+    if not pdf.exists():
+        return None
+    try:
+        import pypdfium2 as pdfium
+        doc = pdfium.PdfDocument(str(pdf))
+        t = "\n".join(doc[i].get_textpage().get_text_range() for i in range(min(2, len(doc))))
+    except Exception:
+        return None
+    t = re.sub(r"[\u200e\u200f\u202a-\u202e]", "", t)
+    for pat in RESP_PATS:
+        m = re.search(pat, t)
+        if m:
+            v = int(m.group(1).replace(",", ""))
+            if 80 <= v <= 20000:
+                return v
+    return None
+
+
 def canon(text: str | None, table: list[tuple[str, str]]) -> str | None:
     if not text:
         return None
@@ -278,6 +310,10 @@ def main() -> int:
         unknown_pollster = pid is None or (str(ref) not in OVERRIDE and pname not in {v for _, v in POLLSTER_CANON})
         pubid = get_publisher(publisher_cec, d.get("commissioner_as_written"))
 
+        _n_pdf = respondents_from_pdf(ref)
+        if _n_pdf and d.get("respondents") and abs(_n_pdf - d["respondents"]) / _n_pdf > 0.05:
+            print(f"  {ref}: מספר משיבים {d['respondents']} בחילוץ -> {_n_pdf} לפי ה-PDF")
+            d["respondents"] = _n_pdf
         mains = [q for q in d["questions"] if q["type"] == "main"]
         has_main = int(bool(mains))
         exclude = None
