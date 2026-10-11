@@ -1,0 +1,15 @@
+{
+  "ref": "4198",
+  "pollster_as_written": "דיאלוג – יעוץ ארגוני, מחקר ותורכה בע״מ",
+  "commissioner_as_written": "ידיעות אחרונות ynet, שלומברג. נח מוזס 1, ראשון לציון (תא דואר 438, מיקוד 7510302)",
+  "fieldwork_start": "2026-10-05",
+  "fieldwork_end": "2026-10-06",
+  "method": "internet",
+  "initial_sample": 1703,
+  "respondents": 543,
+  "response_rate_pct": 31.0,
+  "margin_error_pct": 4.4,
+  "population": "מדגם ארצי מייצג של בני 18-22",
+  "questions": [],
+  "extraction_notes": "This poll surveyed only young adults aged 18-22. All questions (pages 2-4) are opinion/preference questions about parties in the 27 October election context and perspectives on hostage negotiations, security issues, and political leadership. None of them are standard vote-intention questions asking 'if elections were held today, which party would you vote for' with a full results table showing seats/percentages for multiple parties. Therefore, no questions are extracted."
+}

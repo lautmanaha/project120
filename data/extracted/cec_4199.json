@@ -1,0 +1,108 @@
+{
+  "ref": "4199",
+  "pollster_as_written": "Direct Polls",
+  "commissioner_as_written": "i24NEWS",
+  "fieldwork_start": "2026-10-07",
+  "fieldwork_end": "2026-10-07",
+  "method": "internet",
+  "initial_sample": 8700,
+  "respondents": 518,
+  "response_rate_pct": 6.0,
+  "margin_error_pct": 4.3,
+  "population": "מדגם ארצי ומייצג של כלל האוכלוסייה בישראל בגילאי 18+, לרבות יהודים וערבים",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, למי היית מצביע?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד",
+          "party": "הליכוד",
+          "seats": 26,
+          "pct": 19.8
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 20,
+          "pct": 16.0
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 11,
+          "pct": 8.4
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 10,
+          "pct": 7.9
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 9,
+          "pct": 7.3
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.1
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": 5.7
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.6
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 7,
+          "pct": 5.4
+        },
+        {
+          "party_as_written": "הציונות הדתית תחת",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "רע\"ם",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.1
+        },
+        {
+          "party_as_written": "עמך ישראל",
+          "party": "עמך ישראל",
+          "seats": 4,
+          "pct": 3.3
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית",
+          "party": "בית ציוני",
+          "seats": 0,
+          "pct": 2.3
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Table includes one below-threshold entry: המילואימניקים והכלכלית with 2.3% (shown as '2.3%' in mandates column). Note at bottom mentions 'נדגמו וקיבלו מתחת ל-1%' parties: בצע שחור, כחול לבן בראשות בני גנץ, נעם (לישראל בראשות אבי מעוז, הציבור החרדי, אח\"י, ישראל תחילה - עלה ירוק)."
+    }
+  ],
+  "extraction_notes": "The last row in the table shows 2.3% in both columns (percentage and mandates), which represents below-threshold parties grouped together. The note at the bottom lists additional parties that received less than 1%."
+}
