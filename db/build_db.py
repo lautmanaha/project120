@@ -323,10 +323,9 @@ def main() -> int:
         unknown_pollster = pid is None or (str(ref) not in OVERRIDE and pname not in {v for _, v in POLLSTER_CANON})
         pubid = get_publisher(publisher_cec, d.get("commissioner_as_written"))
 
-        _n_pdf = respondents_from_pdf(ref)
-        if _n_pdf and d.get("respondents") and abs(_n_pdf - d["respondents"]) / _n_pdf > 0.05:
-            print(f"  {ref}: מספר משיבים {d['respondents']} בחילוץ -> {_n_pdf} לפי ה-PDF")
-            d["respondents"] = _n_pdf
+        # (12.10.2026) ביטול ההחלפה האוטומטית של מספר המשיבים מה-PDF: בשרת הריצה סדר הטקסט העברי שונה,
+        # והמנתח לקח את "מס' האנשים שהתבקשו" במקום "שהשתתפו בפועל" (קנטאר, מאגר מוחות, דיירקט פולס - 26 סקרים).
+        # מספר המשיבים נשאר מהחילוץ; בקרת האיכות (qa_check, דגל 6) בודקת אותו מול טעות הדגימה ומול חציון המכון.
         mains = [q for q in d["questions"] if q["type"] == "main"]
         has_main = int(bool(mains))
         exclude = None
