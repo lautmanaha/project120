@@ -6,8 +6,8 @@
   "fieldwork_end": "2026-10-08",
   "method": "internet",
   "initial_sample": 4667,
-  "respondents": 3967,
-  "response_rate_pct": 85.0,
+  "respondents": 700,
+  "response_rate_pct": 15.0,
   "margin_error_pct": 3.7,
   "population": "מדגם מייצג של אזרחי ישראל בגילי 18 ומעלה, יהודים, נוצרים, דרוזים, מוסלמים",
   "questions": [
@@ -128,5 +128,5 @@
       "notes": "המיזוגאימניקים והכלכלית is a merger not matching standard party names; 'נועם בית ישראל' is also non-standard and mapped to אחר."
     }
   ],
-  "extraction_notes": "Page 1 lists technical details: sample from Lazar panel, field date 08.10.2026 12:30–13:00 on 09.10.2026, method: internet. Initial sample 4667, respondents who consented to participate 3967, response rate 85%, margin of error ±3.7%. Page 2 has the main vote-intention table and the parties below threshold at the bottom. Remaining pages show non-vote questions (bloc preferences, coalition/opposition preference, PM suitability, head-to-head matchups) which are ignored per spec."
+  "extraction_notes": "Page 1 lists technical details: sample from Lazar panel, field date 08.10.2026 12:30–13:00 on 09.10.2026, method: internet. Initial sample 4667, respondents who consented to participate 3967, response rate 85%, margin of error ±3.7%. Page 2 has the main vote-intention table and the parties below threshold at the bottom. Remaining pages show non-vote questions (bloc preferences, coalition/opposition preference, PM suitability, head-to-head matchups) which are ignored per spec. | תיקון ידני 12.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 700 (3967 הוא מספר המסרבים); תואם לטעות הדגימה ±3.7%."
 }

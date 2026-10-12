@@ -181,23 +181,36 @@ RESP_PATS = [r"([\d,]{3,6})\s+בפועל\s+(?:לסקר\s+|בסקר\s+)?(?:המש
              r"\)להשתתף\s+מהמתבקשים\s+[\d.]+%\s+\)\s*([\d,]{3,6})"]
 
 
+def _pdf_texts(pdf):
+    """טקסט עמודים 1-2 בשתי דרכים (pypdfium2 ו-pdftotext), כי בשרת הריצה אחת מהן עלולה להיכשל או לסדר עברית אחרת."""
+    out = []
+    try:
+        import pypdfium2 as pdfium
+        doc = pdfium.PdfDocument(str(pdf))
+        out.append("\n".join(doc[i].get_textpage().get_text_range() for i in range(min(2, len(doc)))))
+    except Exception as e:
+        print(f"  pypdfium2 נכשל על {pdf.name}: {e}")
+    try:
+        import subprocess
+        r = subprocess.run(["pdftotext", "-l", "2", "-layout", str(pdf), "-"], capture_output=True, text=True, timeout=60)
+        if r.returncode == 0:
+            out.append(r.stdout)
+    except Exception:
+        pass
+    return [re.sub(r"[\u200e\u200f\u202a-\u202e\u2066-\u2069]", "", t) for t in out]
+
+
 def respondents_from_pdf(ref: str) -> int | None:
     pdf = ROOT / "data" / "pdfs" / f"cec_{ref}.pdf"
     if not pdf.exists():
         return None
-    try:
-        import pypdfium2 as pdfium
-        doc = pdfium.PdfDocument(str(pdf))
-        t = "\n".join(doc[i].get_textpage().get_text_range() for i in range(min(2, len(doc))))
-    except Exception:
-        return None
-    t = re.sub(r"[\u200e\u200f\u202a-\u202e]", "", t)
-    for pat in RESP_PATS:
-        m = re.search(pat, t)
-        if m:
-            v = int(m.group(1).replace(",", ""))
-            if 80 <= v <= 20000:
-                return v
+    for t in _pdf_texts(pdf):
+        for pat in RESP_PATS:
+            m = re.search(pat, t)
+            if m:
+                v = int(m.group(1).replace(",", ""))
+                if 80 <= v <= 20000:
+                    return v
     return None
 
 
