@@ -200,6 +200,25 @@ def _pdf_texts(pdf):
     return [re.sub(r"[\u200e\u200f\u202a-\u202e\u2066-\u2069]", "", t) for t in out]
 
 
+def pdf_first_page(ref: str) -> str:
+    """טקסט עמוד 1 (שם המכון), לרמז שיוך כשהחילוץ שיבש את שם המכון (4207: "לוד מחקרים" במקום "לזר מחקרים").
+    גם בסדר תווים הפוך, למקרה שהטקסט נקרא בסדר חזותי."""
+    pdf = ROOT / "data" / "pdfs" / f"cec_{ref}.pdf"
+    if not pdf.exists():
+        return ""
+    t = ""
+    try:
+        import subprocess
+        r = subprocess.run(["pdftotext", "-l", "1", str(pdf), "-"], capture_output=True, text=True, timeout=60)
+        t = r.stdout if r.returncode == 0 else ""
+    except Exception:
+        pass
+    if not t.strip():
+        t = "\n".join(_pdf_texts(pdf)[:1])
+    t = re.sub(r"[\u200e\u200f\u202a-\u202e\u2066-\u2069]", "", t)
+    return t + "\n" + "\n".join(line[::-1] for line in t.splitlines())
+
+
 def respondents_from_pdf(ref: str) -> int | None:
     pdf = ROOT / "data" / "pdfs" / f"cec_{ref}.pdf"
     if not pdf.exists():
@@ -316,7 +335,7 @@ def main() -> int:
         publisher_cec = m[2] if m else None
         qe0 = quarantine.get(ref) or {}
         pid = get_pollster(editor_cec, d.get("pollster_as_written"), d.get("commissioner_as_written"), ref=ref,
-                           hints=(qe0.get("note"), d.get("extraction_notes")))
+                           hints=(qe0.get("note"), d.get("extraction_notes"), pdf_first_page(ref)))
         # מכון שאינו ברשימת המכונים המוכרים ולא שויך ידנית לא נכנס למודל - גם אם אושר בבקרת האיכות,
         # כי שם מכון שגוי יוצר "מכון חדש" עם אפקט בית משלו. שם של כלי תקשורת במקום מכון הוא הסימן הנפוץ.
         pname = next((k for k, v in pollster_ids.items() if v == pid), None)

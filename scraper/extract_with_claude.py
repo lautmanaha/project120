@@ -47,6 +47,20 @@ def render_pages(pdf_path: Path, ref: str) -> list[Path]:
     return out
 
 
+def text_layer(pdf_path: Path, pages: int = 4, limit: int = 8000) -> str:
+    """שכבת הטקסט של ה-PDF (pdftotext -layout), כשיש. בראייה בלבד החילוץ שיבש שמות עבריים -
+    4207 (13.10.2026): "לזר מחקרים" נקרא "לוד מחקרים" ו"המילואימניקים" נקרא "המיליאונימניקים", אף שהטקסט היה תקין ב-PDF."""
+    import subprocess
+    try:
+        r = subprocess.run(["pdftotext", "-l", str(pages), "-layout", str(pdf_path), "-"],
+                           capture_output=True, text=True, timeout=60)
+    except Exception:
+        return ""
+    t = re.sub(r"[\u200e\u200f\u202a-\u202e\u2066-\u2069]", "", r.stdout if r.returncode == 0 else "")
+    t = re.sub(r"[ \t]{3,}", "   ", t).strip()
+    return t[:limit] if len(re.findall(r"[\u0590-\u05ff]", t)) >= 50 else ""   # PDF סרוק / בלי טקסט עברי - בלי שכבה
+
+
 def _png_b64(path: Path, max_side: int = 1600) -> str:
     from PIL import Image
     im = Image.open(path)
@@ -84,6 +98,13 @@ def extract_one(ref: str, pdf_path: Path, meta_hint: dict | None = None, retries
         f"(the people who actually answered) - never 'מספר המסרבים' (refusals) and never the initial/invited sample. "
         f"Also extract the table of lists below the threshold (\"מפלגות שלא עברו את אחוז החסימה\") as result rows with seats 0.\n\n=== SPEC ===\n{spec}\n\n"
         f"Return ONLY the JSON object, no prose, no code fences."}]
+    tl = text_layer(pdf_path)
+    if tl:
+        content.append({"type": "text", "text":
+            "=== PDF TEXT LAYER (first pages, extracted by pdftotext) ===\n"
+            "Use the page images for table structure and for which number belongs to which row, but copy Hebrew names "
+            "(pollster, commissioner, party names) and numbers exactly as spelled in this text layer when they appear in it - "
+            "image reading has garbled names before (e.g. 'לזר' read as 'לוד').\n\n" + tl})
     for i, p in enumerate(pages):
         content.append({"type": "text", "text": f"--- page {i + 1} of {len(pages)} ---"})
         content.append({"type": "image", "source": {"type": "base64", "media_type": "image/png",
