@@ -1,7 +1,12 @@
 {
   "ref": "4207",
+<<<<<<< HEAD
   "pollster_as_written": "לזר מחקרים בראשות ד\"ר מנחם לזר",
   "commissioner_as_written": "וואלה תקשורת",
+=======
+  "pollster_as_written": "לוד מחקרים",
+  "commissioner_as_written": null,
+>>>>>>> 8715bb4bb5239fc18e55bc6c4358f29c5c1b2cb4
   "fieldwork_start": "2026-10-12",
   "fieldwork_end": "2026-10-13",
   "method": "internet",
@@ -78,14 +83,23 @@
           "pct": 5.4
         },
         {
+<<<<<<< HEAD
           "party_as_written": "רע\"ם בראשות מנסור עבאס ויואב סגלוביץ",
+=======
+          "party_as_written": "רע\"ם בראשות מנסור עבאס ויואב סלקניקוב",
+>>>>>>> 8715bb4bb5239fc18e55bc6c4358f29c5c1b2cb4
           "party": "רע\"ם",
           "seats": 5,
           "pct": 3.9
         },
         {
+<<<<<<< HEAD
           "party_as_written": "המילואימניקים והכלכלית בראשות יועז הנדל וירון זליכה",
           "party": "המילואימניקים והכלכלית",
+=======
+          "party_as_written": "המיליאונימניקים והכלכלית בראשות ישי חדד נרון וילנה",
+          "party": "אחר",
+>>>>>>> 8715bb4bb5239fc18e55bc6c4358f29c5c1b2cb4
           "seats": 4,
           "pct": 3.5
         },
@@ -122,5 +136,9 @@
       "notes": "המיליאונימניקים והכלכלית appears to be a merger or joint list; mapped to אחר as no single canonical party fits"
     }
   ],
+<<<<<<< HEAD
   "extraction_notes": "Page 1 contains methodology details. Page 2 contains the main vote intention table. Page 3 contains additional cross-tabs by coalition/opposition preference - not extracted per spec (not vote-intention). The party 'המיליאונימניקים והכלכלית בראשות ישי חדד נרון וילנה' does not map cleanly to a single canonical party and has been coded as 'אחר'. | תיקון ידני 14.10.2026 לפי שכבת הטקסט של ה-PDF: המכון לזר מחקרים (החילוץ קרא \"לוד\"), המזמין וואלה, ושם רשימת המילואימניקים והכלכלית."
+=======
+  "extraction_notes": "Page 1 contains methodology details. Page 2 contains the main vote intention table. Page 3 contains additional cross-tabs by coalition/opposition preference - not extracted per spec (not vote-intention). The party 'המיליאונימניקים והכלכלית בראשות ישי חדד נרון וילנה' does not map cleanly to a single canonical party and has been coded as 'אחר'."
+>>>>>>> 8715bb4bb5239fc18e55bc6c4358f29c5c1b2cb4
 }
