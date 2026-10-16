@@ -179,7 +179,7 @@ def review_with_claude(ref: str, d: dict) -> dict:
         "Below is the extracted main vote-intention table: each row = the party name as printed, the canonical party it was "
         "mapped to, seats, percent. Canonical parties: הליכוד, ישר, ביחד, הדמוקרטים, ישראל ביתנו, יהדות התורה, עוצמה יהודית, "
         "ש\"ס (=התאחדות הספרדים שומרי תורה), הציונות הדתית, הרשימה המשותפת (=חד\"ש-תע\"ל[-בל\"ד]), רע\"ם (=הרשימה הערבית המאוחדת), "
-        "עמך ישראל, כחול לבן (=המחנה הממלכתי / בני גנץ), בית ציוני, נעם, הציבור החרדי, הכלכלית החדשה, אחר.\n"
+        "עמך ישראל, כחול לבן (=המחנה הממלכתי / בני גנץ), המילואימניקים והכלכלית (=הנדל וזליכה; גם בית ציוני והכלכלית החדשה ממופים אליה), נעם, הציבור החרדי, אחר.\n"
         "Check against the images: (1) every party row in the printed table appears in the extraction, (2) each mapping is correct, "
         "(3) seats and percent match the printed numbers, (4) the extracted table is the main national vote-intention question, "
         "not a sub-sample or a scenario question. Ignore rounding and party-name typos.\n"
