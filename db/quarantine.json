@@ -270,7 +270,7 @@
    "note": ""
   },
   "4209": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "מכון חדש במאגר: נקסט דאטה (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי. אם זה בעצם מכון מוכר, לכתוב את שמו בתגובת האישור, למשל: אישור - נקסט דאטה)"
    ],
@@ -283,7 +283,9 @@
    "pollster": "נקסט דאטה",
    "fieldwork": "2026-10-12..2026-10-12",
    "created": "2026-10-15T11:08:11",
-   "issue": "https://github.com/lautmanaha/project120/issues/50"
+   "issue": "https://github.com/lautmanaha/project120/issues/50",
+   "decided": "2026-10-16T13:13:21",
+   "note": ""
   },
   "4210": {
    "status": "pending",
