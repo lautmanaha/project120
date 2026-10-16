@@ -1,0 +1,132 @@
+{
+  "ref": "4212",
+  "pollster_as_written": "חברת Next Data, המנופים 1, הרצליה",
+  "commissioner_as_written": "ערוץ עכשיו 14, צלע ההר 44, מודיעין",
+  "fieldwork_start": "2026-10-14",
+  "fieldwork_end": "2026-10-14",
+  "method": "internet",
+  "initial_sample": 650,
+  "respondents": 568,
+  "response_rate_pct": 11.5,
+  "margin_error_pct": 4.1,
+  "population": "נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 29,
+          "pct": 22.1
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 20,
+          "pct": 15.6
+        },
+        {
+          "party_as_written": "יחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 11,
+          "pct": 8.5
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 10,
+          "pct": 7.7
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל-בל\"ד בראשות ד\"ר יוסף ג'בארין",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.1
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 5.9
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' וזהות",
+          "party": "הציונות הדתית",
+          "seats": 7,
+          "pct": 5.5
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 3.6
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 5,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית בראשות הנדל וזליכה",
+          "party": "בית ציוני",
+          "seats": 0,
+          "pct": 3.1
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 2.7
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 1.2
+        },
+        {
+          "party_as_written": "נועם לישראל בראשות אבי מעוז",
+          "party": "נעם",
+          "seats": 0,
+          "pct": 0.8
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.4
+        },
+        {
+          "party_as_written": "מפלגת אחי – חוזרים לשורשים",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.2
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Below-threshold parties extracted from the second table. 'מפלגת אחי – חוזרים לשורשים' mapped to אחר as no canonical match exists."
+    }
+  ],
+  "extraction_notes": "The poll was conducted on 14.10.2026 between 14:44-16:27. 'המילואימניקים והכלכלית בראשות הנדל וזליכה' is assumed to be 'בית ציוני' (Hendel's Miluimnikim). Party named 'יחד בראשות נפתלי בנט' mapped to canonical 'ביחד'. Party 'רע\"מ בראשות מנסור עבאס' mapped to canonical 'רע\"ם' with double quotation marks."
+}
