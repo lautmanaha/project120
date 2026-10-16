@@ -303,7 +303,7 @@
    "issue": "https://github.com/lautmanaha/project120/issues/51"
   },
   "4211": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "מכון חדש במאגר: דיירקט פולס (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי. אם זה בעצם מכון מוכר, לכתוב את שמו בתגובת האישור, למשל: אישור - נקסט דאטה)"
    ],
@@ -317,10 +317,12 @@
    "pollster": "דיירקט פולס",
    "fieldwork": "2026-10-13..2026-10-13",
    "created": "2026-10-16T10:04:43",
-   "issue": "https://github.com/lautmanaha/project120/issues/52"
+   "issue": "https://github.com/lautmanaha/project120/issues/52",
+   "decided": "2026-10-16T12:48:51",
+   "note": ""
   },
   "4212": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "מכון חדש במאגר: נקסט דאטה (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי. אם זה בעצם מכון מוכר, לכתוב את שמו בתגובת האישור, למשל: אישור - נקסט דאטה)"
    ],
@@ -333,7 +335,9 @@
    "pollster": "נקסט דאטה",
    "fieldwork": "2026-10-14..2026-10-14",
    "created": "2026-10-16T10:04:47",
-   "issue": "https://github.com/lautmanaha/project120/issues/53"
+   "issue": "https://github.com/lautmanaha/project120/issues/53",
+   "decided": "2026-10-16T12:48:51",
+   "note": ""
   }
  }
 }
