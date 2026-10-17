@@ -9,9 +9,8 @@ permissions:
   contents: write
   issues: write
   actions: write
-concurrency:
-  group: update
-  cancel-in-progress: false
+# בלי concurrency: בקבוצת concurrency משותפת עם "Update forecast", גיטהאב מבטל ריצה ממתינה כשמגיעה ריצה חדשה,
+# ואישורים שנכתבו בזמן שהעדכון רץ נבלעו (4210, 16.10.2026). הדחיפה עצמה מוגנת ב-pull --rebase וניסיונות חוזרים.
 jobs:
   decide:
     if: startsWith(github.event.issue.title, '[QA]') && github.event.comment.user.login == github.repository_owner
@@ -53,7 +52,8 @@ jobs:
           git config user.name "project120-bot"
           git config user.email "bot@project120.co.il"
           git add db/quarantine.json
-          git commit -m "QA: ${{ steps.d.outputs.act }} ${{ steps.d.outputs.ref }}" && git pull --rebase -X theirs origin main && git push
+          git commit -m "QA: ${{ steps.d.outputs.act }} ${{ steps.d.outputs.ref }}"
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs origin main && git push && break; sleep 20; done
           gh issue comment ${{ github.event.issue.number }} --body "$( [ "${{ steps.d.outputs.act }}" = approve ] && echo "אושר (${{ steps.d.outputs.ref }}) - נכנס למודל, התחזית מתעדכנת (כ-15 דקות)." || echo "נדחה (${{ steps.d.outputs.ref }}) - לא ייכנס למודל." )"
           gh issue close ${{ github.event.issue.number }}
           gh workflow run update.yml -f force=true
