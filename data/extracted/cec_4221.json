@@ -1,0 +1,114 @@
+{
+  "ref": "4221",
+  "pollster_as_written": "טאטיקה מחקרים ומדיה בע\"מ, בשיתוף פאנל Adgenda",
+  "commissioner_as_written": "זמן ישראל (זמני ישראל בע\"מ)",
+  "fieldwork_start": "2026-09-16",
+  "fieldwork_end": "2026-09-17",
+  "method": "mixed",
+  "initial_sample": 18000,
+  "respondents": 500,
+  "response_rate_pct": 3.0,
+  "margin_error_pct": 4.4,
+  "population": "כלל האוכלוסייה הבוגרת בישראל בעלת זכות בחירה (בני 18 ומעלה), יהודים וערבים, בכל אזורי הארץ לרבות יהודה ושומרון",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום, וכל המפלגות הקיימות היו מתמודדות בנפרד, למי היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "ישר בראשות גדי אייזנקוט",
+          "party": "ישר",
+          "seats": 24,
+          "pct": 18.4
+        },
+        {
+          "party_as_written": "הליכוד",
+          "party": "הליכוד",
+          "seats": 22,
+          "pct": 16.2
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 14,
+          "pct": 10.6
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 9,
+          "pct": 7.2
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 9,
+          "pct": 7.2
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 9,
+          "pct": 6.8
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "חד\"ש תע\"ל בל״ד",
+          "party": "הרשימה המשותפת",
+          "seats": 8,
+          "pct": 6.2
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 7,
+          "pct": 5.4
+        },
+        {
+          "party_as_written": "רע\"ם",
+          "party": "רע\"ם",
+          "seats": 6,
+          "pct": 4.8
+        },
+        {
+          "party_as_written": "הציונות הדתית",
+          "party": "הציונות הדתית",
+          "seats": 4,
+          "pct": 3.6
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 3.0
+        },
+        {
+          "party_as_written": "מילואימניקים + הכלכלית",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 2.2
+        },
+        {
+          "party_as_written": "כחול לבן בהובלת בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 2.0
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": ""
+    }
+  ],
+  "extraction_notes": ""
+}
