@@ -352,7 +352,7 @@
    "note": ""
   },
   "4215": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "גודל מדגם 2099 חריג למכון (חציון 551) - לבדוק 'מספר המשיבים בפועל'"
    ],
@@ -363,7 +363,9 @@
    "pollster": "מאגר מוחות",
    "fieldwork": "2026-10-12..2026-10-13",
    "created": "2026-10-18T10:40:56",
-   "issue": "https://github.com/lautmanaha/project120/issues/54"
+   "issue": "https://github.com/lautmanaha/project120/issues/54",
+   "decided": "2026-10-19T22:18:24",
+   "note": ""
   }
  }
 }
