@@ -298,7 +298,7 @@
    "note": ""
   },
   "4210": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "מכון חדש במאגר: פרויקט המדגם (רוזנר) (אין סקר קודם - לבדוק שהשם עקבי ושזה מכון אמיתי. אם זה בעצם מכון מוכר, לכתוב את שמו בתגובת האישור, למשל: אישור - נקסט דאטה)"
    ],
@@ -312,7 +312,9 @@
    "pollster": "פרויקט המדגם (רוזנר)",
    "fieldwork": "2026-10-13..2026-10-13",
    "created": "2026-10-15T16:01:23",
-   "issue": "https://github.com/lautmanaha/project120/issues/51"
+   "issue": "https://github.com/lautmanaha/project120/issues/51",
+   "decided": "2026-10-19T22:18:41",
+   "note": ""
   },
   "4211": {
    "status": "approved",
