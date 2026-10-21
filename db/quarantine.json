@@ -122,7 +122,12 @@
   "4223",
   "4224",
   "4225",
-  "4228"
+  "4228",
+  "4229",
+  "4230",
+  "4232",
+  "4233",
+  "4235"
  ],
  "polls": {
   "4140": {
@@ -368,6 +373,21 @@
    "issue": "https://github.com/lautmanaha/project120/issues/54",
    "decided": "2026-10-19T22:18:24",
    "note": ""
+  },
+  "4235": {
+   "status": "pending",
+   "flags": [
+    "מפלגות חסרות בסקר ארצי (היו מקבלות ערך מוערך): רע\"ם",
+    "החילוץ נכשל באימות (needs_review)"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "פרויקט המדגם (רוזנר)",
+   "fieldwork": "2026-10-18..2026-10-18",
+   "created": "2026-10-21T10:56:04",
+   "issue": "https://github.com/lautmanaha/project120/issues/55"
   }
  }
 }

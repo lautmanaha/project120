@@ -1,0 +1,145 @@
+{
+  "ref": "4235",
+  "pollster_as_written": "שמואל רוזנר עם חברת פאנל פרוייקט המדגם",
+  "commissioner_as_written": "חדשות 13",
+  "fieldwork_start": "2026-10-18",
+  "fieldwork_end": "2026-10-18",
+  "method": "mixed",
+  "initial_sample": 8150,
+  "respondents": 1016,
+  "response_rate_pct": null,
+  "margin_error_pct": 3.1,
+  "population": "מדגם שכבות מייצג של אוכלוסיית המדינה בגילאי +18",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "כחול לבן",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ליכוד",
+          "party": "הליכוד",
+          "seats": 16,
+          "pct": null
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 6,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציונות הדתית",
+          "party": "הציונות הדתית",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "עמך ישראל (וינטר)",
+          "party": "עמך ישראל",
+          "seats": 5,
+          "pct": null
+        },
+        {
+          "party_as_written": "רע\"מ",
+          "party": "רע\"מ",
+          "seats": 6,
+          "pct": null
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
+          "pct": null
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 10,
+          "pct": null
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 15,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 18,
+          "pct": null
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 4,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציבור החרדי",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "נעם (מתוך \"מפלגה אחרת\")",
+          "party": "נעם",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "הקהל (מתוך \"מפלגה אחרת\")",
+          "party": "מפלגת הקהל",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "צבע שחור (מתוך \"מפלגה אחרת\")",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל תחילה (מתוך \"מפלגה אחרת\")",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        }
+      ],
+      "undecided_pct": 10.0,
+      "not_voting_pct": 2.8,
+      "other_pct": 0.2,
+      "blank_pct": 0.2,
+      "seats_total": 120,
+      "notes": "pct columns are per-sector raw samples; only seats (מנדטים) are national weighted. The four percentage columns are unweighted samples: adult Jews, youth, Haredim, and Arab sector. Seats calculated via statistical methodology advised by Prof. David Steinberg."
+    }
+  ],
+  "extraction_notes": "The table contains only raw unweighted percentages broken down by sector (adult Jews, youth, Haredim, Arab sector). There is no national percentage column. Only the seats column (מנדטים נוכחי) represents the national weighted projection. Follow-up questions on leaners and second choice preferences were not extracted per spec (not main vote intention). 'צבע שחור' and 'ישראל תחילה' mapped to 'אחר' as they are not in the canonical list. [VALIDATION: party not canonical: רע\"מ]",
+  "needs_review": true
+}

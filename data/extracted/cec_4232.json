@@ -1,0 +1,114 @@
+{
+  "ref": "4232",
+  "pollster_as_written": "מדגם יעוץ ומחקר בראשות מנו גבע",
+  "commissioner_as_written": "חברת החדשות",
+  "fieldwork_start": "2026-10-19",
+  "fieldwork_end": "2026-10-19",
+  "method": "mixed",
+  "initial_sample": 500,
+  "respondents": 507,
+  "response_rate_pct": 20.0,
+  "margin_error_pct": 4.4,
+  "population": "כלל האוכלוסייה - בישראל מגיל 18 ומעלה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "ישר! עם איזנקוט בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 24,
+          "pct": 18.5
+        },
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 21,
+          "pct": 16.4
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 14,
+          "pct": 10.9
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) בראשות יוסף ג`בארין",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
+          "pct": 6.9
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.1
+        },
+        {
+          "party_as_written": "הציונות הדתית – זהות בראשות בצלאל סמוטריץ` ומשה פייגלין",
+          "party": "הציונות הדתית",
+          "seats": 7,
+          "pct": 5.5
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 5.4
+        },
+        {
+          "party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס ויואב סגלוביץ`",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 2.8
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית בראשות יועז הנדל וירון זליכה",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 2.1
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 1.4
+        }
+      ],
+      "undecided_pct": 7.3,
+      "not_voting_pct": null,
+      "other_pct": 0.3,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "הציונות הדתית – זהות is presented as a merged list; party set to הציונות הדתית as the larger component. מפלגות אחרות עד 1% כ\"א listed at 0.3%."
+    }
+  ],
+  "extraction_notes": "Commissioner is חברת החדשות (likely חדשות 12 based on header). Pollster is מדגם יעוץ ומחקר בראשות מנו גבע. Fieldwork date is single date 19/10/2026. Initial sample is 500; respondents who actually answered is 507. The text notes raw percentages (אחוז גולמי) do not account for 'פיצוח מתלבטים' (breaking undecideds), suggesting the results are weighted. Below-threshold parties are included with 0 seats."
+}
