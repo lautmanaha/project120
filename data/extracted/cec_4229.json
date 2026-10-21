@@ -5,7 +5,7 @@
   "fieldwork_start": "2026-10-18",
   "fieldwork_end": "2026-10-18",
   "method": "internet",
-  "initial_sample": 500,
+  "initial_sample": 9600,
   "respondents": 525,
   "response_rate_pct": 5.5,
   "margin_error_pct": 4.2,
@@ -118,12 +118,6 @@
           "party": "אחר",
           "seats": 0,
           "pct": null
-        },
-        {
-          "party_as_written": "צבע שחור",
-          "party": "אחר",
-          "seats": 0,
-          "pct": null
         }
       ],
       "undecided_pct": null,
@@ -131,8 +125,8 @@
       "other_pct": null,
       "blank_pct": null,
       "seats_total": 120,
-      "notes": "הציונות הדתית וזהות is presented as a merged list; assigned to הציונות הדתית. Parties below threshold (כחול לבן, הציבור החרדי, נעם, אח\"י, צבע שחור) had no percentages listed in the table, only noted as receiving less than 1%."
+      "notes": "The table shows a merged list 'הציונות הדתית וזהות'. Parties below threshold (כחול לבן, הציבור החרדי, נעם, אח\"י) were sampled but received under 1% according to text; no specific percentages given for these parties. אח\"י is not a canonical party name."
     }
   ],
-  "extraction_notes": "The text mentions parties that were sampled and received less than 1%: צבע שחור, כחול לבן, הציבור החרדי, נעם, אח\"י. These were added as rows with 0 seats and null pct. אח\"י and צבע שחור are not in the canonical list so marked as אחר."
+  "extraction_notes": "The text mentions 'גודל המדגם ההתחלתי: 500' but also 'מס' האנשים שהתבקשו להשתתף בסקר: 9,600'. The 9,600 appears to be the initial invitation pool (initial_sample), while 500 is described as 'initial sample size' but is distinct from the 525 actual respondents. Following the spec to use 'מספר המתבקשים' as initial_sample, I used 9,600. The party 'אח\"י' is not in the canonical list; set to 'אחר'."
 }

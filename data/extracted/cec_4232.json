@@ -1,7 +1,7 @@
 {
   "ref": "4232",
   "pollster_as_written": "מדגם יעוץ ומחקר בראשות מנו גבע",
-  "commissioner_as_written": "חברת החדשות",
+  "commissioner_as_written": "חברת החדשות 12",
   "fieldwork_start": "2026-10-19",
   "fieldwork_end": "2026-10-19",
   "method": "mixed",
@@ -9,7 +9,7 @@
   "respondents": 507,
   "response_rate_pct": 20.0,
   "margin_error_pct": 4.4,
-  "population": "כלל האוכלוסייה - בישראל מגיל 18 ומעלה",
+  "population": "כלל האוכלוסייה הבוגרת 18+",
   "questions": [
     {
       "qid": 1,
@@ -42,7 +42,7 @@
           "pct": 7.0
         },
         {
-          "party_as_written": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) בראשות יוסף ג`בארין",
+          "party_as_written": "הרשימה המשותפת (חד\"ש, תע\"ל, בל\"ד) בראשות יוסף ג'בארין",
           "party": "הרשימה המשותפת",
           "seats": 9,
           "pct": 6.9
@@ -66,7 +66,7 @@
           "pct": 6.1
         },
         {
-          "party_as_written": "הציונות הדתית – זהות בראשות בצלאל סמוטריץ` ומשה פייגלין",
+          "party_as_written": "הציונות הדתית – זהות בראשות בצלאל סמוטריץ' ומשה פייגלין",
           "party": "הציונות הדתית",
           "seats": 7,
           "pct": 5.5
@@ -78,7 +78,7 @@
           "pct": 5.4
         },
         {
-          "party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס ויואב סגלוביץ`",
+          "party_as_written": "הרשימה הערבית המאוחדת - רע\"ם בראשות מנסור עבאס ויואב סגלוביץ'",
           "party": "רע\"ם",
           "seats": 5,
           "pct": 4.0
@@ -107,8 +107,8 @@
       "other_pct": 0.3,
       "blank_pct": null,
       "seats_total": 120,
-      "notes": "הציונות הדתית – זהות is presented as a merged list; party set to הציונות הדתית as the larger component. מפלגות אחרות עד 1% כ\"א listed at 0.3%."
+      "notes": "The party 'הציונות הדתית – זהות' is a merged list of הציונות הדתית and זהות. Party recorded as הציונות הדתית (the larger component). Other parties below 1% each are aggregated as 0.3% 'other'."
     }
   ],
-  "extraction_notes": "Commissioner is חברת החדשות (likely חדשות 12 based on header). Pollster is מדגם יעוץ ומחקר בראשות מנו גבע. Fieldwork date is single date 19/10/2026. Initial sample is 500; respondents who actually answered is 507. The text notes raw percentages (אחוז גולמי) do not account for 'פיצוח מתלבטים' (breaking undecideds), suggesting the results are weighted. Below-threshold parties are included with 0 seats."
+  "extraction_notes": "The vote-intention question is on pages 2-3. Pages 3-4 contain non-voting questions (suitability for PM, opinion questions about various political figures/events) which are not extracted per the spec."
 }

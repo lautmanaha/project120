@@ -125,8 +125,8 @@
       "other_pct": null,
       "blank_pct": null,
       "seats_total": 120,
-      "notes": "הציונות הדתית וזהות are listed as a joint list. Parties below threshold are included with 0 seats."
+      "notes": "Table includes parties below threshold with 0 seats. Two small parties (מפלגת אח\"י, צבע שחור מגן עולם התורה) mapped to אחר as not in canonical list."
     }
   ],
-  "extraction_notes": "The below-threshold table does not have a separate section header 'מפלגות שלא עברו את אחוז החסימה', but the parties with 0 seats and percentages below 3.25% are listed after the blank row in the main table and have been extracted as results with seats=0. Two small parties ('מפלגת אח\"י' and 'צבע שחור מגן עולם התורה') do not match the canonical party list and are marked as 'אחר'."
+  "extraction_notes": "Document is clear. All data from pages 1-2. Margin of error given as ±4.2%. Below-threshold parties extracted from main table."
 }

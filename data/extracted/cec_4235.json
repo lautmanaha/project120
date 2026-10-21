@@ -9,7 +9,7 @@
   "respondents": 1016,
   "response_rate_pct": null,
   "margin_error_pct": 3.1,
-  "population": "מדגם שכבות מייצג של אוכלוסיית המדינה בגילאי +18",
+  "population": "אוכלוסיית המדינה בגילאי +18",
   "questions": [
     {
       "qid": 1,
@@ -18,9 +18,9 @@
       "weighted": true,
       "results": [
         {
-          "party_as_written": "כחול לבן",
-          "party": "כחול לבן",
-          "seats": 0,
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 18,
           "pct": null
         },
         {
@@ -30,20 +30,32 @@
           "pct": null
         },
         {
-          "party_as_written": "ש\"ס",
-          "party": "ש\"ס",
-          "seats": 6,
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 15,
           "pct": null
         },
         {
-          "party_as_written": "הציונות הדתית",
-          "party": "הציונות הדתית",
-          "seats": 8,
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 10,
+          "pct": null
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
           "pct": null
         },
         {
           "party_as_written": "יהדות התורה",
           "party": "יהדות התורה",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציונות הדתית",
+          "party": "הציונות הדתית",
           "seats": 8,
           "pct": null
         },
@@ -54,51 +66,39 @@
           "pct": null
         },
         {
-          "party_as_written": "עמך ישראל (וינטר)",
-          "party": "עמך ישראל",
-          "seats": 5,
-          "pct": null
-        },
-        {
-          "party_as_written": "רע\"מ",
-          "party": "רע\"מ",
-          "seats": 6,
-          "pct": null
-        },
-        {
-          "party_as_written": "הרשימה המשותפת",
-          "party": "הרשימה המשותפת",
-          "seats": 9,
-          "pct": null
-        },
-        {
           "party_as_written": "עוצמה יהודית",
           "party": "עוצמה יהודית",
           "seats": 7,
           "pct": null
         },
         {
-          "party_as_written": "הדמוקרטים",
-          "party": "הדמוקרטים",
-          "seats": 10,
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 6,
           "pct": null
         },
         {
-          "party_as_written": "ביחד",
-          "party": "ביחד",
-          "seats": 15,
+          "party_as_written": "רע\"מ",
+          "party": "רע\"ם",
+          "seats": 6,
           "pct": null
         },
         {
-          "party_as_written": "ישר",
-          "party": "ישר",
-          "seats": 18,
+          "party_as_written": "עמך ישראל (וינטר)",
+          "party": "עמך ישראל",
+          "seats": 5,
           "pct": null
         },
         {
           "party_as_written": "המילואימניקים והכלכלית",
           "party": "המילואימניקים והכלכלית",
           "seats": 4,
+          "pct": null
+        },
+        {
+          "party_as_written": "כחול לבן",
+          "party": "כחול לבן",
+          "seats": 0,
           "pct": null
         },
         {
@@ -132,14 +132,13 @@
           "pct": null
         }
       ],
-      "undecided_pct": 10.0,
-      "not_voting_pct": 2.8,
-      "other_pct": 0.2,
-      "blank_pct": 0.2,
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
       "seats_total": 120,
-      "notes": "pct columns are per-sector raw samples; only seats (מנדטים) are national weighted. The four percentage columns are unweighted samples: adult Jews, youth, Haredim, and Arab sector. Seats calculated via statistical methodology advised by Prof. David Steinberg."
+      "notes": "pct columns are per-sector raw samples; only seats are national. The table shows raw unweighted percentages for four separate samples (בוגרים יהודים, צעירים, חרדים, מגזר ערבי), not national percentages. Seats were calculated using statistical methodology weighted by sector populations. Parties below threshold (הציבור החרדי, נעם, הקהל, צבע שחור, ישראל תחילה) shown with 0 seats."
     }
   ],
-  "extraction_notes": "The table contains only raw unweighted percentages broken down by sector (adult Jews, youth, Haredim, Arab sector). There is no national percentage column. Only the seats column (מנדטים נוכחי) represents the national weighted projection. Follow-up questions on leaners and second choice preferences were not extracted per spec (not main vote intention). 'צבע שחור' and 'ישראל תחילה' mapped to 'אחר' as they are not in the canonical list. [VALIDATION: party not canonical: רע\"מ]",
-  "needs_review": true
+  "extraction_notes": "The PDF contains a main vote-intention question with results broken down by four sub-samples. The percentage columns are explicitly labeled as raw/unweighted percentages for each separate sample (not national), and the text states: 'האחוזים בארבעת הטורים האחרונים הם גולמיים ובלתי משוקללים, וכל מדגם מוצג בנפרד. האחוזים אינם משקללים את היחס בין גודלי המדגמים ואינם מייצגים את התפלגות הקולות הארצית.' Therefore pct is set to null for all parties and only seats (which are nationally weighted) are recorded. Additional tables on leaners and second preferences are not vote-intention questions and were not extracted."
 }

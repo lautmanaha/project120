@@ -1,7 +1,7 @@
 {
   "ref": "4233",
-  "pollster_as_written": "חברת Next Data, המנופים 1, הרצליה",
-  "commissioner_as_written": "ערוץ עכשיו 14, צלע ההר 44, מודיעין",
+  "pollster_as_written": "Next Data",
+  "commissioner_as_written": "ערוץ עכשיו 14",
   "fieldwork_start": "2026-10-19",
   "fieldwork_end": "2026-10-19",
   "method": "internet",
@@ -9,7 +9,7 @@
   "respondents": 454,
   "response_rate_pct": 6.5,
   "margin_error_pct": 4.6,
-  "population": "454 נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "population": "נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
   "questions": [
     {
       "qid": 1,
@@ -125,8 +125,8 @@
       "other_pct": null,
       "blank_pct": null,
       "seats_total": 120,
-      "notes": "הציונות הדתית וזהות appear as a merged list. מתלבטים וטרם החליטו (0.6%) recorded as undecided_pct."
+      "notes": "Party listed as 'מפלגת אחי - חוזרים לשורשים' mapped to אחר as it is not in the canonical list"
     }
   ],
-  "extraction_notes": "Survey conducted via digital internet collection system. All vote-intention data extracted from page 2. Pages 3-6 contain PM suitability and issue questions (not extracted per spec). The below-threshold table includes a party 'מפלגת אחי - חוזרים לשורשים' which does not match any canonical party name, so it is marked as 'אחר'."
+  "extraction_notes": "All vote-intention data extracted from page 2. Pages 3-6 contain non-vote-intention questions (PM suitability, issue questions) and were not extracted per spec. The merger label 'הציונות הדתית וזהות' is recorded as written; mapped to הציונות הדתית per spec."
 }
