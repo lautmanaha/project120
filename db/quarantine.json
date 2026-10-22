@@ -394,7 +394,7 @@
    "issue": "https://github.com/lautmanaha/project120/issues/55"
   },
   "4237": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "גודל מדגם 2026 חריג למכון (חציון 551) - לבדוק 'מספר המשיבים בפועל'"
    ],
@@ -408,10 +408,12 @@
    "pollster": "מאגר מוחות",
    "fieldwork": "2026-10-19..2026-10-20",
    "created": "2026-10-22T06:22:38",
-   "issue": "https://github.com/lautmanaha/project120/issues/56"
+   "issue": "https://github.com/lautmanaha/project120/issues/56",
+   "decided": "2026-10-22T07:08:39",
+   "note": ""
   },
   "4238": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "גודל מדגם 2116 חריג למכון (חציון 588) - לבדוק 'מספר המשיבים בפועל'"
    ],
@@ -422,10 +424,12 @@
    "pollster": "נקסט דאטה",
    "fieldwork": "2026-10-20..2026-10-20",
    "created": "2026-10-22T06:22:40",
-   "issue": "https://github.com/lautmanaha/project120/issues/57"
+   "issue": "https://github.com/lautmanaha/project120/issues/57",
+   "decided": "2026-10-22T07:08:39",
+   "note": ""
   },
   "4240": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "גודל מדגם 1954 חריג למכון (חציון 588) - לבדוק 'מספר המשיבים בפועל'"
    ],
@@ -436,10 +440,12 @@
    "pollster": "נקסט דאטה",
    "fieldwork": "2026-10-21..2026-10-21",
    "created": "2026-10-22T06:22:41",
-   "issue": "https://github.com/lautmanaha/project120/issues/58"
+   "issue": "https://github.com/lautmanaha/project120/issues/58",
+   "decided": "2026-10-22T07:08:39",
+   "note": ""
   },
   "4241": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "המילואימניקים והכלכלית מופיעה 2 פעמים"
    ],
@@ -450,7 +456,9 @@
    "pollster": "לזר מחקרים",
    "fieldwork": "2026-10-19..2026-10-19",
    "created": "2026-10-22T06:22:43",
-   "issue": "https://github.com/lautmanaha/project120/issues/59"
+   "issue": "https://github.com/lautmanaha/project120/issues/59",
+   "decided": "2026-10-22T07:08:39",
+   "note": ""
   }
  }
 }
