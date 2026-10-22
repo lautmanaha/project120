@@ -109,7 +109,7 @@
         },
         {
           "party_as_written": "צומת בית ישראל",
-          "party": "בית ציוני",
+          "party": "אחר",
           "seats": 0,
           "pct": 0.2
         }
@@ -122,5 +122,5 @@
       "notes": "Party 'הציונות הדתית זהות' is listed as a merged list of הציונות הדתית and זהות."
     }
   ],
-  "extraction_notes": "All data extracted cleanly from single-page PDF. The percentages column is labeled 'אחוזים גולמיים' (raw percentages), but given the context and that these sum to 100%, they appear to be weighted percentages. Four parties below threshold are included with 0 seats."
+  "extraction_notes": "All data extracted cleanly from single-page PDF. The percentages column is labeled 'אחוזים גולמיים' (raw percentages), but given the context and that these sum to 100%, they appear to be weighted percentages. Four parties below threshold are included with 0 seats. | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): \"צומת בית ישראל\" (0.2%) היא מפלגה אחרת - שויכה בטעות ל\"בית ציוני\" ומשם להמילואימניקים והכלכלית."
 }

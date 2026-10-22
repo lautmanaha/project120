@@ -88,6 +88,18 @@
           "party": "עמך ישראל",
           "seats": 4,
           "pct": 3.4
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 1.4
+        },
+        {
+          "party_as_written": "כחול לבן",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 1.1
         }
       ],
       "undecided_pct": null,
@@ -98,5 +110,5 @@
       "notes": "המילואימניקים והכלכלית are listed under 'other parties' at 1.4%"
     }
   ],
-  "extraction_notes": "The poll was commissioned by i24NEWS. Initial sample was 15,700 people contacted, with 1,054 respondents actually participating. The response rate is 6.7%. Margin of error is ±3.0% at 95% confidence. The footnote mentions parties below threshold including 'הציבור החרדי, צבע שחור, נעם לישראל בראשות אבי מעוז, אח\"י, הקהל, ישראל תחילה - עולה ירוק'."
+  "extraction_notes": "The poll was commissioned by i24NEWS. Initial sample was 15,700 people contacted, with 1,054 respondents actually participating. The response rate is 6.7%. Margin of error is ±3.0% at 95% confidence. The footnote mentions parties below threshold including 'הציבור החרדי, צבע שחור, נעם לישראל בראשות אבי מעוז, אח\"י, הקהל, ישראל תחילה - עולה ירוק'. | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): נוספו שורות מתחת לאחוז החסימה שהחילוץ השמיט: המילואימניקים והכלכלית 1.4%, כחול לבן 1.1%"
 }

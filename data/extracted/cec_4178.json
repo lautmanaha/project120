@@ -88,6 +88,18 @@
           "party": "עמך ישראל",
           "seats": 4,
           "pct": 3.3
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 1.8
+        },
+        {
+          "party_as_written": "כחול לבן (מתחת ל-1%)",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.5
         }
       ],
       "undecided_pct": null,
@@ -98,5 +110,5 @@
       "notes": "Other parties listed as 'המילואימניקים והכלכלית' with 1.8% but shown as below threshold (1.8 not a seat count)."
     }
   ],
-  "extraction_notes": "The poll was conducted by Direct Polls (דיירקט פולס) for i24NEWS. Fieldwork was on October 1, 2026, between 9:00-14:00. The table includes 'המילואימניקים והכלכלית' at 1.8%, which appears to represent parties below threshold (shown with percentage only, not seat count). The note at bottom mentions 'נדגמו וקיבלו מתחת ל-1%' for several parties including 'צבע שחור, כחול לבן בראשות בני גנץ, נעם לישראל בראשות אבי מעוז, הציבור החרדי, אח\"י, ישראל מחילה'."
+  "extraction_notes": "The poll was conducted by Direct Polls (דיירקט פולס) for i24NEWS. Fieldwork was on October 1, 2026, between 9:00-14:00. The table includes 'המילואימניקים והכלכלית' at 1.8%, which appears to represent parties below threshold (shown with percentage only, not seat count). The note at bottom mentions 'נדגמו וקיבלו מתחת ל-1%' for several parties including 'צבע שחור, כחול לבן בראשות בני גנץ, נעם לישראל בראשות אבי מעוז, הציבור החרדי, אח\"י, ישראל מחילה'. | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): נוספו שורות מתחת לאחוז החסימה שהחילוץ השמיט: המילואימניקים והכלכלית 1.8%, כחול לבן (מתחת ל-1%) 0.5% (\"מתחת ל-1%\" נרשם 0.5)"
 }

@@ -88,6 +88,18 @@
           "party": "עמך ישראל",
           "seats": 4,
           "pct": 3.3
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 1.6
+        },
+        {
+          "party_as_written": "כחול לבן (מתחת ל-1%)",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.5
         }
       ],
       "undecided_pct": null,
@@ -98,5 +110,5 @@
       "notes": "Other parties listed as 'המילואימניקים והכלכלית' with 1.6% and 1.6% (presumably seats not shown as below threshold). Bottom note indicates random and Vickrey methods used, white votes counted at head of Benny Gantz list, Neama in Avi Maoz leadership, Israel Betcha at start."
     }
   ],
-  "extraction_notes": "Poll conducted by Direct Polls by Tzuriel Sharon for i24NEWS on September 24, 2026. Initial sample 8,850, respondents who participated 537 (response rate 6.1%). Margin of error ±4.2% at 95% confidence. Method is internet (אינטרנט, פאנל משיבים). Population is national representative sample of all Israeli population 18+, including Jews and Arabs. The 'other parties' row shows המילואימניקים והכלכלית at 1.6% (appears to show percentage rather than seats, indicating below threshold)."
+  "extraction_notes": "Poll conducted by Direct Polls by Tzuriel Sharon for i24NEWS on September 24, 2026. Initial sample 8,850, respondents who participated 537 (response rate 6.1%). Margin of error ±4.2% at 95% confidence. Method is internet (אינטרנט, פאנל משיבים). Population is national representative sample of all Israeli population 18+, including Jews and Arabs. The 'other parties' row shows המילואימניקים והכלכלית at 1.6% (appears to show percentage rather than seats, indicating below threshold). | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): נוספו שורות מתחת לאחוז החסימה שהחילוץ השמיט: המילואימניקים והכלכלית 1.6%, כחול לבן (מתחת ל-1%) 0.5% (\"מתחת ל-1%\" נרשם 0.5)"
 }

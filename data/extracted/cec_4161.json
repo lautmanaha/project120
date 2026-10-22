@@ -88,6 +88,18 @@
           "party": "עמך ישראל",
           "seats": 5,
           "pct": 3.7
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 2.2
+        },
+        {
+          "party_as_written": "כחול לבן (מתחת ל-1%)",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.5
         }
       ],
       "undecided_pct": null,
@@ -98,5 +110,5 @@
       "notes": "Other parties listed in text below table: נדגמו וקיבלו פחות מ-1%: צבע שחור, הציבור החרדי, אחד, כחול לבן בראשות בני גנץ, נעם לישראל בראשות אבי מעוז, הקול, ישראל חזקה."
     }
   ],
-  "extraction_notes": "The table shows 'המילואימניקים והכלכלית' with 2.2% listed, which represents other parties below threshold. The text below the table specifies these parties include צבע שחור, הציבור החרדי, אחד, כחול לבן, נעם, הקול, and ישראל חזקה. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 525 (בחילוץ: 500 - נלקח מספר המסרבים או גודל המדגם ההתחלתי)"
+  "extraction_notes": "The table shows 'המילואימניקים והכלכלית' with 2.2% listed, which represents other parties below threshold. The text below the table specifies these parties include צבע שחור, הציבור החרדי, אחד, כחול לבן, נעם, הקול, and ישראל חזקה. | תיקון 4.10.2026: מספר המשיבים בפועל לפי ה-PDF הוא 525 (בחילוץ: 500 - נלקח מספר המסרבים או גודל המדגם ההתחלתי) | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): נוספו שורות מתחת לאחוז החסימה שהחילוץ השמיט: המילואימניקים והכלכלית 2.2%, כחול לבן (מתחת ל-1%) 0.5% (\"מתחת ל-1%\" נרשם 0.5)"
 }

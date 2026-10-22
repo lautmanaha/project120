@@ -94,6 +94,12 @@
           "party": "עמך ישראל",
           "seats": 4,
           "pct": 3.3
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.8
         }
       ],
       "undecided_pct": null,
@@ -104,5 +110,5 @@
       "notes": "Four parties shown with 0% or below threshold: כחול לבן בראשות בני גנץ (0.8%), הציבור החרדי בראשות מוטי לייטנר (0.9%), מפלגת נעם בראשות אבי מעוז (0.4%), ישראל תחילה ועלה ירוק בראשות שרון השכל (0.5%). The table shows a merged list 'הציונות הדתית זהות' which combines הציונות הדתית and זהות - attributed to the larger component הציונות הדתית. Similarly 'המילואימניקים והמפלגה הכלכלית' appears to be a merged list - attributed to הכלכלית החדשה."
     }
   ],
-  "extraction_notes": "Page 1 contains methodology details. Page 2 contains the main voting intention table. The poll was conducted via internet panel (אינטרנטי, פאנל משיבים). Several parties are shown below threshold with percentages but no seats. The table shows some merged party lists."
+  "extraction_notes": "Page 1 contains methodology details. Page 2 contains the main voting intention table. The poll was conducted via internet panel (אינטרנטי, פאנל משיבים). Several parties are shown below threshold with percentages but no seats. The table shows some merged party lists. | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): נוספו שורות מתחת לאחוז החסימה שהחילוץ השמיט: כחול לבן בראשות בני גנץ 0.8%"
 }

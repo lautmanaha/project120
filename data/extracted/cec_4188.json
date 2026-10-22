@@ -88,6 +88,18 @@
           "party": "רע\"ם",
           "seats": 5,
           "pct": 3.9
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 2.6
+        },
+        {
+          "party_as_written": "כחול לבן בראשות בני גנץ",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 1.3
         }
       ],
       "undecided_pct": null,
@@ -98,5 +110,5 @@
       "notes": "המיליאומניקים והמפלגה הכלכלית appears as a merged entity with 4 seats; mapped to אחר as it represents two parties (בית ציוני + הכלכלית החדשה). Five parties shown below threshold (no seats): עמך ישראל בראשות עופר וינטר (2.6%), כחול לבן בראשות בני גנץ (1.3%), הציבור החרדי בראשות מוטי לייטנר (0.9%), מפלגה אחת בראשות הרב אברגיל (0.7%), צבע שחור מן עולם התורה בראשות אליהו בוימירק (0.6%)."
     }
   ],
-  "extraction_notes": "Poll conducted by Kantar on 4.10.2026 (October 4, 2026). Page 1 shows methodology: internet panel, 550 total initial sample size, adult Israeli population 18+ (Jews and Arabs), 2,390 invited, 553 participated, 23% response rate, margin of error ±4.2%. Page 2 contains the main vote-intention table with both percentages and seats. The remaining pages (3-5) contain additional questions about Netanyahu vs. Bennett vs. Gantz, PM suitability, coalition preferences, and other non-vote-intention questions that are not extracted per the specification."
+  "extraction_notes": "Poll conducted by Kantar on 4.10.2026 (October 4, 2026). Page 1 shows methodology: internet panel, 550 total initial sample size, adult Israeli population 18+ (Jews and Arabs), 2,390 invited, 553 participated, 23% response rate, margin of error ±4.2%. Page 2 contains the main vote-intention table with both percentages and seats. The remaining pages (3-5) contain additional questions about Netanyahu vs. Bennett vs. Gantz, PM suitability, coalition preferences, and other non-vote-intention questions that are not extracted per the specification. | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): נוספו שורות מתחת לאחוז החסימה שהחילוץ השמיט: עמך ישראל בראשות עופר וינטר 2.6%, כחול לבן בראשות בני גנץ 1.3%"
 }

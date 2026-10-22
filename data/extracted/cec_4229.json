@@ -96,12 +96,6 @@
           "pct": 2.4
         },
         {
-          "party_as_written": "כחול לבן",
-          "party": "כחול לבן",
-          "seats": 0,
-          "pct": null
-        },
-        {
           "party_as_written": "הציבור החרדי",
           "party": "הציבור החרדי",
           "seats": 0,
@@ -118,6 +112,12 @@
           "party": "אחר",
           "seats": 0,
           "pct": null
+        },
+        {
+          "party_as_written": "כחול לבן (מתחת ל-1%)",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.5
         }
       ],
       "undecided_pct": null,
@@ -128,5 +128,5 @@
       "notes": "The table shows a merged list 'הציונות הדתית וזהות'. Parties below threshold (כחול לבן, הציבור החרדי, נעם, אח\"י) were sampled but received under 1% according to text; no specific percentages given for these parties. אח\"י is not a canonical party name."
     }
   ],
-  "extraction_notes": "The text mentions 'גודל המדגם ההתחלתי: 500' but also 'מס' האנשים שהתבקשו להשתתף בסקר: 9,600'. The 9,600 appears to be the initial invitation pool (initial_sample), while 500 is described as 'initial sample size' but is distinct from the 525 actual respondents. Following the spec to use 'מספר המתבקשים' as initial_sample, I used 9,600. The party 'אח\"י' is not in the canonical list; set to 'אחר'."
+  "extraction_notes": "The text mentions 'גודל המדגם ההתחלתי: 500' but also 'מס' האנשים שהתבקשו להשתתף בסקר: 9,600'. The 9,600 appears to be the initial invitation pool (initial_sample), while 500 is described as 'initial sample size' but is distinct from the 525 actual respondents. Following the spec to use 'מספר המתבקשים' as initial_sample, I used 9,600. The party 'אח\"י' is not in the canonical list; set to 'אחר'. | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): נוספו שורות מתחת לאחוז החסימה שהחילוץ השמיט: כחול לבן (מתחת ל-1%) 0.5% (\"מתחת ל-1%\" נרשם 0.5)"
 }

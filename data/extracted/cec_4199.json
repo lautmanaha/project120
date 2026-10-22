@@ -94,6 +94,12 @@
           "party": "בית ציוני",
           "seats": 0,
           "pct": 2.3
+        },
+        {
+          "party_as_written": "כחול לבן (מתחת ל-1%)",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.5
         }
       ],
       "undecided_pct": null,
@@ -104,5 +110,5 @@
       "notes": "Table includes one below-threshold entry: המילואימניקים והכלכלית with 2.3% (shown as '2.3%' in mandates column). Note at bottom mentions 'נדגמו וקיבלו מתחת ל-1%' parties: בצע שחור, כחול לבן בראשות בני גנץ, נעם (לישראל בראשות אבי מעוז, הציבור החרדי, אח\"י, ישראל תחילה - עלה ירוק)."
     }
   ],
-  "extraction_notes": "The last row in the table shows 2.3% in both columns (percentage and mandates), which represents below-threshold parties grouped together. The note at the bottom lists additional parties that received less than 1%."
+  "extraction_notes": "The last row in the table shows 2.3% in both columns (percentage and mandates), which represents below-threshold parties grouped together. The note at the bottom lists additional parties that received less than 1%. | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): נוספו שורות מתחת לאחוז החסימה שהחילוץ השמיט: כחול לבן (מתחת ל-1%) 0.5% (\"מתחת ל-1%\" נרשם 0.5)"
 }

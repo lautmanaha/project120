@@ -96,16 +96,16 @@
           "pct": 2.2
         },
         {
-          "party_as_written": "כחול לבן בראשות בני גנץ",
-          "party": "כחול לבן",
-          "seats": 0,
-          "pct": null
-        },
-        {
           "party_as_written": "הציבור החרדי",
           "party": "הציבור החרדי",
           "seats": 0,
           "pct": null
+        },
+        {
+          "party_as_written": "כחול לבן (מתחת ל-1%)",
+          "party": "כחול לבן",
+          "seats": 0,
+          "pct": 0.5
         }
       ],
       "undecided_pct": null,
@@ -116,5 +116,5 @@
       "notes": "הציונות הדתית וזהות is a merged list; assigned to הציונות הדתית as the larger component. המילואימניקים והכלכלית mapped to בית ציוני (המילואימניקים). Parties below threshold listed without percentages: כחול לבן, צבע שחור, נעם לישראל, אח\"י, הציבור החרדי, ישראל תחילה - only כחול לבן and הציבור החרדי are in the canonical list and included."
     }
   ],
-  "extraction_notes": "The PDF lists 'גודל המדגם ההתחלתי' as 1,000 and 'מס' האנשים שהתבקשו להשתתף' as 18,800. Per spec, initial_sample is the invited sample (18,800). The actual respondents (מס' האנשים שהשתתפו בסקר בפועל) is 1,210. Below-threshold parties mentioned in text include several not in canonical list (צבע שחור, נעם לישראל, אח\"י, ישראל תחילה); only canonical ones are included in results with 0 seats."
+  "extraction_notes": "The PDF lists 'גודל המדגם ההתחלתי' as 1,000 and 'מס' האנשים שהתבקשו להשתתף' as 18,800. Per spec, initial_sample is the invited sample (18,800). The actual respondents (מס' האנשים שהשתתפו בסקר בפועל) is 1,210. Below-threshold parties mentioned in text include several not in canonical list (צבע שחור, נעם לישראל, אח\"י, ישראל תחילה); only canonical ones are included in results with 0 seats. | תיקון ידני 22.10.2026 (ביקורת מול ה-PDF): נוספו שורות מתחת לאחוז החסימה שהחילוץ השמיט: כחול לבן (מתחת ל-1%) 0.5% (\"מתחת ל-1%\" נרשם 0.5)"
 }

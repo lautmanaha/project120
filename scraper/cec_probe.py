@@ -30,7 +30,10 @@ PDF_DIR = ROOT / "data" / "pdfs"
 INDEX = ROOT / "db" / "cec_index.json"
 URL = "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/knesset_election{n}/he/Survey_{ref}.pdf"
 # הוועדה לא עקבית בשם הקובץ: 4190 (פרסום 99) פורסם כ-Survey4190.pdf, בלי קו תחתון - מה שעצר את הגישוש ב-9.10.2026
-URLS = [URL, "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/knesset_election{n}/he/Survey{ref}.pdf"]
+# ו-4227 (פרסום 122) פורסם כ-Surveyl_4227.pdf (עם l) - פספסנו אותו עד הביקורת ב-22.10.2026
+URLS = [URL, "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/knesset_election{n}/he/Survey{ref}.pdf",
+        "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/knesset_election{n}/he/Surveyl_{ref}.pdf",
+        "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/knesset_election{n}/he/Surveyl{ref}.pdf"]
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36",
     "Accept": "application/pdf,*/*;q=0.8", "Accept-Language": "he-IL,he;q=0.9,en;q=0.8",
