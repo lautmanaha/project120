@@ -1,6 +1,6 @@
 {
   "ref": "4242",
-  "pollster_as_written": "שמואל רוזנר עם חברת פאנל פרוייקט המדגם בהנהלת ד\"ר אריאל איילון, חברת סטטנט נט בהנהלת יוסף מקלדה, חברת אסקריא בהנהלת דודי דרור",
+  "pollster_as_written": "שמואל רוזנר עם חברת פאנל פרוייקט המדגם",
   "commissioner_as_written": "חדשות 13",
   "fieldwork_start": "2026-10-20",
   "fieldwork_end": "2026-10-21",
@@ -18,33 +18,15 @@
       "weighted": true,
       "results": [
         {
-          "party_as_written": "ישר",
-          "party": "ישר",
-          "seats": 20,
-          "pct": null
-        },
-        {
           "party_as_written": "ליכוד",
           "party": "הליכוד",
           "seats": 19,
           "pct": null
         },
         {
-          "party_as_written": "ביחד",
-          "party": "ביחד",
-          "seats": 14,
-          "pct": null
-        },
-        {
-          "party_as_written": "הדמוקרטים",
-          "party": "הדמוקרטים",
-          "seats": 10,
-          "pct": null
-        },
-        {
-          "party_as_written": "הרשימה המשותפת",
-          "party": "הרשימה המשותפת",
-          "seats": 9,
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 7,
           "pct": null
         },
         {
@@ -66,15 +48,9 @@
           "pct": null
         },
         {
-          "party_as_written": "ש\"ס",
-          "party": "ש\"ס",
-          "seats": 7,
-          "pct": null
-        },
-        {
-          "party_as_written": "עוצמה יהודית",
-          "party": "עוצמה יהודית",
-          "seats": 7,
+          "party_as_written": "עמך ישראל",
+          "party": "עמך ישראל",
+          "seats": 0,
           "pct": null
         },
         {
@@ -84,15 +60,39 @@
           "pct": null
         },
         {
-          "party_as_written": "המילואימניקים והכלכלית",
-          "party": "המילואימניקים והכלכלית",
-          "seats": 4,
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
           "pct": null
         },
         {
-          "party_as_written": "עמך ישראל",
-          "party": "עמך ישראל",
-          "seats": 0,
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 10,
+          "pct": null
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 14,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 20,
+          "pct": null
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 4,
           "pct": null
         },
         {
@@ -102,32 +102,14 @@
           "pct": null
         },
         {
-          "party_as_written": "נעם",
+          "party_as_written": "נעם (מתוך \"מפלגה אחרת\")",
           "party": "נעם",
           "seats": 0,
           "pct": null
         },
         {
-          "party_as_written": "הקהל",
+          "party_as_written": "הקהל (מתוך \"מפלגה אחרת\")",
           "party": "מפלגת הקהל",
-          "seats": 0,
-          "pct": null
-        },
-        {
-          "party_as_written": "צבע שחור",
-          "party": "אחר",
-          "seats": 0,
-          "pct": null
-        },
-        {
-          "party_as_written": "אחי",
-          "party": "אחר",
-          "seats": 0,
-          "pct": null
-        },
-        {
-          "party_as_written": "ישראל תחילה",
-          "party": "אחר",
           "seats": 0,
           "pct": null
         }
@@ -137,8 +119,8 @@
       "other_pct": null,
       "blank_pct": null,
       "seats_total": 120,
-      "notes": "pct columns are per-sector raw samples; only seats are national. Parties below threshold included: עמך ישראל, הציבור החרדי, נעם, הקהל (מפלגת הקהל), צבע שחור, אחי, ישראל תחילה. 'מפלגה אחרת' respondents were shown sub-lists (נעם, הקהל, צבע שחור, אחי, ישראל תחילה). צבע שחור, אחי, and ישראל תחילה mapped to אחר as they don't match canonical names."
+      "notes": "pct columns are per-sector raw samples; only seats are national. Parties below threshold (עמך ישראל, הציבור החרדי, נעם, הקהל, and others mentioned in the table footnote) recorded with 0 seats. The table includes separate sub-items from 'מפלגה אחרת' (צבע שחור, אחי, ישראל תחילה) which had 0.0% in all columns and are not included as separate rows. The undecided/not voting/blank percentages are shown per sector but not aggregated nationally in the main table."
     }
   ],
-  "extraction_notes": "The PDF presents a typical רוזנר/פרויקט המדגם layout with four raw percentage columns (one per sector subsample) but no national percentage column. Following the spec, pct is set to null for all parties and only seats are used. The table includes parties below threshold explicitly. The text mentions 'עדיין לא החלטתי' (undecided) percentages per sector but these are raw per-sector and not a national undecided_pct, so undecided_pct is left null. The document also contains leaner allocation and second-preference questions, which are not vote-intention and are ignored per spec."
+  "extraction_notes": "The PDF uses a complex layout with four sector columns (adult Jews, youth, Haredi, Arab) showing raw unweighted percentages, plus a mandates (seats) column that represents the national weighted allocation. Following the spec and the table footnote warning, I set pct to null for all parties since there is no national percentage column - only sector-specific raw percentages. The parties עמך ישראל and הציבור החרדי appear in the main table but with 0 mandates (below threshold). Additional parties (נעם, הקהל, and others) are mentioned in the footnote as sub-options of 'מפלגה אחרת' and shown with mostly 0.0% across sectors - I included נעם and הקהל as they are listed parties, though both received 0 mandates. The text mentions צבע שחור, אחי, and ישראל תחילה but all had 0.0% in every column so I did not create separate rows for them. Total seats sum to 120."
 }
