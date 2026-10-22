@@ -379,7 +379,7 @@
    "note": ""
   },
   "4235": {
-   "status": "pending",
+   "status": "approved",
    "flags": [
     "מפלגות חסרות בסקר ארצי (היו מקבלות ערך מוערך): רע\"ם",
     "החילוץ נכשל באימות (needs_review)"
@@ -391,7 +391,9 @@
    "pollster": "פרויקט המדגם (רוזנר)",
    "fieldwork": "2026-10-18..2026-10-18",
    "created": "2026-10-21T10:56:04",
-   "issue": "https://github.com/lautmanaha/project120/issues/55"
+   "issue": "https://github.com/lautmanaha/project120/issues/55",
+   "decided": "2026-10-22T07:09:55",
+   "note": ""
   },
   "4237": {
    "status": "approved",
