@@ -1,0 +1,114 @@
+{
+  "ref": "4237",
+  "pollster_as_written": "מאגר מוחות",
+  "commissioner_as_written": "ערוץ 16",
+  "fieldwork_start": "2026-10-19",
+  "fieldwork_end": "2026-10-20",
+  "method": "mixed",
+  "initial_sample": 2000,
+  "respondents": 2026,
+  "response_rate_pct": 13.0,
+  "margin_error_pct": 2.1,
+  "population": "האוכלוסייה הישראלית הבוגרת גילי 18 ומעלה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "\"ישר!\" בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 21,
+          "pct": 17.0
+        },
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 18,
+          "pct": 15.0
+        },
+        {
+          "party_as_written": "\"ביחד\" בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 15,
+          "pct": 12.0
+        },
+        {
+          "party_as_written": "הרשימה המשותפת בראשות פרופ' יוסף ג'בארין",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
+          "pct": 8.0
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 9,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 7.0
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 6,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "הציונות הדתית + זהות, בראשות בצלאל סמוטריץ'",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 4,
+          "pct": 3.4
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית בראשות יועז הנדל וירון זליכה",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 4,
+          "pct": 3.4
+        },
+        {
+          "party_as_written": "\"הציבור החרדי\" בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.7
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": 0.2,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "The table includes a merger row: 'הציונות הדתית + זהות' assigned to הציונות הדתית as the larger component."
+    }
+  ],
+  "extraction_notes": "The PDF shows four polling waves (29.9.26, 6.10.26, 13.10.26, 20.10.26). The extracted data is from the most recent wave (20.10.26). The table shows both raw unweighted percentages (גולמיים ללא שקלול) and weighted percentages (בעלי הדעה), and the results extracted use the weighted column. Undecided percentage (לא יודע/ת) is listed as 9% in the raw column but is not included in the weighted 'בעלי הדעה' column."
+}

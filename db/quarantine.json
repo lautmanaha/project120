@@ -127,7 +127,11 @@
   "4230",
   "4232",
   "4233",
-  "4235"
+  "4235",
+  "4237",
+  "4238",
+  "4240",
+  "4241"
  ],
  "polls": {
   "4140": {
@@ -388,6 +392,65 @@
    "fieldwork": "2026-10-18..2026-10-18",
    "created": "2026-10-21T10:56:04",
    "issue": "https://github.com/lautmanaha/project120/issues/55"
+  },
+  "4237": {
+   "status": "pending",
+   "flags": [
+    "גודל מדגם 2026 חריג למכון (חציון 551) - לבדוק 'מספר המשיבים בפועל'"
+   ],
+   "review": {
+    "ok": false,
+    "issues": [
+     "חסר שורה של 'מפלגות אחרות' שמופיעה בטבלה המודפסת עם 0.20%",
+     "חסר שורה של 'לא יודע/ת' שמופיעה בטבלה המודפסת עם 9%"
+    ]
+   },
+   "pollster": "מאגר מוחות",
+   "fieldwork": "2026-10-19..2026-10-20",
+   "created": "2026-10-22T06:22:38",
+   "issue": "https://github.com/lautmanaha/project120/issues/56"
+  },
+  "4238": {
+   "status": "pending",
+   "flags": [
+    "גודל מדגם 2116 חריג למכון (חציון 588) - לבדוק 'מספר המשיבים בפועל'"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "נקסט דאטה",
+   "fieldwork": "2026-10-20..2026-10-20",
+   "created": "2026-10-22T06:22:40",
+   "issue": "https://github.com/lautmanaha/project120/issues/57"
+  },
+  "4240": {
+   "status": "pending",
+   "flags": [
+    "גודל מדגם 1954 חריג למכון (חציון 588) - לבדוק 'מספר המשיבים בפועל'"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "נקסט דאטה",
+   "fieldwork": "2026-10-21..2026-10-21",
+   "created": "2026-10-22T06:22:41",
+   "issue": "https://github.com/lautmanaha/project120/issues/58"
+  },
+  "4241": {
+   "status": "pending",
+   "flags": [
+    "המילואימניקים והכלכלית מופיעה 2 פעמים"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "לזר מחקרים",
+   "fieldwork": "2026-10-19..2026-10-19",
+   "created": "2026-10-22T06:22:43",
+   "issue": "https://github.com/lautmanaha/project120/issues/59"
   }
  }
 }

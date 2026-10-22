@@ -1,0 +1,126 @@
+{
+  "ref": "4238",
+  "pollster_as_written": "Next Data",
+  "commissioner_as_written": "ערוץ עכשיו 14",
+  "fieldwork_start": "2026-10-20",
+  "fieldwork_end": "2026-10-20",
+  "method": "internet",
+  "initial_sample": 2200,
+  "respondents": 2116,
+  "response_rate_pct": 21.9,
+  "margin_error_pct": 2.1,
+  "population": "נדגמים בוגרים (בני +18), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל הרשאים לבחור",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו נערכות היום, לאיזו מהרשימה הבאה תצביעו?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 30,
+          "pct": 22.8
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 20,
+          "pct": 15.3
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 9,
+          "pct": 6.7
+        },
+        {
+          "party_as_written": "יחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 9,
+          "pct": 6.8
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 9,
+          "pct": 6.9
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.3
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "חד״ש תע״ל בל״ד בראשות ד״ר יוסף ג׳בארין",
+          "party": "הרשימה המשותפת",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' וזהות",
+          "party": "הציונות הדתית",
+          "seats": 7,
+          "pct": 5.6
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 6,
+          "pct": 4.8
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 6,
+          "pct": 4.4
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית בראשות הנדל וזליכה",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 2.5
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 1.9
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.9
+        },
+        {
+          "party_as_written": "נועם לישראל בראשות אבי מעוז",
+          "party": "נעם",
+          "seats": 0,
+          "pct": 0.9
+        },
+        {
+          "party_as_written": "מפלגת אחי - חוזרים לשורשים",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.4
+        }
+      ],
+      "undecided_pct": 1.7,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "מפלגת אחי listed as below threshold - canonical name unknown, marked as אחר. Merger of הציונות הדתית וזהות noted in party_as_written."
+    }
+  ],
+  "extraction_notes": "The PDF includes both above-threshold and below-threshold parties. The seat allocation includes the merged הציונות הדתית וזהות. מפלגת אחי (Ahi party) has no canonical equivalent so marked as אחר."
+}
