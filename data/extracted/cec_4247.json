@@ -1,0 +1,120 @@
+{
+  "ref": "4247",
+  "pollster_as_written": "מכון DRI",
+  "commissioner_as_written": null,
+  "fieldwork_start": "2026-10-19",
+  "fieldwork_end": "2026-10-21",
+  "method": "internet",
+  "initial_sample": 1071,
+  "respondents": 939,
+  "response_rate_pct": 0.99,
+  "margin_error_pct": 3.5,
+  "population": "נדגמים בוגרים (בני 18+), המהווים מדגם מייצג של אוכלוסיית אזרחי ישראל בעלי זכות בחירה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו הבחירות לכנסת היו מתקיימות היום, למי היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בהנהגת בנימין נתניהו לראשות הממשלה",
+          "party": "הליכוד",
+          "seats": 28,
+          "pct": 21.93
+        },
+        {
+          "party_as_written": "ישר בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 23,
+          "pct": 17.12
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט ויאיר לפיד",
+          "party": "ביחד",
+          "seats": 9,
+          "pct": 7.09
+        },
+        {
+          "party_as_written": "הציונות הדתית בראשות בצלאל סמוטריץ' וזהות",
+          "party": "הציונות הדתית",
+          "seats": 9,
+          "pct": 6.96
+        },
+        {
+          "party_as_written": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף",
+          "party": "ש\"ס",
+          "seats": 8,
+          "pct": 6.66
+        },
+        {
+          "party_as_written": "מפלגת הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 8,
+          "pct": 6.63
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.49
+        },
+        {
+          "party_as_written": "חד\"ש תע\"ל בראשות איימן עודה ואחמד טיבי",
+          "party": "הרשימה המשותפת",
+          "seats": 8,
+          "pct": 6.06
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.48
+        },
+        {
+          "party_as_written": "יהדות התורה והשבת אגודת ישראל - דגל התורה",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 5.45
+        },
+        {
+          "party_as_written": "הרשימה הערבית המאוחדת",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.12
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 2.34
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 1.81
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית החדשה – יועז הנדל פרופסור ירון זליכה ועינת וילף",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": 1.77
+        },
+        {
+          "party_as_written": "ישראל תחילה בראשות שרן השכל",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.09
+        }
+      ],
+      "undecided_pct": 1.43,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "The table shows 'טרם החליטו' at 1.43%. The percentages are labeled as 'אחוזים גולמיים' (raw percentages), but the note at bottom states the raw numbers do not account for undecided-breaking ('הנתונים הגולמיים אינם לוקחים בחשבון פיצוח מתלבטים'), implying the seat allocations are based on weighted/allocated figures."
+    }
+  ],
+  "extraction_notes": "The PDF reports initial sample as 1071, but also mentions 95,080 people were invited to participate. The respondents number is clearly 939. The document notes the raw percentages do not reflect allocation of undecided voters, but seats do reflect such allocation. The party 'ישראל תחילה בראשות שרן השכל' is mapped to 'אחר' as it is not in the canonical list."
+}
