@@ -140,7 +140,11 @@
   "4249",
   "4254",
   "4257",
-  "4258"
+  "4258",
+  "4256",
+  "4259",
+  "4260",
+  "4261"
  ],
  "polls": {
   "4140": {
@@ -484,6 +488,35 @@
    "fieldwork": "2026-10-22..2026-10-22",
    "created": "2026-10-25T15:23:54",
    "issue": "https://github.com/lautmanaha/project120/issues/60"
+  },
+  "4256": {
+   "status": "pending",
+   "flags": [
+    "מפלגות חסרות בסקר ארצי (היו מקבלות ערך מוערך): הרשימה המשותפת",
+    "חריג: הליכוד 29.0% מול הממוצע הכללי 18.0% (לא בהכרח שגיאה)"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "דיאלוג",
+   "fieldwork": "2026-10-20..2026-10-21",
+   "created": "2026-10-25T18:39:35",
+   "issue": "https://github.com/lautmanaha/project120/issues/61"
+  },
+  "4259": {
+   "status": "pending",
+   "flags": [
+    "גודל מדגם 5000 חריג למכון (חציון 551) - לבדוק 'מספר המשיבים בפועל'"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "מאגר מוחות",
+   "fieldwork": "2026-10-21..2026-10-22",
+   "created": "2026-10-25T18:39:38",
+   "issue": "https://github.com/lautmanaha/project120/issues/62"
   }
  }
 }

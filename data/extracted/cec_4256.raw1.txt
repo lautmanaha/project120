@@ -1,0 +1,89 @@
+I'll extract the poll data from CEC 4256. Let me start by reading all the page images.
+
+<read>data/pages/cec_4256_p1.png</read>
+<read>data/pages/cec_4256_p2.png</read>
+<read>data/pages/cec_4256_p3.png</read>
+<read>data/pages/cec_4256_p4.png</read>
+<read>data/pages/cec_4256_p5.png</read>
+<read>data/pages/cec_4256_p6.png</read>
+<read>data/pages/cec_4256_p7.png</read>
+
+Now I'll compile the JSON from the data:
+
+From page 1:
+- Pollster: דיאלוג – יעוץ ארגוני, מחקר והדרכה בע"מ
+- Commissioner: ידיעות אחרונות ו-ynet
+- Fieldwork: 20/10/2026 15:00 - 21/10/2026 10:00
+- Method: אינטרנטי, פאנל משיבים (internet)
+- Initial sample: 498 (גודל המדגם ההתחלתי)
+- Invited: 1,182 (מס' האנשים שהתבקשו להשתתף)
+- Respondents: 498 (מס' האנשים שהשתתפו בסקר בפועל)
+- Response rate: 42%
+- Margin of error: ±4.4%
+- Population: מדגם ארצי מייצג בקרב 53 ישובים שקרובים לגבול הצפון ולעוטף עזה
+
+From page 1-2, the vote intention results:
+- הליכוד בראשות בנימין נתניהו: 29%
+- ישר! בראשות גדי איזנקוט: 18%
+- עוצמה יהודית בראשות איתמר בן גביר: 9%
+- טרם החלטתי / לא יודע/ת: 8%
+- ישראל ביתנו בראשות אביגדור ליברמן: 6%
+- הציונות הדתית – זהות בראשות בצלאל סמוטריץ' ומשה פייגלין: 6%
+- ביחד בראשות נפתלי בנט: 5%
+- הדמוקרטים בראשות יאיר גולן: 4%
+- המילואימניקים והכלכלית בראשות יועז הנדל וירון זליכה: 4%
+- ש"ס בראשות אריה דרעי: 3%
+- עמך ישראל בראשת עופר וינטר: 3%
+- אף אחת מהמפלגות / לא מתכוון/ת להצביע: 3%
+- יהדות התורה בראשות יעקב אשר: 1%
+- מפלגה אחרת: 1%
+- רע"ם בראשות מנסור עבאס: 0%
+- הציבור החרדי בראשות מוטי לייטנר: 0%
+
+Note: The table shows percentages only, no seats are shown. This appears to be a special poll of residents in north and south border communities affected by war, not a national representative sample for seat allocation.
+
+<write>
+{
+  "ref": "4256",
+  "pollster_as_written": "דיאלוג – יעוץ ארגוני, מחקר והדרכה בע\"מ",
+  "commissioner_as_written": "ידיעות אחרונות ו-ynet",
+  "fieldwork_start": "2026-10-20",
+  "fieldwork_end": "2026-10-21",
+  "method": "internet",
+  "initial_sample": 498,
+  "respondents": 498,
+  "response_rate_pct": 42.0,
+  "margin_error_pct": 4.4,
+  "population": "מדגם ארצי מייצג בקרב 53 ישובים שקרובים לגבול הצפון ולעוטף עזה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום לאיזו מפלגה היית מצביע במצב הזה?",
+      "weighted": true,
+      "results": [
+        {"party_as_written": "הליכוד בראשות בנימין נתניהו", "party": "הליכוד", "seats": null, "pct": 29.0},
+        {"party_as_written": "ישר! בראשות גדי איזנקוט", "party": "ישר", "seats": null, "pct": 18.0},
+        {"party_as_written": "עוצמה יהודית בראשות איתמר בן גביר", "party": "עוצמה יהודית", "seats": null, "pct": 9.0},
+        {"party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן", "party": "ישראל ביתנו", "seats": null, "pct": 6.0},
+        {"party_as_written": "הציונות הדתית – זהות בראשות בצלאל סמוטריץ` ומשה פייגלין", "party": "הציונות הדתית", "seats": null, "pct": 6.0},
+        {"party_as_written": "ביחד בראשות נפתלי בנט", "party": "ביחד", "seats": null, "pct": 5.0},
+        {"party_as_written": "הדמוקרטים בראשות יאיר גולן", "party": "הדמוקרטים", "seats": null, "pct": 4.0},
+        {"party_as_written": "המילואימניקים והכלכלית בראשות יועז הנדל וירון זליכה", "party": "המילואימניקים והכלכלית", "seats": null, "pct": 4.0},
+        {"party_as_written": "ש''ס בראשות אריה דרעי", "party": "ש\"ס", "seats": null, "pct": 3.0},
+        {"party_as_written": "עמך ישראל בראשת עופר וינטר", "party": "עמך ישראל", "seats": null, "pct": 3.0},
+        {"party_as_written": "יהדות התורה בראשות יעקב אשר", "party": "יהדות התורה", "seats": null, "pct": 1.0},
+        {"party_as_written": "רע''ם בראשות מנסור עבאס", "party": "רע\"ם", "seats": null, "pct": 0.0},
+        {"party_as_written": "הציבור החרדי בראשות מוטי לייטנר", "party": "הציבור החרדי", "seats": null, "pct": 0.0}
+      ],
+      "undecided_pct": 8.0,
+      "not_voting_pct": 3.0,
+      "other_pct": 1.0,
+      "blank_pct": null,
+      "seats_total": null,
+      "notes": "Special poll of residents in 53 settlements near northern border and Gaza envelope affected by war. No seat allocation provided, percentages only. The party labeled 'הציונות הדתית – זהות' represents a merged list of Smotrich and Feiglin."
+    }
+  ],
+  "extraction_notes": "This is a special survey of war-affected communities in the north and south, not a standard national poll. The sample comprises residents from 53 specific settlements near the northern border and Gaza envelope (261 from north, 237 from south). No seat projections are given, only vote percentages. Questions 2-8 are not vote-intention questions (impact of war on vote, government handling assessments, etc.) and were not extracted per spec."
+}
+</write>
