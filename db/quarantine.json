@@ -136,7 +136,11 @@
   "4242",
   "4243",
   "4245",
-  "4247"
+  "4247",
+  "4249",
+  "4254",
+  "4257",
+  "4258"
  ],
  "polls": {
   "4140": {
@@ -466,6 +470,20 @@
    "issue": "https://github.com/lautmanaha/project120/issues/59",
    "decided": "2026-10-22T07:09:43",
    "note": ""
+  },
+  "4254": {
+   "status": "pending",
+   "flags": [
+    "גודל מדגם 7937 חריג למכון (חציון 636) - לבדוק 'מספר המשיבים בפועל'"
+   ],
+   "review": {
+    "ok": true,
+    "issues": []
+   },
+   "pollster": "נקסט דאטה",
+   "fieldwork": "2026-10-22..2026-10-22",
+   "created": "2026-10-25T15:23:54",
+   "issue": "https://github.com/lautmanaha/project120/issues/60"
   }
  }
 }
