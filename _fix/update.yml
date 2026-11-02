@@ -8,12 +8,9 @@
 # בקרת איכות: סקר חדש עם דגלים (scraper/qa_check.py) נכנס להסגר ולא למודל; נפתח Issue "[QA] סקר ...".
 #   אישור/דחייה בתגובה ל-Issue (qa_approve.yml) -> עדכון db/quarantine.json -> ריצה מחדש.
 name: Update forecast
+# 30.10.2026: הבחירות הסתיימו - התחזית קפואה על הריצה של 27.10. ההרצות האוטומטיות (כל 30 דקות, יומית, webhook) בוטלו;
+# נשארה רק הרצה ידנית. להחזרה: לשחזר את schedule ו-repository_dispatch מההיסטוריה של הקובץ.
 on:
-  schedule:
-    - cron: "*/30 * * * *"
-    - cron: "0 6 * * *"
-  repository_dispatch:
-    types: [new_poll]
   workflow_dispatch:
     inputs:
       force:

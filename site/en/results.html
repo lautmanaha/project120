@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project 120 - Forecast vs. result</title>
+<meta name="description" content="Project 120's final forecast for the 26th Knesset election against the official results: what worked, what missed, and what we learned">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNTFBMjYiLz4KICA8ZyBmaWxsPSIjRjFGM0Y4Ij4KICAgIDxjaXJjbGUgY3g9IjExIiBjeT0iNDIiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjE1LjUiIGN5PSIyOS41IiByPSI0LjIiLz48Y2lyY2xlIGN4PSIyNCIgY3k9IjIwIiByPSI0LjIiLz4KICAgIDxjaXJjbGUgY3g9IjQ0IiBjeT0iMjAiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjUyLjUiIGN5PSIyOS41IiByPSI0LjIiLz48Y2lyY2xlIGN4PSI1NyIgY3k9IjQyIiByPSI0LjIiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iMzQiIGN5PSIxNiIgcj0iNS4yIiBmaWxsPSIjMDNBODlFIi8+CiAgPHRleHQgeD0iMzQiIHk9IjUyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSIxOSIgZmlsbD0iI0YxRjNGOCI+MTIwPC90ZXh0Pgo8L3N2Zz4K">
+<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c0577a42bf76400f822d4b8382150152"}'></script><!-- End Cloudflare Web Analytics -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Alef:wght@400;700&family=Assistant:wght@300;400;600;700&display=swap">
+<style>
+:root{--bg:#0B0F1A;--surface:#151B2B;--ink:#F1F3F8;--ink-2:#AEB5C6;--ink-3:#6F778C;--line:#242C40;--brand:#03A89E;--brand-soft:rgba(3,168,158,.14);color-scheme:dark}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#F3F4F8;--surface:#FFFFFF;--ink:#141927;--ink-2:#4A5163;--ink-3:#7C8397;--line:#DCE0EA;--brand:#03A89E;--brand-soft:rgba(3,168,158,.12);color-scheme:light}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Assistant",Arial,sans-serif;font-size:17px;line-height:1.65}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:"Suez One",serif;font-size:26px;text-decoration:none;color:var(--ink)} .brand span{color:var(--brand)}
+nav a.lnk{font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+nav a.lnk:hover{color:var(--ink);border-color:var(--brand)}
+h1{font-family:"Alef",Arial,sans-serif;font-size:34px;margin:44px 0 6px}
+.sub{color:var(--ink-2);margin:0 0 30px;font-weight:300;font-size:18px}
+h2{font-family:"Alef",Arial,sans-serif;font-size:22px;margin:38px 0 10px;padding-top:26px;border-top:1px solid var(--line)}
+p{margin:0 0 12px} ul{margin:0 0 12px;padding-inline-start:22px} li{margin-bottom:6px}
+a{color:var(--brand)} .toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.toc a{font-size:13.5px;font-weight:600;text-decoration:none;color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.toc a:hover{color:var(--ink);border-color:var(--brand)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:14px 0}
+.note{font-size:14px;color:var(--ink-3)}
+footer{margin:56px 0 40px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-3)}
+
+table{width:100%;border-collapse:collapse;margin:12px 0 6px;font-size:15.5px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:center}
+th{font-size:13px;color:var(--ink-3);font-weight:600}
+td:first-child,th:first-child{text-align:start}
+td.hit{color:var(--brand);font-weight:700} td.miss{color:#E2725B;font-weight:700}
+.tw{overflow-x:auto}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:18px 0}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.kpi b{display:block;font-size:26px;font-family:"Alef",Arial,sans-serif}
+.kpi span{font-size:13.5px;color:var(--ink-2)}
+@media (max-width:560px){body{font-size:16px} th,td{padding:7px 3px;font-size:13.5px} .wrap{padding:0 16px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="/en/">Project <span>120</span></a><span><a class="lnk" href="/results.html">עברית</a> <a class="lnk" href="/en/">Final forecast</a></span></div></nav>
+<main class="wrap">
+<h1>Forecast vs. result</h1>
+<p class="sub">26th Knesset election, 27.10.2026. Project 120's final forecast (based on the 128 polls officially published on the Central Elections Committee website, the last from 23.10) against the official results.</p>
+<div class="kpis">
+<div class="kpi"><b>27 / 26</b><span>Likud: actual / forecast. The poll average gave 23</span></div>
+<div class="kpi"><b>53</b><span>Right bloc actual - inside the range (52-64), below the forecast of 58</span></div>
+<div class="kpi"><b>12 vs 18</b><span>Total seat error: forecast vs. poll average</span></div>
+<div class="kpi"><b>80%</b><span>Turnout in Arab localities - a record, higher than in Jewish localities</span></div>
+</div>
+<h2>Blocs</h2>
+<div class="tw"><table><tr><th>Bloc</th><th>Forecast</th><th>90% range</th><th>Actual</th></tr>
+<tr><td>Right bloc</td><td>58</td><td>52-64</td><td>53</td></tr>
+<tr><td>Left bloc</td><td>47</td><td>39-52</td><td>48</td></tr>
+<tr><td>Arab parties</td><td>15</td><td>11-20</td><td>19</td></tr></table></div>
+<p>The forecast gave the right bloc a 24% chance of a 61-seat majority; it won 53. All three blocs landed inside the published ranges, the right bloc at the bottom edge - mainly because of Shas and Arab-sector turnout (details below).</p>
+<h2>Parties</h2>
+<div class="tw"><table><tr><th>List</th><th>Poll average</th><th>Forecast</th><th>90% range</th><th>Actual</th><th>% polls</th><th>% forecast</th><th>% actual</th></tr>
+<tr><td>Likud</td><td>23</td><td>26</td><td>21-31</td><td class="hit">27</td><td>17.4%</td><td>19.5%</td><td>20.5%</td></tr>
+<tr><td>Yashar</td><td>22</td><td>21</td><td>18-23</td><td class="hit">21</td><td>16.8%</td><td>15.7%</td><td>16.1%</td></tr>
+<tr><td>Beyachad</td><td>13</td><td>12</td><td>10-14</td><td class="hit">12</td><td>10.1%</td><td>9.1%</td><td>9.3%</td></tr>
+<tr><td>Shas</td><td>8</td><td>10</td><td>8-12</td><td class="miss">6</td><td>6.2%</td><td>7.6%</td><td>5.3%</td></tr>
+<tr><td>Joint List</td><td>9</td><td>9</td><td>5-14</td><td class="">11</td><td>6.7%</td><td>6.8%</td><td>8.8%</td></tr>
+<tr><td>United Torah Judaism</td><td>8</td><td>8</td><td>7-9</td><td class="hit">7</td><td>5.9%</td><td>6.0%</td><td>5.5%</td></tr>
+<tr><td>Otzma Yehudit</td><td>8</td><td>8</td><td>6-10</td><td class="hit">7</td><td>6.3%</td><td>6.0%</td><td>5.7%</td></tr>
+<tr><td>Yisrael Beitenu</td><td>8</td><td>7</td><td>6-9</td><td class="hit">7</td><td>5.9%</td><td>5.5%</td><td>5.9%</td></tr>
+<tr><td>The Democrats</td><td>9</td><td>7</td><td>0-14</td><td class="hit">8</td><td>7.1%</td><td>5.5%</td><td>6.4%</td></tr>
+<tr><td>Ra'am</td><td>5</td><td>6</td><td>5-7</td><td class="miss">8</td><td>4.4%</td><td>5.0%</td><td>5.9%</td></tr>
+<tr><td>Religious Zionism</td><td>7</td><td>6</td><td>5-8</td><td class="hit">6</td><td>5.5%</td><td>5.1%</td><td>5.1%</td></tr>
+<tr><td>Reservists & Economic</td><td>0</td><td>0</td><td>0-5</td><td class="hit">0</td><td>3.0%</td><td>2.9%</td><td>2.7%</td></tr>
+<tr><td>Amcha Yisrael</td><td>0</td><td>0</td><td>0-4</td><td class="hit">0</td><td>2.8%</td><td>2.8%</td><td>1.7%</td></tr></table></div>
+<p class="note">"Forecast": the 120-seat map shown on the site. Green: within one seat. Red: outside the published range. "Poll average": per-pollster average of the 20 polls published in the final week (18-23.10, 9 pollsters), converted to seats with the same Bader-Ofer method and surplus agreements. Blue and White received no votes; Amcha Yisrael and the Reservists &amp; Economic list missed the threshold, as forecast.</p>
+<h2>What worked</h2>
+<ul>
+<li><b>Likud.</b> Most pollsters measured Likud below the result, some by 4-6 points. The model's adjustment - halfway between the historically accurate pollsters and the rest, plus the polls' historical Likud miss - raised it from 23 seats in the poll average to 26. Actual: 27.</li>
+<li><b>Most other lists</b> - Yashar, Beyachad, Yisrael Beitenu, Otzma Yehudit, Religious Zionism and United Torah Judaism - landed within one seat of the forecast.</li>
+<li><b>Overall</b> the forecast missed by 12 seats in total, against 18 for the simple poll average; in vote share, 0.82 points per list on average against 0.98.</li>
+</ul>
+<h2>What missed</h2>
+<ul>
+<li><b>Shas - over-estimated because of the previous elections.</b> In all five previous elections (2019-2022) the polls under-measured Shas, so the model added about 1.6 points. This time the polls over-estimated Shas (6.2% vs. 5.3% actual), and the correction doubled the error: 10 seats forecast, 6 actual. This is the largest miss, and alone accounts for most of the right-bloc gap.</li>
+<li><b>Record, unexpected turnout in the Arab sector.</b> Turnout in Arab localities reached about 80%, against about 53% in 2022 - a historic high, and above turnout in Jewish localities. No poll anticipated it: the Joint List and Ra'am won 14.7% together, against 11.2% in the poll average, and 19 seats instead of 15. Ra'am won 8, above its published range (5-7).</li>
+<li><b>The Democrats.</b> Here too the historical correction (polls used to over-estimate the left) lowered them too much: 7 forecast, 8 actual, while the poll average gave 9.</li>
+</ul>
+<h2>What we learned</h2>
+<ul>
+<li><b>Apply a historical correction only when its direction is stable.</b> When a party's polling error flips sign between elections, widen its uncertainty instead of shifting the forecast.</li>
+<li><b>Shared uncertainty for Arab-sector turnout.</b> Sector turnout moves the Joint List and Ra'am together and should enter the model as one factor, with wider ranges.</li>
+<li><b>Small lists.</b> A list that withdraws should leave the model automatically, and lists polling below the threshold tend to lose votes at the last minute (Amcha Yisrael: 1.7% actual vs. 2.8% in the polls).</li>
+</ul>
+<p class="note">Sources: official results on the Central Elections Committee website for the 26th Knesset (votes26.bechirot.gov.il, as of 30.10.2026; 5,690,682 valid votes, 12,926 polling stations). Seats computed by Bader-Ofer with a 3.25% threshold and the signed surplus agreements. Forecast: the last run before the election, 27.10.2026. Arab-locality turnout computed from polling-station results in localities where the Joint List and Ra'am together won over 70% of the vote. All data and code are open in the project repository.</p>
+<footer>Project 120 · Dr. Aharon Lautman · <a href="/en/about.html">About</a></footer>
+</main>
+</body>
+</html>
