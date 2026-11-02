@@ -1,0 +1,108 @@
+{
+  "ref": "4256",
+  "pollster_as_written": "דיאלוג – יעוץ ארגוני, מחקר והדרכה בע\"מ",
+  "commissioner_as_written": "ידיעות אחרונות ו ynet",
+  "fieldwork_start": "2026-10-20",
+  "fieldwork_end": "2026-10-21",
+  "method": "internet",
+  "initial_sample": 498,
+  "respondents": 498,
+  "response_rate_pct": 42.0,
+  "margin_error_pct": 4.4,
+  "population": "מדגם ארצי מייצג בקרב 53 ישובים שקרובים לגבול הצפון ולעוטף עזה",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות היו מתקיימות היום לאיזו מפלגה היית מצביע במצב הזה?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": null,
+          "pct": 29.0
+        },
+        {
+          "party_as_written": "ישר! בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": null,
+          "pct": 18.0
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": null,
+          "pct": 9.0
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": null,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "הציונות הדתית – זהות בראשות בצלאל סמוטריץ' ומשה פייגלין",
+          "party": "הציונות הדתית",
+          "seats": null,
+          "pct": 6.0
+        },
+        {
+          "party_as_written": "ביחד בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": null,
+          "pct": 5.0
+        },
+        {
+          "party_as_written": "הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": null,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית בראשות יועז הנדל וירון זליכה",
+          "party": "המילואימניקים והכלכלית",
+          "seats": null,
+          "pct": 4.0
+        },
+        {
+          "party_as_written": "עמך ישראל בראשת עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": null,
+          "pct": 3.0
+        },
+        {
+          "party_as_written": "ש''ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": null,
+          "pct": 3.0
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": null,
+          "pct": 1.0
+        },
+        {
+          "party_as_written": "רע''ם בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": null,
+          "pct": 0.0
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": null,
+          "pct": 0.0
+        }
+      ],
+      "undecided_pct": 8.0,
+      "not_voting_pct": 3.0,
+      "other_pct": 1.0,
+      "blank_pct": null,
+      "seats_total": null,
+      "notes": "Table shows percentages only, no seat allocations. Question 1 in PDF."
+    }
+  ],
+  "extraction_notes": "This poll is a special sample of residents from northern and southern border settlements (Gaza envelope and northern border), not a national representative sample. The main voting intention table (Q1) provides only percentages, no seat distribution. Questions 2-8 are non-vote-intention questions (war impact, government handling, etc.) and were not extracted per spec."
+}

@@ -1,0 +1,126 @@
+{
+  "ref": "4261",
+  "pollster_as_written": "קאנטר ישראל",
+  "commissioner_as_written": "עיתון ישראל היום בע\"מ",
+  "fieldwork_start": "2026-10-21",
+  "fieldwork_end": "2026-10-22",
+  "method": "internet",
+  "initial_sample": 1100,
+  "respondents": 1105,
+  "response_rate_pct": 24.0,
+  "margin_error_pct": 3.0,
+  "population": "מדגם ארצי ומייצג של האוכלוסייה בישראל בגילאי +18 (יהודים וערבים)",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אילו היו מתקיימות היום הבחירות לכנסת, והמפלגות המתמודדות יהיו המפלגות הבאות עם ראשי המפלגות שברשימה בפניך, עבור איזו מפלגה היית מצביע?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "הליכוד בראשות בנימין נתניהו",
+          "party": "הליכוד",
+          "seats": 21,
+          "pct": 16.5
+        },
+        {
+          "party_as_written": "\"ביחד\" בראשות נפתלי בנט",
+          "party": "ביחד",
+          "seats": 14,
+          "pct": 11.3
+        },
+        {
+          "party_as_written": "מפלגת ישר! בראשות גדי איזנקוט",
+          "party": "ישר",
+          "seats": 23,
+          "pct": 18.3
+        },
+        {
+          "party_as_written": "מפלגת הדמוקרטים בראשות יאיר גולן",
+          "party": "הדמוקרטים",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "המילואימניקים והמפלגה הכלכלית בראשות יועז הנדל וירון זליכה",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 4,
+          "pct": 3.7
+        },
+        {
+          "party_as_written": "הציונות הדתית וזהות בראשות בצלאל סמוטריץ'",
+          "party": "הציונות הדתית",
+          "seats": 6,
+          "pct": 4.8
+        },
+        {
+          "party_as_written": "עוצמה יהודית בראשות איתמר בן גביר",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "ישראל ביתנו בראשות אביגדור ליברמן",
+          "party": "ישראל ביתנו",
+          "seats": 7,
+          "pct": 5.6
+        },
+        {
+          "party_as_written": "ש\"ס בראשות אריה דרעי",
+          "party": "ש\"ס",
+          "seats": 8,
+          "pct": 6.4
+        },
+        {
+          "party_as_written": "יהדות התורה בראשות יעקב אשר",
+          "party": "יהדות התורה",
+          "seats": 7,
+          "pct": 5.5
+        },
+        {
+          "party_as_written": "חד\"ש-תע\"ל ובל\"ד בראשות יוסף ג'אברין",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
+          "pct": 7.1
+        },
+        {
+          "party_as_written": "רע\"מ בראשות מנסור עבאס",
+          "party": "רע\"ם",
+          "seats": 5,
+          "pct": 4.1
+        },
+        {
+          "party_as_written": "עמך ישראל בראשות עופר וינטר",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": 2.7
+        },
+        {
+          "party_as_written": "הציבור החרדי בראשות מוטי לייטנר",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": 0.7
+        },
+        {
+          "party_as_written": "מפלגת אח\"י בראשות הרב אברג'ל",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.2
+        },
+        {
+          "party_as_written": "\"צבע שחור – מגן עולם התורה\" בראשות אליהו באומרינד",
+          "party": "אחר",
+          "seats": 0,
+          "pct": 0.3
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "Two small parties (מפלגת אח\"י and צבע שחור – מגן עולם התורה) set to אחר as they are not in the canonical list."
+    }
+  ],
+  "extraction_notes": "PDF is clear. The vote-intention table includes both parties above and below threshold. No undecided/not voting/other/blank percentages were reported for the main vote-intention question. Additional questions (turnout intention, vote change, issue priorities) are non-vote-intention and not extracted per spec."
+}

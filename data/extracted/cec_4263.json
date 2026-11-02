@@ -1,0 +1,144 @@
+{
+  "ref": "4263",
+  "pollster_as_written": "שמואל רוזנר עם חברת פאנל פרוייקט המדגם",
+  "commissioner_as_written": "חדשות 13",
+  "fieldwork_start": "2026-10-22",
+  "fieldwork_end": "2026-10-23",
+  "method": "mixed",
+  "initial_sample": 16554,
+  "respondents": 2048,
+  "response_rate_pct": null,
+  "margin_error_pct": 2.2,
+  "population": "אוכלוסיית המדינה בגילאי +18",
+  "questions": [
+    {
+      "qid": 1,
+      "type": "main",
+      "description": "אם הבחירות לכנסת היו מתקיימות היום, לאיזו מפלגה היית מצביע/ה?",
+      "weighted": true,
+      "results": [
+        {
+          "party_as_written": "ישר",
+          "party": "ישר",
+          "seats": 22,
+          "pct": null
+        },
+        {
+          "party_as_written": "ליכוד",
+          "party": "הליכוד",
+          "seats": 19,
+          "pct": null
+        },
+        {
+          "party_as_written": "ביחד",
+          "party": "ביחד",
+          "seats": 14,
+          "pct": null
+        },
+        {
+          "party_as_written": "הדמוקרטים",
+          "party": "הדמוקרטים",
+          "seats": 10,
+          "pct": null
+        },
+        {
+          "party_as_written": "הרשימה המשותפת",
+          "party": "הרשימה המשותפת",
+          "seats": 9,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציונות הדתית",
+          "party": "הציונות הדתית",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "יהדות התורה",
+          "party": "יהדות התורה",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל ביתנו",
+          "party": "ישראל ביתנו",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "עוצמה יהודית",
+          "party": "עוצמה יהודית",
+          "seats": 8,
+          "pct": null
+        },
+        {
+          "party_as_written": "ש\"ס",
+          "party": "ש\"ס",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "רע\"מ",
+          "party": "רע\"ם",
+          "seats": 7,
+          "pct": null
+        },
+        {
+          "party_as_written": "עמך ישראל",
+          "party": "עמך ישראל",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "המילואימניקים והכלכלית",
+          "party": "המילואימניקים והכלכלית",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "הציבור החרדי",
+          "party": "הציבור החרדי",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "נעם (מתוך \"מפלגה אחרת\")",
+          "party": "נעם",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "הקהל (מתוך \"מפלגה אחרת\")",
+          "party": "מפלגת הקהל",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "צבע שחור (מתוך \"מפלגה אחרת\")",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "תנועת אחי (מתוך \"מפלגה אחרת\")",
+          "party": "ברית אחים",
+          "seats": 0,
+          "pct": null
+        },
+        {
+          "party_as_written": "ישראל תחילה (מתוך \"מפלגה אחרת\")",
+          "party": "אחר",
+          "seats": 0,
+          "pct": null
+        }
+      ],
+      "undecided_pct": null,
+      "not_voting_pct": null,
+      "other_pct": null,
+      "blank_pct": null,
+      "seats_total": 120,
+      "notes": "pct columns are per-sector raw samples; only seats are national. The PDF states that percentages in the four columns (Jewish adults, youth, Haredi, Arab) are raw/unweighted and do not represent national distribution; mandates are calculated as a weighted average of the last three surveys using sector weights."
+    }
+  ],
+  "extraction_notes": "The table shows only sector-level raw percentages (not national weighted percentages) in four separate columns. No national percentage column exists. Following the spec, pct is set to null for all parties. Seats are the national weighted calculation. 'צבע שחור' and 'ישראל תחילה' mapped to 'אחר' as they are not in the canonical list. 'תנועת אחי' mapped to 'ברית אחים'. Undecided_pct, not_voting_pct, other_pct, and blank_pct are present in the raw data but are per-sector and cannot be aggregated to a national figure from this table, so set to null."
+}
